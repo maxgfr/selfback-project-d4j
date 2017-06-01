@@ -3,6 +3,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.stream.Stream;
 
 /**
@@ -25,28 +27,26 @@ public class ReadFile {
         return INSTANCE;
     }
 
-    public void listFilesForFolder(final File folder) {
+    public void displayFilesForFolder(final File folder) {
         for (final File fileEntry : folder.listFiles()) {
             if (fileEntry.isDirectory()) {
-                listFilesForFolder(fileEntry);
+                displayFilesForFolder(fileEntry);
             } else {
                 System.out.println(fileEntry.getName());
             }
         }
     }
 
-    public void readAllFileFromRes () {
-
-
-        final File folder = new File("/home/you/Desktop");
-        listFilesForFolder(folder);
-        try (Stream<Path> paths = Files.walk(Paths.get("/home/you/Desktop"))) {
-            paths
-                    .filter(Files::isRegularFile)
-                    .forEach(System.out::println);
-        } catch (IOException e) {
-            e.printStackTrace();
+    public List<String> listFilesPathForFolder (final File folder) {
+        List<String> list = new LinkedList<String>();
+        for (final File fileEntry : folder.listFiles()) {
+            if (fileEntry.isDirectory()) {
+                listFilesPathForFolder(fileEntry);
+            } else {
+                list.add(fileEntry.getPath());
+            }
         }
-
+        return list;
     }
+
 }

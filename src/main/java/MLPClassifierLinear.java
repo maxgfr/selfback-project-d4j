@@ -27,30 +27,27 @@ import java.io.File;
  */
 public class MLPClassifierLinear {
 
-    public static void main(String[] args) throws Exception {
+    private int seed;//123
+    private double learningRate;//0.01
+    private int batchSize;//50
+    private int nEpochs;//20
+    private int numInputs;//500
+    private int numOutputs;//6
+    private int numHiddenNodes;//20
+    private MultiLayerNetwork model;
 
-        int seed = 123;
-        double learningRate = 0.01;
-        int batchSize = 50;
-        int nEpochs = 20;
+    public MLPClassifierLinear (int seed, double learningRate, int batchSize, int nEpochs, int numInputs, int numOutputs, int numHiddenNodes) {
+        this.seed = seed;
+        this.learningRate = learningRate;
+        this.batchSize= batchSize;
+        this.nEpochs = nEpochs;
+        this.numInputs= numInputs;
+        this.numOutputs= numOutputs;
+        this.numHiddenNodes= numHiddenNodes;
+        configureMLNetwork();
+    }
 
-        int numInputs = 500;
-        int numOutputs = 6;
-        int numHiddenNodes = 20;
-
-        final String filenameTrain  = new ClassPathResource("linear_data_train.csv").getFile().getPath();
-        final String filenameTest  = new ClassPathResource("linear_data_eval.csv").getFile().getPath();
-
-        //Load the training data:
-        RecordReader rr = new CSVRecordReader();
-//        rr.initialize(new FileSplit(new File("src/main/resources/classification/linear_data_train.csv")));
-        rr.initialize(new FileSplit(new File(filenameTrain)));
-        DataSetIterator trainIter = new RecordReaderDataSetIterator(rr,batchSize,0,2);
-
-        //Load the test/evaluation data:
-        RecordReader rrTest = new CSVRecordReader();
-        rrTest.initialize(new FileSplit(new File(filenameTest)));
-        DataSetIterator testIter = new RecordReaderDataSetIterator(rrTest,batchSize,0,2);
+    public void configureMLNetwork () {
 
         MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
                 .seed(seed)
@@ -74,6 +71,9 @@ public class MLPClassifierLinear {
         model.init();
         model.setListeners(new ScoreIterationListener(10));  //Print score every 10 parameter updates
 
+    }
+
+    public void trainMLNetwork (DataSetIterator trainIter, DataSetIterator testIter) {
 
         for ( int n = 0; n < nEpochs; n++) {
             model.fit( trainIter );
@@ -94,35 +94,6 @@ public class MLPClassifierLinear {
         //Print the evaluation statistics
         System.out.println(eval.stats());
 
-
-        //------------------------------------------------------------------------------------
-        //Training is complete. Code that follows is for plotting the data & predictions only
-
-        //Plot the data:
-        double xMin = 0;
-        double xMax = 1.0;
-        double yMin = -0.2;
-        double yMax = 0.8;
-
-        //Let's evaluate the predictions at every point in the x/y input space
-        int nPointsPerAxis = 100;
-        double[][] evalPoints = new double[nPointsPerAxis*nPointsPerAxis][2];
-        int count = 0;
-        for( int i=0; i<nPointsPerAxis; i++ ){
-            for( int j=0; j<nPointsPerAxis; j++ ){
-                double x = i * (xMax-xMin)/(nPointsPerAxis-1) + xMin;
-                double y = j * (yMax-yMin)/(nPointsPerAxis-1) + yMin;
-
-                evalPoints[count][0] = x;
-                evalPoints[count][1] = y;
-
-                count++;
-            }
-        }
-
-        INDArray allXYPoints = Nd4j.create(evalPoints);
-        INDArray predictionsAtXYPoints = model.output(allXYPoints);
-
-        System.out.println("****************Example finished********************");
     }
+
 }
