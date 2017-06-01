@@ -26,14 +26,16 @@ import java.io.File;
  * Created by maxime on 01-Jun-17.
  */
 public class MLPClassifierLinear {
+
     public static void main(String[] args) throws Exception {
+
         int seed = 123;
         double learningRate = 0.01;
         int batchSize = 50;
-        int nEpochs = 30;
+        int nEpochs = 20;
 
-        int numInputs = 2;
-        int numOutputs = 2;
+        int numInputs = 500;
+        int numOutputs = 6;
         int numHiddenNodes = 20;
 
         final String filenameTrain  = new ClassPathResource("linear_data_train.csv").getFile().getPath();
