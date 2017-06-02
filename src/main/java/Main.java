@@ -1,8 +1,4 @@
-import org.datavec.api.records.reader.RecordReader;
-import org.datavec.api.records.reader.impl.csv.CSVRecordReader;
-import org.datavec.api.split.FileSplit;
 import org.datavec.api.util.ClassPathResource;
-import org.deeplearning4j.datasets.datavec.RecordReaderDataSetIterator;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 
 import java.io.File;
@@ -16,13 +12,6 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        List<String> listDownstairs = new LinkedList<String>();
-        List<String> listJogging = new LinkedList<String>();
-        List<String> listSitting = new LinkedList<String>();
-        List<String> listStanding = new LinkedList<String>();
-        List<String> listUpstairs = new LinkedList<String>();
-        List<String> listWalking = new LinkedList<String>();
-
         ReadFile readFile = ReadFile.getInstance();
 
         final File folderDownstairs = new ClassPathResource("downstairs").getFile();
@@ -32,28 +21,31 @@ public class Main {
         final File folderUpstairs = new ClassPathResource("upstairs").getFile();
         final File folderWalking = new ClassPathResource("walking").getFile();
 
-        listDownstairs = readFile.listFilesPathForFolder(folderDownstairs);
-        listJogging = readFile.listFilesPathForFolder(folderJogging);
-        listSitting = readFile.listFilesPathForFolder(folderSitting);
-        listStanding = readFile.listFilesPathForFolder(folderStanding);
-        listUpstairs = readFile.listFilesPathForFolder(folderUpstairs);
-        listWalking = readFile.listFilesPathForFolder(folderWalking);
+        List<String> listDownstairs = readFile.listFilesPathForFolder(folderDownstairs);
+        List<String> listJogging= readFile.listFilesPathForFolder(folderJogging);
+        List<String> listSitting = readFile.listFilesPathForFolder(folderSitting);
+        List<String> listStanding = readFile.listFilesPathForFolder(folderStanding);
+        List<String> listUpstairs = readFile.listFilesPathForFolder(folderUpstairs);
+        List<String> listWalking = readFile.listFilesPathForFolder(folderWalking);
 
 
-        int batchSize = 50;
+        DataSetManager dataSetManager = DataSetManager.getInstance(50);
 
-        final String filenameTrain  = new ClassPathResource("linear_data_train.csv").getFile().getPath();
-        final String filenameTest  = new ClassPathResource("linear_data_eval.csv").getFile().getPath();
+        List<DataSetIterator> listSetIteratorDownstairs = dataSetManager.createDataSetIterator(listDownstairs);
+        List<DataSetIterator> listSetIteratorJogging = dataSetManager.createDataSetIterator(listJogging);
+        List<DataSetIterator> listSetIteratorSitting = dataSetManager.createDataSetIterator(listSitting);
+        List<DataSetIterator> listSetIteratorStanding = dataSetManager.createDataSetIterator(listStanding);
+        List<DataSetIterator> listSetIteratorUpstairs = dataSetManager.createDataSetIterator(listUpstairs);
+        List<DataSetIterator> listSetIteratorWalking = dataSetManager.createDataSetIterator(listWalking);
 
-        //Load the training data:
-        RecordReader rr = new CSVRecordReader();
-        //rr.initialize(new FileSplit(new File("src/main/resources/classification/linear_data_train.csv")));
-        rr.initialize(new FileSplit(new File(filenameTrain)));
-        DataSetIterator trainIter = new RecordReaderDataSetIterator(rr,batchSize,0,2);
+        MLPClassifierLinear network = new MLPClassifierLinear(123,0.01,50,20,500,6,20);
 
-        //Load the test/evaluation data:
-        RecordReader rrTest = new CSVRecordReader();
-        rrTest.initialize(new FileSplit(new File(filenameTest)));
-        DataSetIterator testIter = new RecordReaderDataSetIterator(rrTest,batchSize,0,2);
+        network.trainMLNetwork(listSetIteratorDownstairs);
+        network.trainMLNetwork(listSetIteratorJogging);
+        network.trainMLNetwork(listSetIteratorSitting);
+        network.trainMLNetwork(listSetIteratorStanding);
+        network.trainMLNetwork(listSetIteratorUpstairs);
+        network.trainMLNetwork(listSetIteratorWalking);
+
     }
 }

@@ -21,6 +21,7 @@ import org.nd4j.linalg.lossfunctions.LossFunctions.LossFunction;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 
 import java.io.File;
+import java.util.List;
 
 /**
  * Created by maxime on 01-Jun-17.
@@ -47,7 +48,7 @@ public class MLPClassifierLinear {
         configureMLNetwork();
     }
 
-    public void configureMLNetwork () {
+    private void configureMLNetwork () {
 
         MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
                 .seed(seed)
@@ -73,26 +74,14 @@ public class MLPClassifierLinear {
 
     }
 
-    public void trainMLNetwork (DataSetIterator trainIter, DataSetIterator testIter) {
+    public void trainMLNetwork (List<DataSetIterator> list) {
 
         for ( int n = 0; n < nEpochs; n++) {
-            model.fit( trainIter );
-        }
-
-        System.out.println("Evaluate model....");
-        Evaluation eval = new Evaluation(numOutputs);
-        while(testIter.hasNext()){
-            DataSet t = testIter.next();
-            INDArray features = t.getFeatureMatrix();
-            INDArray lables = t.getLabels();
-            INDArray predicted = model.output(features,false);
-
-            eval.eval(lables, predicted);
+            for (DataSetIterator trainIter : list) {
+                model.fit( trainIter );
+            }
 
         }
-
-        //Print the evaluation statistics
-        System.out.println(eval.stats());
 
     }
 
