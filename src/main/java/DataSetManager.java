@@ -56,39 +56,4 @@ public class DataSetManager {
 
         return listDataSetIterator;
     }
-
-    private void normalizeCSV (String path) {
-        Schema schema = new Schema.Builder()
-                .addColumnString("time")
-                .addColumnString("x")
-                .addColumnString("y")
-                .addColumnInteger("z")
-                .build();
-
-        TransformProcess tp = new TransformProcess.Builder(schema)
-                //Let's remove some column we don't need
-                .removeColumns("time")
-                .build();
-
-        SparkConf sparkConf = new SparkConf();
-        sparkConf.setMaster("local[*]");
-        sparkConf.setAppName("Storm Reports Record Reader Transform");
-        JavaSparkContext sc = new JavaSparkContext(sparkConf);
-
-
-        File f = new File(path);
-        String newPath = f.getAbsolutePath();
-
-        // read the data file
-        JavaRDD<String> lines = sc.textFile(newPath);
-        // convert to Writable
-        JavaRDD<List<Writable>> stormReports = lines.map(new StringToWritablesFunction(new CSVRecordReader()));
-        // run our transform process
-        JavaRDD<List<Writable>> processed = SparkTransformExecutor.execute(stormReports,tp);
-        // convert Writable back to string for export
-        JavaRDD<String> toSave= processed.map(new WritablesToStringFunction(","));
-
-        toSave.saveAsTextFile(newPath+"uo");
-
-    }
 }
