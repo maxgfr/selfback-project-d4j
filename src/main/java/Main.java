@@ -47,5 +47,6 @@ public class Main {
         network.trainMLNetwork(listSetIteratorUpstairs);
         network.trainMLNetwork(listSetIteratorWalking);
 
+        network.saveModel();
     }
 }

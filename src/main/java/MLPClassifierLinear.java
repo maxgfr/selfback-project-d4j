@@ -13,14 +13,17 @@ import org.deeplearning4j.nn.conf.layers.OutputLayer;
 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
 import org.deeplearning4j.nn.weights.WeightInit;
 import org.deeplearning4j.optimize.listeners.ScoreIterationListener;
+import org.deeplearning4j.util.ModelSerializer;
 import org.nd4j.linalg.activations.Activation;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.dataset.DataSet;
 import org.nd4j.linalg.factory.Nd4j;
+import org.nd4j.linalg.lossfunctions.LossFunctions;
 import org.nd4j.linalg.lossfunctions.LossFunctions.LossFunction;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -76,13 +79,23 @@ public class MLPClassifierLinear {
 
     public void trainMLNetwork (List<DataSetIterator> list) {
 
-        for ( int n = 0; n < nEpochs; n++) {
-            for (DataSetIterator trainIter : list) {
+        System.out.println(list.toString()+ " start");
+
+        for (DataSetIterator trainIter : list) {
+            for ( int n = 0; n < nEpochs; n++) {
                 model.fit( trainIter );
             }
-
         }
 
+        System.out.println(list.toString()+ "is finished");
+
+    }
+
+
+    public void saveModel () throws IOException {
+        File locationToSave = new File("NetworkFromD4J.zip");      //Where to save the network. Note: the file is in .zip format - can be opened externally
+        boolean saveUpdater = true;                                             //Updater: i.e., the state for Momentum, RMSProp, Adagrad etc. Save this if you want to train your network more in the future
+        ModelSerializer.writeModel(model, locationToSave, saveUpdater);
     }
 
 }
