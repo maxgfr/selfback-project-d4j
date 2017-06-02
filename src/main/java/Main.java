@@ -2,6 +2,7 @@ import org.datavec.api.util.ClassPathResource;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -28,25 +29,30 @@ public class Main {
         List<String> listUpstairs = readFile.listFilesPathForFolder(folderUpstairs);
         List<String> listWalking = readFile.listFilesPathForFolder(folderWalking);
 
-
         DataSetManager dataSetManager = DataSetManager.getInstance(50);
 
-        List<DataSetIterator> listSetIteratorDownstairs = dataSetManager.createDataSetIterator(listDownstairs);
-        List<DataSetIterator> listSetIteratorJogging = dataSetManager.createDataSetIterator(listJogging);
-        List<DataSetIterator> listSetIteratorSitting = dataSetManager.createDataSetIterator(listSitting);
-        List<DataSetIterator> listSetIteratorStanding = dataSetManager.createDataSetIterator(listStanding);
-        List<DataSetIterator> listSetIteratorUpstairs = dataSetManager.createDataSetIterator(listUpstairs);
-        List<DataSetIterator> listSetIteratorWalking = dataSetManager.createDataSetIterator(listWalking);
+        try {
+            List<DataSetIterator> listSetIteratorDownstairs = dataSetManager.createDataSetIterator(listDownstairs);
+            List<DataSetIterator> listSetIteratorJogging = dataSetManager.createDataSetIterator(listJogging);
+            List<DataSetIterator> listSetIteratorSitting = dataSetManager.createDataSetIterator(listSitting);
+            List<DataSetIterator> listSetIteratorStanding = dataSetManager.createDataSetIterator(listStanding);
+            List<DataSetIterator> listSetIteratorUpstairs = dataSetManager.createDataSetIterator(listUpstairs);
+            List<DataSetIterator> listSetIteratorWalking = dataSetManager.createDataSetIterator(listWalking);
 
-        MLPClassifierLinear network = new MLPClassifierLinear(123,0.01,50,20,500,6,20);
+            MLPClassifierLinear network = new MLPClassifierLinear(123,0.01,50,20,500,6,20);
 
-        network.trainMLNetwork(listSetIteratorDownstairs);
-        network.trainMLNetwork(listSetIteratorJogging);
-        network.trainMLNetwork(listSetIteratorSitting);
-        network.trainMLNetwork(listSetIteratorStanding);
-        network.trainMLNetwork(listSetIteratorUpstairs);
-        network.trainMLNetwork(listSetIteratorWalking);
+            network.trainMLNetwork(listSetIteratorDownstairs);
+            network.trainMLNetwork(listSetIteratorJogging);
+            network.trainMLNetwork(listSetIteratorSitting);
+            network.trainMLNetwork(listSetIteratorStanding);
+            network.trainMLNetwork(listSetIteratorUpstairs);
+            network.trainMLNetwork(listSetIteratorWalking);
 
-        network.saveModel();
+            network.saveModel();
+        } catch (IOException io){
+            io.getMessage();
+        } catch (InterruptedException inter){
+            inter.getMessage();
+        }
     }
 }
