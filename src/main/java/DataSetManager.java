@@ -1,17 +1,8 @@
-import org.apache.spark.SparkConf;
-import org.apache.spark.api.java.JavaRDD;
-import org.apache.spark.api.java.JavaSparkContext;
 import org.datavec.api.records.reader.RecordReader;
 import org.datavec.api.records.reader.impl.csv.CSVRecordReader;
 import org.datavec.api.split.FileSplit;
-import org.datavec.api.transform.TransformProcess;
-import org.datavec.api.transform.schema.Schema;
-import org.datavec.api.writable.Writable;
 import org.deeplearning4j.datasets.datavec.RecordReaderDataSetIterator;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
-import org.datavec.spark.transform.SparkTransformExecutor;
-import org.datavec.spark.transform.misc.StringToWritablesFunction;
-import org.datavec.spark.transform.misc.WritablesToStringFunction;
 
 import java.io.File;
 import java.io.IOException;
@@ -45,13 +36,15 @@ public class DataSetManager {
     public List<DataSetIterator> createDataSetIterator (List<String> list) throws IOException, InterruptedException {
 
         List<DataSetIterator> listDataSetIterator  = new LinkedList<DataSetIterator>();
+        int numClasses = 1; //6 classes : downstairs,jogging,etc.
+        int labelIndex = 2; //3 values in each row of the iris.txt CSV
 
         for (String path : list) {
             //Load the training data:
             RecordReader rr = new CSVRecordReader(1,",");
-            normalizeCSV(path);
             rr.initialize(new FileSplit(new File(path)));
-            listDataSetIterator.add (new RecordReaderDataSetIterator(rr,batchSize));
+            listDataSetIterator.add (new RecordReaderDataSetIterator(rr,batchSize,labelIndex,numClasses));
+            numClasses++;
         }
 
         return listDataSetIterator;
