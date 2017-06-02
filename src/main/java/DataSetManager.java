@@ -18,6 +18,7 @@ public class DataSetManager {
     /** Instance unique non préinitialisée */
     private static DataSetManager INSTANCE = null;
 
+    /** Defines number of samples that going to be propagated through the network.*/
     private int batchSize;//50
 
     /** Constructeur privé */
@@ -39,9 +40,9 @@ public class DataSetManager {
 
         for (String path : list) {
             //Load the training data:
-            RecordReader rr = new CSVRecordReader();
+            RecordReader rr = new CSVRecordReader(1,",");
             rr.initialize(new FileSplit(new File(path)));
-            listDataSetIterator.add (new RecordReaderDataSetIterator(rr,batchSize,0,2) );
+            listDataSetIterator.add (new RecordReaderDataSetIterator(rr,batchSize,1,3) );
         }
 
         return listDataSetIterator;

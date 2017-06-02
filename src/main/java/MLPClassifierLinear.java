@@ -33,6 +33,7 @@ public class MLPClassifierLinear {
 
     private int seed;//123
     private double learningRate;//0.01
+    /** Defines number of samples that going to be propagated through the network.*/
     private int batchSize;//50
     private int nEpochs;//20
     private int numInputs;//500
@@ -79,15 +80,16 @@ public class MLPClassifierLinear {
 
     public void trainMLNetwork (List<DataSetIterator> list) {
 
-        System.out.println(list.toString()+ " start");
+        System.out.println("trainMLNetwork start");
 
-        for (DataSetIterator trainIter : list) {
-            for ( int n = 0; n < nEpochs; n++) {
+        for ( int n = 0; n < nEpochs; n++) {
+            System.out.println(n+" iteration(s)");
+            for (DataSetIterator trainIter : list) {
                 model.fit( trainIter );
             }
         }
 
-        System.out.println(list.toString()+ "is finished");
+        System.out.println("trainMLNetwork is finished");
 
     }
 
