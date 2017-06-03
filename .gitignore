@@ -7,5 +7,5 @@
 /build
 /captures
 .externalNativeBuild
-src/main/resources/allData.csv
+./src/main/resources/allData.csv
 target/classes/allData.csv
