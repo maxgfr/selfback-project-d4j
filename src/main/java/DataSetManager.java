@@ -21,19 +21,24 @@ public class DataSetManager {
 
     /** Instance unique non préinitialisée */
     private static DataSetManager INSTANCE = null;
-
     /** Defines number of samples that going to be propagated through the network.*/
     private int batchSize;//50
+    /** Classes : downstairs,jogging,etc.*/
+    private int numClasses;//6
+    /**3 if the label index is on the 4th column*/
+    private int labelIndex;//3
 
-    /** Constructeur privé */
-    private DataSetManager(int batchSize) {
+    /** Constructor private */
+    private DataSetManager(int batchSize, int numClasses, int labelIndex) {
         this.batchSize = batchSize;
+        this.numClasses = numClasses;
+        this.labelIndex = labelIndex;
     }
 
-    /** Point d'accès pour l'instance unique du singleton */
-    public static synchronized DataSetManager getInstance(int batchSize) {
+    /** Singleton */
+    public static synchronized DataSetManager getInstance(int batchSize, int numClasses, int labelIndex) {
         if (INSTANCE == null)
-        { 	INSTANCE = new DataSetManager(batchSize);
+        { 	INSTANCE = new DataSetManager(batchSize,numClasses,labelIndex);
         }
         return INSTANCE;
     }
@@ -41,37 +46,21 @@ public class DataSetManager {
     public List<DataSetIterator> createDataSetIterator (List<File> list) throws IOException, InterruptedException {
 
         List<DataSetIterator> listDataSetIterator  = new LinkedList<DataSetIterator>();
-        int numClasses = 6; //6 classes : downstairs,jogging,etc.
-        int labelIndex = 2; //3 values in each row of the iris.txt CSV
 
         for (File file : list) {
             //Load the training data:
             RecordReader rr = new CSVRecordReader(1,",");
             rr.initialize(new FileSplit(file));
             listDataSetIterator.add (new RecordReaderDataSetIterator(rr,batchSize,labelIndex,numClasses));
-            //numClasses++;
         }
 
         return listDataSetIterator;
     }
 
-    public DataSetIterator createOneDataSet(File file) throws IOException, InterruptedException {
-        int numClasses = 6; //6 classes : downstairs,jogging,etc.
-        int labelIndex = 2; //3 values in each row of the iris.txt CSV
-
-        RecordReader rr = new CSVRecordReader(1,",");
-        rr.initialize(new FileSplit(file));
-        DataSetIterator dataSetIterator = new RecordReaderDataSetIterator(rr,batchSize,labelIndex,numClasses);
-        return dataSetIterator;
-    }
-
     public DataSet createOneDataSetAll(File file) throws IOException, InterruptedException {
-        int numClasses = 6; //6 classes : downstairs,jogging,etc.
-        int labelIndex = 4; //3 values in each row of the iris.txt CSV
 
         RecordReader rr = new CSVRecordReader(1,",");
         rr.initialize(new FileSplit(file));
-
 
         RecordReaderDataSetIterator iterator = new RecordReaderDataSetIterator(rr,batchSize,labelIndex,numClasses);
         iterator.setCollectMetaData(true);

@@ -20,24 +20,24 @@ public class Main {
 
         List<File> listOfCSV = readFile.listFilesForFolder(folderDownstairs);
 
-        DataSetManager dataSetManager = DataSetManager.getInstance(50);
+        DataSetManager dataSetManager = DataSetManager.getInstance(50,6,3);
 
         try {
             //List<DataSetIterator> listSetIterator = dataSetManager.createDataSetIterator(listOfCSV);
 
-            //DataSetIterator dataSetIterator = dataSetManager.createOneDataSet(listOfCSV.get(0));
-
             DataSet dataSet = dataSetManager.createOneDataSetAll(listOfCSV.get(0));
 
-            MLPClassifierLinear network = new MLPClassifierLinear(123,0.01,50,20,500,6,20);
+            MLPClassifierLinear network = new MLPClassifierLinear(123,0.01,1,50,20,3,6,20);
 
             //network.trainMLNetwork(listSetIterator);
 
-            network.trainMLNetworkOne(dataSet);
+            network.train(dataSet);
 
-            network.saveModel();
+            //network.trainMLNetworkOne(dataSet);
 
-            network.dispModel();
+            //network.saveModel();
+
+            //network.dispModel();
         } catch (IOException io){
             io.getMessage();
         } catch (InterruptedException inter){
