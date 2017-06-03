@@ -2,8 +2,8 @@
 
 path="src/main/resources/"
 
-OutFileName="src/main/resources/concat.csv"                       # Fix the output name
-i=0                                       # Reset a counter
+OutFileName="src/main/resources/concat"
+extension=".csv"
 
 for file in "$path"*; do
 		if [ -d $file ]
@@ -12,17 +12,13 @@ for file in "$path"*; do
 			echo "$file is a directory"
 			
 			for filename in "$file"/*.csv; do 
-				if [ "$filename"  != "$OutFileName" ] ;      # Avoid recursion 
+				if [ "$filename"  != "$OutFileName" ] ; 
 				then 
-					if [[ $i -eq 0 ]] ; then 
-						head -1  $filename >   $OutFileName # Copy header if it is the first file
-					fi
-					tail -n +2  $filename >>  $OutFileName # Append from the 2nd line each file
-					i=$(( $i + 1 ))                        # Increase the counter
+					tail -n +2  $filename >>  $OutFileName$j$extension
 				fi
 			done;
 			
 		fi
 done;
 
-sed 's/^ *//' "$OutFileName" | cut -d "," -f2- > "$path"final.csv # Delete the first column
+sed -i 1i"x,y,z" "$OutFileName$j$extension" # Add the first line
