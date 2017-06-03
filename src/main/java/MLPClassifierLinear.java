@@ -1,4 +1,5 @@
 import org.deeplearning4j.api.storage.StatsStorage;
+import org.deeplearning4j.eval.Evaluation;
 import org.deeplearning4j.nn.api.OptimizationAlgorithm;
 import org.deeplearning4j.nn.conf.MultiLayerConfiguration;
 import org.deeplearning4j.nn.conf.NeuralNetConfiguration;
@@ -13,6 +14,7 @@ import org.deeplearning4j.ui.stats.StatsListener;
 import org.deeplearning4j.ui.storage.InMemoryStatsStorage;
 import org.deeplearning4j.util.ModelSerializer;
 import org.nd4j.linalg.activations.Activation;
+import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.dataset.DataSet;
 import org.nd4j.linalg.lossfunctions.LossFunctions;
 import org.nd4j.linalg.lossfunctions.LossFunctions.LossFunction;
@@ -76,13 +78,17 @@ public class MLPClassifierLinear {
     }
 
     public void train (DataSet trainingData) {
+
+        configureMLNetwork();
+
+        System.out.println("We're starting to train the network");
+
         //Configure a simple model. We're not using an optimal configuration here, in order to show evaluation/errors, later
         final int numInputs = 3;
         int outputNum = 6;
         int iterations = 50;
         long seed = 6;
 
-        System.out.println("Build model....");
         MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
                 .seed(seed)
                 .iterations(iterations)
@@ -103,36 +109,16 @@ public class MLPClassifierLinear {
         model.setListeners(new ScoreIterationListener(100));
 
         model.fit(trainingData);
+
+        System.out.println("We finished to train the network");
     }
 
-    public void trainMLNetwork (List<DataSetIterator> list) {
-
-        configureMLNetwork();
-
-        System.out.println("trainMLNetwork start");
-
-        for (DataSetIterator trainIter : list) {
-            for ( int n = 0; n < nEpochs; n++) {
-                model.fit( trainIter );
-            }
-        }
-
-        System.out.println("trainMLNetwork is finished");
-
-    }
-
-    public void trainMLNetworkOne (DataSet data) {
-
-        configureMLNetwork();
-
-        System.out.println("trainMLNetworkOne start");
-
-        for ( int n = 0; n < nEpochs; n++) {
-            model.fit( data );
-        }
-
-        System.out.println("trainMLNetworkOne is finished");
-
+    public void makeEvaluation (DataSet testData) {
+        //evaluate the model on the test set
+        Evaluation eval = new Evaluation(3);
+        INDArray output = model.output(testData.getFeatureMatrix());
+        eval.eval(testData.getLabels(), output);
+        System.out.println("The evaluation of the model is : "+eval.stats());
     }
 
     //http://localhost:9000/train

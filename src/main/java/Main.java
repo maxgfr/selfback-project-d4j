@@ -14,8 +14,6 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        ReadFile readFile = ReadFile.getInstance();
-
         final File allData = new ClassPathResource("allData.csv").getFile();
 
         DataSetManager dataSetManager = DataSetManager.getInstance(50,6,3);
@@ -30,14 +28,14 @@ public class Main {
 
         MLPClassifierLinear network = new MLPClassifierLinear(123,0.01,1,50,20,3,6,3);
 
-        //network.trainMLNetwork(listSetIterator);
+        //network.dispModel();
 
-        network.train(dataSetManager.getDataTrain());
+        network.train(dataSetManager.getTrainingData());
 
-        //network.trainMLNetworkOne(dataSet);
+        //network.makeEvaluation(dataSetManager.getTestData());
 
         //network.saveModel();
 
-        //network.dispModel();
+
     }
 }

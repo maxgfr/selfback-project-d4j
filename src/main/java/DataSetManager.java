@@ -1,18 +1,14 @@
-import org.datavec.api.records.metadata.RecordMetaData;
 import org.datavec.api.records.reader.RecordReader;
 import org.datavec.api.records.reader.impl.csv.CSVRecordReader;
 import org.datavec.api.split.FileSplit;
 import org.deeplearning4j.datasets.datavec.RecordReaderDataSetIterator;
 import org.nd4j.linalg.dataset.DataSet;
 import org.nd4j.linalg.dataset.SplitTestAndTrain;
-import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 import org.nd4j.linalg.dataset.api.preprocessor.DataNormalization;
 import org.nd4j.linalg.dataset.api.preprocessor.NormalizerStandardize;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * Created by maxime on 02-Jun-17.
@@ -47,14 +43,13 @@ public class DataSetManager {
         return INSTANCE;
     }
 
-    public DataSet getDataTrain () {
+    public DataSet getTrainingData () {
         return trainingData;
     }
 
     public DataSet getTestData () {
         return testData;
     }
-
 
     public void createDataSetFromOneFile (File file) throws IOException, InterruptedException {
 
