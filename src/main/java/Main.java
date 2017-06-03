@@ -26,15 +26,13 @@ public class Main {
             inter.getMessage();
         }
 
-        MLPClassifierLinear network = new MLPClassifierLinear(123,0.01,1,50,20,3,6,3);
-
-        //network.dispModel();
+        MLPClassifierLinear network = new MLPClassifierLinear(123,0.01,100,500,20,3,6,3);
 
         network.train(dataSetManager.getTrainingData());
 
-        //network.makeEvaluation(dataSetManager.getTestData());
+        network.makeEvaluation(dataSetManager.getTestData());
 
-        //network.saveModel();
+        network.saveModel();
 
 
     }

@@ -51,7 +51,9 @@ public class MLPClassifierLinear {
         this.numHiddenNodes= numHiddenNodes;
     }
 
-    private void configureMLNetwork () {
+    public void train (DataSet trainingData) {
+
+        System.out.println("We're starting to train the network");
 
         MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
                 .seed(seed)
@@ -68,45 +70,18 @@ public class MLPClassifierLinear {
                         .weightInit(WeightInit.XAVIER)
                         .activation(Activation.SOFTMAX).weightInit(WeightInit.XAVIER)
                         .nIn(numHiddenNodes).nOut(numOutputs).build())
-                .pretrain(false).backprop(true).build();
-
-
-        MultiLayerNetwork model = new MultiLayerNetwork(conf);
-        model.init();
-        model.setListeners(new ScoreIterationListener(10));  //Print score every 10 parameter updates
-
-    }
-
-    public void train (DataSet trainingData) {
-
-        configureMLNetwork();
-
-        System.out.println("We're starting to train the network");
-
-        //Configure a simple model. We're not using an optimal configuration here, in order to show evaluation/errors, later
-        final int numInputs = 3;
-        int outputNum = 6;
-        int iterations = 50;
-        long seed = 6;
-
-        MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
-                .seed(seed)
-                .iterations(iterations)
-                .activation(Activation.TANH)
-                .weightInit(WeightInit.XAVIER)
-                .learningRate(0.1)
-                .regularization(true).l2(1e-4)
-                .list()
-                .layer(0, new DenseLayer.Builder().nIn(numInputs).nOut(3).build())
-                .layer(1, new OutputLayer.Builder(LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD)
-                        .activation(Activation.SOFTMAX).nIn(3).nOut(outputNum).build())
-                .backprop(true).pretrain(false)
+                .pretrain(false)
+                .backprop(true)
                 .build();
 
-        //Fit the model
-        MultiLayerNetwork model = new MultiLayerNetwork(conf);
+
+        model = new MultiLayerNetwork(conf);
+
         model.init();
-        model.setListeners(new ScoreIterationListener(100));
+
+        model.setListeners(new ScoreIterationListener(10));  //Print score every 10 parameter updates
+
+        dispModel();
 
         model.fit(trainingData);
 
@@ -121,8 +96,14 @@ public class MLPClassifierLinear {
         System.out.println("The evaluation of the model is : "+eval.stats());
     }
 
+    public void saveModel () throws IOException {
+        File locationToSave = new File("NetworkFromD4J.zip");      //Where to save the network. Note: the file is in .zip format - can be opened externally
+        boolean saveUpdater = true;                                             //Updater: i.e., the state for Momentum, RMSProp, Adagrad etc. Save this if you want to train your network more in the future
+        ModelSerializer.writeModel(model, locationToSave, saveUpdater);
+    }
+
     //http://localhost:9000/train
-    public void dispModel () {
+    private void dispModel () {
         //Initialize the user interface backend
         UIServer uiServer = UIServer.getInstance();
 
@@ -134,12 +115,6 @@ public class MLPClassifierLinear {
 
         //Then add the StatsListener to collect this information from the network, as it trains
         model.setListeners(new StatsListener(statsStorage));
-    }
-
-    public void saveModel () throws IOException {
-        File locationToSave = new File("NetworkFromD4J.zip");      //Where to save the network. Note: the file is in .zip format - can be opened externally
-        boolean saveUpdater = true;                                             //Updater: i.e., the state for Momentum, RMSProp, Adagrad etc. Save this if you want to train your network more in the future
-        ModelSerializer.writeModel(model, locationToSave, saveUpdater);
     }
 
 }
