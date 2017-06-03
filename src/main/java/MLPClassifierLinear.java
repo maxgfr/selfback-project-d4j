@@ -1,3 +1,4 @@
+import org.deeplearning4j.api.storage.StatsStorage;
 import org.deeplearning4j.nn.api.OptimizationAlgorithm;
 import org.deeplearning4j.nn.conf.MultiLayerConfiguration;
 import org.deeplearning4j.nn.conf.NeuralNetConfiguration;
@@ -7,8 +8,12 @@ import org.deeplearning4j.nn.conf.layers.OutputLayer;
 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
 import org.deeplearning4j.nn.weights.WeightInit;
 import org.deeplearning4j.optimize.listeners.ScoreIterationListener;
+import org.deeplearning4j.ui.api.UIServer;
+import org.deeplearning4j.ui.stats.StatsListener;
+import org.deeplearning4j.ui.storage.InMemoryStatsStorage;
 import org.deeplearning4j.util.ModelSerializer;
 import org.nd4j.linalg.activations.Activation;
+import org.nd4j.linalg.dataset.DataSet;
 import org.nd4j.linalg.lossfunctions.LossFunctions.LossFunction;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 
@@ -72,15 +77,40 @@ public class MLPClassifierLinear {
 
         System.out.println("trainMLNetwork start");
 
-        for ( int n = 0; n < nEpochs; n++) {
-            System.out.println(n+" iteration(s)");
-            for (DataSetIterator trainIter : list) {
+        for (DataSetIterator trainIter : list) {
+            for ( int n = 0; n < nEpochs; n++) {
                 model.fit( trainIter );
             }
         }
 
         System.out.println("trainMLNetwork is finished");
 
+    }
+
+    public void trainMLNetworkOne (DataSet data) {
+
+        System.out.println("trainMLNetwork start");
+
+        for ( int n = 0; n < nEpochs; n++) {
+            model.fit( data );
+        }
+
+        System.out.println("trainMLNetwork is finished");
+
+    }
+
+    public void dispModel () { //http://localhost:9000/train
+        //Initialize the user interface backend
+        UIServer uiServer = UIServer.getInstance();
+
+        //Configure where the network information (gradients, score vs. time etc) is to be stored. Here: store in memory.
+        StatsStorage statsStorage = new InMemoryStatsStorage();         //Alternative: new FileStatsStorage(File), for saving and loading later
+
+        //Attach the StatsStorage instance to the UI: this allows the contents of the StatsStorage to be visualized
+        uiServer.attach(statsStorage);
+
+        //Then add the StatsListener to collect this information from the network, as it trains
+        model.setListeners(new StatsListener(statsStorage));
     }
 
 

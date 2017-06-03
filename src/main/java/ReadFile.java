@@ -32,13 +32,13 @@ public class ReadFile {
         }
     }
 
-    public List<String> listFilesPathForFolder (final File folder) {
-        List<String> list = new LinkedList<String>();
+    public List<File> listFilesForFolder (final File folder) {
+        List<File> list = new LinkedList<File>();
         for (final File fileEntry : folder.listFiles()) {
             if (fileEntry.isDirectory()) {
-                listFilesPathForFolder(fileEntry);
+                listFilesForFolder(fileEntry);
             } else {
-                list.add(fileEntry.getPath());
+                list.add(fileEntry);
             }
         }
         return list;
