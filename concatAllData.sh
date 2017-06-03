@@ -2,7 +2,7 @@
 
 path="src/main/resources/"
 
-OutFileName="src/main/resources/concat"
+OutFileName="src/main/resources/allData"
 extension=".csv"
 
 for file in "$path"*; do
