@@ -16,7 +16,7 @@ public class Main {
 
         final File allData = new ClassPathResource("allData.csv").getFile();
 
-        DataSetManager dataSetManager = DataSetManager.getInstance(50,6,3);
+        DataSetManager dataSetManager = DataSetManager.getInstance(500,6,3);
 
         try {
             dataSetManager.createDataSetFromOneFile(allData);
@@ -26,7 +26,7 @@ public class Main {
             inter.getMessage();
         }
 
-        MLPClassifierLinear network = new MLPClassifierLinear(123,0.01,100,500,20,3,6,3);
+        MLPClassifierLinear network = new MLPClassifierLinear(123,0.01,100,500,20,3,6,300);
 
         network.train(dataSetManager.getTrainingData());
 

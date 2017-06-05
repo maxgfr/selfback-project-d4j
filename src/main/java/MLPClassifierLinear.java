@@ -90,7 +90,7 @@ public class MLPClassifierLinear {
 
     public void makeEvaluation (DataSet testData) {
         //evaluate the model on the test set
-        Evaluation eval = new Evaluation(3);
+        Evaluation eval = new Evaluation(6);
         INDArray output = model.output(testData.getFeatureMatrix());
         eval.eval(testData.getLabels(), output);
         System.out.println("The evaluation of the model is : "+eval.stats());
