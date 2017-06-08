@@ -34,7 +34,7 @@ public class MLPClassifierLinear {
     private int iteration;//50
     /** Defines number of samples that going to be propagated through the network.*/
     private int batchSize;//50
-    private int nEpochs;//20
+    private int nbEpochs;//20
     private int numInputs;//500
     private int numOutputs;//6
     private int numHiddenNodes;//20
@@ -45,13 +45,15 @@ public class MLPClassifierLinear {
         this.learningRate = learningRate;
         this.iteration = iteration;
         this.batchSize= batchSize;
-        this.nEpochs = nEpochs;
+        this.nbEpochs = nEpochs;
         this.numInputs= numInputs;
         this.numOutputs= numOutputs;
         this.numHiddenNodes= numHiddenNodes;
     }
 
-    public void train (DataSet trainingData) {
+    public MultiLayerNetwork getModel () {return model;}
+
+    public void train (DataSetIterator iteratorTrain) {
 
         System.out.println("We're starting to train the network");
 
@@ -83,17 +85,24 @@ public class MLPClassifierLinear {
 
         dispModel();
 
-        model.fit(trainingData);
+        for (int i=0; i<nbEpochs; i++) {
+            model.fit(iteratorTrain);
+            System.out.println(i+" epoch completed");
+        }
 
         System.out.println("We finished to train the network");
     }
 
-    public void makeEvaluation (DataSet testData) {
+    public void makeEvaluation (DataSetIterator testData) {
         //evaluate the model on the test set
+        System.out.println("Evaluation is starting");
         Evaluation eval = new Evaluation(6);
-        INDArray output = model.output(testData.getFeatureMatrix());
-        eval.eval(testData.getLabels(), output);
-        System.out.println("The evaluation of the model is : "+eval.stats());
+        while (testData.hasNext()) {
+            DataSet ds = testData.next();
+            INDArray output = model.output(ds.getFeatureMatrix(),false);
+            eval.eval(ds.getLabels(), output);
+        }
+        System.out.println("The evaluation of the model is : "+ eval.stats());
     }
 
     public void saveModel () throws IOException {

@@ -4,6 +4,7 @@ import org.datavec.api.split.FileSplit;
 import org.deeplearning4j.datasets.datavec.RecordReaderDataSetIterator;
 import org.nd4j.linalg.dataset.DataSet;
 import org.nd4j.linalg.dataset.SplitTestAndTrain;
+import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 import org.nd4j.linalg.dataset.api.preprocessor.DataNormalization;
 import org.nd4j.linalg.dataset.api.preprocessor.NormalizerStandardize;
 
@@ -23,10 +24,8 @@ public class DataSetManager {
     private int numClasses;//6
     /**3 if the label index is on the 4th column*/
     private int labelIndex;//3
-    /**Training Data*/
-    private DataSet trainingData;
-    /**Tested Data*/
-    private DataSet testData;
+    /**DataSetIterator*/
+    private DataSetIterator iterator;
 
     /** Constructor private */
     private DataSetManager(int batchSize, int numClasses, int labelIndex) {
@@ -43,35 +42,37 @@ public class DataSetManager {
         return INSTANCE;
     }
 
-    public DataSet getTrainingData () {
-        return trainingData;
+    public DataSetIterator getDataSetIterator () {
+        return iterator;
     }
 
-    public DataSet getTestData () {
-        return testData;
-    }
 
-    public void createDataSetFromOneFile (File file) throws IOException, InterruptedException {
+    public void createDataSetIterator (File file) throws IOException, InterruptedException {
 
         RecordReader rr = new CSVRecordReader(1,",");
         rr.initialize(new FileSplit(file));
 
-        RecordReaderDataSetIterator iterator = new RecordReaderDataSetIterator(rr,batchSize,labelIndex,numClasses);
-        iterator.setCollectMetaData(true);
+        iterator = new RecordReaderDataSetIterator(rr,batchSize,labelIndex,numClasses);
 
-        DataSet allData = iterator.next();
-        allData.shuffle();
+        System.out.println("Normalizer");
 
-        SplitTestAndTrain testAndTrain = allData.splitTestAndTrain(0.65);  //Use 65% of data for training
-
-        trainingData = testAndTrain.getTrain();
-        testData = testAndTrain.getTest();
-
-        //Normalize data as per basic CSV example
         DataNormalization normalizer = new NormalizerStandardize();
-        normalizer.fit(trainingData);           //Collect the statistics (mean/stdev) from the training data. This does not modify the input data
-        normalizer.transform(trainingData);     //Apply normalization to the training data
-        normalizer.transform(testData);         //Apply normalization to the test data. This is using statistics calculated from the *training* set
+        normalizer.fit(iterator);
+        iterator.setPreProcessor(normalizer);
+
+        System.out.println("End fit normalizer");
+    }
+
+
+    public DataSetIterator launchDataTest (File file) throws IOException, InterruptedException {
+
+        RecordReader rr = new CSVRecordReader(1,",");
+        rr.initialize(new FileSplit(file));
+
+        DataSetIterator it = new RecordReaderDataSetIterator(rr,batchSize,labelIndex,numClasses);
+
+
+        return it;
 
     }
 }
