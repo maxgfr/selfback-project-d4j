@@ -97,12 +97,20 @@ public class MLPClassifierLinear {
         //evaluate the model on the test set
         System.out.println("Evaluation is starting");
         Evaluation eval = new Evaluation(6);
-        //while (testData.hasNext()) {
-        for (int i=0;i<nbEpochs;i++){
+        while (testData.hasNext()) {
             DataSet ds = testData.next();
             INDArray output = model.output(ds.getFeatureMatrix(),false);
             eval.eval(ds.getLabels(), output);
         }
+        System.out.println("The evaluation of the model is : "+ eval.stats());
+    }
+
+    public void makeEvaluationFor5Sec(DataSet ds) {
+        //evaluate the model on the test set
+        System.out.println("Evaluation is starting");
+        Evaluation eval = new Evaluation(6);
+        INDArray output = model.output(ds.getFeatureMatrix(),false);
+        eval.eval(ds.getLabels(), output);
         System.out.println("The evaluation of the model is : "+ eval.stats());
     }
 
@@ -126,5 +134,6 @@ public class MLPClassifierLinear {
         //Then add the StatsListener to collect this information from the network, as it trains
         model.setListeners(new StatsListener(statsStorage));
     }
+
 
 }

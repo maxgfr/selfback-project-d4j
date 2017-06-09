@@ -2,6 +2,7 @@ import org.datavec.api.util.ClassPathResource;
 import org.deeplearning4j.nn.modelimport.keras.InvalidKerasConfigurationException;
 import org.deeplearning4j.nn.modelimport.keras.UnsupportedKerasConfigurationException;
 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
+import org.nd4j.linalg.dataset.DataSet;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 
 import java.io.File;
@@ -27,9 +28,11 @@ public class Main {
 
             File file = new File ("raw/sitting.csv");
 
-            DataSetIterator testData = dataSetManager.createDataSetIterator(file);
+            DataSet testData = dataSetManager.createTrainDataSetFor5FirstSec(file);
 
-            network.makeEvaluation(testData);
+            //network.makeEvaluation(testData);
+
+            network.makeEvaluationFor5Sec(testData);
 
             network.saveModel();
 

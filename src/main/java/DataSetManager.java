@@ -59,4 +59,14 @@ public class DataSetManager {
         return iterator;
     }
 
+    public DataSet createTrainDataSetFor5FirstSec (File file) throws IOException, InterruptedException {
+
+        RecordReader rr = new CSVRecordReader(1,",");
+        rr.initialize(new FileSplit(file));
+
+        DataSetIterator iterator = new RecordReaderDataSetIterator(rr,batchSize);
+
+        return iterator.next();
+    }
+
 }
