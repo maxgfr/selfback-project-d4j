@@ -12,12 +12,12 @@ public class Main {
 
         KerasManager kerasManager = KerasManager.getInstance();
         DataSetManager dataSetManager = DataSetManager.getInstance(500,6,3);
-        MLPClassifierLinear network = new MLPClassifierLinear(123,0.01,1,500,1,3,6,300);
+        MLPClassifierLinear network = new MLPClassifierLinear(123,0.01,1,500,20,3,6,300);
 
         /**To train the model */
-        final File allData = new ClassPathResource("allData.csv").getFile();
-        DataSetIterator trainData = dataSetManager.createTrainDataSetIterator(allData);
-        DataSetIterator testData = dataSetManager.createDataSetIteror(allData);
+        final File allDataLight = new ClassPathResource("allDataLight.csv").getFile();
+        DataSetIterator trainData = dataSetManager.createTrainDataSetIterator(allDataLight);
+        DataSetIterator testData = dataSetManager.createDataSetIteror(allDataLight);
         network.train(trainData,testData);
         kerasManager.saveModelD4J(network.getModel());
 
