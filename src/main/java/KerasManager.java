@@ -53,7 +53,7 @@ public class KerasManager {
         return restored;
     }
 
-    public void saveModel(MultiLayerNetwork model) throws IOException {
+    public void saveKerasModel(MultiLayerNetwork model) throws IOException {
         File locationToSave = new File("NetworkKeras.zip");      //Where to save the network. Note: the file is in .zip format - can be opened externally
         boolean saveUpdater = true;                                             //Updater: i.e., the state for Momentum, RMSProp, Adagrad etc. Save this if you want to train your network more in the future
         ModelSerializer.writeModel(model, locationToSave, saveUpdater);
@@ -63,5 +63,12 @@ public class KerasManager {
         MultiLayerNetwork restored = ModelSerializer.restoreMultiLayerNetwork(file);
         System.out.println("Model restore from D4J zip");
         return restored;
+    }
+
+    public void saveModelD4J (MultiLayerNetwork model) throws IOException {
+        File locationToSave = new File("NetworkD4J.zip");      //Where to save the network. Note: the file is in .zip format - can be opened externally
+        boolean saveUpdater = true;                                             //Updater: i.e., the state for Momentum, RMSProp, Adagrad etc. Save this if you want to train your network more in the future
+        ModelSerializer.writeModel(model, locationToSave, saveUpdater);
+        System.out.println("Model save in a zip");
     }
 }

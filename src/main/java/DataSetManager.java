@@ -1,7 +1,10 @@
 import org.datavec.api.records.reader.RecordReader;
+import org.datavec.api.records.reader.SequenceRecordReader;
 import org.datavec.api.records.reader.impl.csv.CSVRecordReader;
+import org.datavec.api.records.reader.impl.csv.CSVSequenceRecordReader;
 import org.datavec.api.split.FileSplit;
 import org.deeplearning4j.datasets.datavec.RecordReaderDataSetIterator;
+import org.deeplearning4j.datasets.datavec.SequenceRecordReaderDataSetIterator;
 import org.nd4j.linalg.dataset.DataSet;
 import org.nd4j.linalg.dataset.SplitTestAndTrain;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
@@ -43,38 +46,31 @@ public class DataSetManager {
 
     public DataSetIterator createTrainDataSetIterator (File file) throws IOException, InterruptedException {
 
-        RecordReader rr = new CSVRecordReader(1,",");
-        rr.initialize(new FileSplit(file));
+        SequenceRecordReader trainFeatures = new CSVSequenceRecordReader(1,",");
 
-        DataSetIterator iterator = new RecordReaderDataSetIterator(rr,batchSize,labelIndex,numClasses);
+        trainFeatures.initialize(new FileSplit(file));
+
+        DataSetIterator iterator = new SequenceRecordReaderDataSetIterator(trainFeatures,batchSize,labelIndex,numClasses);
 
         System.out.println("Normalizer");
 
         DataNormalization normalizer = new NormalizerStandardize();
         normalizer.fit(iterator);
+        iterator.reset();
         iterator.setPreProcessor(normalizer);
 
         System.out.println("End fit normalizer");
 
         return iterator;
-    }
 
-    public DataSet createDataSetFor5FirstSec (File file) throws IOException, InterruptedException {
-
-        RecordReader rr = new CSVRecordReader(1,",");
-        rr.initialize(new FileSplit(file));
-
-        DataSetIterator iterator = new RecordReaderDataSetIterator(rr,batchSize);
-
-        return iterator.next();
     }
 
     public DataSetIterator createDataSetIteror (File file) throws IOException, InterruptedException {
 
-        RecordReader rr = new CSVRecordReader(1,",");
-        rr.initialize(new FileSplit(file));
+        SequenceRecordReader features = new CSVSequenceRecordReader(1,",");
+        features.initialize(new FileSplit(file));
 
-        DataSetIterator iterator = new RecordReaderDataSetIterator(rr,batchSize);
+        DataSetIterator iterator = new RecordReaderDataSetIterator(features,batchSize);
 
         DataNormalization normalizer = new NormalizerStandardize();
         normalizer.fit(iterator);
