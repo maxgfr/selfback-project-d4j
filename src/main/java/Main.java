@@ -20,7 +20,7 @@ public class Main {
         DataSetManager dataSetManager = DataSetManager.getInstance(500,6,3);
 
         try {
-            DataSetIterator trainData = dataSetManager.createDataSetIterator(allData);
+            DataSetIterator trainData = dataSetManager.createTrainDataSetIterator(allData);
 
             MLPClassifierLinear network = new MLPClassifierLinear(123,0.01,1,500,1,3,6,300);
 
@@ -28,11 +28,9 @@ public class Main {
 
             File file = new File ("raw/sitting.csv");
 
-            DataSet testData = dataSetManager.createTrainDataSetFor5FirstSec(file);
+            DataSetIterator testData = dataSetManager.createDataSetIteror(file);
 
-            //network.makeEvaluation(testData);
-
-            network.makePredictionFor5Sec(testData);
+            network.makePredictionForADataSetIterator(testData);
 
             network.saveModel();
 

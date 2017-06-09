@@ -105,17 +105,32 @@ public class MLPClassifierLinear {
         System.out.println("The evaluation of the model is : "+ eval.stats());
     }
 
-    public void makePredictionFor5Sec(DataSet ds) {
+    public void makePredictionForADataSet(DataSet ds) {
         //evaluate the model on the test set
         System.out.println("Prediction is starting");
-        List<String> ls = model.predict(ds);
-        for (String s : ls) {
-            System.out.println(s);
-        }
-        /*int[] tab = model.predict(ds.getFeatureMatrix());
+        int[] tab = model.predict(ds.getFeatureMatrix());
         for (int t : tab) {
             System.out.println(t);
-        }*/
+        }
+    }
+
+    public void makePredictionForADataSetIterator(DataSetIterator it) {
+        //evaluate the model on the test set
+        System.out.println("Prediction is starting");
+        int res = 0;
+        int i = 0;
+        while (it.hasNext()) {
+            DataSet ds = it.next();
+            int[] tab = model.predict(ds.getFeatureMatrix());
+            for (int t : tab) {
+                res+=t;
+                res = res/tab.length;
+            }
+            i++;
+        }
+        int moyenne = res/i;
+
+        System.out.println(moyenne);
     }
 
     public void saveModel () throws IOException {

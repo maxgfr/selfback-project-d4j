@@ -41,7 +41,7 @@ public class DataSetManager {
     }
 
 
-    public DataSetIterator createDataSetIterator (File file) throws IOException, InterruptedException {
+    public DataSetIterator createTrainDataSetIterator (File file) throws IOException, InterruptedException {
 
         RecordReader rr = new CSVRecordReader(1,",");
         rr.initialize(new FileSplit(file));
@@ -59,7 +59,7 @@ public class DataSetManager {
         return iterator;
     }
 
-    public DataSet createTrainDataSetFor5FirstSec (File file) throws IOException, InterruptedException {
+    public DataSet createDataSetFor5FirstSec (File file) throws IOException, InterruptedException {
 
         RecordReader rr = new CSVRecordReader(1,",");
         rr.initialize(new FileSplit(file));
@@ -67,6 +67,20 @@ public class DataSetManager {
         DataSetIterator iterator = new RecordReaderDataSetIterator(rr,batchSize);
 
         return iterator.next();
+    }
+
+    public DataSetIterator createDataSetIteror (File file) throws IOException, InterruptedException {
+
+        RecordReader rr = new CSVRecordReader(1,",");
+        rr.initialize(new FileSplit(file));
+
+        DataSetIterator iterator = new RecordReaderDataSetIterator(rr,batchSize);
+
+        DataNormalization normalizer = new NormalizerStandardize();
+        normalizer.fit(iterator);
+        iterator.setPreProcessor(normalizer);
+
+        return iterator;
     }
 
 }

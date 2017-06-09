@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a72650ba-2388-4825-8cbc-f50ccb23b68a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/DataSetManager.java" afterPath="$PROJECT_DIR$/src/main/java/DataSetManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/MLPClassifierLinear.java" afterPath="$PROJECT_DIR$/src/main/java/MLPClassifierLinear.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
     </list>
@@ -19,8 +20,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="34" column="41" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="41" />
+            <state relative-caret-position="230">
+              <caret line="32" column="54" lean-forward="false" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -28,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MLPClassifierLinear.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MLPClassifierLinear.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/MLPClassifierLinear.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="109" column="36" lean-forward="true" selection-start-line="109" selection-start-column="36" selection-end-line="109" selection-end-column="36" />
+            <state relative-caret-position="230">
+              <caret line="116" column="49" lean-forward="false" selection-start-line="116" selection-start-column="16" selection-end-line="116" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#saveModel#0;class#MLPClassifierLinear#0" expanded="false" />
@@ -45,18 +46,18 @@
       <file leaf-file-name="KerasManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/KerasManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-275">
+            <state relative-caret-position="-520">
               <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataSetManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DataSetManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/DataSetManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="68" column="31" lean-forward="false" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
+            <state relative-caret-position="155">
+              <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,9 +99,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/TestNetwork.java" />
         <option value="$PROJECT_DIR$/src/main/java/NetworkTester.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DataSetManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/MLPClassifierLinear.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DataSetManager.java" />
       </list>
     </option>
   </component>
@@ -867,10 +868,30 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/NetworkTester.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/KerasManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-520">
+          <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MLPClassifierLinear.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="116" column="49" lean-forward="false" selection-start-line="116" selection-start-column="16" selection-end-line="116" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#saveModel#0;class#MLPClassifierLinear#0" expanded="false" />
+            <element signature="method#dispModel#0;class#MLPClassifierLinear#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="34" column="41" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="41" />
+        <state relative-caret-position="230">
+          <caret line="32" column="54" lean-forward="false" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -879,30 +900,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DataSetManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="68" column="31" lean-forward="false" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
+        <state relative-caret-position="155">
+          <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/KerasManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-275">
-          <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MLPClassifierLinear.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="109" column="36" lean-forward="true" selection-start-line="109" selection-start-column="36" selection-end-line="109" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#saveModel#0;class#MLPClassifierLinear#0" expanded="false" />
-            <element signature="method#dispModel#0;class#MLPClassifierLinear#0" expanded="false" />
           </folding>
         </state>
       </provider>
