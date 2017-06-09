@@ -24,8 +24,6 @@ public class DataSetManager {
     private int numClasses;//6
     /**3 if the label index is on the 4th column*/
     private int labelIndex;//3
-    /**DataSetIterator*/
-    private DataSetIterator iterator;
 
     /** Constructor private */
     private DataSetManager(int batchSize, int numClasses, int labelIndex) {
@@ -42,17 +40,13 @@ public class DataSetManager {
         return INSTANCE;
     }
 
-    public DataSetIterator getDataSetIterator () {
-        return iterator;
-    }
 
-
-    public void createDataSetIterator (File file) throws IOException, InterruptedException {
+    public DataSetIterator createDataSetIterator (File file) throws IOException, InterruptedException {
 
         RecordReader rr = new CSVRecordReader(1,",");
         rr.initialize(new FileSplit(file));
 
-        iterator = new RecordReaderDataSetIterator(rr,batchSize,labelIndex,numClasses);
+        DataSetIterator iterator = new RecordReaderDataSetIterator(rr,batchSize,labelIndex,numClasses);
 
         System.out.println("Normalizer");
 
@@ -61,18 +55,8 @@ public class DataSetManager {
         iterator.setPreProcessor(normalizer);
 
         System.out.println("End fit normalizer");
+
+        return iterator;
     }
 
-
-    public DataSetIterator launchDataTest (File file) throws IOException, InterruptedException {
-
-        RecordReader rr = new CSVRecordReader(1,",");
-        rr.initialize(new FileSplit(file));
-
-        DataSetIterator it = new RecordReaderDataSetIterator(rr,batchSize,labelIndex,numClasses);
-
-
-        return it;
-
-    }
 }

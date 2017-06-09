@@ -19,30 +19,26 @@ public class Main {
         DataSetManager dataSetManager = DataSetManager.getInstance(500,6,3);
 
         try {
-            dataSetManager.createDataSetIterator(allData);
+            DataSetIterator trainData = dataSetManager.createDataSetIterator(allData);
+
+            MLPClassifierLinear network = new MLPClassifierLinear(123,0.01,1,500,1,3,6,300);
+
+            network.train(trainData);
+
+            File file = new File ("raw/sitting.csv");
+
+            DataSetIterator testData = dataSetManager.createDataSetIterator(file);
+
+            network.makeEvaluation(testData);
+
+            network.saveModel();
+
         } catch (IOException io){
             io.getMessage();
         } catch (InterruptedException inter){
             inter.getMessage();
         }
 
-        MLPClassifierLinear network = new MLPClassifierLinear(123,0.01,2,500,100,3,6,300);
-
-        network.train(dataSetManager.getDataSetIterator());
-
-
-        File file = new File ("raw/sitting.csv");
-
-        try {
-            DataSetIterator it = dataSetManager.launchDataTest(file);
-            network.makeEvaluation(it);
-        } catch (IOException io){
-            io.getMessage();
-        } catch (InterruptedException inter){
-            inter.getMessage();
-        }
-
-        network.saveModel();
 
         /** Restore and save model from Keras*/
         /*KerasManager kerasManager = KerasManager.getInstance();

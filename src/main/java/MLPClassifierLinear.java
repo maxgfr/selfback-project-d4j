@@ -97,7 +97,8 @@ public class MLPClassifierLinear {
         //evaluate the model on the test set
         System.out.println("Evaluation is starting");
         Evaluation eval = new Evaluation(6);
-        while (testData.hasNext()) {
+        //while (testData.hasNext()) {
+        for (int i=0;i<nbEpochs;i++){
             DataSet ds = testData.next();
             INDArray output = model.output(ds.getFeatureMatrix(),false);
             eval.eval(ds.getLabels(), output);
