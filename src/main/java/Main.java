@@ -19,6 +19,12 @@ public class Main {
 
         DataSetManager dataSetManager = DataSetManager.getInstance(500,6,3);
 
+        KerasManager kerasManager = KerasManager.getInstance();
+
+        File model = new File ("NetworkFromD4J.zip");
+
+        MultiLayerNetwork networkRestored = kerasManager.restoreModelFromD4J(model);
+
         try {
             DataSetIterator trainData = dataSetManager.createTrainDataSetIterator(allData);
 
@@ -42,7 +48,7 @@ public class Main {
 
 
         /** Restore and save model from Keras*/
-        /*KerasManager kerasManager = KerasManager.getInstance();
+        /*
 
         try {
             MultiLayerNetwork mln = kerasManager.loadFile("cnn_wrist_33.h5");

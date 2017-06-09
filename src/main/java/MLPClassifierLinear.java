@@ -4,6 +4,7 @@ import org.deeplearning4j.nn.api.OptimizationAlgorithm;
 import org.deeplearning4j.nn.conf.MultiLayerConfiguration;
 import org.deeplearning4j.nn.conf.NeuralNetConfiguration;
 import org.deeplearning4j.nn.conf.Updater;
+import org.deeplearning4j.nn.conf.layers.ConvolutionLayer;
 import org.deeplearning4j.nn.conf.layers.DenseLayer;
 import org.deeplearning4j.nn.conf.layers.OutputLayer;
 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
@@ -126,17 +127,19 @@ public class MLPClassifierLinear {
                 res+=t;
                 res = res/tab.length;
             }
+            System.out.println(i+" iteration(s), res="+res);
             i++;
         }
-        int moyenne = res/i;
+        int avg = res/i;
 
-        System.out.println(moyenne);
+        System.out.println("The average prediction is: "+avg);
     }
 
     public void saveModel () throws IOException {
         File locationToSave = new File("NetworkFromD4J.zip");      //Where to save the network. Note: the file is in .zip format - can be opened externally
         boolean saveUpdater = true;                                             //Updater: i.e., the state for Momentum, RMSProp, Adagrad etc. Save this if you want to train your network more in the future
         ModelSerializer.writeModel(model, locationToSave, saveUpdater);
+        System.out.println("Model save in a zip");
     }
 
     //http://localhost:9000/train

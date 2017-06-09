@@ -58,4 +58,10 @@ public class KerasManager {
         boolean saveUpdater = true;                                             //Updater: i.e., the state for Momentum, RMSProp, Adagrad etc. Save this if you want to train your network more in the future
         ModelSerializer.writeModel(model, locationToSave, saveUpdater);
     }
+
+    public MultiLayerNetwork restoreModelFromD4J (File file) throws IOException {
+        MultiLayerNetwork restored = ModelSerializer.restoreMultiLayerNetwork(file);
+        System.out.println("Model restore from D4J zip");
+        return restored;
+    }
 }
