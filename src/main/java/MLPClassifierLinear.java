@@ -105,13 +105,17 @@ public class MLPClassifierLinear {
         System.out.println("The evaluation of the model is : "+ eval.stats());
     }
 
-    public void makeEvaluationFor5Sec(DataSet ds) {
+    public void makePredictionFor5Sec(DataSet ds) {
         //evaluate the model on the test set
-        System.out.println("Evaluation is starting");
-        Evaluation eval = new Evaluation(6);
-        INDArray output = model.output(ds.getFeatureMatrix(),false);
-        eval.eval(ds.getLabels(), output);
-        System.out.println("The evaluation of the model is : "+ eval.stats());
+        System.out.println("Prediction is starting");
+        List<String> ls = model.predict(ds);
+        for (String s : ls) {
+            System.out.println(s);
+        }
+        /*int[] tab = model.predict(ds.getFeatureMatrix());
+        for (int t : tab) {
+            System.out.println(t);
+        }*/
     }
 
     public void saveModel () throws IOException {

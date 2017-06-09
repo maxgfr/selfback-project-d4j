@@ -32,7 +32,7 @@ public class Main {
 
             //network.makeEvaluation(testData);
 
-            network.makeEvaluationFor5Sec(testData);
+            network.makePredictionFor5Sec(testData);
 
             network.saveModel();
 
