@@ -1,10 +1,7 @@
 import org.deeplearning4j.api.storage.StatsStorage;
 import org.deeplearning4j.eval.Evaluation;
 import org.deeplearning4j.nn.api.OptimizationAlgorithm;
-import org.deeplearning4j.nn.conf.GradientNormalization;
-import org.deeplearning4j.nn.conf.MultiLayerConfiguration;
-import org.deeplearning4j.nn.conf.NeuralNetConfiguration;
-import org.deeplearning4j.nn.conf.Updater;
+import org.deeplearning4j.nn.conf.*;
 import org.deeplearning4j.nn.conf.layers.*;
 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
 import org.deeplearning4j.nn.weights.WeightInit;
@@ -27,13 +24,13 @@ public class MLPClassifierLinear {
 
     private int seed;//123
     private double learningRate;//0.01
-    private int iteration;//50
+    private int iteration;
     /** Defines number of samples that going to be propagated through the network.*/
     private int batchSize;//500
-    private int nbEpochs;//20
-    private int numInputs;//500
+    private int nbEpochs;
+    private int numInputs;//3
     private int numOutputs;//6
-    private int numHiddenNodes;//20
+    private int numHiddenNodes;//30
     private MultiLayerNetwork model;
 
     public MLPClassifierLinear (int seed, double learningRate, int iteration, int batchSize, int nEpochs, int numInputs, int numOutputs, int numHiddenNodes) {
@@ -68,7 +65,9 @@ public class MLPClassifierLinear {
                 .layer(0, new GravesLSTM.Builder().activation(Activation.TANH).nIn(numInputs).nOut(numHiddenNodes).build())
                 .layer(1, new RnnOutputLayer.Builder(LossFunctions.LossFunction.MCXENT)
                         .activation(Activation.SOFTMAX).nIn(numHiddenNodes).nOut(numOutputs).build())
-                .pretrain(false).backprop(true).build();
+                .pretrain(false)
+                .backprop(true)
+                .build();
 
         MultiLayerNetwork net = new MultiLayerNetwork(conf);
         net.init();
@@ -81,7 +80,7 @@ public class MLPClassifierLinear {
 
         dispModel();
 
-        for (int i=0; i<nbEpochs; i++) {
+        for (int i=1; i<nbEpochs+1; i++) {
             model.fit(iteratorTrain);
             makeEvaluation(model,testData);
             System.out.println(i+" epoch(s) completed");
@@ -106,7 +105,7 @@ public class MLPClassifierLinear {
 
     private void makeEvaluation (MultiLayerNetwork network, DataSetIterator testData) {
         Evaluation evaluation = network.evaluate(testData);
-        System.out.println("Evaluation of model :"+evaluation.accuracy()+evaluation.f1());
+        System.out.println("Evaluation of model with Accuracy = "+evaluation.accuracy()+" and F1 = "+evaluation.f1());
         testData.reset();
     }
 

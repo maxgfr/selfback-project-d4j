@@ -22,7 +22,7 @@ public class DataSetManager {
     /** Instance unique non préinitialisée */
     private static DataSetManager INSTANCE = null;
     /** Defines number of samples that going to be propagated through the network.*/
-    private int batchSize;//50
+    private int batchSize;//500
     /** Classes : downstairs,jogging,etc.*/
     private int numClasses;//6
     /**3 if the label index is on the 4th column*/
@@ -65,7 +65,7 @@ public class DataSetManager {
 
     }
 
-    public DataSetIterator createDataSetIteror (File file) throws IOException, InterruptedException {
+    public DataSetIterator createDataSetIterator (File file) throws IOException, InterruptedException {
 
         SequenceRecordReader features = new CSVSequenceRecordReader(1,",");
         features.initialize(new FileSplit(file));

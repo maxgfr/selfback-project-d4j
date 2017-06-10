@@ -12,12 +12,14 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
+        /**For allDataLight I use 20 epochs and 600 iterations*/
+
         KerasManager kerasManager = KerasManager.getInstance();
         DataSetManager dataSetManager = DataSetManager.getInstance(500,6,3);
-        MLPClassifierLinear network = new MLPClassifierLinear(123,0.01,10,500,5,3,6,30);
+        MLPClassifierLinear network = new MLPClassifierLinear(123,0.01,600,500,20,3,6,30);
 
         /**To train the model */
-        /*final File allDataLight = new ClassPathResource("allDataLight.csv").getFile();
+        /*final File allDataLight = new ClassPathResource("allData.csv").getFile();
         DataSetIterator trainData = dataSetManager.createTrainDataSetIterator(allDataLight);
         DataSetIterator testData = dataSetManager.createTrainDataSetIterator(allDataLight);
         network.train(trainData,testData);
@@ -29,7 +31,7 @@ public class Main {
         network.setModel(networkRestored);
         try {
             File file = new File ("raw/walking.csv");
-            DataSetIterator testData = dataSetManager.createDataSetIteror(file);
+            DataSetIterator testData = dataSetManager.createDataSetIterator(file);
             network.makePrediction(testData);
         } catch (IOException io){
             io.getMessage();
