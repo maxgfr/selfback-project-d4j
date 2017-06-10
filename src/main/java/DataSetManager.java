@@ -50,7 +50,7 @@ public class DataSetManager {
 
         trainFeatures.initialize(new FileSplit(file));
 
-        DataSetIterator iterator = new SequenceRecordReaderDataSetIterator(trainFeatures,batchSize,labelIndex,numClasses);
+        DataSetIterator iterator = new SequenceRecordReaderDataSetIterator(trainFeatures,batchSize,numClasses,labelIndex,false);
 
         System.out.println("Normalizer");
 

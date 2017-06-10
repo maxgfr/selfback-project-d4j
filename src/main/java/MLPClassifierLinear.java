@@ -14,8 +14,11 @@ import org.deeplearning4j.ui.stats.StatsListener;
 import org.deeplearning4j.ui.storage.InMemoryStatsStorage;
 import org.nd4j.linalg.activations.Activation;
 import org.nd4j.linalg.api.ndarray.INDArray;
+import org.nd4j.linalg.dataset.DataSet;
 import org.nd4j.linalg.lossfunctions.LossFunctions;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
+
+import java.util.List;
 
 /**
  * Created by maxime on 01-Jun-17.
@@ -74,47 +77,36 @@ public class MLPClassifierLinear {
 
         model.init();
 
-        model.setListeners(new ScoreIterationListener(20));
+        model.setListeners(new ScoreIterationListener(1));
 
         dispModel();
 
         for (int i=0; i<nbEpochs; i++) {
             model.fit(iteratorTrain);
             makeEvaluation(model,testData);
-            System.out.println(i+" epoch completed");
+            System.out.println(i+" epoch(s) completed");
         }
 
         System.out.println("We finished to train the network");
     }
 
-
     public void makePrediction(DataSetIterator it) {
         //evaluate the model on the test set
         System.out.println("Prediction is starting");
-        int res = 0;
-        int i = 0;
-        INDArray output = model.output(it);
-        int[] list = model.predict(output);
-        for (int t : list) {
-            res+=t;
-            res = res/list.length;
-            System.out.println(t);
-        }
-        /*while (it.hasNext()) {
+        while (it.hasNext()) {
             DataSet ds = it.next();
-            int[] tab =
-
-            System.out.println(i+" iteration(s), res="+res);
-            i++;
+            int[] ls = model.predict(ds.getFeatureMatrix());
+            for(int s : ls) {
+                System.out.println(s);
+            }
         }
-        int avg = res/i;*/
 
         System.out.println("The average prediction is: ");
     }
 
     private void makeEvaluation (MultiLayerNetwork network, DataSetIterator testData) {
         Evaluation evaluation = network.evaluate(testData);
-        System.out.println("Evaluation of model :"+evaluation.accuracy()+evaluation.f1()+ evaluation.stats());
+        System.out.println("Evaluation of model :"+evaluation.accuracy()+evaluation.f1());
         testData.reset();
     }
 
