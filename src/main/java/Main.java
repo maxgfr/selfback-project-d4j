@@ -12,14 +12,14 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        /**For allDataLight I use 20 epochs and 600 iterations*/
+        /**For allDataVeryLight I use 10 epochs and 5 iterations and 100 hiddenNodes ==> 0.85*/
 
         KerasManager kerasManager = KerasManager.getInstance();
         DataSetManager dataSetManager = DataSetManager.getInstance(500,6,3);
-        MLPClassifierLinear network = new MLPClassifierLinear(123,0.01,600,500,20,3,6,30);
+        MLPClassifierLinear network = new MLPClassifierLinear(123,0.01,5,500,10,3,6,100);
 
         /**To train the model */
-        /*final File allDataLight = new ClassPathResource("allData.csv").getFile();
+        /*final File allDataLight = new ClassPathResource("allDataVeryLight.csv").getFile();
         DataSetIterator trainData = dataSetManager.createTrainDataSetIterator(allDataLight);
         DataSetIterator testData = dataSetManager.createTrainDataSetIterator(allDataLight);
         network.train(trainData,testData);

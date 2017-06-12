@@ -15,7 +15,10 @@ import org.nd4j.linalg.dataset.DataSet;
 import org.nd4j.linalg.lossfunctions.LossFunctions;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by maxime on 01-Jun-17.
@@ -67,6 +70,9 @@ public class MLPClassifierLinear {
                         .activation(Activation.SOFTMAX).nIn(numHiddenNodes).nOut(numOutputs).build())
                 .pretrain(false)
                 .backprop(true)
+                .backpropType(BackpropType.TruncatedBPTT)
+                .tBPTTForwardLength(100)
+                .tBPTTBackwardLength(100)
                 .build();
 
         MultiLayerNetwork net = new MultiLayerNetwork(conf);
@@ -92,15 +98,15 @@ public class MLPClassifierLinear {
     public void makePrediction(DataSetIterator it) {
         //evaluate the model on the test set
         System.out.println("Prediction is starting");
+        List<Integer> list = new LinkedList<Integer>();
         while (it.hasNext()) {
             DataSet ds = it.next();
             int[] ls = model.predict(ds.getFeatureMatrix());
             for(int s : ls) {
-                System.out.println(s);
+                list.add(s);
             }
         }
-
-        System.out.println("The average prediction is: ");
+        dispOccurence(list);
     }
 
     private void makeEvaluation (MultiLayerNetwork network, DataSetIterator testData) {
@@ -125,5 +131,33 @@ public class MLPClassifierLinear {
         model.setListeners(new StatsListener(statsStorage));
     }
 
+    private void dispOccurence (List<Integer> myList) {
+        int downstairs,jogging,sitting,standing,upstairs,walking;
+        downstairs=jogging=sitting=standing=upstairs=walking = 0;
+        for (Integer x : myList) {
+            switch (x) {
+                case 0:  downstairs++;
+                    break;
+                case 1:  jogging++;
+                    break;
+                case 2:  sitting++;
+                    break;
+                case 3:  standing++;
+                    break;
+                case 4:  upstairs++;
+                    break;
+                case 5: walking++;
+                    break;
+            }
+            System.out.println("Number of occurrence :" +
+                    "\nfor downstairs is "+downstairs+
+                    "\nfor jogging is "+jogging+
+                    "\nfor sitting is "+sitting+
+                    "\nfor standing is "+ standing+
+                    "\nfor upstairs is " +upstairs+
+                    "\nfor walking is " +walking);
+        }
+    }
 
 }
+

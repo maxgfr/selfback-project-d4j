@@ -12,7 +12,7 @@ for file in "$path"*; do
 			echo "$file is a directory"
 			
 			for filename in "$file"/*.csv; do
-				head -n 50000 $filename > $OutFileName$j$extension
+				head -n 25000 $filename > $OutFileName$j$extension
 				j=$(( $j + 1 ))
 			done;
 			
