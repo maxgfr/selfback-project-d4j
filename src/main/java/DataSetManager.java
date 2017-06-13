@@ -91,7 +91,7 @@ public class DataSetManager {
 
         RecordReader trainFeatures = new CSVRecordReader(1,",");
         trainFeatures.initialize(new FileSplit(file));
-        DataSetIterator iterator = new RecordReaderDataSetIterator(trainFeatures,batchSize,numClasses,labelIndex);
+        DataSetIterator iterator = new RecordReaderDataSetIterator(trainFeatures,batchSize,labelIndex,numClasses);
 
         System.out.println("Normalizer");
 
@@ -101,7 +101,6 @@ public class DataSetManager {
 
         while (iterator.hasNext()) {
             DataSet ds = iterator.next();
-            ds.shuffle();
             SplitTestAndTrain testAndTrain = ds.splitTestAndTrain(0.65);  //Use 65% of data for training
 
             DataSet trainingData = testAndTrain.getTrain();
