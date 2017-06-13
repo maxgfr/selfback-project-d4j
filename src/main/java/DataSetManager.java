@@ -18,6 +18,7 @@ import org.nd4j.linalg.dataset.api.preprocessor.NormalizerStandardize;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -34,10 +35,9 @@ public class DataSetManager {
     private int numClasses;//6
     /**3 if the label index is on the 4th column*/
     private int labelIndex;//3
-
-    public List<DataSet> listDataSetTrain;
-
-    public  List<DataSet> listDataSetTest;
+    /**4 For feedforward network*/
+    private List<DataSet> listDataSetTrain;
+    private List<DataSet> listDataSetTest;
 
     /** Constructor private */
     private DataSetManager(int batchSize, int numClasses, int labelIndex) {
@@ -54,8 +54,15 @@ public class DataSetManager {
         return INSTANCE;
     }
 
+    public List<DataSet> getListTrainData () {
+        return listDataSetTrain;
+    }
 
-    public DataSetIterator createDataSetIteratorForLSTM (File file, boolean train) throws IOException, InterruptedException {
+    public List<DataSet> getListTestData () {
+        return listDataSetTest;
+    }
+
+    public DataSetIterator createDataSetIteratorForRNN (File file, boolean train) throws IOException, InterruptedException {
 
         DataSetIterator iterator = null;
 
@@ -64,7 +71,7 @@ public class DataSetManager {
         trainFeatures.initialize(new FileSplit(file));
 
         if (train){
-            iterator = new SequenceRecordReaderDataSetIterator(trainFeatures,batchSize,numClasses,labelIndex,false);
+            iterator = new SequenceRecordReaderDataSetIterator(trainFeatures,batchSize,numClasses,labelIndex);
         } else {
             iterator = new RecordReaderDataSetIterator(trainFeatures,batchSize);
         }
@@ -80,11 +87,11 @@ public class DataSetManager {
 
     }
 
-    public void createDataSetIteratorForCNN (File file) throws IOException, InterruptedException {
+    public void createDataSetIteratorForFeedForward (File file) throws IOException, InterruptedException {
 
-        RecordReader recordReader = new CSVRecordReader(1,",");
-        recordReader.initialize(new FileSplit(file));
-        DataSetIterator iterator = new RecordReaderDataSetIterator(recordReader,batchSize,labelIndex,numClasses);
+        SequenceRecordReader trainFeatures = new CSVSequenceRecordReader(1,",");
+        trainFeatures.initialize(new FileSplit(file));
+        DataSetIterator iterator = new SequenceRecordReaderDataSetIterator(trainFeatures,batchSize,numClasses,labelIndex);
 
         System.out.println("Normalizer");
 
@@ -109,6 +116,9 @@ public class DataSetManager {
             listDataSetTrain.add(trainingData);
             listDataSetTest.add(trainingData);
         }
+
+        //Collections.shuffle(listDataSetTrain);
+        //Collections.shuffle(listDataSetTest);
 
         System.out.println("End Normalizer");
 

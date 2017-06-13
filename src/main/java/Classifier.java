@@ -35,7 +35,6 @@ public class Classifier {
     private int numInputs;//3
     private int numOutputs;//6
     private int numHiddenNodes;//30
-    private int vectorSize;
     private MultiLayerNetwork model;
 
     public Classifier (int seed, double learningRate, int iteration, int batchSize, int nEpochs, int numInputs, int numOutputs, int numHiddenNodes) {
@@ -49,14 +48,13 @@ public class Classifier {
         this.numHiddenNodes= numHiddenNodes;
     }
 
-    public Classifier (double learningRate, int iteration, int batchSize, int nEpochs, int numInputs, int numOutputs, int vectorSize) {
+    public Classifier (double learningRate, int iteration, int batchSize, int nEpochs, int numInputs, int numOutputs) {
         this.learningRate = learningRate;
         this.iteration = iteration;
-        this.batchSize= batchSize;
+        this.batchSize = batchSize;
         this.nbEpochs = nEpochs;
         this.numInputs= numInputs;
         this.numOutputs= numOutputs;
-        this.vectorSize= vectorSize;
     }
 
     public MultiLayerNetwork getModel () {return model;}
@@ -98,6 +96,39 @@ public class Classifier {
 
     }
 
+    public void createFeedForward () {
+
+        System.out.println("We're starting to create the FeedForward network");
+
+        MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
+                .seed(seed)
+                .iterations(iteration)
+                .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
+                .learningRate(learningRate)
+                .updater(Updater.NESTEROVS).momentum(0.9)
+                .list()
+                .layer(0, new DenseLayer.Builder().nIn(numInputs).nOut(numHiddenNodes)
+                        .weightInit(WeightInit.XAVIER)
+                        .activation(Activation.RELU)
+                        .build())
+                .layer(1, new OutputLayer.Builder(LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD)
+                        .weightInit(WeightInit.XAVIER)
+                        .activation(Activation.SOFTMAX).weightInit(WeightInit.XAVIER)
+                        .nIn(numHiddenNodes).nOut(numOutputs).build())
+                .pretrain(false).backprop(true).build();
+
+        MultiLayerNetwork net = new MultiLayerNetwork(conf);
+        net.init();
+
+        model = new MultiLayerNetwork(conf);
+
+        model.init();
+
+        model.setListeners(new ScoreIterationListener(100));
+
+        System.out.println("We're starting to create the FeedForward network");
+    }
+
     public void createCNN () {
 
         System.out.println("We're starting to create the CNN network");
@@ -119,40 +150,60 @@ public class Classifier {
                 .list()
                 .layer(0, new ConvolutionLayer.Builder()
                         .nIn(numInputs)
-                        .kernelSize(1,vectorSize)
-                        .stride(1,vectorSize)
+                        .kernelSize(1,10)
+                        .stride(1,1)
                         .nOut(150)
                         .activation(Activation.RELU)
                         .build())
-                .layer(1, new ConvolutionLayer.Builder()
-                        .kernelSize(1,vectorSize)
-                        .stride(1,vectorSize)
+                .layer(1, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX)
+                        .kernelSize(1,2)
+                        .stride(1,2)
+                        .build())
+                .layer(2, new ConvolutionLayer.Builder()
                         .nIn(numInputs)
+                        .kernelSize(1,10)
+                        .stride(1,1)
                         .nOut(100)
                         .activation(Activation.RELU)
                         .build())
-                .layer(2, new ConvolutionLayer.Builder()
-                        .kernelSize(1,vectorSize)
-                        .stride(1,vectorSize)
+                .layer(3, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX)
+                        .kernelSize(1,2)
+                        .stride(1,2)
+                        .build())
+                .layer(4, new ConvolutionLayer.Builder()
+                        .kernelSize(1,10)
+                        .stride(1,1)
                         .nIn(numInputs)
                         .nOut(80)
                         .activation(Activation.RELU)
                         .build())
-                .layer(3, new ConvolutionLayer.Builder()
-                        .kernelSize(1,vectorSize)
-                        .stride(1,vectorSize)
+                .layer(5, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX)
+                        .kernelSize(1,2)
+                        .stride(1,2)
+                        .build())
+                .layer(6, new ConvolutionLayer.Builder()
+                        .kernelSize(1,10)
+                        .stride(1,1)
                         .nIn(numInputs)
                         .nOut(60)
                         .activation(Activation.RELU)
                         .build())
-                .layer(4, new ConvolutionLayer.Builder()
-                        .kernelSize(1,vectorSize)
-                        .stride(1,vectorSize)
+                .layer(7, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX)
+                        .kernelSize(1,2)
+                        .stride(1,2)
+                        .build())
+                .layer(8, new ConvolutionLayer.Builder()
                         .nIn(numInputs)
+                        .kernelSize(1,10)
+                        .stride(1,1)
                         .nOut(40)
                         .activation(Activation.RELU)
                         .build())
-                .layer(5, new OutputLayer.Builder()
+                .layer(9, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX)
+                        .kernelSize(1,2)
+                        .stride(1,2)
+                        .build())
+                .layer(10, new OutputLayer.Builder()
                         .nIn(numInputs)
                         .nOut(numOutputs)
                         .activation(Activation.SOFTMAX)
@@ -189,19 +240,18 @@ public class Classifier {
         System.out.println("We finished to train the LSTM network");
     }
 
-    public void trainCNN (List<DataSet> train, List<DataSet>  test) {
+    public void trainFeedForward (List<DataSet> train, List<DataSet>  test) {
 
-        System.out.println("We're starting to train the CNN network");
-
+        System.out.println("We're starting to train the FeedForward network");
         dispModel();
-
-        //evaluate the model on the test set
-        Evaluation eval = new Evaluation(6);
-
         for (DataSet ds : train) {
             model.fit(ds);
         }
-        System.out.println("We finished to train the CNN network");
+        System.out.println("We finished to train the FeedForward network");
+    }
+
+    public void trainCNN (){
+
     }
 
     public void makePrediction(DataSetIterator it) {
