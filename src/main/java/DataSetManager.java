@@ -89,9 +89,9 @@ public class DataSetManager {
 
     public void createDataSetIteratorForFeedForward (File file) throws IOException, InterruptedException {
 
-        SequenceRecordReader trainFeatures = new CSVSequenceRecordReader(1,",");
+        RecordReader trainFeatures = new CSVRecordReader(1,",");
         trainFeatures.initialize(new FileSplit(file));
-        DataSetIterator iterator = new SequenceRecordReaderDataSetIterator(trainFeatures,batchSize,numClasses,labelIndex);
+        DataSetIterator iterator = new RecordReaderDataSetIterator(trainFeatures,batchSize,numClasses,labelIndex);
 
         System.out.println("Normalizer");
 
