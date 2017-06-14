@@ -232,7 +232,7 @@ public class Classifier {
         System.out.println("We're starting to create the CNN network");
     }
 
-    public void trainLSTM (DataSetIterator iteratorTrain, DataSetIterator testData) {
+    public void trainRNN (DataSetIterator iteratorTrain, DataSetIterator testData) {
 
         System.out.println("We're starting to train the LSTM network");
 
@@ -245,16 +245,6 @@ public class Classifier {
         }
 
         System.out.println("We finished to train the LSTM network");
-    }
-
-    public void trainFeedForward (List<DataSet> train, List<DataSet>  test) {
-
-        System.out.println("We're starting to train the FeedForward network");
-        dispModel();
-        for (DataSet ds : train) {
-            model.fit(ds);
-        }
-        System.out.println("We finished to train the FeedForward network");
     }
 
     public void trainCNN (){

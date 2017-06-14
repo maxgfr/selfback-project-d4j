@@ -41,9 +41,6 @@ public class DataSetManager {
     private int numClasses;//6
     /**3 if the label index is on the 4th column*/
     private int labelIndex;//3
-    /**4 For feedforward network*/
-    private List<DataSet> listDataSetTrain;
-    private List<DataSet> listDataSetTest;
 
     /** Constructor private */
     private DataSetManager(int batchSize, int numClasses, int labelIndex) {
@@ -58,14 +55,6 @@ public class DataSetManager {
         { 	INSTANCE = new DataSetManager(batchSize,numClasses,labelIndex);
         }
         return INSTANCE;
-    }
-
-    public List<DataSet> getListTrainData () {
-        return listDataSetTrain;
-    }
-
-    public List<DataSet> getListTestData () {
-        return listDataSetTest;
     }
 
     public DataSetIterator createDataSetIteratorForLSTM (File fileData, File fileLabel) throws IOException, InterruptedException {
@@ -93,39 +82,21 @@ public class DataSetManager {
 
     }
 
-    public void createDataSetIteratorForFeedForward (File file) throws IOException, InterruptedException {
+    public DataSetIterator createDataSetIteratorForFeedForward (File file) throws IOException, InterruptedException {
 
-        RecordReader trainFeatures = new CSVRecordReader(1,",");
-        trainFeatures.initialize(new FileSplit(file));
-        DataSetIterator iterator = new RecordReaderDataSetIterator(trainFeatures,batchSize,labelIndex,numClasses);
+        RecordReader rr = new CSVRecordReader(1,",");
+        rr.initialize(new FileSplit(file));
+        DataSetIterator iterator = new RecordReaderDataSetIterator(rr,batchSize,labelIndex,numClasses);
 
         System.out.println("Normalizer");
 
-        listDataSetTrain = new LinkedList<DataSet>();
-
-        listDataSetTest = new LinkedList<DataSet>();
-
-        while (iterator.hasNext()) {
-            DataSet ds = iterator.next();
-            SplitTestAndTrain testAndTrain = ds.splitTestAndTrain(0.65);  //Use 65% of data for training
-
-            DataSet trainingData = testAndTrain.getTrain();
-            DataSet testData = testAndTrain.getTest();
-
-            //We need to normalize our data. We'll use NormalizeStandardize (which gives us mean 0, unit variance):
-            DataNormalization normalizer = new NormalizerStandardize();
-            normalizer.fit(trainingData);
-            normalizer.transform(trainingData);
-            normalizer.transform(testData);
-
-            listDataSetTrain.add(trainingData);
-            listDataSetTest.add(trainingData);
-        }
-
-        Collections.shuffle(listDataSetTrain);
-        Collections.shuffle(listDataSetTest);
+        /*DataNormalization normalizer = new NormalizerStandardize();
+        normalizer.fit(iterator);
+        iterator.setPreProcessor(normalizer);*/
 
         System.out.println("End Normalizer");
+
+        return iterator;
 
     }
 

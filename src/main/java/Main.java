@@ -34,16 +34,17 @@ public class Main {
         /*final File data = new ClassPathResource("data").getFile();
         final File index = new ClassPathResource("index").getFile();
         LSTM.createLSTM();
-        DataSetIterator testData = dataSetManager.createDataSetIteratorForCNN(data,index);
-        DataSetIterator trainData = dataSetManager.createDataSetIteratorForCNN(data,index);
-        LSTM.trainLSTM(trainData,testData);
+        DataSetIterator testData = dataSetManager.createDataSetIteratorForLSTM(data,index);
+        DataSetIterator trainData = dataSetManager.createDataSetIteratorForLSTM(data,index);
+        LSTM.trainRNN(trainData,testData);
         kerasManager.saveModelD4J(LSTM.getModel());*/
 
         /**To train  FeedForward model */
         final File allData = new ClassPathResource("allData.csv").getFile();
+        DataSetIterator testData = dataSetManager.createDataSetIteratorForFeedForward(allData);
+        DataSetIterator trainData = dataSetManager.createDataSetIteratorForFeedForward(allData);
         FeedForward.createFeedForward();
-        dataSetManager.createDataSetIteratorForFeedForward(allData);
-        FeedForward.trainFeedForward(dataSetManager.getListTrainData(),dataSetManager.getListTestData());
+        FeedForward.trainRNN(trainData,testData);
         kerasManager.saveModelD4J(FeedForward.getModel());
 
         /**To train  CNN model */
