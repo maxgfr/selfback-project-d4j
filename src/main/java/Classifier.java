@@ -103,18 +103,25 @@ public class Classifier {
         MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
                 .seed(seed)
                 .iterations(iteration)
+                .weightInit(WeightInit.XAVIER)
+                .activation(Activation.RELU)
                 .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
                 .learningRate(learningRate)
                 .updater(Updater.NESTEROVS).momentum(0.9)
                 .list()
-                .layer(0, new DenseLayer.Builder().nIn(numInputs).nOut(numHiddenNodes)
-                        .weightInit(WeightInit.XAVIER)
-                        .activation(Activation.RELU)
+                .layer(0, new DenseLayer.Builder()
+                        .nIn(numInputs)
+                        .nOut(numHiddenNodes)
                         .build())
-                .layer(1, new OutputLayer.Builder(LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD)
-                        .weightInit(WeightInit.XAVIER)
-                        .activation(Activation.SOFTMAX).weightInit(WeightInit.XAVIER)
-                        .nIn(numHiddenNodes).nOut(numOutputs).build())
+                .layer(1, new DenseLayer.Builder()
+                        .nIn(numHiddenNodes)
+                        .nOut(numHiddenNodes)
+                        .build())
+                .layer(2, new OutputLayer.Builder(LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD)
+                        .nIn(numHiddenNodes)
+                        .nOut(numOutputs)
+                        .activation(Activation.SOFTMAX)
+                        .build())
                 .pretrain(false).backprop(true).build();
 
         MultiLayerNetwork net = new MultiLayerNetwork(conf);
@@ -274,21 +281,6 @@ public class Classifier {
         testData.reset();
     }
 
-    //http://localhost:9000/train
-    private void dispModel () {
-        //Initialize the user interface backend
-        UIServer uiServer = UIServer.getInstance();
-
-        //Configure where the network information (gradients, score vs. time etc) is to be stored. Here: store in memory.
-        StatsStorage statsStorage = new InMemoryStatsStorage();         //Alternative: new FileStatsStorage(File), for saving and loading later
-
-        //Attach the StatsStorage instance to the UI: this allows the contents of the StatsStorage to be visualized
-        uiServer.attach(statsStorage);
-
-        //Then add the StatsListener to collect this information from the network, as it trains
-        model.setListeners(new StatsListener(statsStorage));
-    }
-
     private void dispOccurence (List<Integer> myList) {
         int downstairs,jogging,sitting,standing,upstairs,walking;
         downstairs=jogging=sitting=standing=upstairs=walking = 0;
@@ -307,14 +299,29 @@ public class Classifier {
                 case 5: walking++;
                     break;
             }
-            System.out.println("Number of occurrence :" +
-                    "\nfor downstairs is "+downstairs+
-                    "\nfor jogging is "+jogging+
-                    "\nfor sitting is "+sitting+
-                    "\nfor standing is "+ standing+
-                    "\nfor upstairs is " +upstairs+
-                    "\nfor walking is " +walking);
         }
+        System.out.println("Number of occurrence :" +
+                "\nfor downstairs is "+downstairs+
+                "\nfor jogging is "+jogging+
+                "\nfor sitting is "+sitting+
+                "\nfor standing is "+ standing+
+                "\nfor upstairs is " +upstairs+
+                "\nfor walking is " +walking);
+    }
+
+    //http://localhost:9000/train
+    private void dispModel () {
+        //Initialize the user interface backend
+        UIServer uiServer = UIServer.getInstance();
+
+        //Configure where the network information (gradients, score vs. time etc) is to be stored. Here: store in memory.
+        StatsStorage statsStorage = new InMemoryStatsStorage();         //Alternative: new FileStatsStorage(File), for saving and loading later
+
+        //Attach the StatsStorage instance to the UI: this allows the contents of the StatsStorage to be visualized
+        uiServer.attach(statsStorage);
+
+        //Then add the StatsListener to collect this information from the network, as it trains
+        model.setListeners(new StatsListener(statsStorage));
     }
 
 }

@@ -2,8 +2,1232 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a72650ba-2388-4825-8cbc-f50ccb23b68a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/DataSetManager.class" afterPath="$PROJECT_DIR$/target/classes/DataSetManager.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/raw/downstairs.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/raw/jogging.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/raw/sitting.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/raw/standing.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/raw/upstairs.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/raw/walking.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/data/downstairs.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/data/jogging.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/data/sitting.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/data/standing.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/data/upstairs.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/data/walking.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/007.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/008.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/009.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/010.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/011.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/012.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/013.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/016.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/018.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/019.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/020.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/021.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/022.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/023.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/024.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/025.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/026.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/027.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/028.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/029.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/030.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/031.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/033.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/034.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/035.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/036.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/039.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/040.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/041.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/042.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/043.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/044.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/046.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/047.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/048.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/049.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/050.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/051.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/052.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/053.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/054.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/055.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/056.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/057.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/058.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/059.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/060.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/061.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/062.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/downstairs/063.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/007.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/008.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/009.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/010.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/011.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/012.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/013.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/016.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/018.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/019.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/020.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/021.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/022.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/023.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/024.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/025.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/026.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/027.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/028.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/029.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/030.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/031.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/033.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/034.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/035.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/036.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/039.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/040.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/041.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/042.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/043.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/044.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/046.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/047.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/048.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/049.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/050.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/051.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/052.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/053.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/054.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/055.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/056.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/057.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/058.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/059.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/060.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/061.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/062.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/jogging/063.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/007.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/008.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/009.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/010.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/011.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/012.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/013.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/016.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/018.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/019.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/020.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/021.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/022.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/023.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/024.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/025.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/026.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/027.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/028.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/029.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/030.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/031.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/033.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/034.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/035.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/036.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/039.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/040.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/041.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/042.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/043.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/044.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/046.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/047.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/048.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/049.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/050.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/051.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/052.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/053.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/054.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/055.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/056.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/057.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/058.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/059.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/060.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/061.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/062.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/downstairs/063.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/007.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/008.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/009.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/010.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/011.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/012.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/013.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/016.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/018.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/019.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/020.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/021.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/022.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/023.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/024.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/025.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/026.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/027.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/028.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/029.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/030.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/031.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/033.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/034.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/035.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/036.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/039.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/040.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/041.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/042.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/043.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/044.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/046.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/047.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/048.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/049.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/050.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/051.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/052.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/053.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/054.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/055.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/056.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/057.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/058.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/059.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/060.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/061.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/062.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/jogging/063.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/007.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/008.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/009.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/010.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/011.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/012.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/013.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/016.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/018.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/019.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/020.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/021.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/022.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/023.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/024.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/025.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/026.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/027.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/028.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/029.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/030.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/031.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/033.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/034.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/035.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/036.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/039.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/040.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/041.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/042.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/043.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/044.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/046.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/047.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/048.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/049.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/050.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/051.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/052.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/053.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/054.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/055.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/056.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/057.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/058.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/059.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/060.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/061.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/062.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/sitting/063.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/007.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/008.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/009.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/010.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/011.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/012.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/013.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/016.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/018.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/019.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/020.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/021.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/022.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/023.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/024.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/025.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/026.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/027.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/028.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/029.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/030.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/031.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/033.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/034.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/035.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/036.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/039.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/040.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/041.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/042.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/043.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/044.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/046.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/047.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/048.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/049.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/050.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/051.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/052.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/053.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/054.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/055.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/056.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/057.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/058.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/059.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/060.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/061.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/062.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/standing/063.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/007.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/008.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/009.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/010.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/011.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/012.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/013.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/016.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/018.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/019.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/020.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/021.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/022.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/023.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/024.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/025.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/026.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/027.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/028.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/029.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/030.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/031.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/033.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/034.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/035.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/036.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/039.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/040.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/041.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/042.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/043.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/044.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/046.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/047.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/048.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/049.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/050.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/051.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/052.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/053.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/054.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/055.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/056.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/057.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/058.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/059.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/060.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/061.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/062.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/upstairs/063.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/007.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/008.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/009.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/010.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/011.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/012.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/013.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/016.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/018.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/019.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/020.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/021.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/022.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/023.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/024.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/025.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/026.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/027.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/028.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/029.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/030.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/031.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/033.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/034.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/035.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/036.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/039.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/040.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/041.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/042.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/043.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/044.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/046.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/047.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/048.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/049.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/050.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/051.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/052.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/053.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/054.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/055.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/056.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/057.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/058.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/059.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/060.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/061.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/062.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/label/walking/063.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/007.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/008.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/009.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/010.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/011.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/012.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/013.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/016.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/018.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/019.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/020.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/021.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/022.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/023.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/024.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/025.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/026.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/027.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/028.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/029.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/030.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/031.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/033.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/034.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/035.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/036.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/039.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/040.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/041.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/042.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/043.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/044.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/046.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/047.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/048.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/049.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/050.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/051.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/052.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/053.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/054.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/055.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/056.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/057.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/058.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/059.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/060.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/061.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/062.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/sitting/063.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/007.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/008.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/009.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/010.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/011.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/012.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/013.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/016.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/018.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/019.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/020.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/021.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/022.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/023.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/024.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/025.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/026.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/027.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/028.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/029.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/030.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/031.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/033.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/034.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/035.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/036.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/039.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/040.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/041.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/042.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/043.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/044.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/046.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/047.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/048.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/049.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/050.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/051.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/052.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/053.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/054.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/055.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/056.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/057.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/058.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/059.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/060.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/061.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/062.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/standing/063.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/007.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/008.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/009.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/010.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/011.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/012.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/013.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/016.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/018.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/019.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/020.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/021.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/022.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/023.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/024.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/025.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/026.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/027.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/028.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/029.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/030.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/031.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/033.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/034.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/035.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/036.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/039.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/040.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/041.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/042.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/043.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/044.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/046.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/047.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/048.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/049.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/050.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/051.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/052.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/053.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/054.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/055.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/056.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/057.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/058.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/059.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/060.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/061.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/062.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/upstairs/063.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/007.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/008.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/009.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/010.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/011.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/012.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/013.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/016.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/018.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/019.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/020.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/021.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/022.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/023.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/024.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/025.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/026.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/027.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/028.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/029.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/030.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/031.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/033.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/034.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/035.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/036.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/039.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/040.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/041.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/042.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/043.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/044.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/046.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/047.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/048.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/049.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/050.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/051.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/052.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/053.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/054.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/055.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/056.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/057.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/058.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/059.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/060.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/061.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/062.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/walking/063.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/allDataLight.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/allDataUltraLight.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/allDataVeryLight.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/data/downstairs.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/data/jogging.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/data/sitting.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/data/standing.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/data/upstairs.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/data/walking.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/007.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/008.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/009.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/010.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/011.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/012.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/013.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/016.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/018.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/019.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/020.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/021.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/022.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/023.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/024.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/025.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/026.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/027.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/028.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/029.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/030.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/031.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/033.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/034.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/035.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/036.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/039.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/040.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/041.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/042.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/043.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/044.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/046.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/047.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/048.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/049.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/050.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/051.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/052.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/053.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/054.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/055.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/056.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/057.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/058.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/059.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/060.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/061.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/062.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/downstairs/063.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/007.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/008.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/009.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/010.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/011.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/012.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/013.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/016.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/018.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/019.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/020.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/021.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/022.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/023.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/024.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/025.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/026.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/027.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/028.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/029.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/030.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/031.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/033.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/034.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/035.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/036.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/039.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/040.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/041.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/042.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/043.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/044.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/046.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/047.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/048.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/049.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/050.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/051.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/052.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/053.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/054.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/055.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/056.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/057.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/058.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/059.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/060.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/061.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/062.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jogging/063.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/007.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/008.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/009.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/010.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/011.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/012.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/013.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/016.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/018.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/019.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/020.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/021.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/022.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/023.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/024.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/025.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/026.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/027.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/028.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/029.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/030.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/031.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/033.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/034.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/035.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/036.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/039.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/040.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/041.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/042.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/043.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/044.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/046.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/047.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/048.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/049.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/050.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/051.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/052.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/053.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/054.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/055.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/056.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/057.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/058.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/059.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/060.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/061.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/062.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/downstairs/063.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/007.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/008.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/009.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/010.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/011.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/012.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/013.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/016.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/018.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/019.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/020.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/021.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/022.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/023.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/024.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/025.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/026.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/027.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/028.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/029.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/030.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/031.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/033.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/034.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/035.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/036.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/039.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/040.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/041.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/042.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/043.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/044.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/046.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/047.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/048.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/049.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/050.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/051.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/052.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/053.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/054.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/055.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/056.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/057.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/058.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/059.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/060.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/061.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/062.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/jogging/063.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/007.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/008.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/009.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/010.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/011.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/012.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/013.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/016.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/018.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/019.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/020.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/021.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/022.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/023.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/024.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/025.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/026.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/027.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/028.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/029.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/030.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/031.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/033.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/034.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/035.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/036.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/039.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/040.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/041.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/042.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/043.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/044.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/046.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/047.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/048.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/049.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/050.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/051.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/052.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/053.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/054.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/055.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/056.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/057.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/058.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/059.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/060.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/061.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/062.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/sitting/063.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/007.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/008.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/009.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/010.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/011.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/012.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/013.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/016.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/018.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/019.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/020.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/021.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/022.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/023.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/024.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/025.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/026.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/027.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/028.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/029.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/030.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/031.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/033.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/034.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/035.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/036.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/039.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/040.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/041.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/042.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/043.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/044.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/046.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/047.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/048.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/049.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/050.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/051.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/052.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/053.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/054.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/055.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/056.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/057.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/058.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/059.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/060.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/061.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/062.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/standing/063.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/007.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/008.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/009.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/010.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/011.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/012.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/013.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/016.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/018.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/019.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/020.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/021.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/022.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/023.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/024.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/025.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/026.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/027.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/028.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/029.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/030.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/031.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/033.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/034.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/035.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/036.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/039.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/040.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/041.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/042.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/043.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/044.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/046.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/047.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/048.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/049.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/050.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/051.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/052.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/053.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/054.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/055.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/056.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/057.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/058.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/059.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/060.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/061.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/062.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/upstairs/063.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/007.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/008.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/009.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/010.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/011.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/012.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/013.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/016.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/018.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/019.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/020.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/021.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/022.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/023.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/024.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/025.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/026.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/027.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/028.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/029.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/030.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/031.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/033.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/034.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/035.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/036.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/039.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/040.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/041.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/042.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/043.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/044.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/046.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/047.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/048.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/049.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/050.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/051.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/052.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/053.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/054.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/055.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/056.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/057.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/058.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/059.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/060.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/061.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/062.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/label/walking/063.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/007.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/008.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/009.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/010.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/011.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/012.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/013.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/016.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/018.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/019.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/020.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/021.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/022.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/023.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/024.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/025.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/026.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/027.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/028.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/029.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/030.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/031.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/033.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/034.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/035.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/036.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/039.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/040.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/041.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/042.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/043.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/044.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/046.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/047.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/048.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/049.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/050.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/051.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/052.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/053.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/054.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/055.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/056.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/057.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/058.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/059.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/060.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/061.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/062.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sitting/063.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/007.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/008.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/009.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/010.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/011.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/012.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/013.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/016.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/018.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/019.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/020.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/021.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/022.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/023.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/024.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/025.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/026.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/027.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/028.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/029.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/030.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/031.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/033.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/034.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/035.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/036.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/039.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/040.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/041.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/042.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/043.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/044.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/046.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/047.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/048.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/049.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/050.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/051.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/052.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/053.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/054.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/055.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/056.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/057.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/058.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/059.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/060.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/061.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/062.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/standing/063.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/007.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/008.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/009.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/010.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/011.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/012.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/013.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/016.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/018.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/019.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/020.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/021.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/022.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/023.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/024.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/025.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/026.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/027.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/028.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/029.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/030.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/031.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/033.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/034.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/035.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/036.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/039.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/040.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/041.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/042.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/043.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/044.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/046.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/047.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/048.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/049.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/050.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/051.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/052.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/053.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/054.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/055.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/056.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/057.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/058.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/059.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/060.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/061.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/062.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/upstairs/063.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/007.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/008.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/009.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/010.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/011.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/012.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/013.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/016.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/018.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/019.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/020.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/021.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/022.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/023.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/024.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/025.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/026.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/027.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/028.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/029.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/030.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/031.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/033.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/034.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/035.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/036.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/039.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/040.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/041.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/042.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/043.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/044.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/046.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/047.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/048.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/049.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/050.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/051.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/052.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/053.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/054.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/055.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/056.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/057.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/058.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/059.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/060.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/061.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/062.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/walking/063.csv" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Classifier.class" afterPath="$PROJECT_DIR$/target/classes/Classifier.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Classifier.java" afterPath="$PROJECT_DIR$/src/main/java/Classifier.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/DataSetManager.java" afterPath="$PROJECT_DIR$/src/main/java/DataSetManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,17 +1237,20 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/D4JSelfback$Main.coverage" NAME="Main Coverage Results" MODIFIED="1497456277736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="D4JSelfback" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+            <state relative-caret-position="422">
+              <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -34,10 +1261,9 @@
       <file leaf-file-name="Classifier.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Classifier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="242" column="0" lean-forward="false" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
+            <state relative-caret-position="133">
+              <caret line="98" column="37" lean-forward="false" selection-start-line="98" selection-start-column="37" selection-end-line="98" selection-end-column="37" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="method#createLSTM#0;class#Classifier#0" expanded="false" />
                 <element signature="method#createFeedForward#0;class#Classifier#0" expanded="false" />
                 <element signature="method#createCNN#0;class#Classifier#0" expanded="false" />
@@ -46,20 +1272,24 @@
                 <element signature="method#trainCNN#0;class#Classifier#0" expanded="false" />
                 <element signature="method#makePrediction#0;class#Classifier#0" expanded="false" />
                 <element signature="method#makeEvaluation#0;class#Classifier#0" expanded="false" />
-                <element signature="method#dispModel#0;class#Classifier#0" expanded="false" />
                 <element signature="method#dispOccurence#0;class#Classifier#0" expanded="false" />
+                <element signature="method#dispModel#0;class#Classifier#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataSetManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DataSetManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/DataSetManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="95" column="36" lean-forward="false" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
+            <state relative-caret-position="278">
+              <caret line="95" column="51" lean-forward="false" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="51" />
               <folding>
-                <element signature="method#createDataSetIteratorForRNN#0;class#DataSetManager#0" expanded="false" />
+                <element signature="method#createDataSetIteratorForLSTM#0;class#DataSetManager#0" expanded="false" />
+                <element signature="method#createDataSetIteratorForFeedForward#0;class#DataSetManager#0" expanded="false" />
+                <element signature="method#createDataSetIteratorForCNN#0;class#DataSetManager#0" expanded="false" />
+                <element signature="method#labelGenerator#0;class#DataSetManager#0" expanded="false" />
+                <element signature="e#6275#6299#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,9 +1333,9 @@
         <option value="$PROJECT_DIR$/src/main/java/MLPClassifierLinear.java" />
         <option value="$PROJECT_DIR$/src/main/java/CNNClasssifier.java" />
         <option value="$PROJECT_DIR$/src/main/java/LSTMClassifier.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DataSetManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/Classifier.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DataSetManager.java" />
       </list>
     </option>
   </component>
@@ -141,9 +1371,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -187,10 +1414,6 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -214,22 +1437,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="D4JSelfback" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="D4JSelfback" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="raw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -509,8 +1721,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="true" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -521,19 +1732,19 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532699" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29964328" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22486487" sideWeight="0.67895365" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2372973" sideWeight="0.67895365" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39954337" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22108108" sideWeight="0.32104638" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39954337" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -547,7 +1758,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -556,51 +1767,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="36" column="35" lean-forward="true" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Classifier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#createLSTM#0;class#Classifier#0" expanded="false" />
-            <element signature="method#createFeedForward#0;class#Classifier#0" expanded="false" />
-            <element signature="method#createCNN#0;class#Classifier#0" expanded="false" />
-            <element signature="method#trainLSTM#0;class#Classifier#0" expanded="false" />
-            <element signature="method#trainFeedForward#0;class#Classifier#0" expanded="false" />
-            <element signature="method#trainCNN#0;class#Classifier#0" expanded="false" />
-            <element signature="method#makePrediction#0;class#Classifier#0" expanded="false" />
-            <element signature="method#makeEvaluation#0;class#Classifier#0" expanded="false" />
-            <element signature="method#dispModel#0;class#Classifier#0" expanded="false" />
-            <element signature="method#dispOccurence#0;class#Classifier#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MLPClassifier.java" />
-    <entry file="file://$PROJECT_DIR$/D4JSelfback.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="466">
@@ -622,7 +1788,7 @@
         <state relative-caret-position="101">
           <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#createLSTM#0;class#Classifier#0" expanded="false" />
             <element signature="method#createFeedForward#0;class#Classifier#0" expanded="false" />
             <element signature="method#createCNN#0;class#Classifier#0" expanded="false" />
@@ -631,7 +1797,6 @@
             <element signature="method#trainCNN#0;class#Classifier#0" expanded="false" />
             <element signature="method#makePrediction#0;class#Classifier#0" expanded="false" />
             <element signature="method#makeEvaluation#0;class#Classifier#0" expanded="false" />
-            <element signature="method#dispModel#0;class#Classifier#0" expanded="false" />
             <element signature="method#dispOccurence#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
@@ -660,7 +1825,11 @@
         <state relative-caret-position="1200">
           <caret line="48" column="5" lean-forward="false" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
           <folding>
-            <element signature="method#createDataSetIteratorForRNN#0;class#DataSetManager#0" expanded="false" />
+            <element signature="method#createDataSetIteratorForLSTM#0;class#DataSetManager#0" expanded="false" />
+            <element signature="method#createDataSetIteratorForFeedForward#0;class#DataSetManager#0" expanded="false" />
+            <element signature="method#createDataSetIteratorForCNN#0;class#DataSetManager#0" expanded="false" />
+            <element signature="method#labelGenerator#0;class#DataSetManager#0" expanded="false" />
+            <element signature="e#6275#6299#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -670,7 +1839,7 @@
         <state relative-caret-position="950">
           <caret line="38" column="14" lean-forward="false" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#createLSTM#0;class#Classifier#0" expanded="false" />
             <element signature="method#createFeedForward#0;class#Classifier#0" expanded="false" />
             <element signature="method#createCNN#0;class#Classifier#0" expanded="false" />
@@ -679,7 +1848,6 @@
             <element signature="method#trainCNN#0;class#Classifier#0" expanded="false" />
             <element signature="method#makePrediction#0;class#Classifier#0" expanded="false" />
             <element signature="method#makeEvaluation#0;class#Classifier#0" expanded="false" />
-            <element signature="method#dispModel#0;class#Classifier#0" expanded="false" />
             <element signature="method#dispOccurence#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
@@ -708,7 +1876,7 @@
         <state relative-caret-position="950">
           <caret line="38" column="14" lean-forward="true" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#createLSTM#0;class#Classifier#0" expanded="false" />
             <element signature="method#createFeedForward#0;class#Classifier#0" expanded="false" />
             <element signature="method#createCNN#0;class#Classifier#0" expanded="false" />
@@ -717,7 +1885,6 @@
             <element signature="method#trainCNN#0;class#Classifier#0" expanded="false" />
             <element signature="method#makePrediction#0;class#Classifier#0" expanded="false" />
             <element signature="method#makeEvaluation#0;class#Classifier#0" expanded="false" />
-            <element signature="method#dispModel#0;class#Classifier#0" expanded="false" />
             <element signature="method#dispOccurence#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
@@ -746,7 +1913,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#createLSTM#0;class#Classifier#0" expanded="false" />
             <element signature="method#createFeedForward#0;class#Classifier#0" expanded="false" />
             <element signature="method#createCNN#0;class#Classifier#0" expanded="false" />
@@ -755,7 +1922,6 @@
             <element signature="method#trainCNN#0;class#Classifier#0" expanded="false" />
             <element signature="method#makePrediction#0;class#Classifier#0" expanded="false" />
             <element signature="method#makeEvaluation#0;class#Classifier#0" expanded="false" />
-            <element signature="method#dispModel#0;class#Classifier#0" expanded="false" />
             <element signature="method#dispOccurence#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
@@ -864,13 +2030,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/deeplearning4j/deeplearning4j-core/0.8.0/deeplearning4j-core-0.8.0.jar!/org/deeplearning4j/datasets/datavec/SequenceRecordReaderDataSetIterator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="77" column="11" lean-forward="false" selection-start-line="77" selection-start-column="11" selection-end-line="77" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/allDataLight.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -879,30 +2038,72 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CNNClasssifier.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/KerasManager.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/nd4j/nd4j-api/0.8.0/nd4j-api-0.8.0.jar!/org/nd4j/linalg/util/LinAlgExceptions.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="63" column="26" lean-forward="false" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
+        <state relative-caret-position="152">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/nd4j/nd4j-api/0.8.0/nd4j-api-0.8.0.jar!/org/nd4j/linalg/api/ops/BaseTransformOp.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+        <state relative-caret-position="152">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/nd4j/nd4j-api/0.8.0/nd4j-api-0.8.0.jar!/org/nd4j/linalg/api/ops/impl/transforms/Set.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#646#647#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/nd4j/nd4j-api/0.8.0/nd4j-api-0.8.0.jar!/org/nd4j/linalg/api/ndarray/BaseNDArray.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="836" column="0" lean-forward="false" selection-start-line="836" selection-start-column="0" selection-end-line="836" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/deeplearning4j/deeplearning4j-core/0.8.0/deeplearning4j-core-0.8.0.jar!/org/deeplearning4j/datasets/datavec/SequenceRecordReaderDataSetIterator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="252" column="0" lean-forward="false" selection-start-line="252" selection-start-column="0" selection-end-line="252" selection-end-column="0" />
+          <folding>
+            <element signature="e#4242#4243#0" expanded="true" />
+            <element signature="e#4294#4295#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/nd4j/nd4j-api/0.8.0/nd4j-api-0.8.0.jar!/org/nd4j/linalg/dataset/api/preprocessor/AbstractDataSetNormalizer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/KerasManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="38" column="40" lean-forward="false" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Classifier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="242" column="0" lean-forward="false" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
+        <state relative-caret-position="133">
+          <caret line="98" column="37" lean-forward="false" selection-start-line="98" selection-start-column="37" selection-end-line="98" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#createLSTM#0;class#Classifier#0" expanded="false" />
             <element signature="method#createFeedForward#0;class#Classifier#0" expanded="false" />
             <element signature="method#createCNN#0;class#Classifier#0" expanded="false" />
@@ -911,18 +2112,32 @@
             <element signature="method#trainCNN#0;class#Classifier#0" expanded="false" />
             <element signature="method#makePrediction#0;class#Classifier#0" expanded="false" />
             <element signature="method#makeEvaluation#0;class#Classifier#0" expanded="false" />
-            <element signature="method#dispModel#0;class#Classifier#0" expanded="false" />
             <element signature="method#dispOccurence#0;class#Classifier#0" expanded="false" />
+            <element signature="method#dispModel#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DataSetManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="95" column="36" lean-forward="false" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
+        <state relative-caret-position="278">
+          <caret line="95" column="51" lean-forward="false" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="51" />
           <folding>
-            <element signature="method#createDataSetIteratorForRNN#0;class#DataSetManager#0" expanded="false" />
+            <element signature="method#createDataSetIteratorForLSTM#0;class#DataSetManager#0" expanded="false" />
+            <element signature="method#createDataSetIteratorForFeedForward#0;class#DataSetManager#0" expanded="false" />
+            <element signature="method#createDataSetIteratorForCNN#0;class#DataSetManager#0" expanded="false" />
+            <element signature="method#labelGenerator#0;class#DataSetManager#0" expanded="false" />
+            <element signature="e#6275#6299#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,11 +1,17 @@
+import org.datavec.api.io.labels.PathLabelGenerator;
+import org.datavec.api.io.labels.PatternPathLabelGenerator;
 import org.datavec.api.records.reader.RecordReader;
 import org.datavec.api.records.reader.SequenceRecordReader;
 import org.datavec.api.records.reader.impl.csv.CSVRecordReader;
 import org.datavec.api.records.reader.impl.csv.CSVSequenceRecordReader;
 import org.datavec.api.split.FileSplit;
+import org.datavec.api.split.NumberedFileInputSplit;
+import org.datavec.api.writable.Writable;
+import org.datavec.image.recordreader.ImageRecordReader;
 import org.deeplearning4j.datasets.datavec.RecordReaderDataSetIterator;
 import org.deeplearning4j.datasets.datavec.SequenceRecordReaderDataSetIterator;
 import org.deeplearning4j.datasets.iterator.BaseDatasetIterator;
+import org.deeplearning4j.datasets.iterator.MultipleEpochsIterator;
 import org.deeplearning4j.datasets.iterator.impl.CifarDataSetIterator;
 import org.deeplearning4j.datasets.iterator.impl.ListDataSetIterator;
 import org.nd4j.linalg.api.ndarray.INDArray;
@@ -62,28 +68,28 @@ public class DataSetManager {
         return listDataSetTest;
     }
 
-    public DataSetIterator createDataSetIteratorForRNN (File file, boolean train) throws IOException, InterruptedException {
-
-        DataSetIterator iterator = null;
+    public DataSetIterator createDataSetIteratorForLSTM (File fileData, File fileLabel) throws IOException, InterruptedException {
 
         SequenceRecordReader trainFeatures = new CSVSequenceRecordReader(1,",");
+        trainFeatures.initialize(new NumberedFileInputSplit(fileData.getAbsolutePath() + "/%d.csv", 1, 6));
 
-        trainFeatures.initialize(new FileSplit(file));
+        SequenceRecordReader trainLabels = new CSVSequenceRecordReader();
+        trainLabels.initialize(new NumberedFileInputSplit(fileLabel.getAbsolutePath() + "/%d.csv", 1, 6));
 
-        if (train){
-            iterator = new SequenceRecordReaderDataSetIterator(trainFeatures,batchSize,numClasses,labelIndex);
-        } else {
-            iterator = new RecordReaderDataSetIterator(trainFeatures,batchSize);
-        }
+        DataSetIterator trainData = new SequenceRecordReaderDataSetIterator(trainFeatures, trainLabels, batchSize, numClasses,
+                false, SequenceRecordReaderDataSetIterator.AlignmentMode.ALIGN_END);
+
         System.out.println("Normalizer");
 
+        //Normalize the training data
         DataNormalization normalizer = new NormalizerStandardize();
-        normalizer.fit(iterator);
-        iterator.setPreProcessor(normalizer);
+        normalizer.fit(trainData);
+        trainData.reset();
+        trainData.setPreProcessor(normalizer);
 
         System.out.println("End fit normalizer");
 
-        return iterator;
+        return trainData;
 
     }
 
@@ -116,11 +122,51 @@ public class DataSetManager {
             listDataSetTest.add(trainingData);
         }
 
-        //Collections.shuffle(listDataSetTrain);
-        //Collections.shuffle(listDataSetTest);
+        Collections.shuffle(listDataSetTrain);
+        Collections.shuffle(listDataSetTest);
 
         System.out.println("End Normalizer");
 
+    }
+
+    public void createDataSetIteratorForCNN (File file, int height, int width) throws IOException, InterruptedException {
+
+
+
+        ImageRecordReader irr = new ImageRecordReader(height,width);
+        //irr.
+
+        RecordReader trainFeatures = new CSVRecordReader(1,",");
+        trainFeatures.initialize(new FileSplit(file));
+        DataSetIterator iterator = new RecordReaderDataSetIterator(trainFeatures,batchSize,labelIndex,numClasses);
+
+        DataNormalization normalizer = new NormalizerStandardize();
+        normalizer.fit(iterator);
+
+    }
+
+    private Writable labelGenerator (File file) {
+        String path  = file.getPath();
+        PathLabelGenerator pathLabelGenerator = new PatternPathLabelGenerator(".[0-9]+");
+        Writable label = pathLabelGenerator.getLabelForPath(path);
+        System.out.println(label.toString());
+        return label;
+    }
+
+    public List<MultipleEpochsIterator> createMultiEpochsForRNN (List<File> list ) throws IOException, InterruptedException {
+
+        int i = 0;
+        List<MultipleEpochsIterator> listMult = new LinkedList<MultipleEpochsIterator>();
+        for (File f : list) {
+            SequenceRecordReader trainFeatures = new CSVSequenceRecordReader(1,",");
+            trainFeatures.initialize(new FileSplit(f));
+            DataSetIterator iterator = new SequenceRecordReaderDataSetIterator(trainFeatures,batchSize,numClasses,i);
+            DataNormalization normalizer = new NormalizerStandardize();
+            normalizer.fit(iterator);
+            MultipleEpochsIterator multipleEpochsIterator = new MultipleEpochsIterator(50,iterator);
+            listMult.add(multipleEpochsIterator);
+        }
+        return listMult;
     }
 
 }
