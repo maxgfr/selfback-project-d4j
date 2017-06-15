@@ -82,17 +82,23 @@ public class DataSetManager {
 
     }
 
-    public DataSetIterator createDataSetIteratorForFeedForward (File file) throws IOException, InterruptedException {
+    public DataSetIterator createDataSetIteratorForFeedForward (File file, boolean train) throws IOException, InterruptedException {
+
+        DataSetIterator iterator = null;
 
         RecordReader rr = new CSVRecordReader(1,",");
         rr.initialize(new FileSplit(file));
-        DataSetIterator iterator = new RecordReaderDataSetIterator(rr,batchSize,labelIndex,numClasses);
+        if (train) {
+            iterator = new RecordReaderDataSetIterator(rr,batchSize,labelIndex,numClasses);
+        } else {
+            iterator = new RecordReaderDataSetIterator(rr,batchSize);
+        }
 
         System.out.println("Normalizer");
 
-        /*DataNormalization normalizer = new NormalizerStandardize();
+        DataNormalization normalizer = new NormalizerStandardize();
         normalizer.fit(iterator);
-        iterator.setPreProcessor(normalizer);*/
+        iterator.setPreProcessor(normalizer);
 
         System.out.println("End Normalizer");
 
@@ -116,28 +122,5 @@ public class DataSetManager {
 
     }
 
-    private Writable labelGenerator (File file) {
-        String path  = file.getPath();
-        PathLabelGenerator pathLabelGenerator = new PatternPathLabelGenerator(".[0-9]+");
-        Writable label = pathLabelGenerator.getLabelForPath(path);
-        System.out.println(label.toString());
-        return label;
-    }
-
-    public List<MultipleEpochsIterator> createMultiEpochsForRNN (List<File> list ) throws IOException, InterruptedException {
-
-        int i = 0;
-        List<MultipleEpochsIterator> listMult = new LinkedList<MultipleEpochsIterator>();
-        for (File f : list) {
-            SequenceRecordReader trainFeatures = new CSVSequenceRecordReader(1,",");
-            trainFeatures.initialize(new FileSplit(f));
-            DataSetIterator iterator = new SequenceRecordReaderDataSetIterator(trainFeatures,batchSize,numClasses,i);
-            DataNormalization normalizer = new NormalizerStandardize();
-            normalizer.fit(iterator);
-            MultipleEpochsIterator multipleEpochsIterator = new MultipleEpochsIterator(50,iterator);
-            listMult.add(multipleEpochsIterator);
-        }
-        return listMult;
-    }
 
 }

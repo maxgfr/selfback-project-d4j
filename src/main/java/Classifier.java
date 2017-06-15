@@ -16,10 +16,7 @@ import org.nd4j.linalg.dataset.DataSet;
 import org.nd4j.linalg.lossfunctions.LossFunctions;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by maxime on 01-Jun-17.
@@ -232,7 +229,7 @@ public class Classifier {
         System.out.println("We're starting to create the CNN network");
     }
 
-    public void trainRNN (DataSetIterator iteratorTrain, DataSetIterator testData) {
+    public void trainLSTM (DataSetIterator iteratorTrain, DataSetIterator testData) {
 
         System.out.println("We're starting to train the LSTM network");
 
@@ -245,6 +242,39 @@ public class Classifier {
         }
 
         System.out.println("We finished to train the LSTM network");
+    }
+
+    public void trainFeedForward (DataSetIterator iteratorTrain, DataSetIterator testData) {
+
+        System.out.println("We're starting to train the FeedForward network");
+        dispModel();
+
+        //shuffle data
+        List<DataSet> list = new LinkedList<DataSet>();
+        while (iteratorTrain.hasNext()){
+            DataSet ds = iteratorTrain.next();
+            list.add(ds);
+        }
+        Collections.shuffle(list);
+
+        //fit network
+        for (int i=1; i<nbEpochs+1; i++) {
+            for (DataSet dataSet : list) {
+                model.fit(dataSet);
+            }
+        }
+        
+        //make an evaluation
+        System.out.println("Evaluate model....");
+        Evaluation eval = new Evaluation(numOutputs);
+        while(testData.hasNext()){
+            DataSet t = testData.next();
+            INDArray features = t.getFeatureMatrix();
+            INDArray labels = t.getLabels();
+            INDArray predicted = model.output(features,false);
+            eval.eval(labels, predicted);
+        }
+        System.out.println(eval.stats());
     }
 
     public void trainCNN (){

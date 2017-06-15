@@ -27,7 +27,7 @@ public class Main {
         KerasManager kerasManager = KerasManager.getInstance();
         DataSetManager dataSetManager = DataSetManager.getInstance(500,6,3);
         Classifier LSTM = new Classifier(123,0.01,1,500,40,3,6,10);
-        Classifier FeedForward = new Classifier(123,0.01,20,500,100,3,6,100);
+        Classifier FeedForward = new Classifier(123,0.01,1,500,2,3,6,100);
         Classifier CNN = new Classifier(0.01,1,500,40,3,6);
 
         /**To train LSTM model */
@@ -40,29 +40,29 @@ public class Main {
         kerasManager.saveModelD4J(LSTM.getModel());*/
 
         /**To train  FeedForward model */
-        final File allData = new ClassPathResource("allData.csv").getFile();
-        DataSetIterator testData = dataSetManager.createDataSetIteratorForFeedForward(allData);
-        DataSetIterator trainData = dataSetManager.createDataSetIteratorForFeedForward(allData);
+        /*final File allData = new ClassPathResource("allData.csv").getFile();
+        DataSetIterator testData = dataSetManager.createDataSetIteratorForFeedForward(allData,true);
+        DataSetIterator trainData = dataSetManager.createDataSetIteratorForFeedForward(allData,true);
         FeedForward.createFeedForward();
-        FeedForward.trainRNN(trainData,testData);
-        kerasManager.saveModelD4J(FeedForward.getModel());
+        FeedForward.trainFeedForward(trainData,testData);
+        kerasManager.saveModelD4J(FeedForward.getModel());*/
 
         /**To train  CNN model */
-        /*final File data = new ClassPathResource("data").getFile();
+        final File data = new ClassPathResource("data").getFile();
         final File index = new ClassPathResource("index").getFile();
         CNN.createCNN();
-        DataSetIterator trainData = dataSetManager.createDataSetIteratorForCNN(data,index);
-        DataSetIterator testData = dataSetManager.createDataSetIteratorForCNN(data,index);
+        DataSetIterator trainData = dataSetManager.createDataSetIteratorForLSTM(data,index);
+        DataSetIterator testData = dataSetManager.createDataSetIteratorForLSTM(data,index);
         CNN.trainLSTM(trainData,testData);
-        kerasManager.saveModelD4J(CNN.getModel());*/
+        kerasManager.saveModelD4J(CNN.getModel());
 
         /**To test the model */
         /*File model = new File ("NetworkD4J.zip");
         MultiLayerNetwork networkRestored = kerasManager.restoreModelFromD4J(model);
         FeedForward.setModel(networkRestored);
         try {
-            File file = new File ("data_test/walking.csv");
-            DataSetIterator testModelData = dataSetManager.cre(file,false);
+            File file = new File ("data_test/jogging.csv");
+            DataSetIterator testModelData = dataSetManager.createDataSetIteratorForFeedForward(file,false);
             FeedForward.makePrediction(testModelData);
         } catch (IOException io){
             io.getMessage();
