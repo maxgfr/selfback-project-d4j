@@ -263,7 +263,7 @@ public class Classifier {
                 model.fit(dataSet);
             }
         }
-        
+
         //make an evaluation
         System.out.println("Evaluate model....");
         Evaluation eval = new Evaluation(numOutputs);
@@ -277,8 +277,25 @@ public class Classifier {
         System.out.println(eval.stats());
     }
 
-    public void trainCNN (){
+    public void trainCNN (DataSetIterator iteratorTrain){
 
+        System.out.println("We're starting to train the CNN network");
+
+        List<INDArray> featuresTrain = new ArrayList<INDArray>();
+        while(iteratorTrain.hasNext()){
+            DataSet ds = iteratorTrain.next();
+            featuresTrain.add(ds.getFeatureMatrix());
+        }
+
+        for( int epoch=0; epoch<nbEpochs; epoch++ ){
+            for(INDArray data : featuresTrain){
+                model.fit(data,data);
+            }
+            System.out.println("Epoch " + epoch + " complete");
+        }
+
+
+        System.out.println("We finished to train the CNN network");
     }
 
     public void makePrediction(DataSetIterator it) {

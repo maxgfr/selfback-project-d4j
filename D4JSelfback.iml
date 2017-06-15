@@ -204,5 +204,6 @@
     <orderEntry type="library" name="Maven: org.deeplearning4j:deeplearning4j-ui-resources:0.8.0" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.9" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-simple:1.7.9" level="project" />
+    <orderEntry type="library" name="Maven: net.sf.opencsv:opencsv:2.3" level="project" />
   </component>
 </module>

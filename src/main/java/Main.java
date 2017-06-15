@@ -21,13 +21,14 @@ public class Main {
 
         /**
          * FeedForward
+         * numberOfHiddenNodes = 2 * input + output
          * For allData I use 100 epochs,100 nodes, 1 iteration
          */
 
         KerasManager kerasManager = KerasManager.getInstance();
         DataSetManager dataSetManager = DataSetManager.getInstance(500,6,3);
         Classifier LSTM = new Classifier(123,0.01,1,500,40,3,6,10);
-        Classifier FeedForward = new Classifier(123,0.01,1,500,2,3,6,100);
+        Classifier FeedForward = new Classifier(123,0.01,1,500,2,3,6,12);
         Classifier CNN = new Classifier(0.01,1,500,40,3,6);
 
         /**To train LSTM model */
@@ -48,12 +49,11 @@ public class Main {
         kerasManager.saveModelD4J(FeedForward.getModel());*/
 
         /**To train  CNN model */
-        final File data = new ClassPathResource("data").getFile();
+        final File data = new ClassPathResource("allData.csv").getFile();
         final File index = new ClassPathResource("index").getFile();
         CNN.createCNN();
-        DataSetIterator trainData = dataSetManager.createDataSetIteratorForLSTM(data,index);
-        DataSetIterator testData = dataSetManager.createDataSetIteratorForLSTM(data,index);
-        CNN.trainLSTM(trainData,testData);
+        DataSetIterator trainData = dataSetManager.createDataSetIteratorForCNN(data,index);
+        CNN.trainCNN(trainData);
         kerasManager.saveModelD4J(CNN.getModel());
 
         /**To test the model */
