@@ -26,30 +26,8 @@ public class KerasManager {
         return INSTANCE;
     }
 
-    public void displayFilesForFolder(final File folder) {
-        for (final File fileEntry : folder.listFiles()) {
-            if (fileEntry.isDirectory()) {
-                displayFilesForFolder(fileEntry);
-            } else {
-                System.out.println(fileEntry.getName());
-            }
-        }
-    }
-
-    public List<File> listFilesForFolder (final File folder) {
-        List<File> list = new LinkedList<File>();
-        for (final File fileEntry : folder.listFiles()) {
-            if (fileEntry.isDirectory()) {
-                listFilesForFolder(fileEntry);
-            } else {
-                list.add(fileEntry);
-            }
-        }
-        return list;
-    }
-
-    public MultiLayerNetwork loadFile(String nameFile) throws UnsupportedKerasConfigurationException, IOException, InvalidKerasConfigurationException {
-        MultiLayerNetwork restored = KerasModelImport.importKerasSequentialModelAndWeights(nameFile);
+    public MultiLayerNetwork restoreModelFromKeras(File nameFile) throws UnsupportedKerasConfigurationException, IOException, InvalidKerasConfigurationException {
+        MultiLayerNetwork restored = KerasModelImport.importKerasSequentialModelAndWeights(nameFile.getPath());
         return restored;
     }
 

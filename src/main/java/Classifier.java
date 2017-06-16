@@ -45,13 +45,11 @@ public class Classifier {
         this.numHiddenNodes= numHiddenNodes;
     }
 
-    public Classifier (double learningRate, int iteration, int batchSize, int nEpochs, int numInputs, int numOutputs) {
+    public Classifier (double learningRate, int iteration, int batchSize, int nEpochs) {
         this.learningRate = learningRate;
         this.iteration = iteration;
         this.batchSize = batchSize;
         this.nbEpochs = nEpochs;
-        this.numInputs= numInputs;
-        this.numOutputs= numOutputs;
     }
 
     public MultiLayerNetwork getModel () {return model;}
@@ -137,82 +135,67 @@ public class Classifier {
 
         System.out.println("We're starting to create the CNN network");
 
-        Map<Integer, Double> lrSchedule = new HashMap<Integer, Double>();
-        lrSchedule.put(0, learningRate);
-        lrSchedule.put(1000, 0.005);
-        lrSchedule.put(3000, 0.001);
-
         MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
+                .seed(seed)
                 .iterations(iteration)
-                .regularization(true).l2(0.0005)
+                .regularization(false).l2(0.005)
+                .activation(Activation.RELU)
                 .learningRate(learningRate)
-                .learningRateDecayPolicy(LearningRatePolicy.Schedule)
-                .learningRateSchedule(lrSchedule)
                 .weightInit(WeightInit.XAVIER)
                 .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-                .updater(Updater.NESTEROVS).momentum(0.9)
+                .updater(Updater.RMSPROP).momentum(0.9)
                 .list()
-                .layer(0, new ConvolutionLayer.Builder()
-                        .nIn(numInputs)
-                        .kernelSize(1,10)
-                        .stride(1,1)
+                .layer(0, new ConvolutionLayer.Builder(1,10) //depends height
+                        .nIn(3)//depth
                         .nOut(150)
-                        .activation(Activation.RELU)
+                        .stride(1,1)
                         .build())
-                .layer(1, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX)
+                .layer(1, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX) //max pooling
                         .kernelSize(1,2)
                         .stride(1,2)
                         .build())
-                .layer(2, new ConvolutionLayer.Builder()
-                        .nIn(numInputs)
-                        .kernelSize(1,10)
-                        .stride(1,1)
+                .layer(2, new ConvolutionLayer.Builder(1,10)
+                        .nIn(150)
                         .nOut(100)
-                        .activation(Activation.RELU)
+                        .stride(1,1)
                         .build())
                 .layer(3, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX)
                         .kernelSize(1,2)
                         .stride(1,2)
                         .build())
-                .layer(4, new ConvolutionLayer.Builder()
-                        .kernelSize(1,10)
-                        .stride(1,1)
-                        .nIn(numInputs)
+                .layer(4, new ConvolutionLayer.Builder(1,10)
+                        .nIn(100)
                         .nOut(80)
-                        .activation(Activation.RELU)
+                        .stride(1,1)
                         .build())
                 .layer(5, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX)
                         .kernelSize(1,2)
                         .stride(1,2)
                         .build())
-                .layer(6, new ConvolutionLayer.Builder()
-                        .kernelSize(1,10)
-                        .stride(1,1)
-                        .nIn(numInputs)
+                .layer(6, new ConvolutionLayer.Builder(1,10)
+                        .nIn(80)
                         .nOut(60)
-                        .activation(Activation.RELU)
+                        .stride(1,1)
                         .build())
                 .layer(7, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX)
                         .kernelSize(1,2)
                         .stride(1,2)
                         .build())
-                .layer(8, new ConvolutionLayer.Builder()
-                        .nIn(numInputs)
-                        .kernelSize(1,10)
+                .layer(8, new ConvolutionLayer.Builder(1,10)
                         .stride(1,1)
+                        .nIn(60)
                         .nOut(40)
-                        .activation(Activation.RELU)
                         .build())
                 .layer(9, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX)
                         .kernelSize(1,2)
                         .stride(1,2)
                         .build())
                 .layer(10, new OutputLayer.Builder()
-                        .nIn(numInputs)
-                        .nOut(numOutputs)
+                        .nOut(1) //to modif
                         .activation(Activation.SOFTMAX)
                         .lossFunction(LossFunctions.LossFunction.MCXENT)
                         .build())
+                .setInputType(InputType.convolutional(1, 500, 3))
                 .backprop(true)
                 .pretrain(false)
                 .build();
@@ -281,7 +264,7 @@ public class Classifier {
 
         System.out.println("We're starting to train the CNN network");
 
-        List<INDArray> featuresTrain = new ArrayList<INDArray>();
+        /*List<INDArray> featuresTrain = new ArrayList<INDArray>();
         while(iteratorTrain.hasNext()){
             DataSet ds = iteratorTrain.next();
             featuresTrain.add(ds.getFeatureMatrix());
@@ -292,6 +275,11 @@ public class Classifier {
                 model.fit(data,data);
             }
             System.out.println("Epoch " + epoch + " complete");
+        }*/
+
+        for (int i=1; i<nbEpochs+1; i++) {
+            model.fit(iteratorTrain);
+            System.out.println(i+" epoch(s) completed");
         }
 
 

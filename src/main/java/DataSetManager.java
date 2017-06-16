@@ -12,6 +12,7 @@ import org.datavec.image.recordreader.ImageRecordReader;
 import org.deeplearning4j.datasets.datavec.RecordReaderDataSetIterator;
 import org.deeplearning4j.datasets.datavec.SequenceRecordReaderDataSetIterator;
 import org.deeplearning4j.datasets.iterator.BaseDatasetIterator;
+import org.deeplearning4j.datasets.iterator.INDArrayDataSetIterator;
 import org.deeplearning4j.datasets.iterator.MultipleEpochsIterator;
 import org.deeplearning4j.datasets.iterator.impl.CifarDataSetIterator;
 import org.deeplearning4j.datasets.iterator.impl.ListDataSetIterator;
@@ -107,48 +108,15 @@ public class DataSetManager {
 
     }
 
-    public DataSetIterator createDataSetIteratorForCNN (File fileData, File fileLabel) throws IOException, InterruptedException {
+    public INDArrayDataSetIterator createDataSetIteratorForCNN (File fileData) throws IOException, InterruptedException {
         int height = 1;
         int width = 500;
-        int depth = 3; //nbChannel
+        int depth = 3;
 
         DataInput di = new DataInput(height,width,depth);
 
-        di.parsingArray(fileData.getPath());
-
-        /*log.info("***** Get an INDArrayDataSetIterator *****");
-        INDArrayDataSetIterator iterator = di.getDataSetIterator();
-        System.out.println("***** Iterator Info *****");
-        System.out.printf("String of iterator: " + iterator.toString());
-        System.out.println("\nTotal example: " + iterator.totalExamples());
-        System.out.println("Labels: " + iterator.getLabels());
-        System.out.println("***************************");*/
-
-
-        SequenceRecordReader trainFeatures = new CSVSequenceRecordReader(1,",");
-        trainFeatures.initialize(new NumberedFileInputSplit(fileData.getAbsolutePath() + "/%d.csv", 1, 6));
-
-        SequenceRecordReader trainLabels = new CSVSequenceRecordReader();
-        trainLabels.initialize(new NumberedFileInputSplit(fileLabel.getAbsolutePath() + "/%d.csv", 1, 6));
-
-        DataSetIterator trainData = new SequenceRecordReaderDataSetIterator(trainFeatures, trainLabels, batchSize, numClasses,
-                false);
-        System.out.println("Normalizer");
-
-        //Normalize the training data
-        DataNormalization normalizer = new NormalizerStandardize();
-        normalizer.fit(trainData);
-        trainData.reset();
-        trainData.setPreProcessor(normalizer);
-
-        System.out.println("End fit normalizer");
-
-        return trainData;
-
-
-
+        return  di.getDataSetIterator(fileData,0);
 
     }
-
 
 }

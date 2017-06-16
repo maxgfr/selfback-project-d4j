@@ -29,10 +29,10 @@ public class Main {
         DataSetManager dataSetManager = DataSetManager.getInstance(500,6,3);
         Classifier LSTM = new Classifier(123,0.01,1,500,40,3,6,10);
         Classifier FeedForward = new Classifier(123,0.01,1,500,2,3,6,12);
-        Classifier CNN = new Classifier(0.01,1,500,40,3,6);
+        Classifier CNN = new Classifier(0.001,1,500,40);
 
         /**To train LSTM model */
-        /*final File data = new ClassPathResource("data").getFile();
+        /*final File data = new ClassPathResource("data_light").getFile();
         final File index = new ClassPathResource("index").getFile();
         LSTM.createLSTM();
         DataSetIterator testData = dataSetManager.createDataSetIteratorForLSTM(data,index);
@@ -49,16 +49,29 @@ public class Main {
         kerasManager.saveModelD4J(FeedForward.getModel());*/
 
         /**To train  CNN model */
-        final File data = new ClassPathResource("allData.csv").getFile();
-        final File index = new ClassPathResource("index").getFile();
+        final File data = new ClassPathResource("data_light").getFile();
         CNN.createCNN();
-        DataSetIterator trainData = dataSetManager.createDataSetIteratorForCNN(data,index);
+        DataSetIterator trainData = dataSetManager.createDataSetIteratorForCNN(data);
         CNN.trainCNN(trainData);
         kerasManager.saveModelD4J(CNN.getModel());
 
-        /**To test the model */
+        /**To test from D4J model the model */
         /*File model = new File ("NetworkD4J.zip");
         MultiLayerNetwork networkRestored = kerasManager.restoreModelFromD4J(model);
+        FeedForward.setModel(networkRestored);
+        try {
+            File file = new File ("data_test/jogging.csv");
+            DataSetIterator testModelData = dataSetManager.createDataSetIteratorForFeedForward(file,false);
+            FeedForward.makePrediction(testModelData);
+        } catch (IOException io){
+            io.getMessage();
+        } catch (InterruptedException inter){
+            inter.getMessage();
+        }*/
+
+        /**To test from Keras model the model */
+        /*File model = new File ("cnn_wrist_33.h5");
+        MultiLayerNetwork networkRestored = kerasManager.restoreModelFromKeras(model);
         FeedForward.setModel(networkRestored);
         try {
             File file = new File ("data_test/jogging.csv");
