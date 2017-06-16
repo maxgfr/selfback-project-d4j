@@ -1,7 +1,7 @@
 #!/bin/bash
 
 path="src/main/resources/data"
-OutFileName="src/main/resources/data_light/"
+OutFileName="src/main/resources/data_ultra_light/"
 extension=".csv"
 j=1
 
@@ -12,7 +12,7 @@ for file in "$path"*; do
 			echo "$file is a directory"
 			
 			for filename in "$file"/*.csv; do
-				head -n 250000 $filename > $OutFileName$j$extension
+				head -n 50000 $filename > $OutFileName$j$extension
 				j=$(( $j + 1 ))
 			done;
 			

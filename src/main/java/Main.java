@@ -49,10 +49,11 @@ public class Main {
         kerasManager.saveModelD4J(FeedForward.getModel());*/
 
         /**To train  CNN model */
-        final File data = new ClassPathResource("data_light").getFile();
+        final File data = new ClassPathResource("data").getFile();
         CNN.createCNN();
         DataSetIterator trainData = dataSetManager.createDataSetIteratorForCNN(data);
-        CNN.trainCNN(trainData);
+        DataSetIterator testData = dataSetManager.createDataSetIteratorForCNN(data);
+        CNN.trainCNN(trainData,testData);
         kerasManager.saveModelD4J(CNN.getModel());
 
         /**To test from D4J model the model */

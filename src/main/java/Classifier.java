@@ -197,7 +197,7 @@ public class Classifier {
                         .build())
                 .setInputType(InputType.convolutional(1, 500, 3))
                 .backprop(true)
-                .pretrain(false)
+                .pretrain(true)
                 .build();
 
         MultiLayerNetwork net = new MultiLayerNetwork(conf);
@@ -247,40 +247,32 @@ public class Classifier {
             }
         }
 
-        //make an evaluation
-        System.out.println("Evaluate model....");
-        Evaluation eval = new Evaluation(numOutputs);
-        while(testData.hasNext()){
-            DataSet t = testData.next();
-            INDArray features = t.getFeatureMatrix();
-            INDArray labels = t.getLabels();
-            INDArray predicted = model.output(features,false);
-            eval.eval(labels, predicted);
-        }
-        System.out.println(eval.stats());
+        makeConclusion(model,testData);
     }
 
-    public void trainCNN (DataSetIterator iteratorTrain){
+    public void trainCNN (DataSetIterator iteratorTrain, DataSetIterator testData){
 
         System.out.println("We're starting to train the CNN network");
 
-        /*List<INDArray> featuresTrain = new ArrayList<INDArray>();
+        List<INDArray> featuresTrain = new ArrayList<INDArray>();
         while(iteratorTrain.hasNext()){
             DataSet ds = iteratorTrain.next();
             featuresTrain.add(ds.getFeatureMatrix());
         }
 
-        for( int epoch=0; epoch<nbEpochs; epoch++ ){
+        for( int epoch=1; epoch<nbEpochs+1; epoch++){
             for(INDArray data : featuresTrain){
-                model.fit(data,data);
+                model.fit(data); //pretrain true
             }
-            System.out.println("Epoch " + epoch + " complete");
-        }*/
+            System.out.println("Epoch(s) " + epoch + " completed");
+        }
 
-        for (int i=1; i<nbEpochs+1; i++) {
+        makeConclusion(model,testData);
+
+        /*for (int i=1; i<nbEpochs+1; i++) {
             model.fit(iteratorTrain);
             System.out.println(i+" epoch(s) completed");
-        }
+        }*/
 
 
         System.out.println("We finished to train the CNN network");
@@ -304,6 +296,20 @@ public class Classifier {
         Evaluation evaluation = network.evaluate(testData);
         System.out.println("Evaluation of model with Accuracy = "+evaluation.accuracy()+" and F1 = "+evaluation.f1());
         testData.reset();
+    }
+
+    private void makeConclusion (MultiLayerNetwork network, DataSetIterator testData) {
+        //make an evaluation
+        System.out.println("Evaluate model....");
+        Evaluation eval = new Evaluation(numOutputs);
+        while(testData.hasNext()){
+            DataSet t = testData.next();
+            INDArray features = t.getFeatureMatrix();
+            INDArray labels = t.getLabels();
+            INDArray predicted = model.output(features,false);
+            eval.eval(labels, predicted);
+        }
+        System.out.println(eval.stats());
     }
 
     private void dispOccurence (List<Integer> myList) {
