@@ -3,6 +3,7 @@ import org.deeplearning4j.berkeley.Pair;
 import org.deeplearning4j.datasets.iterator.INDArrayDataSetIterator;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.dataset.DataSet;
+import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 import org.nd4j.linalg.factory.Nd4j;
 
 import java.io.File;
@@ -12,7 +13,7 @@ import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -38,22 +39,70 @@ public class DataInput {
         nHeight = x;
         nWidth = y;
         nDepth = z;
-        allListData = new LinkedList<INDArray>();
-        allListLabel = new LinkedList<INDArray>();
+        allListData = new ArrayList<INDArray>();
+        allListLabel = new ArrayList<INDArray>();
     }
 
-    public INDArrayDataSetIterator getDataSetIterator(File folder, int value){
+    public DataSetIterator getDataSetIteratorTest(File nameFile){
+
+        List<INDArray> datas = null;
+
+        try {
+            datas = getData(nameFile.getPath());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        List<INDArray> fakeLabel = createFalseRandLabels(6,datas.size());
+
+        Iterable featuresAndLabelsTest = mergeFeaturesWithLabels(datas,fakeLabel);
+
+        DataSetIterator testData = new INDArrayDataSetIterator(featuresAndLabelsTest,1);
+
+        return testData;
+    }
+
+    public INDArrayDataSetIterator getDataSetIterator(File folder){
 
         fusionList(folder);
 
-        ArrayList<Pair> featureAndLabel = new ArrayList<Pair>();
-        for(int i = 0; i < allListData.size(); i++){
-            featureAndLabel.add(new Pair(allListData.get(i), allListLabel.get(i)));
-        }
-        System.out.println("Size dataset: " + featureAndLabel.size());
+        ArrayList<Pair> featureAndLabel = mergeFeaturesWithLabels(allListData,allListLabel);
+
         Iterable featLab = featureAndLabel;
         INDArrayDataSetIterator ds = new INDArrayDataSetIterator(featLab, 500);
         return ds;
+    }
+
+    public static List<INDArray> createFalseRandLabels(int numOutcomes,int numSamples){
+
+        List<INDArray> falseTarget= new ArrayList<INDArray>();
+
+        for(int i=0;i<numSamples;i++){
+            INDArray y = Nd4j.zeros(1,numOutcomes);
+            if (Math.random()>0.5){
+                y.putScalar(new int[] {0,0},1);
+            }
+            else{
+                y.putScalar(new int[] {0,1},1);
+            }
+
+            falseTarget.add(y);
+        }
+
+        return falseTarget;
+    }
+
+    public static ArrayList<Pair> mergeFeaturesWithLabels(List<INDArray> features,List<INDArray> labels){
+
+        ArrayList<Pair> featuresAndLabels = new ArrayList<Pair>();
+
+        for(int i=0;i<features.size();i++){
+            featuresAndLabels.add(new Pair(features.get(i),labels.get(i)));
+        }
+
+        System.out.println("Size dataset: " + featuresAndLabels.size());
+
+        return featuresAndLabels;
     }
 
     private List<INDArray> getListLabel (int value, int size) throws Exception {
@@ -113,7 +162,7 @@ public class DataInput {
 
         CSVReader reader = new CSVReader(new FileReader(fileName), '\n');
 
-        List<INDArray> datas = new LinkedList<INDArray>();
+        List<INDArray> datas = new ArrayList<INDArray>();
         String[] nextLine;
         int k = 0;
         int j = 0;
@@ -170,7 +219,7 @@ public class DataInput {
     }
 
     private List<File> listFilesForFolder (File folder) {
-        List<File> list = new LinkedList<File>();
+        List<File> list = new ArrayList<File>();
         for (final File fileEntry : folder.listFiles()) {
             if (fileEntry.isDirectory()) {
                 listFilesForFolder(fileEntry);

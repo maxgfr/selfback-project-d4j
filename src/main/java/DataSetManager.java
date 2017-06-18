@@ -115,8 +115,20 @@ public class DataSetManager {
 
         DataInput di = new DataInput(height,width,depth);
 
-        return  di.getDataSetIterator(fileData,0);
+        return  di.getDataSetIterator(fileData);
 
     }
+
+    public DataSetIterator createDataSetTest (File fileData) throws IOException, InterruptedException {
+        int height = 1;
+        int width = 500;
+        int depth = 3;
+
+        DataInput di = new DataInput(height,width,depth);
+
+        return  di.getDataSetIteratorTest(fileData);
+
+    }
+
 
 }

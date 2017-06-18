@@ -1,9 +1,12 @@
 import org.datavec.api.util.ClassPathResource;
+import org.deeplearning4j.datasets.iterator.INDArrayDataSetIterator;
 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
+import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Created by maxime on 01-Jun-17.
@@ -29,7 +32,7 @@ public class Main {
         DataSetManager dataSetManager = DataSetManager.getInstance(500,6,3);
         Classifier LSTM = new Classifier(123,0.01,1,500,40,3,6,10);
         Classifier FeedForward = new Classifier(123,0.01,1,500,2,3,6,12);
-        Classifier CNN = new Classifier(0.001,1,500,40);
+        Classifier CNN = new Classifier(0.001,1,500,15);
 
         /**To train LSTM model */
         /*final File data = new ClassPathResource("data_light").getFile();
@@ -49,14 +52,13 @@ public class Main {
         kerasManager.saveModelD4J(FeedForward.getModel());*/
 
         /**To train  CNN model */
-        final File data = new ClassPathResource("data").getFile();
+        /*final File data = new ClassPathResource("data").getFile();
         CNN.createCNN();
         DataSetIterator trainData = dataSetManager.createDataSetIteratorForCNN(data);
-        DataSetIterator testData = dataSetManager.createDataSetIteratorForCNN(data);
-        CNN.trainCNN(trainData,testData);
-        kerasManager.saveModelD4J(CNN.getModel());
+        CNN.trainCNN(trainData);
+        kerasManager.saveModelD4J(CNN.getModel());*/
 
-        /**To test from D4J model the model */
+        /**To test D4J model from zip */
         /*File model = new File ("NetworkD4J.zip");
         MultiLayerNetwork networkRestored = kerasManager.restoreModelFromD4J(model);
         FeedForward.setModel(networkRestored);
@@ -69,6 +71,21 @@ public class Main {
         } catch (InterruptedException inter){
             inter.getMessage();
         }*/
+
+        /**To test CNN D4J model from zip */
+        File model = new File ("NetworkD4J.zip");
+        MultiLayerNetwork networkRestored = kerasManager.restoreModelFromD4J(model);
+        CNN.setModel(networkRestored);
+        try {
+            File file = new File ("data_test/sitting.csv");
+            DataSetIterator testModelData = dataSetManager.createDataSetTest(file);
+            CNN.makePrediction(testModelData);
+        } catch (IOException io){
+            io.getMessage();
+        } catch (InterruptedException inter){
+            inter.getMessage();
+        }
+
 
         /**To test from Keras model the model */
         /*File model = new File ("cnn_wrist_33.h5");

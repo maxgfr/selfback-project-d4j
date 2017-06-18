@@ -1,4 +1,6 @@
 import org.deeplearning4j.api.storage.StatsStorage;
+import org.deeplearning4j.berkeley.Pair;
+import org.deeplearning4j.datasets.iterator.INDArrayDataSetIterator;
 import org.deeplearning4j.eval.Evaluation;
 import org.deeplearning4j.nn.api.OptimizationAlgorithm;
 import org.deeplearning4j.nn.conf.*;
@@ -13,6 +15,7 @@ import org.deeplearning4j.ui.storage.InMemoryStatsStorage;
 import org.nd4j.linalg.activations.Activation;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.dataset.DataSet;
+import org.nd4j.linalg.factory.Nd4j;
 import org.nd4j.linalg.lossfunctions.LossFunctions;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 
@@ -250,7 +253,7 @@ public class Classifier {
         makeConclusion(model,testData);
     }
 
-    public void trainCNN (DataSetIterator iteratorTrain, DataSetIterator testData){
+    public void trainCNN (DataSetIterator iteratorTrain){
 
         System.out.println("We're starting to train the CNN network");
 
@@ -266,8 +269,6 @@ public class Classifier {
             }
             System.out.println("Epoch(s) " + epoch + " completed");
         }
-
-        makeConclusion(model,testData);
 
         /*for (int i=1; i<nbEpochs+1; i++) {
             model.fit(iteratorTrain);
@@ -290,6 +291,7 @@ public class Classifier {
             }
         }
         dispOccurence(list);
+        makeConclusion(model,it);
     }
 
     private void makeEvaluation (MultiLayerNetwork network, DataSetIterator testData) {
