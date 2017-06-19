@@ -1,6 +1,7 @@
 import org.deeplearning4j.api.storage.StatsStorage;
 import org.deeplearning4j.berkeley.Pair;
 import org.deeplearning4j.datasets.iterator.INDArrayDataSetIterator;
+import org.deeplearning4j.datasets.iterator.MultipleEpochsIterator;
 import org.deeplearning4j.eval.Evaluation;
 import org.deeplearning4j.nn.api.OptimizationAlgorithm;
 import org.deeplearning4j.nn.conf.*;
@@ -15,6 +16,9 @@ import org.deeplearning4j.ui.storage.InMemoryStatsStorage;
 import org.nd4j.linalg.activations.Activation;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.dataset.DataSet;
+import org.nd4j.linalg.dataset.SplitTestAndTrain;
+import org.nd4j.linalg.dataset.api.preprocessor.DataNormalization;
+import org.nd4j.linalg.dataset.api.preprocessor.NormalizerStandardize;
 import org.nd4j.linalg.factory.Nd4j;
 import org.nd4j.linalg.lossfunctions.LossFunctions;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
@@ -200,7 +204,7 @@ public class Classifier {
                         .build())
                 .setInputType(InputType.convolutional(1, 500, 3))
                 .backprop(true)
-                .pretrain(true)
+                .pretrain(false)
                 .build();
 
         MultiLayerNetwork net = new MultiLayerNetwork(conf);
@@ -253,30 +257,18 @@ public class Classifier {
         makeConclusion(model,testData);
     }
 
-    public void trainCNN (DataSetIterator iteratorTrain){
+    public void trainCNN (DataSetIterator dataIter){
 
         System.out.println("We're starting to train the CNN network");
+        dispModel();
 
-        List<INDArray> featuresTrain = new ArrayList<INDArray>();
-        while(iteratorTrain.hasNext()){
-            DataSet ds = iteratorTrain.next();
-            featuresTrain.add(ds.getFeatureMatrix());
-        }
-
-        for( int epoch=1; epoch<nbEpochs+1; epoch++){
-            for(INDArray data : featuresTrain){
-                model.fit(data); //pretrain true
-            }
-            System.out.println("Epoch(s) " + epoch + " completed");
-        }
-
-        /*for (int i=1; i<nbEpochs+1; i++) {
-            model.fit(iteratorTrain);
+        for (int i=1; i<nbEpochs+1; i++) {
+            model.fit(dataIter);
             System.out.println(i+" epoch(s) completed");
-        }*/
-
+        }
 
         System.out.println("We finished to train the CNN network");
+
     }
 
     public void makePrediction(DataSetIterator it) {

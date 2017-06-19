@@ -22,6 +22,8 @@ import org.nd4j.linalg.dataset.SplitTestAndTrain;
 import org.nd4j.linalg.dataset.api.iterator.CachingDataSetIterator;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 import org.nd4j.linalg.dataset.api.preprocessor.DataNormalization;
+import org.nd4j.linalg.dataset.api.preprocessor.ImagePreProcessingScaler;
+import org.nd4j.linalg.dataset.api.preprocessor.NormalizerMinMaxScaler;
 import org.nd4j.linalg.dataset.api.preprocessor.NormalizerStandardize;
 
 import java.io.File;
@@ -108,14 +110,24 @@ public class DataSetManager {
 
     }
 
-    public INDArrayDataSetIterator createDataSetIteratorForCNN (File fileData) throws IOException, InterruptedException {
+    public DataSetIterator createDataSetIteratorForCNN (File fileData) throws IOException, InterruptedException {
         int height = 1;
         int width = 500;
         int depth = 3;
 
         DataInput di = new DataInput(height,width,depth);
 
-        return  di.getDataSetIterator(fileData);
+        INDArrayDataSetIterator iterator =  di.getDataSetIterator(fileData);
+
+        System.out.println("Normalizer");
+
+        DataNormalization normalizer = new NormalizerStandardize();
+        normalizer.fit(iterator);
+        iterator.setPreProcessor(normalizer);
+
+        System.out.println("End Normalizer");
+
+        return iterator;
 
     }
 

@@ -43,7 +43,7 @@ public class DataInput {
         allListLabel = new ArrayList<INDArray>();
     }
 
-    public DataSetIterator getDataSetIteratorTest(File nameFile){
+    public INDArrayDataSetIterator getDataSetIteratorTest(File nameFile){
 
         List<INDArray> datas = null;
 
@@ -57,7 +57,7 @@ public class DataInput {
 
         Iterable featuresAndLabelsTest = mergeFeaturesWithLabels(datas,fakeLabel);
 
-        DataSetIterator testData = new INDArrayDataSetIterator(featuresAndLabelsTest,1);
+        INDArrayDataSetIterator testData = new INDArrayDataSetIterator(featuresAndLabelsTest,500);
 
         return testData;
     }
