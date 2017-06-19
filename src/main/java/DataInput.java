@@ -11,10 +11,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.lang.reflect.Array;
+import java.util.*;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by maxime on 15-Jun-17.
@@ -67,6 +65,8 @@ public class DataInput {
         fusionList(folder);
 
         ArrayList<Pair> featureAndLabel = mergeFeaturesWithLabels(allListData,allListLabel);
+
+        Collections.shuffle(featureAndLabel);
 
         Iterable featLab = featureAndLabel;
         INDArrayDataSetIterator ds = new INDArrayDataSetIterator(featLab, 500);
