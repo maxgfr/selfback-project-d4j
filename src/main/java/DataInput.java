@@ -106,18 +106,19 @@ public class DataInput {
     }
 
     private List<INDArray> getListLabel (int value, int size) throws Exception {
-        INDArray downstairs = Nd4j.zeros(1, 1);
-        INDArray jogging = Nd4j.zeros(1, 1);
-        INDArray sitting = Nd4j.zeros(1, 1);
-        INDArray standing = Nd4j.zeros(1, 1);
-        INDArray upstairs = Nd4j.zeros(1, 1);
-        INDArray walking = Nd4j.zeros(1, 1);
-        downstairs.put(0,0,0);
-        jogging.put(0,0,1);
-        sitting.put(0,0,2);
-        standing.put(0,0,3);
-        upstairs.put(0,0,4);
-        walking.put(0,0,5);
+        int numOut = 6;
+        INDArray downstairs = Nd4j.zeros(1, numOut);
+        INDArray jogging = Nd4j.zeros(1, numOut);
+        INDArray sitting = Nd4j.zeros(1, numOut);
+        INDArray standing = Nd4j.zeros(1, numOut);
+        INDArray upstairs = Nd4j.zeros(1, numOut);
+        INDArray walking = Nd4j.zeros(1, numOut);
+        downstairs.putScalar(0,0,1);
+        jogging.putScalar(0,1,1);
+        sitting.putScalar(0,2,1);
+        standing.putScalar(0,3,1);
+        upstairs.putScalar(0,4,1);
+        walking.putScalar(0,5,1);
 
         List<INDArray> listLabel = new ArrayList<INDArray>();
 

@@ -52,11 +52,12 @@ public class Classifier {
         this.numHiddenNodes= numHiddenNodes;
     }
 
-    public Classifier (double learningRate, int iteration, int batchSize, int nEpochs) {
+    public Classifier (double learningRate, int iteration, int batchSize, int nEpochs, int numOutputs) {
         this.learningRate = learningRate;
         this.iteration = iteration;
         this.batchSize = batchSize;
         this.nbEpochs = nEpochs;
+        this.numOutputs = numOutputs;
     }
 
     public MultiLayerNetwork getModel () {return model;}
@@ -198,9 +199,9 @@ public class Classifier {
                         .stride(1,2)
                         .build())
                 .layer(10, new OutputLayer.Builder()
-                        .nOut(1) //to modif
                         .activation(Activation.SOFTMAX)
-                        .lossFunction(LossFunctions.LossFunction.MCXENT)
+                        .lossFunction(LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD)
+                        .nOut(numOutputs)
                         .build())
                 .setInputType(InputType.convolutional(1, 500, 3))
                 .backprop(true)
@@ -227,8 +228,10 @@ public class Classifier {
 
         for (int i=1; i<nbEpochs+1; i++) {
             model.fit(iteratorTrain);
-            makeEvaluation(model,testData);
             System.out.println(i+" epoch(s) completed");
+            Evaluation evaluation = model.evaluate(testData);
+            System.out.println("Evaluation of model with Accuracy = "+evaluation.accuracy()+" and F1 = "+evaluation.f1());
+            testData.reset();
         }
 
         System.out.println("We finished to train the LSTM network");
@@ -257,7 +260,7 @@ public class Classifier {
         makeConclusion(model,testData);
     }
 
-    public void trainCNN (DataSetIterator dataIter){
+    public void trainCNN (DataSetIterator dataIter, DataSetIterator dataTest){
 
         System.out.println("We're starting to train the CNN network");
         dispModel();
@@ -265,6 +268,16 @@ public class Classifier {
         for (int i=1; i<nbEpochs+1; i++) {
             model.fit(dataIter);
             System.out.println(i+" epoch(s) completed");
+
+            System.out.println("Evaluate model....");
+            Evaluation eval = new Evaluation(numOutputs);
+            while(dataTest.hasNext()){
+                DataSet ds = dataTest.next();
+                INDArray output = model.output(ds.getFeatureMatrix(), false);
+                eval.eval(ds.getLabels(), output);
+            }
+            System.out.println(eval.stats());
+            dataTest.reset();
         }
 
         System.out.println("We finished to train the CNN network");
@@ -284,12 +297,6 @@ public class Classifier {
         }
         dispOccurence(list);
         makeConclusion(model,it);
-    }
-
-    private void makeEvaluation (MultiLayerNetwork network, DataSetIterator testData) {
-        Evaluation evaluation = network.evaluate(testData);
-        System.out.println("Evaluation of model with Accuracy = "+evaluation.accuracy()+" and F1 = "+evaluation.f1());
-        testData.reset();
     }
 
     private void makeConclusion (MultiLayerNetwork network, DataSetIterator testData) {

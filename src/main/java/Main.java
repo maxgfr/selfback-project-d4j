@@ -32,7 +32,7 @@ public class Main {
         DataSetManager dataSetManager = DataSetManager.getInstance(500,6,3);
         Classifier LSTM = new Classifier(123,0.01,1,500,40,3,6,10);
         Classifier FeedForward = new Classifier(123,0.01,1,500,2,3,6,12);
-        Classifier CNN = new Classifier(0.001,1,500,15);
+        Classifier CNN = new Classifier(0.01,1,500,15, 6);
 
         /**To train LSTM model */
         /*final File data = new ClassPathResource("data_light").getFile();
@@ -55,7 +55,8 @@ public class Main {
         final File data = new ClassPathResource("data").getFile();
         CNN.createCNN();
         DataSetIterator trainData = dataSetManager.createDataSetIteratorForCNN(data);
-        CNN.trainCNN(trainData);
+        DataSetIterator testData = dataSetManager.createDataSetIteratorForCNN(data);
+        CNN.trainCNN(trainData,testData);
         kerasManager.saveModelD4J(CNN.getModel());
 
         /**To test D4J model from zip */
