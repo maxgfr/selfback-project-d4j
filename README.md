@@ -8,16 +8,18 @@ Activity recognition through Neural Network
 Data folder contains 6 files in whuch each file contain 1 collumn per axis (x,y,z) and all of the data from the activity
 Label folder contains 6 files in which we can found the label for each file in the data folder
 
+The **batchsize** is 500
+
 ## FOR CNN : 
 
-NetworkD4J_1 is the model which corresponds to CNN with configuration : Classifier CNN = new Classifier(0.01,1,500,15, 6);
+NetworkD4J_1 is the model which corresponds to CNN with configuration :
 
-The configuration of this CNN is  : 
 MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
-						.seed(seed)
-						.iterations(iteration)
-						.regularization(false).l2(0.005)
-						.activation(Activation.RELU)
+.seed(seed)
+.iterations(iteration)
+.regularization(false)
+.l2(0.005)
+.activation(Activation.RELU)
 						.learningRate(learningRate)
 						.weightInit(WeightInit.XAVIER)
 						.optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
@@ -78,12 +80,15 @@ MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
                 .pretrain(false)
                 .build();
 
-He uses the folder : data and label
+He uses the folder : data and label and class DataInput.java with height of 1, width of 500 and depth of 3
 
-![alt text](https://raw.githubusercontent.com/maxgfr/D4JSelfback/blob/master/screen/Capture.PNG)
-![alt text](https://github.com/maxgfr/D4JSelfback/blob/master/screen/Capture.PNG)
+For : **350 epochs, 0.01 of learning rate**
 
-After : 350 epoch(s) completed
+**Scores**
+Accuracy:        0.8982
+Precision:       0.8775
+Recall:          0.8477
+F1 Score:        0.8623
 
 Examples labeled as 0 classified by model as 0: 590 times
 Examples labeled as 0 classified by model as 1: 4 times
@@ -119,9 +124,4 @@ Examples labeled as 5 classified by model as 3: 14 times
 Examples labeled as 5 classified by model as 4: 57 times
 Examples labeled as 5 classified by model as 5: 1418 times
 
-
-Scores =>
- Accuracy:        0.8982
- Precision:       0.8775
- Recall:          0.8477
- F1 Score:        0.8623
+![alt text](https://github.com/maxgfr/D4JSelfback/blob/master/screen/Capture.PNG)
