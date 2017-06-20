@@ -294,9 +294,9 @@ public class Classifier {
             for(int s : ls) {
                 list.add(s);
             }
+            System.out.println("Iterator has next...");
         }
-        dispOccurence(list);
-        makeConclusion(model,it);
+        //dispOccurence(list);
     }
 
     private void makeConclusion (MultiLayerNetwork network, DataSetIterator testData) {

@@ -53,11 +53,13 @@ public class DataInput {
 
         List<INDArray> fakeLabel = createFalseRandLabels(6,datas.size());
 
-        Iterable featuresAndLabelsTest = mergeFeaturesWithLabels(datas,fakeLabel);
+        ArrayList<Pair> featuresAndLabels = mergeFeaturesWithLabels(datas,fakeLabel);
 
-        INDArrayDataSetIterator testData = new INDArrayDataSetIterator(featuresAndLabelsTest,500);
+        Iterable featLab = featuresAndLabels;
 
-        return testData;
+        INDArrayDataSetIterator ds = new INDArrayDataSetIterator(featLab, 500);
+
+        return ds;
     }
 
     public INDArrayDataSetIterator getDataSetIterator(File folder){
@@ -73,26 +75,32 @@ public class DataInput {
         return ds;
     }
 
-    public static List<INDArray> createFalseRandLabels(int numOutcomes,int numSamples){
+    private List<INDArray> createFalseRandLabels(int numOutcomes,int numSamples){
 
         List<INDArray> falseTarget= new ArrayList<INDArray>();
 
         for(int i=0;i<numSamples;i++){
             INDArray y = Nd4j.zeros(1,numOutcomes);
-            if (Math.random()>0.5){
-                y.putScalar(new int[] {0,0},1);
+            if (Math.random()<0.15){
+                y.putScalar(0,0,1);
+            } else if (Math.random()>0.15 && Math.random()<0.3){
+                y.putScalar(0,1,1);
+            } else if (Math.random()>0.3 && Math.random()<0.45){
+                y.putScalar(0,2,1);
+            } else if (Math.random()>0.45 && Math.random()<0.65){
+                y.putScalar(0,3,1);
+            }else if (Math.random()>0.65 && Math.random()<0.80){
+                y.putScalar(0,4,1);
+            } else{
+                y.putScalar(0,5,1);
             }
-            else{
-                y.putScalar(new int[] {0,1},1);
-            }
-
             falseTarget.add(y);
         }
 
         return falseTarget;
     }
 
-    public static ArrayList<Pair> mergeFeaturesWithLabels(List<INDArray> features,List<INDArray> labels){
+    private ArrayList<Pair> mergeFeaturesWithLabels(List<INDArray> features,List<INDArray> labels){
 
         ArrayList<Pair> featuresAndLabels = new ArrayList<Pair>();
 

@@ -131,14 +131,16 @@ public class DataSetManager {
 
     }
 
-    public DataSetIterator createDataSetTest (File fileData) throws IOException, InterruptedException {
+    public DataSetIterator createDataSetTestCNN (File fileData) throws IOException, InterruptedException {
         int height = 1;
         int width = 500;
         int depth = 3;
 
-        DataInput di = new DataInput(height,width,depth);
+        DataInput dataInput = new DataInput(height,width,depth);
 
-        return  di.getDataSetIteratorTest(fileData);
+        INDArrayDataSetIterator iterator = dataInput.getDataSetIteratorTest(fileData);
+
+        return  iterator;
 
     }
 
