@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a72650ba-2388-4825-8cbc-f50ccb23b68a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/DataInput.class" afterPath="$PROJECT_DIR$/target/classes/DataInput.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/DataSetManager.class" afterPath="$PROJECT_DIR$/target/classes/DataSetManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Main.class" afterPath="$PROJECT_DIR$/target/classes/Main.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NetworkD4J.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Classifier.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Main.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Classifier.java" afterPath="$PROJECT_DIR$/src/main/java/Classifier.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/DataInput.java" afterPath="$PROJECT_DIR$/src/main/java/DataInput.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/DataSetManager.java" afterPath="$PROJECT_DIR$/src/main/java/DataSetManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,20 +26,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="Classifier.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Classifier.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Classifier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="296" column="55" lean-forward="false" selection-start-line="296" selection-start-column="55" selection-end-line="296" selection-end-column="55" />
+            <state relative-caret-position="-280">
+              <caret line="187" column="32" lean-forward="true" selection-start-line="187" selection-start-column="32" selection-end-line="187" selection-end-column="32" />
               <folding>
                 <element signature="method#createLSTM#0;class#Classifier#0" expanded="false" />
                 <element signature="method#createFeedForward#0;class#Classifier#0" expanded="false" />
-                <element signature="method#createCNN#0;class#Classifier#0" expanded="false" />
                 <element signature="method#trainLSTM#0;class#Classifier#0" expanded="false" />
                 <element signature="method#trainFeedForward#0;class#Classifier#0" expanded="false" />
-                <element signature="e#9905#9914#0" expanded="true" />
                 <element signature="method#trainCNN#0;class#Classifier#0" expanded="false" />
-                <element signature="e#11299#11308#0" expanded="true" />
                 <element signature="method#makeConclusion#0;class#Classifier#0" expanded="false" />
                 <element signature="method#dispOccurence#0;class#Classifier#0" expanded="false" />
               </folding>
@@ -52,22 +47,18 @@
       <file leaf-file-name="DataInput.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/DataInput.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state relative-caret-position="245">
+              <caret line="43" column="72" lean-forward="false" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
               <folding>
                 <element signature="method#DataInput#0;class#DataInput#0" expanded="false" />
+                <element signature="method#getDataSetIteratorTest#0;class#DataInput#0" expanded="false" />
                 <element signature="method#getDataSetIterator#0;class#DataInput#0" expanded="false" />
                 <element signature="method#createFalseRandLabels#0;class#DataInput#0" expanded="false" />
-                <element signature="e#2327#2337#0" expanded="true" />
                 <element signature="method#mergeFeaturesWithLabels#0;class#DataInput#0" expanded="false" />
-                <element signature="e#3217#3223#0" expanded="true" />
                 <element signature="method#getListLabel#0;class#DataInput#0" expanded="false" />
-                <element signature="e#4142#4152#0" expanded="true" />
                 <element signature="method#getData#0;class#DataInput#0" expanded="false" />
-                <element signature="e#5454#5464#0" expanded="true" />
                 <element signature="method#fusionList#0;class#DataInput#0" expanded="false" />
                 <element signature="method#listFilesForFolder#0;class#DataInput#0" expanded="false" />
-                <element signature="e#7453#7459#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,7 +67,7 @@
       <file leaf-file-name="DataSetManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/DataSetManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
+            <state relative-caret-position="370">
               <caret line="138" column="25" lean-forward="false" selection-start-line="138" selection-start-column="25" selection-end-line="138" selection-end-column="25" />
               <folding>
                 <element signature="method#DataSetManager#0;class#DataSetManager#0" expanded="false" />
@@ -88,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="94" column="13" lean-forward="true" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
+            <state relative-caret-position="227">
+              <caret line="55" column="37" lean-forward="true" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -154,10 +145,10 @@
         <option value="$PROJECT_DIR$/src/main/java/KerasManager.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$USER_HOME$/.IdeaIC2017.1/idea64.exe.vmoptions" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Classifier.java" />
         <option value="$PROJECT_DIR$/src/main/java/DataInput.java" />
         <option value="$PROJECT_DIR$/src/main/java/DataSetManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Classifier.java" />
       </list>
     </option>
   </component>
@@ -193,6 +184,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -279,9 +273,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -574,12 +565,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27348396" sideWeight="0.5043243" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31629014" sideWeight="0.49567568" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31629014" sideWeight="0.49567568" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27837837" sideWeight="0.67895365" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28324324" sideWeight="0.67895365" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -851,7 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -859,54 +849,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Classifier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="296" column="55" lean-forward="false" selection-start-line="296" selection-start-column="55" selection-end-line="296" selection-end-column="55" />
-          <folding>
-            <element signature="method#createLSTM#0;class#Classifier#0" expanded="false" />
-            <element signature="method#createFeedForward#0;class#Classifier#0" expanded="false" />
-            <element signature="method#createCNN#0;class#Classifier#0" expanded="false" />
-            <element signature="method#trainLSTM#0;class#Classifier#0" expanded="false" />
-            <element signature="method#trainFeedForward#0;class#Classifier#0" expanded="false" />
-            <element signature="e#9905#9914#0" expanded="true" />
-            <element signature="method#trainCNN#0;class#Classifier#0" expanded="false" />
-            <element signature="e#11299#11308#0" expanded="true" />
-            <element signature="method#makeConclusion#0;class#Classifier#0" expanded="false" />
-            <element signature="method#dispOccurence#0;class#Classifier#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DataInput.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        <state relative-caret-position="245">
+          <caret line="43" column="72" lean-forward="false" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
           <folding>
             <element signature="method#DataInput#0;class#DataInput#0" expanded="false" />
+            <element signature="method#getDataSetIteratorTest#0;class#DataInput#0" expanded="false" />
             <element signature="method#getDataSetIterator#0;class#DataInput#0" expanded="false" />
             <element signature="method#createFalseRandLabels#0;class#DataInput#0" expanded="false" />
-            <element signature="e#2327#2337#0" expanded="true" />
             <element signature="method#mergeFeaturesWithLabels#0;class#DataInput#0" expanded="false" />
-            <element signature="e#3217#3223#0" expanded="true" />
             <element signature="method#getListLabel#0;class#DataInput#0" expanded="false" />
-            <element signature="e#4142#4152#0" expanded="true" />
             <element signature="method#getData#0;class#DataInput#0" expanded="false" />
-            <element signature="e#5454#5464#0" expanded="true" />
             <element signature="method#fusionList#0;class#DataInput#0" expanded="false" />
             <element signature="method#listFilesForFolder#0;class#DataInput#0" expanded="false" />
-            <element signature="e#7453#7459#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DataSetManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
+        <state relative-caret-position="370">
           <caret line="138" column="25" lean-forward="false" selection-start-line="138" selection-start-column="25" selection-end-line="138" selection-end-column="25" />
           <folding>
             <element signature="method#DataSetManager#0;class#DataSetManager#0" expanded="false" />
@@ -919,10 +885,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="94" column="13" lean-forward="true" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
+        <state relative-caret-position="227">
+          <caret line="55" column="37" lean-forward="true" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Classifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-280">
+          <caret line="187" column="32" lean-forward="true" selection-start-line="187" selection-start-column="32" selection-end-line="187" selection-end-column="32" />
+          <folding>
+            <element signature="method#createLSTM#0;class#Classifier#0" expanded="false" />
+            <element signature="method#createFeedForward#0;class#Classifier#0" expanded="false" />
+            <element signature="method#trainLSTM#0;class#Classifier#0" expanded="false" />
+            <element signature="method#trainFeedForward#0;class#Classifier#0" expanded="false" />
+            <element signature="method#trainCNN#0;class#Classifier#0" expanded="false" />
+            <element signature="method#makeConclusion#0;class#Classifier#0" expanded="false" />
+            <element signature="method#dispOccurence#0;class#Classifier#0" expanded="false" />
           </folding>
         </state>
       </provider>

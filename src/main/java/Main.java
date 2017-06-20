@@ -52,12 +52,13 @@ public class Main {
         kerasManager.saveModelD4J(FeedForward.getModel());*/
 
         /**To train  CNN model */
-        /*final File data = new ClassPathResource("data").getFile();
+        final File data = new ClassPathResource("data").getFile();
+        final File datatest = new ClassPathResource("data_thigh34").getFile();
         CNN.createCNN();
         DataSetIterator trainData = dataSetManager.createDataSetIteratorForCNN(data);
-        DataSetIterator testData = dataSetManager.createDataSetIteratorForCNN(data);
+        DataSetIterator testData = dataSetManager.createDataSetIteratorForCNN(datatest);
         CNN.trainCNN(trainData,testData);
-        kerasManager.saveModelD4J(CNN.getModel());*/
+        kerasManager.saveModelD4J(CNN.getModel());
 
         /**To test D4J model from zip */
         /*File model = new File ("NetworkD4J.zip");
@@ -74,7 +75,7 @@ public class Main {
         }*/
 
         /**To test CNN D4J model from zip */
-        File model = new File ("NetworkD4J.zip");
+        /*File model = new File ("NetworkD4J.zip");
         MultiLayerNetwork networkRestored = kerasManager.restoreModelFromD4J(model);
         CNN.setModel(networkRestored);
         try {
@@ -85,7 +86,7 @@ public class Main {
             io.getMessage();
         } catch (InterruptedException inter){
             inter.getMessage();
-        }
+        }*/
 
 
         /**To test from Keras model the model */
