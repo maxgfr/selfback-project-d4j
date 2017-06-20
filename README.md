@@ -3,30 +3,30 @@ Activity recognition through Neural Network
 
 ==The data provides from 50 person from wrist.==
 
-In resssource :
+## In resssource directory :
 
 Data folder contains 6 files in whuch each file contain 1 collumn per axis (x,y,z) and all of the data from the activity
 Label folder contains 6 files in which we can found the label for each file in the data folder
 
-#FOR CNN : 
+## FOR CNN : 
 
 NetworkD4J_1 is the model which corresponds to CNN with configuration : Classifier CNN = new Classifier(0.01,1,500,15, 6);
 
 The configuration of this CNN is  : 
 MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
-                .seed(seed)
-                .iterations(iteration)
-                .regularization(false).l2(0.005)
-                .activation(Activation.RELU)
-                .learningRate(learningRate)
-                .weightInit(WeightInit.XAVIER)
-                .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-                .updater(Updater.RMSPROP).momentum(0.9)
-                .list()
-                .layer(0, new ConvolutionLayer.Builder(1,10) //depends height
-                        .nIn(3)//depth
-                        .nOut(150)
-                        .stride(1,1)
+						.seed(seed)
+						.iterations(iteration)
+						.regularization(false).l2(0.005)
+						.activation(Activation.RELU)
+						.learningRate(learningRate)
+						.weightInit(WeightInit.XAVIER)
+						.optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
+						.updater(Updater.RMSPROP).momentum(0.9)
+						.list()
+						.layer(0, new ConvolutionLayer.Builder(1,10) //depends height
+						.nIn(3)//depth
+						.nOut(150)
+						.stride(1,1)
                         .build())
                 .layer(1, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX) //max pooling
                         .kernelSize(1,2)
@@ -80,10 +80,10 @@ MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
 
 He uses the folder : data and label
 
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+![alt text](https://raw.githubusercontent.com/maxgfr/D4JSelfback/blob/master/screen/Capture.PNG)
+![alt text](https://github.com/maxgfr/D4JSelfback/blob/master/screen/Capture.PNG)
 
-350 epoch(s) completed
-Evaluate model....
+After : 350 epoch(s) completed
 
 Examples labeled as 0 classified by model as 0: 590 times
 Examples labeled as 0 classified by model as 1: 4 times
@@ -120,10 +120,8 @@ Examples labeled as 5 classified by model as 4: 57 times
 Examples labeled as 5 classified by model as 5: 1418 times
 
 
-==========================Scores========================================
+Scores =>
  Accuracy:        0.8982
  Precision:       0.8775
  Recall:          0.8477
  F1 Score:        0.8623
-========================================================================
-We finished to train the CNN network
