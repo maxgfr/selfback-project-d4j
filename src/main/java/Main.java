@@ -28,7 +28,7 @@ public class Main {
         Classifier CNN = new Classifier(0.01,1,500,15, 6);
 
         /**To train LSTM model */
-        /*final File data = new ClassPathResource("data_light").getFile();
+        /*final File data = new ClassPathResource("data").getFile();
         final File index = new ClassPathResource("index").getFile();
         LSTM.createLSTM();
         DataSetIterator testData = dataSetManager.createDataSetIteratorForLSTM(data,index);

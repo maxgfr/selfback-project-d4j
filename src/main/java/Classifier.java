@@ -188,6 +188,95 @@ public class Classifier {
         System.out.println("We're starting to create the CNN network");
     }
 
+    public void createMyOwnCNN () {
+
+        System.out.println("We're starting to create the CNN network");
+
+        MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
+                .seed(seed)
+                .iterations(iteration)
+                .activation(Activation.RELU)
+                .learningRate(learningRate)
+                .weightInit(WeightInit.XAVIER)
+                .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
+                .updater(Updater.RMSPROP).momentum(0.9)
+                .list()
+                .layer(0, new ConvolutionLayer.Builder(1,10) //depends height
+                        .nIn(3)//depth
+                        .nOut(150)
+                        .stride(1,1)
+                        .build())
+                .layer(1, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX) //max pooling
+                        .kernelSize(1,2)
+                        .stride(1,2)
+                        .build())
+                .layer(2, new ConvolutionLayer.Builder(1,10)
+                        .nIn(150)
+                        .nOut(100)
+                        .stride(1,1)
+                        .build())
+                .layer(3, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX)
+                        .kernelSize(1,2)
+                        .stride(1,2)
+                        .build())
+                .layer(4, new ConvolutionLayer.Builder(1,10)
+                        .nIn(100)
+                        .nOut(80)
+                        .stride(1,1)
+                        .build())
+                .layer(5, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX)
+                        .kernelSize(1,2)
+                        .stride(1,2)
+                        .build())
+                .layer(6, new ConvolutionLayer.Builder(1,10)
+                        .nIn(80)
+                        .nOut(60)
+                        .stride(1,1)
+                        .build())
+                .layer(7, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX)
+                        .kernelSize(1,2)
+                        .stride(1,2)
+                        .build())
+                .layer(8, new ConvolutionLayer.Builder(1,10)
+                        .stride(1,1)
+                        .nIn(60)
+                        .nOut(40)
+                        .build())
+                .layer(9, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX)
+                        .kernelSize(1,2)
+                        .stride(1,2)
+                        .build())
+                .layer(10, new DenseLayer.Builder() //fullyConnected
+                        .nOut(900)
+                        .activation(Activation.TANH)
+                        .build())
+                .layer(11, new DenseLayer.Builder()
+                        .nOut(300)
+                        .activation(Activation.TANH)
+                        .dropOut(0.5)
+                        .build())
+                .layer(12, new OutputLayer.Builder()
+                        .activation(Activation.SOFTMAX)
+                        .lossFunction(LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD)
+                        .nOut(numOutputs)
+                        .build())
+                .setInputType(InputType.convolutional(1, 500, 3))
+                .backprop(true)
+                .pretrain(false)
+                .build();
+
+        MultiLayerNetwork net = new MultiLayerNetwork(conf);
+        net.init();
+
+        model = new MultiLayerNetwork(conf);
+
+        model.init();
+
+        model.setListeners(new ScoreIterationListener(100));
+
+        System.out.println("We're starting to create the CNN network");
+    }
+
     public void trainLSTM (DataSetIterator iteratorTrain, DataSetIterator testData) {
 
         System.out.println("We're starting to train the LSTM network");
