@@ -15,15 +15,9 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        /**
-         * LSTM
-         * For allDataUltraLight (5000*5) I use 10 epochs and 5 iterations and 100 hiddenNodes ==> 0.85
-         * For allDataVeryLight (25000*5) I use 60 epochs and 2 iterations and 10 hiddenNodes and regularization L2 0.0001(10^-4)==> 0.85
-         * For allDataLight (50000*5) I use 10 epochs and 1 iterations and 10 hiddenNodes and regularization L2 0.0001(10^-4)==> 0.85
-         */
 
         /**
-         * FeedForward
+         * CNN
          * numberOfHiddenNodes = 2 * input + output
          * For allData I use 100 epochs,100 nodes, 1 iteration
          */
@@ -31,7 +25,6 @@ public class Main {
         KerasManager kerasManager = KerasManager.getInstance();
         DataSetManager dataSetManager = DataSetManager.getInstance(500,6,3);
         Classifier LSTM = new Classifier(123,0.01,1,500,40,3,6,10);
-        Classifier FeedForward = new Classifier(123,0.01,1,500,2,3,6,12);
         Classifier CNN = new Classifier(0.01,1,500,15, 6);
 
         /**To train LSTM model */
@@ -40,16 +33,9 @@ public class Main {
         LSTM.createLSTM();
         DataSetIterator testData = dataSetManager.createDataSetIteratorForLSTM(data,index);
         DataSetIterator trainData = dataSetManager.createDataSetIteratorForLSTM(data,index);
-        LSTM.trainRNN(trainData,testData);
+        LSTM.trainLSTM(trainData,testData);
         kerasManager.saveModelD4J(LSTM.getModel());*/
 
-        /**To train  FeedForward model */
-        /*final File allData = new ClassPathResource("allData.csv").getFile();
-        DataSetIterator testData = dataSetManager.createDataSetIteratorForFeedForward(allData,true);
-        DataSetIterator trainData = dataSetManager.createDataSetIteratorForFeedForward(allData,true);
-        FeedForward.createFeedForward();
-        FeedForward.trainFeedForward(trainData,testData);
-        kerasManager.saveModelD4J(FeedForward.getModel());*/
 
         /**To train  CNN model */
         final File data = new ClassPathResource("data").getFile();
@@ -90,7 +76,7 @@ public class Main {
 
 
         /**To test from Keras model the model */
-        /*File model = new File ("cnn_wrist_33.h5");
+        /*File model = new File ("model/cnn_wrist_33.h5");
         MultiLayerNetwork networkRestored = kerasManager.restoreModelFromKeras(model);
         FeedForward.setModel(networkRestored);
         try {

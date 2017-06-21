@@ -99,46 +99,6 @@ public class Classifier {
 
     }
 
-    public void createFeedForward () {
-
-        System.out.println("We're starting to create the FeedForward network");
-
-        MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
-                .seed(seed)
-                .iterations(iteration)
-                .weightInit(WeightInit.XAVIER)
-                .activation(Activation.RELU)
-                .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-                .learningRate(learningRate)
-                .updater(Updater.NESTEROVS).momentum(0.9)
-                .list()
-                .layer(0, new DenseLayer.Builder()
-                        .nIn(numInputs)
-                        .nOut(numHiddenNodes)
-                        .build())
-                .layer(1, new DenseLayer.Builder()
-                        .nIn(numHiddenNodes)
-                        .nOut(numHiddenNodes)
-                        .build())
-                .layer(2, new OutputLayer.Builder(LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD)
-                        .nIn(numHiddenNodes)
-                        .nOut(numOutputs)
-                        .activation(Activation.SOFTMAX)
-                        .build())
-                .pretrain(false).backprop(true).build();
-
-        MultiLayerNetwork net = new MultiLayerNetwork(conf);
-        net.init();
-
-        model = new MultiLayerNetwork(conf);
-
-        model.init();
-
-        model.setListeners(new ScoreIterationListener(100));
-
-        System.out.println("We're starting to create the FeedForward network");
-    }
-
     public void createCNN () {
 
         System.out.println("We're starting to create the CNN network");
@@ -150,7 +110,7 @@ public class Classifier {
                 .learningRate(learningRate)
                 .weightInit(WeightInit.XAVIER)
                 .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-                .updater(Updater.NESTEROVS).momentum(0.9)
+                .updater(Updater.RMSPROP).momentum(0.9)
                 .list()
                 .layer(0, new ConvolutionLayer.Builder(1,10) //depends height
                         .nIn(3)//depth
@@ -193,15 +153,17 @@ public class Classifier {
                         .nIn(60)
                         .nOut(40)
                         .build())
-                .layer(9, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX) //maxPool
+                .layer(9, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX)
                         .kernelSize(1,2)
                         .stride(1,2)
                         .build())
                 .layer(10, new DenseLayer.Builder() //fullyConnected
                         .nOut(900)
+                        .activation(Activation.TANH)
                         .build())
                 .layer(11, new DenseLayer.Builder()
                         .nOut(300)
+                        .activation(Activation.TANH)
                         .dropOut(0.5)
                         .build())
                 .layer(12, new OutputLayer.Builder()
@@ -243,29 +205,6 @@ public class Classifier {
         System.out.println("We finished to train the LSTM network");
     }
 
-    public void trainFeedForward (DataSetIterator iteratorTrain, DataSetIterator testData) {
-
-        System.out.println("We're starting to train the FeedForward network");
-        dispModel();
-
-        //shuffle data
-        List<DataSet> list = new LinkedList<DataSet>();
-        while (iteratorTrain.hasNext()){
-            DataSet ds = iteratorTrain.next();
-            list.add(ds);
-        }
-        Collections.shuffle(list);
-
-        //fit network
-        for (int i=1; i<nbEpochs+1; i++) {
-            for (DataSet dataSet : list) {
-                model.fit(dataSet);
-            }
-        }
-
-        makeConclusion(model,testData);
-    }
-
     public void trainCNN (DataSetIterator dataIter, DataSetIterator dataTest){
 
         System.out.println("We're starting to train the CNN network");
@@ -302,21 +241,7 @@ public class Classifier {
             }
             System.out.println("Iterator has next...");
         }
-        //dispOccurence(list);
-    }
-
-    private void makeConclusion (MultiLayerNetwork network, DataSetIterator testData) {
-        //make an evaluation
-        System.out.println("Evaluate model....");
-        Evaluation eval = new Evaluation(numOutputs);
-        while(testData.hasNext()){
-            DataSet t = testData.next();
-            INDArray features = t.getFeatureMatrix();
-            INDArray labels = t.getLabels();
-            INDArray predicted = model.output(features,false);
-            eval.eval(labels, predicted);
-        }
-        System.out.println(eval.stats());
+        dispOccurence(list);
     }
 
     private void dispOccurence (List<Integer> myList) {

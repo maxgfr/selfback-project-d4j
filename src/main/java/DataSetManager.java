@@ -86,30 +86,6 @@ public class DataSetManager {
 
     }
 
-    public DataSetIterator createDataSetIteratorForFeedForward (File file, boolean train) throws IOException, InterruptedException {
-
-        DataSetIterator iterator = null;
-
-        RecordReader rr = new CSVRecordReader(1,",");
-        rr.initialize(new FileSplit(file));
-        if (train) {
-            iterator = new RecordReaderDataSetIterator(rr,batchSize,labelIndex,numClasses);
-        } else {
-            iterator = new RecordReaderDataSetIterator(rr,batchSize);
-        }
-
-        System.out.println("Normalizer");
-
-        DataNormalization normalizer = new NormalizerStandardize();
-        normalizer.fit(iterator);
-        iterator.setPreProcessor(normalizer);
-
-        System.out.println("End Normalizer");
-
-        return iterator;
-
-    }
-
     public DataSetIterator createDataSetIteratorForCNN (File fileData) throws IOException, InterruptedException {
         int height = 1;
         int width = 500;
