@@ -86,7 +86,7 @@ public class DataSetManager {
 
     }
 
-    public DataSetIterator createDataSetIteratorForCNN (File fileData) throws IOException, InterruptedException {
+    public DataSetIterator createMyOwnDataSetIterator (File fileData) throws IOException, InterruptedException {
         int height = 1;
         int width = 500;
         int depth = 3;

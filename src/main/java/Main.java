@@ -15,36 +15,28 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-
-        /**
-         * CNN
-         * numberOfHiddenNodes = 2 * input + output
-         * For allData I use 100 epochs,100 nodes, 1 iteration
-         */
-
         KerasManager kerasManager = KerasManager.getInstance();
         DataSetManager dataSetManager = DataSetManager.getInstance(500,6,3);
-        Classifier LSTM = new Classifier(123,0.01,1,500,40,3,6,10);
-        Classifier CNN = new Classifier(0.01,1,500,15, 6);
+        Classifier LSTM = new Classifier(123,0.01,1,500,40,3,6,20);
+        Classifier CNN = new Classifier(0.01,1,500,500, 6);
 
         /**To train LSTM model */
-        /*final File data = new ClassPathResource("data").getFile();
-        final File index = new ClassPathResource("index").getFile();
+        final File data = new ClassPathResource("data").getFile();
         LSTM.createLSTM();
-        DataSetIterator testData = dataSetManager.createDataSetIteratorForLSTM(data,index);
-        DataSetIterator trainData = dataSetManager.createDataSetIteratorForLSTM(data,index);
+        DataSetIterator testData = dataSetManager.createMyOwnDataSetIterator(data);
+        DataSetIterator trainData = dataSetManager.createMyOwnDataSetIterator(data);
         LSTM.trainLSTM(trainData,testData);
-        kerasManager.saveModelD4J(LSTM.getModel());*/
+        kerasManager.saveModelD4J(LSTM.getComputationGraph());
 
 
         /**To train  CNN model */
-        final File data = new ClassPathResource("data").getFile();
-        final File datatest = new ClassPathResource("data_thigh34").getFile();
+        /*final File data = new ClassPathResource("data").getFile();
+        final File datatest = new ClassPathResource("data").getFile();
         CNN.createCNN();
-        DataSetIterator trainData = dataSetManager.createDataSetIteratorForCNN(data);
-        DataSetIterator testData = dataSetManager.createDataSetIteratorForCNN(datatest);
+        DataSetIterator trainData = dataSetManager.createMyOwnDataSetIterator(data);
+        DataSetIterator testData = dataSetManager.createMyOwnDataSetIterator(datatest);
         CNN.trainCNN(trainData,testData);
-        kerasManager.saveModelD4J(CNN.getModel());
+        kerasManager.saveModelD4J(CNN.getModel());*/
 
         /**To test D4J model from zip */
         /*File model = new File ("NetworkD4J.zip");

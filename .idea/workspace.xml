@@ -4,6 +4,8 @@
     <list default="true" id="a72650ba-2388-4825-8cbc-f50ccb23b68a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Classifier.java" afterPath="$PROJECT_DIR$/src/main/java/Classifier.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/DataSetManager.java" afterPath="$PROJECT_DIR$/src/main/java/DataSetManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/KerasManager.java" afterPath="$PROJECT_DIR$/src/main/java/KerasManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,87 +24,7 @@
     <favorites_list name="D4JSelfback" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="Classifier.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Classifier.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-              <folding>
-                <element signature="method#Classifier#0;class#Classifier#0" expanded="false" />
-                <element signature="method#Classifier#1;class#Classifier#0" expanded="false" />
-                <element signature="method#createLSTM#0;class#Classifier#0" expanded="false" />
-                <element signature="method#createCNN#0;class#Classifier#0" expanded="false" />
-                <element signature="method#createMyOwnCNN#0;class#Classifier#0" expanded="false" />
-                <element signature="method#trainLSTM#0;class#Classifier#0" expanded="false" />
-                <element signature="method#trainCNN#0;class#Classifier#0" expanded="false" />
-                <element signature="method#makePrediction#0;class#Classifier#0" expanded="false" />
-                <element signature="method#dispOccurence#0;class#Classifier#0" expanded="false" />
-                <element signature="method#dispModel#0;class#Classifier#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataInput.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DataInput.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="43" column="72" lean-forward="false" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
-              <folding>
-                <element signature="method#DataInput#0;class#DataInput#0" expanded="false" />
-                <element signature="method#getDataSetIteratorTest#0;class#DataInput#0" expanded="false" />
-                <element signature="method#getDataSetIterator#0;class#DataInput#0" expanded="false" />
-                <element signature="method#createFalseRandLabels#0;class#DataInput#0" expanded="false" />
-                <element signature="method#mergeFeaturesWithLabels#0;class#DataInput#0" expanded="false" />
-                <element signature="method#getListLabel#0;class#DataInput#0" expanded="false" />
-                <element signature="method#getData#0;class#DataInput#0" expanded="false" />
-                <element signature="method#fusionList#0;class#DataInput#0" expanded="false" />
-                <element signature="method#listFilesForFolder#0;class#DataInput#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataSetManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DataSetManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-              <folding>
-                <element signature="method#DataSetManager#0;class#DataSetManager#0" expanded="false" />
-                <element signature="method#getInstance#0;class#DataSetManager#0" expanded="false" />
-                <element signature="method#createDataSetIteratorForLSTM#0;class#DataSetManager#0" expanded="false" />
-                <element signature="method#createDataSetIteratorForCNN#0;class#DataSetManager#0" expanded="false" />
-                <element signature="method#createDataSetTestCNN#0;class#DataSetManager#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KerasManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/KerasManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="29" column="109" lean-forward="false" selection-start-line="29" selection-start-column="109" selection-end-line="29" selection-end-column="109" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="36" column="53" lean-forward="false" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -153,11 +75,11 @@
         <option value="$PROJECT_DIR$/src/main/java/MLPClassifierLinear.java" />
         <option value="$PROJECT_DIR$/src/main/java/CNNClasssifier.java" />
         <option value="$PROJECT_DIR$/src/main/java/LSTMClassifier.java" />
-        <option value="$PROJECT_DIR$/src/main/java/KerasManager.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$USER_HOME$/.IdeaIC2017.1/idea64.exe.vmoptions" />
         <option value="$PROJECT_DIR$/src/main/java/DataInput.java" />
         <option value="$PROJECT_DIR$/src/main/java/DataSetManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/KerasManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/Classifier.java" />
       </list>
@@ -195,7 +117,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -239,10 +160,6 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -266,24 +183,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="D4JSelfback" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="D4JSelfback" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data_test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -564,7 +468,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -580,7 +483,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30432433" sideWeight="0.67895365" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25513515" sideWeight="0.67895365" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -601,7 +504,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="23" />
+      <option name="time" value="24" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -610,7 +513,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/downstairs/063.csv" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/downstairs.csv" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/jogging.csv" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/sitting.csv" />
@@ -801,13 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/deeplearning4j/deeplearning4j-nn/0.8.0/deeplearning4j-nn-0.8.0.jar!/org/deeplearning4j/nn/multilayer/MultiLayerNetwork.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="842" column="0" lean-forward="false" selection-start-line="842" selection-start-column="0" selection-end-line="842" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/deeplearning4j/deeplearning4j-nn/0.8.0/deeplearning4j-nn-0.8.0.jar!/org/deeplearning4j/nn/layers/BaseOutputLayer.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
@@ -843,10 +738,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DataInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="77" column="43" lean-forward="true" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
+          <folding>
+            <element signature="method#DataInput#0;class#DataInput#0" expanded="false" />
+            <element signature="method#getDataSetIteratorTest#0;class#DataInput#0" expanded="false" />
+            <element signature="method#getDataSetIterator#0;class#DataInput#0" expanded="false" />
+            <element signature="method#createFalseRandLabels#0;class#DataInput#0" expanded="false" />
+            <element signature="method#mergeFeaturesWithLabels#0;class#DataInput#0" expanded="false" />
+            <element signature="method#getListLabel#0;class#DataInput#0" expanded="false" />
+            <element signature="method#getData#0;class#DataInput#0" expanded="false" />
+            <element signature="method#fusionList#0;class#DataInput#0" expanded="false" />
+            <element signature="method#listFilesForFolder#0;class#DataInput#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/deeplearning4j/deeplearning4j-nn/0.8.0/deeplearning4j-nn-0.8.0.jar!/org/deeplearning4j/nn/graph/ComputationGraph.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="69" column="13" lean-forward="false" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/deeplearning4j/deeplearning4j-nn/0.8.0/deeplearning4j-nn-0.8.0.jar!/org/deeplearning4j/nn/multilayer/MultiLayerNetwork.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="71" column="13" lean-forward="false" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Classifier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+        <state relative-caret-position="100">
+          <caret line="30" column="3" lean-forward="true" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
           <folding>
             <element signature="method#Classifier#0;class#Classifier#0" expanded="false" />
             <element signature="method#Classifier#1;class#Classifier#0" expanded="false" />
@@ -862,52 +791,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DataInput.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="43" column="72" lean-forward="false" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
-          <folding>
-            <element signature="method#DataInput#0;class#DataInput#0" expanded="false" />
-            <element signature="method#getDataSetIteratorTest#0;class#DataInput#0" expanded="false" />
-            <element signature="method#getDataSetIterator#0;class#DataInput#0" expanded="false" />
-            <element signature="method#createFalseRandLabels#0;class#DataInput#0" expanded="false" />
-            <element signature="method#mergeFeaturesWithLabels#0;class#DataInput#0" expanded="false" />
-            <element signature="method#getListLabel#0;class#DataInput#0" expanded="false" />
-            <element signature="method#getData#0;class#DataInput#0" expanded="false" />
-            <element signature="method#fusionList#0;class#DataInput#0" expanded="false" />
-            <element signature="method#listFilesForFolder#0;class#DataInput#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DataSetManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-          <folding>
-            <element signature="method#DataSetManager#0;class#DataSetManager#0" expanded="false" />
-            <element signature="method#getInstance#0;class#DataSetManager#0" expanded="false" />
-            <element signature="method#createDataSetIteratorForLSTM#0;class#DataSetManager#0" expanded="false" />
-            <element signature="method#createDataSetIteratorForCNN#0;class#DataSetManager#0" expanded="false" />
-            <element signature="method#createDataSetTestCNN#0;class#DataSetManager#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="299">
+          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/KerasManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="29" column="109" lean-forward="false" selection-start-line="29" selection-start-column="109" selection-end-line="29" selection-end-column="109" />
+        <state relative-caret-position="295">
+          <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/DataSetManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="36" column="53" lean-forward="false" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
+        <state relative-caret-position="486">
+          <caret line="88" column="53" lean-forward="false" selection-start-line="88" selection-start-column="27" selection-end-line="88" selection-end-column="53" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#DataSetManager#0;class#DataSetManager#0" expanded="false" />
+            <element signature="method#getInstance#0;class#DataSetManager#0" expanded="false" />
+            <element signature="method#createDataSetIteratorForLSTM#0;class#DataSetManager#0" expanded="false" />
+            <element signature="method#createMyOwnDataSetIterator#0;class#DataSetManager#0" expanded="false" />
+            <element signature="method#createDataSetTestCNN#0;class#DataSetManager#0" expanded="false" />
           </folding>
         </state>
       </provider>

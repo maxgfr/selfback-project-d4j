@@ -1,3 +1,4 @@
+import org.deeplearning4j.nn.graph.ComputationGraph;
 import org.deeplearning4j.nn.modelimport.keras.InvalidKerasConfigurationException;
 import org.deeplearning4j.nn.modelimport.keras.KerasModelImport;
 import org.deeplearning4j.nn.modelimport.keras.UnsupportedKerasConfigurationException;
@@ -44,6 +45,13 @@ public class KerasManager {
     }
 
     public void saveModelD4J (MultiLayerNetwork model) throws IOException {
+        File locationToSave = new File("NetworkD4J.zip");      //Where to save the network. Note: the file is in .zip format - can be opened externally
+        boolean saveUpdater = true;                                             //Updater: i.e., the state for Momentum, RMSProp, Adagrad etc. Save this if you want to train your network more in the future
+        ModelSerializer.writeModel(model, locationToSave, saveUpdater);
+        System.out.println("Model save in a zip");
+    }
+
+    public void saveModelD4J (ComputationGraph model) throws IOException {
         File locationToSave = new File("NetworkD4J.zip");      //Where to save the network. Note: the file is in .zip format - can be opened externally
         boolean saveUpdater = true;                                             //Updater: i.e., the state for Momentum, RMSProp, Adagrad etc. Save this if you want to train your network more in the future
         ModelSerializer.writeModel(model, locationToSave, saveUpdater);

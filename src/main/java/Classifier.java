@@ -7,6 +7,7 @@ import org.deeplearning4j.nn.api.OptimizationAlgorithm;
 import org.deeplearning4j.nn.conf.*;
 import org.deeplearning4j.nn.conf.inputs.InputType;
 import org.deeplearning4j.nn.conf.layers.*;
+import org.deeplearning4j.nn.graph.ComputationGraph;
 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
 import org.deeplearning4j.nn.weights.WeightInit;
 import org.deeplearning4j.optimize.listeners.ScoreIterationListener;
@@ -40,6 +41,7 @@ public class Classifier {
     private int numOutputs;//6
     private int numHiddenNodes;//30
     private MultiLayerNetwork model;
+    private ComputationGraph net;
 
     public Classifier (int seed, double learningRate, int iteration, int batchSize, int nEpochs, int numInputs, int numOutputs, int numHiddenNodes) {
         this.seed = seed;
@@ -64,36 +66,45 @@ public class Classifier {
 
     public void setModel (MultiLayerNetwork mln) {model = mln;}
 
+    public ComputationGraph getComputationGraph () {return net;}
+
+    public void setComputationGraph (ComputationGraph mln) {net = mln;}
+
     public void createLSTM () {
 
         System.out.println("We're starting to create the LSTM network");
 
-        MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
-                .seed(seed)    //Random number generator seed for improved repeatability. Optional.
-                .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-                .iterations(iteration)
+        ComputationGraphConfiguration conf = new NeuralNetConfiguration.Builder()
+                .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT).iterations(1)
+                .learningRate(0.1)
+                .rmsDecay(0.95)
+                .seed(12345)
+                .regularization(true)
+                .l2(0.001)
                 .weightInit(WeightInit.XAVIER)
-                .updater(Updater.NESTEROVS).momentum(0.9)
-                .learningRate(learningRate)
-                .gradientNormalization(GradientNormalization.ClipElementWiseAbsoluteValue)  //Not always required, but helps with this data set
-                .gradientNormalizationThreshold(0.5)
-                .regularization(true).l2(0.0001)
-                .list()
-                .layer(0, new GravesLSTM.Builder().activation(Activation.TANH).nIn(numInputs).nOut(numHiddenNodes).build())
-                .layer(1, new RnnOutputLayer.Builder(LossFunctions.LossFunction.MCXENT)
-                        .activation(Activation.SOFTMAX).nIn(numHiddenNodes).nOut(numOutputs).build())
-                .pretrain(false)
-                .backprop(true)
+                .graphBuilder()
+                .addInputs("input") //Give the input a name. For a ComputationGraph with multiple inputs, this also defines the input array orders
+                //First layer: name "first", with inputs from the input called "input"
+                .addLayer("first", new GravesLSTM.Builder().nIn(3).nOut(numHiddenNodes)
+                        .updater(Updater.RMSPROP).activation(Activation.TANH).build(),"input")
+                //Second layer, name "second", with inputs from the layer called "first"
+                .addLayer("second", new GravesLSTM.Builder().nIn(numHiddenNodes).nOut(numHiddenNodes)
+                        .updater(Updater.RMSPROP)
+                        .activation(Activation.TANH).build(),"first")
+                //Output layer, name "outputlayer" with inputs from the two layers called "first" and "second"
+                .addLayer("outputLayer", new RnnOutputLayer.Builder(LossFunctions.LossFunction.MCXENT)
+                        .activation(Activation.SOFTMAX).updater(Updater.RMSPROP)
+                        .nIn(2*numHiddenNodes).nOut(numOutputs).build(),"first","second")
+                .setOutputs("outputLayer")  //List the output. For a ComputationGraph with multiple outputs, this also defines the input array orders
+                .backpropType(BackpropType.TruncatedBPTT).tBPTTForwardLength(30).tBPTTBackwardLength(30)
+                .pretrain(false).backprop(true)
                 .build();
 
-        MultiLayerNetwork net = new MultiLayerNetwork(conf);
+        net = new ComputationGraph(conf);
+
         net.init();
 
-        model = new MultiLayerNetwork(conf);
-
-        model.init();
-
-        model.setListeners(new ScoreIterationListener(1));
+        net.setListeners(new ScoreIterationListener(1));
 
         System.out.println("We finished to create the LSTM network");
 
@@ -281,12 +292,12 @@ public class Classifier {
 
         System.out.println("We're starting to train the LSTM network");
 
-        dispModel();
+        dispModel(true);
 
         for (int i=1; i<nbEpochs+1; i++) {
-            model.fit(iteratorTrain);
+            net.fit(iteratorTrain);
             System.out.println(i+" epoch(s) completed");
-            Evaluation evaluation = model.evaluate(testData);
+            Evaluation evaluation = net.evaluate(testData);
             System.out.println("Evaluation of model with Accuracy = "+evaluation.accuracy()+" and F1 = "+evaluation.f1());
             testData.reset();
         }
@@ -297,7 +308,7 @@ public class Classifier {
     public void trainCNN (DataSetIterator dataIter, DataSetIterator dataTest){
 
         System.out.println("We're starting to train the CNN network");
-        dispModel();
+        dispModel(false);
 
         for (int i=1; i<nbEpochs+1; i++) {
             model.fit(dataIter);
@@ -362,7 +373,7 @@ public class Classifier {
     }
 
     //http://localhost:9000/train
-    private void dispModel () {
+    private void dispModel (boolean graph) {
         //Initialize the user interface backend
         UIServer uiServer = UIServer.getInstance();
 
@@ -373,7 +384,11 @@ public class Classifier {
         uiServer.attach(statsStorage);
 
         //Then add the StatsListener to collect this information from the network, as it trains
-        model.setListeners(new StatsListener(statsStorage));
+        if (graph) {
+            net.setListeners(new StatsListener(statsStorage));
+        } else {
+            model.setListeners(new StatsListener(statsStorage));
+        }
     }
 
 }
