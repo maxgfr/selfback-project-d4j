@@ -1,7 +1,4 @@
 import org.deeplearning4j.api.storage.StatsStorage;
-import org.deeplearning4j.berkeley.Pair;
-import org.deeplearning4j.datasets.iterator.INDArrayDataSetIterator;
-import org.deeplearning4j.datasets.iterator.MultipleEpochsIterator;
 import org.deeplearning4j.eval.Evaluation;
 import org.deeplearning4j.nn.api.OptimizationAlgorithm;
 import org.deeplearning4j.nn.conf.*;
@@ -17,10 +14,6 @@ import org.deeplearning4j.ui.storage.InMemoryStatsStorage;
 import org.nd4j.linalg.activations.Activation;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.dataset.DataSet;
-import org.nd4j.linalg.dataset.SplitTestAndTrain;
-import org.nd4j.linalg.dataset.api.preprocessor.DataNormalization;
-import org.nd4j.linalg.dataset.api.preprocessor.NormalizerStandardize;
-import org.nd4j.linalg.factory.Nd4j;
 import org.nd4j.linalg.lossfunctions.LossFunctions;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 
@@ -41,6 +34,13 @@ public class Classifier {
     private int tBPTT;
     private MultiLayerNetwork model;
     private ComputationGraph net;
+
+    public Classifier (int seed, double learningRate, int iteration, int nEpochs) {
+        this.seed = seed;
+        this.learningRate = learningRate;
+        this.iteration = iteration;
+        this.nbEpochs = nEpochs;
+    }
 
     public Classifier (int seed, double learningRate, int iteration, int nEpochs, int numInputs, int numOutputs, int numHiddenNodes) {
         this.seed = seed;
@@ -246,14 +246,11 @@ public class Classifier {
                 .layer(5, new RnnOutputLayer.Builder(LossFunctions.LossFunction.MCXENT)
                         .activation(Activation.SOFTMAX)
                         .nIn(50)
-                        .nOut(numOutputs)
+                        .nOut(6)
                         .build())
                 .setInputType(InputType.convolutional(1, 500, 3))
                 .backprop(true)
                 .pretrain(false)
-                .backpropType(BackpropType.TruncatedBPTT)
-                .tBPTTForwardLength(tBPTT)
-                .tBPTTBackwardLength(tBPTT)
                 .build();
 
         MultiLayerNetwork net = new MultiLayerNetwork(conf);
