@@ -207,7 +207,7 @@ public class Classifier {
         System.out.println("We're starting to create the CNN network");
     }
 
-    public void createMyOwnCNN () {
+    public void createMyOwnNetwork () {
 
         System.out.println("We're starting to create the CNN network");
 
@@ -222,7 +222,7 @@ public class Classifier {
                 .list()
                 .layer(0, new ConvolutionLayer.Builder(1,10) //depends height
                         .nIn(3)//depth
-                        .nOut(150)
+                        .nOut(40)
                         .stride(1,1)
                         .build())
                 .layer(1, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX) //max pooling
@@ -230,58 +230,30 @@ public class Classifier {
                         .stride(1,2)
                         .build())
                 .layer(2, new ConvolutionLayer.Builder(1,10)
-                        .nIn(150)
-                        .nOut(100)
+                        .nIn(40)//depth
+                        .nOut(10)
                         .stride(1,1)
                         .build())
-                .layer(3, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX)
-                        .kernelSize(1,2)
-                        .stride(1,2)
-                        .build())
-                .layer(4, new ConvolutionLayer.Builder(1,10)
-                        .nIn(100)
-                        .nOut(80)
-                        .stride(1,1)
-                        .build())
-                .layer(5, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX)
-                        .kernelSize(1,2)
-                        .stride(1,2)
-                        .build())
-                .layer(6, new ConvolutionLayer.Builder(1,10)
-                        .nIn(80)
-                        .nOut(60)
-                        .stride(1,1)
-                        .build())
-                .layer(7, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX)
-                        .kernelSize(1,2)
-                        .stride(1,2)
-                        .build())
-                .layer(8, new ConvolutionLayer.Builder(1,10)
-                        .stride(1,1)
-                        .nIn(60)
-                        .nOut(40)
-                        .build())
-                .layer(9, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX)
-                        .kernelSize(1,2)
-                        .stride(1,2)
-                        .build())
-                .layer(10, new DenseLayer.Builder() //fullyConnected
-                        .nOut(900)
-                        .activation(Activation.TANH)
-                        .build())
-                .layer(11, new DenseLayer.Builder()
-                        .nOut(300)
+                .layer(3, new DenseLayer.Builder()
+                        .nOut(50)
                         .activation(Activation.TANH)
                         .dropOut(0.5)
                         .build())
-                .layer(12, new OutputLayer.Builder()
+                .layer(4, new GravesLSTM.Builder()
+                        .nIn(50)
+                        .nOut(50)
+                        .build())
+                .layer(5, new RnnOutputLayer.Builder(LossFunctions.LossFunction.MCXENT)
                         .activation(Activation.SOFTMAX)
-                        .lossFunction(LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD)
+                        .nIn(50)
                         .nOut(numOutputs)
                         .build())
                 .setInputType(InputType.convolutional(1, 500, 3))
                 .backprop(true)
                 .pretrain(false)
+                .backpropType(BackpropType.TruncatedBPTT)
+                .tBPTTForwardLength(tBPTT)
+                .tBPTTBackwardLength(tBPTT)
                 .build();
 
         MultiLayerNetwork net = new MultiLayerNetwork(conf);
@@ -335,6 +307,22 @@ public class Classifier {
 
         System.out.println("We finished to train the CNN network");
 
+    }
+
+    public void trainMyOwnNetwork (DataSetIterator iteratorTrain, DataSetIterator testData) {
+
+        System.out.println("We're starting to train my network");
+
+        dispModel(false);
+
+        for (int i=1; i<nbEpochs+1; i++) {
+            model.fit(iteratorTrain);
+            System.out.println(i+" epoch(s) completed");
+            Evaluation evaluation = model.evaluate(testData);
+            System.out.println("Evaluation of model with Accuracy = "+evaluation.accuracy()+" and F1 = "+evaluation.f1());
+            testData.reset();
+        }
+        System.out.println("We finished to train my network");
     }
 
     public void makePrediction(DataSetIterator it) {

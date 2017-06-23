@@ -19,14 +19,15 @@ public class Main {
         DataSetManager dataSetManager = DataSetManager.getInstance(500,6,3);
         Classifier LSTM = new Classifier(123,0.01,1,200,3,6,300,30);
         Classifier CNN = new Classifier(123, 0.01,1,40, 3,6,20);
+        Classifier myOwnNetwork = new Classifier(123,0.01,1,200,3,6,150,30);
 
         /**To train LSTM model */
-        final File data = new ClassPathResource("data").getFile();
+        /*final File data = new ClassPathResource("data").getFile();
         LSTM.createLSTM();
         DataSetIterator testData = dataSetManager.createMyOwnDataSetIterator(data);
         DataSetIterator trainData = dataSetManager.createMyOwnDataSetIterator(data);
         LSTM.trainLSTM(trainData,testData);
-        kerasManager.saveModelD4J(LSTM.getComputationGraph());
+        kerasManager.saveModelD4J(LSTM.getComputationGraph());*/
 
 
         /**To train  CNN model */
@@ -37,6 +38,14 @@ public class Main {
         DataSetIterator testData = dataSetManager.createMyOwnDataSetIterator(datatest);
         CNN.trainCNN(trainData,testData);
         kerasManager.saveModelD4J(CNN.getModel());*/
+
+        /**To train my own model */
+        final File data = new ClassPathResource("data").getFile();
+        myOwnNetwork.createMyOwnNetwork();
+        DataSetIterator testData = dataSetManager.createMyOwnDataSetIterator(data);
+        DataSetIterator trainData = dataSetManager.createMyOwnDataSetIterator(data);
+        myOwnNetwork.trainMyOwnNetwork(trainData,testData);
+        kerasManager.saveModelD4J(myOwnNetwork.getModel());
 
         /**To test D4J model from zip */
         /*File model = new File ("NetworkD4J.zip");

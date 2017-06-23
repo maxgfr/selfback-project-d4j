@@ -5,6 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
 
+    <name>DeepLearning4j Project Selfback</name>
+    <description>Activity Recognition through deeplearning4j</description>
+    <properties>
+        <nd4j.backend>nd4j-cuda-8.0-platform</nd4j.backend>
+    </properties>
+
+
     <groupId>D4JSelfback</groupId>
     <artifactId>D4JSelfback</artifactId>
     <version>1.0-SNAPSHOT</version>
