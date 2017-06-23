@@ -34,32 +34,33 @@ public class Classifier {
     private int seed;//123
     private double learningRate;//0.01
     private int iteration;
-    /** Defines number of samples that going to be propagated through the network.*/
-    private int batchSize;//500
     private int nbEpochs;
     private int numInputs;//3
     private int numOutputs;//6
-    private int numHiddenNodes;//30
+    private int numHiddenNodes;
+    private int tBPTT;
     private MultiLayerNetwork model;
     private ComputationGraph net;
 
-    public Classifier (int seed, double learningRate, int iteration, int batchSize, int nEpochs, int numInputs, int numOutputs, int numHiddenNodes) {
+    public Classifier (int seed, double learningRate, int iteration, int nEpochs, int numInputs, int numOutputs, int numHiddenNodes) {
         this.seed = seed;
         this.learningRate = learningRate;
         this.iteration = iteration;
-        this.batchSize= batchSize;
         this.nbEpochs = nEpochs;
         this.numInputs= numInputs;
         this.numOutputs= numOutputs;
         this.numHiddenNodes= numHiddenNodes;
     }
 
-    public Classifier (double learningRate, int iteration, int batchSize, int nEpochs, int numOutputs) {
+    public Classifier (int seed, double learningRate, int iteration, int nEpochs, int numInputs, int numOutputs, int numHiddenNodes, int tBPTT) {
+        this.seed = seed;
         this.learningRate = learningRate;
         this.iteration = iteration;
-        this.batchSize = batchSize;
         this.nbEpochs = nEpochs;
-        this.numOutputs = numOutputs;
+        this.numInputs= numInputs;
+        this.numOutputs= numOutputs;
+        this.numHiddenNodes= numHiddenNodes;
+        this.tBPTT = tBPTT;
     }
 
     public MultiLayerNetwork getModel () {return model;}
@@ -75,29 +76,36 @@ public class Classifier {
         System.out.println("We're starting to create the LSTM network");
 
         ComputationGraphConfiguration conf = new NeuralNetConfiguration.Builder()
-                .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT).iterations(1)
-                .learningRate(0.1)
-                .rmsDecay(0.95)
-                .seed(12345)
+                .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
+                .seed(seed)
+                .iterations(iteration)
+                .learningRate(learningRate)
+                .updater(Updater.RMSPROP)
+                .weightInit(WeightInit.XAVIER)
+                .activation(Activation.TANH)
                 .regularization(true)
                 .l2(0.001)
-                .weightInit(WeightInit.XAVIER)
                 .graphBuilder()
-                .addInputs("input") //Give the input a name. For a ComputationGraph with multiple inputs, this also defines the input array orders
-                //First layer: name "first", with inputs from the input called "input"
-                .addLayer("first", new GravesLSTM.Builder().nIn(3).nOut(numHiddenNodes)
-                        .updater(Updater.RMSPROP).activation(Activation.TANH).build(),"input")
-                //Second layer, name "second", with inputs from the layer called "first"
-                .addLayer("second", new GravesLSTM.Builder().nIn(numHiddenNodes).nOut(numHiddenNodes)
-                        .updater(Updater.RMSPROP)
-                        .activation(Activation.TANH).build(),"first")
-                //Output layer, name "outputlayer" with inputs from the two layers called "first" and "second"
+                .addInputs("input")
+                .addLayer("first", new GravesLSTM.Builder()
+                        .nIn(numInputs)
+                        .nOut(numHiddenNodes)
+                        .build(),"input")
+                .addLayer("second", new GravesLSTM.Builder()
+                        .nIn(numHiddenNodes)
+                        .nOut(numHiddenNodes)
+                        .build(),"first")
                 .addLayer("outputLayer", new RnnOutputLayer.Builder(LossFunctions.LossFunction.MCXENT)
-                        .activation(Activation.SOFTMAX).updater(Updater.RMSPROP)
-                        .nIn(2*numHiddenNodes).nOut(numOutputs).build(),"first","second")
-                .setOutputs("outputLayer")  //List the output. For a ComputationGraph with multiple outputs, this also defines the input array orders
-                .backpropType(BackpropType.TruncatedBPTT).tBPTTForwardLength(30).tBPTTBackwardLength(30)
-                .pretrain(false).backprop(true)
+                        .activation(Activation.SOFTMAX)
+                        .nIn(2*numHiddenNodes)
+                        .nOut(numOutputs)
+                        .build(),"first","second")
+                .setOutputs("outputLayer")
+                .backprop(true)
+                .backpropType(BackpropType.TruncatedBPTT)
+                .tBPTTForwardLength(tBPTT)
+                .tBPTTBackwardLength(tBPTT)
+                .pretrain(false)
                 .build();
 
         net = new ComputationGraph(conf);
