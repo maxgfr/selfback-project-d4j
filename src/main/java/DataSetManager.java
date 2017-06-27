@@ -15,7 +15,7 @@ import java.io.IOException;
  */
 public class DataSetManager {
 
-    /** Instance unique non préinitialisée */
+    /** Instance of our class */
     private static DataSetManager INSTANCE = null;
     /** Defines number of samples that going to be propagated through the network.*/
     private int batchSize;//500
@@ -80,31 +80,19 @@ public class DataSetManager {
 
     }
 
-    public DataSetIterator createMyOwnDataSetIterator (File fileData) throws IOException, InterruptedException {
+    public DataSetIterator createMyOwnDataSetIterator (File fileData, boolean toTrain) throws IOException, InterruptedException {
 
         DataInput di = new DataInput(height,width,depth);
 
-        INDArrayDataSetIterator iterator =  di.getDataSetIterator(fileData);
+        INDArrayDataSetIterator iterator = null;
 
-        System.out.println("Normalizer");
-
-        DataNormalization normalizer = new NormalizerStandardize();
-        normalizer.fit(iterator);
-        iterator.setPreProcessor(normalizer);
-
-        System.out.println("End Normalizer");
+        if (toTrain) {
+            iterator = di.getDataSetIterator(fileData);
+        } else {
+            iterator = di.getDataSetIteratorTest(fileData);
+        }
 
         return iterator;
-
-    }
-
-    public DataSetIterator createDataSetIteratorTest (File fileData) throws IOException, InterruptedException {
-
-        DataInput dataInput = new DataInput(height,width,depth);
-
-        INDArrayDataSetIterator iterator = dataInput.getDataSetIteratorTest(fileData);
-
-        return  iterator;
 
     }
 

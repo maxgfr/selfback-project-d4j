@@ -25,8 +25,8 @@ public class Main {
         /**To train LSTM model */
         /*final File data = new ClassPathResource("data").getFile();
         LSTM.createLSTM();
-        DataSetIterator testData = myOwnDataSetManager.createMyOwnDataSetIterator(data);
-        DataSetIterator trainData = myOwnDataSetManager.createMyOwnDataSetIterator(data);
+        DataSetIterator testData = myOwnDataSetManager.createMyOwnDataSetIterator(data,true);
+        DataSetIterator trainData = myOwnDataSetManager.createMyOwnDataSetIterator(data,true);
         LSTM.trainLSTM(trainData,testData);
         kerasManager.saveModelD4J(LSTM.getComputationGraph());*/
 
@@ -35,28 +35,35 @@ public class Main {
         /*final File data = new ClassPathResource("data").getFile();
         final File data_test = new ClassPathResource("data").getFile();
         CNN.createCNN();
-        DataSetIterator trainData = myOwnDataSetManager.createMyOwnDataSetIterator(data);
-        DataSetIterator testData = myOwnDataSetManager.createMyOwnDataSetIterator(data_test);
+        DataSetIterator trainData = myOwnDataSetManager.createMyOwnDataSetIterator(data,true);
+        DataSetIterator testData = myOwnDataSetManager.createMyOwnDataSetIterator(data_test,true);
         CNN.trainCNN(trainData,testData);
         kerasManager.saveModelD4J(CNN.getModel());*/
 
         /**To train my own model */
         /*final File data = new ClassPathResource("data").getFile();
         myOwnNetwork.createMyOwnNetwork();
-        DataSetIterator testData = myOwnDataSetManager.createMyOwnDataSetIterator(data);
-        DataSetIterator trainData = myOwnDataSetManager.createMyOwnDataSetIterator(data);
+        DataSetIterator testData = myOwnDataSetManager.createMyOwnDataSetIterator(data,true);
+        DataSetIterator trainData = myOwnDataSetManager.createMyOwnDataSetIterator(data,true);
         myOwnNetwork.trainMyOwnNetwork(trainData,testData);
         kerasManager.saveModelD4J(myOwnNetwork.getModel());*/
 
         /**To test D4J model from zip */
-        File model = new File ("model/NetworkD4J_1.zip");
-        final File data_test = new ClassPathResource("data_test/downstairs.csv").getFile();
-        DataSetIterator testModelData = myOwnDataSetManager.createDataSetIteratorTest(data_test);
-        DataSetIterator sameData = myOwnDataSetManager.createDataSetIteratorTest(data_test);
-        MultiLayerNetwork networkRestored = kerasManager.restoreModelFromD4J(model);
-        myOwnNetwork.setModel(networkRestored);
-        myOwnNetwork.makePrediction(testModelData);
-        myOwnNetwork.dispTabProbabilities(sameData);
+        final File data_test = new ClassPathResource("data_test/walking.csv").getFile();
+        DataSetIterator testModelData = myOwnDataSetManager.createMyOwnDataSetIterator(data_test, false);
+        DataSetIterator sameData = myOwnDataSetManager.createMyOwnDataSetIterator(data_test, false);
+
+        File modelCNN = new File ("model/NetworkD4J_1.zip");
+        MultiLayerNetwork networkRestored1 = kerasManager.restoreModelFromD4J(modelCNN);
+        CNN.setModel(networkRestored1);
+        CNN.makePrediction(testModelData);
+        //CNN.dispTabProbabilities(testModelData);
+
+        File modelMINE = new File ("model/NetworkD4J_2.zip");
+        MultiLayerNetwork networkRestored2 = kerasManager.restoreModelFromD4J(modelMINE);
+        myOwnNetwork.setModel(networkRestored2);
+        myOwnNetwork.makePrediction(sameData);
+        //myOwnNetwork.dispTabProbabilities(sameData);
 
         /**To test from Keras model the model */
         /*File model = new File ("model/cnn_wrist_33.h5");
