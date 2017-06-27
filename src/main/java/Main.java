@@ -16,10 +16,10 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         KerasManager kerasManager = KerasManager.getInstance();
-        DataSetManager dataSetManager = DataSetManager.getInstance(500,6,3);
+        DataSetManager dataSetManager = DataSetManager.getInstance(500,6,1,500,3);
         Classifier LSTM = new Classifier(123,0.01,1,200,3,6,300,30);
-        Classifier CNN = new Classifier(123, 0.01,1,40, 3,6,20);
-        Classifier myOwnNetwork = new Classifier(123,0.01,1,200);
+        Classifier CNN = new Classifier(123, 0.01,1,1500, 3,6,20);
+        Classifier myOwnNetwork = new Classifier(123,0.01,1,1500);
 
         /**To train LSTM model */
         /*final File data = new ClassPathResource("data").getFile();
@@ -31,50 +31,31 @@ public class Main {
 
 
         /**To train  CNN model */
-        /*final File data = new ClassPathResource("data").getFile();
-        final File datatest = new ClassPathResource("data").getFile();
+        final File data = new ClassPathResource("data").getFile();
+        final File data_test = new ClassPathResource("data").getFile();
         CNN.createCNN();
         DataSetIterator trainData = dataSetManager.createMyOwnDataSetIterator(data);
-        DataSetIterator testData = dataSetManager.createMyOwnDataSetIterator(datatest);
+        DataSetIterator testData = dataSetManager.createMyOwnDataSetIterator(data_test);
         CNN.trainCNN(trainData,testData);
-        kerasManager.saveModelD4J(CNN.getModel());*/
+        kerasManager.saveModelD4J(CNN.getModel());
 
         /**To train my own model */
-        final File data = new ClassPathResource("data").getFile();
+        /*final File data = new ClassPathResource("data").getFile();
         myOwnNetwork.createMyOwnNetwork();
         DataSetIterator testData = dataSetManager.createMyOwnDataSetIterator(data);
         DataSetIterator trainData = dataSetManager.createMyOwnDataSetIterator(data);
         myOwnNetwork.trainMyOwnNetwork(trainData,testData);
-        kerasManager.saveModelD4J(myOwnNetwork.getModel());
+        kerasManager.saveModelD4J(myOwnNetwork.getModel());*/
 
         /**To test D4J model from zip */
-        /*File model = new File ("NetworkD4J.zip");
+        /*File model = new File ("model/NetworkD4J_1.zip");
+        final File data_test = new ClassPathResource("data_test/walking.csv").getFile();
+        DataSetIterator testModelData = dataSetManager.createDataSetIteratorTest(data_test);
+        DataSetIterator sameData = dataSetManager.createDataSetIteratorTest(data_test);
         MultiLayerNetwork networkRestored = kerasManager.restoreModelFromD4J(model);
-        FeedForward.setModel(networkRestored);
-        try {
-            File file = new File ("data_test/jogging.csv");
-            DataSetIterator testModelData = dataSetManager.createDataSetIteratorForFeedForward(file,false);
-            FeedForward.makePrediction(testModelData);
-        } catch (IOException io){
-            io.getMessage();
-        } catch (InterruptedException inter){
-            inter.getMessage();
-        }*/
-
-        /**To test CNN D4J model from zip */
-        /*File model = new File ("NetworkD4J.zip");
-        MultiLayerNetwork networkRestored = kerasManager.restoreModelFromD4J(model);
-        CNN.setModel(networkRestored);
-        try {
-            File file = new File ("data_test/sitting.csv");
-            DataSetIterator testModelData = dataSetManager.createDataSetTestCNN(file);
-            CNN.makePrediction(testModelData);
-        } catch (IOException io){
-            io.getMessage();
-        } catch (InterruptedException inter){
-            inter.getMessage();
-        }*/
-
+        myOwnNetwork.setModel(networkRestored);
+        myOwnNetwork.makePrediction(testModelData);
+        myOwnNetwork.dispTabProbabilities(sameData);*/
 
         /**To test from Keras model the model */
         /*File model = new File ("model/cnn_wrist_33.h5");
@@ -82,7 +63,7 @@ public class Main {
         FeedForward.setModel(networkRestored);
         try {
             File file = new File ("data_test/jogging.csv");
-            DataSetIterator testModelData = dataSetManager.createDataSetIteratorForFeedForward(file,false);
+            DataSetIterator testModelData = dataSetManager.createDataSetIteratorTest(file,false);
             FeedForward.makePrediction(testModelData);
         } catch (IOException io){
             io.getMessage();

@@ -6,10 +6,7 @@ import org.nd4j.linalg.dataset.DataSet;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 import org.nd4j.linalg.factory.Nd4j;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.lang.reflect.Array;
 import java.util.*;
 import java.util.ArrayList;
@@ -33,6 +30,10 @@ public class DataInput {
     private static final int UPSTAIRS = 4;
     private static final int WALKING = 5;
 
+    /** In the constructor of INDArrayDataSetIterator : batchsize seems to be the number of INDarray for one datasets
+     *  if the number is 500, it means that 500 INDarray with width of Y will be contained in one dataset
+     */
+
     public DataInput(int x , int y, int z){
         nHeight = x;
         nWidth = y;
@@ -46,10 +47,13 @@ public class DataInput {
         List<INDArray> datas = null;
 
         try {
+            int numOfLine = countLine(nameFile.getPath());
+            System.out.println("number of line in this CSV : "+numOfLine);
             datas = getData(nameFile.getPath());
         } catch (IOException e) {
             e.printStackTrace();
         }
+
 
         List<INDArray> fakeLabel = createFalseRandLabels(6,datas.size());
 
@@ -57,7 +61,7 @@ public class DataInput {
 
         Iterable featLab = featuresAndLabels;
 
-        INDArrayDataSetIterator ds = new INDArrayDataSetIterator(featLab, 500);
+        INDArrayDataSetIterator ds = new INDArrayDataSetIterator(featLab, 1);
 
         return ds;
     }
@@ -71,7 +75,7 @@ public class DataInput {
         Collections.shuffle(featureAndLabel);
 
         Iterable featLab = featureAndLabel;
-        INDArrayDataSetIterator ds = new INDArrayDataSetIterator(featLab, 500);
+        INDArrayDataSetIterator ds = new INDArrayDataSetIterator(featLab, 1);
         return ds;
     }
 
@@ -237,5 +241,26 @@ public class DataInput {
             }
         }
         return list;
+    }
+
+    private int countLine(String filename) throws IOException {
+        InputStream is = new BufferedInputStream(new FileInputStream(filename));
+        try {
+            byte[] c = new byte[1024];
+            int count = 0;
+            int readChars = 0;
+            boolean empty = true;
+            while ((readChars = is.read(c)) != -1) {
+                empty = false;
+                for (int i = 0; i < readChars; ++i) {
+                    if (c[i] == '\n') {
+                        ++count;
+                    }
+                }
+            }
+            return (count == 0 && !empty) ? 1 : count;
+        } finally {
+            is.close();
+        }
     }
 }

@@ -1,0 +1,3286 @@
+"C:\Program Files\Java\jdk1.8.0_131\bin\java" -Xmx4g "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.1.3\lib\idea_rt.jar=59961:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2017.1.3\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.8.0_131\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\rt.jar;C:\Users\1616016\Downloads\D4JSelfback-master\target\classes;C:\Users\1616016\.m2\repository\org\nd4j\nd4j-native-platform\0.8.0\nd4j-native-platform-0.8.0.jar;C:\Users\1616016\.m2\repository\org\nd4j\nd4j-native\0.8.0\nd4j-native-0.8.0.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\openblas-platform\0.2.19-1.3\openblas-platform-0.2.19-1.3.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\openblas\0.2.19-1.3\openblas-0.2.19-1.3.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\openblas\0.2.19-1.3\openblas-0.2.19-1.3-android-arm.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\openblas\0.2.19-1.3\openblas-0.2.19-1.3-android-x86.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\openblas\0.2.19-1.3\openblas-0.2.19-1.3-linux-x86.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\openblas\0.2.19-1.3\openblas-0.2.19-1.3-linux-x86_64.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\openblas\0.2.19-1.3\openblas-0.2.19-1.3-linux-armhf.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\openblas\0.2.19-1.3\openblas-0.2.19-1.3-linux-ppc64le.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\openblas\0.2.19-1.3\openblas-0.2.19-1.3-macosx-x86_64.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\openblas\0.2.19-1.3\openblas-0.2.19-1.3-windows-x86.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\openblas\0.2.19-1.3\openblas-0.2.19-1.3-windows-x86_64.jar;C:\Users\1616016\.m2\repository\org\nd4j\nd4j-native-api\0.8.0\nd4j-native-api-0.8.0.jar;C:\Users\1616016\.m2\repository\org\nd4j\nd4j-native\0.8.0\nd4j-native-0.8.0-android-arm.jar;C:\Users\1616016\.m2\repository\org\nd4j\nd4j-native\0.8.0\nd4j-native-0.8.0-android-x86.jar;C:\Users\1616016\.m2\repository\org\nd4j\nd4j-native\0.8.0\nd4j-native-0.8.0-linux-x86_64.jar;C:\Users\1616016\.m2\repository\org\nd4j\nd4j-native\0.8.0\nd4j-native-0.8.0-macosx-x86_64.jar;C:\Users\1616016\.m2\repository\org\nd4j\nd4j-native\0.8.0\nd4j-native-0.8.0-windows-x86_64.jar;C:\Users\1616016\.m2\repository\org\nd4j\nd4j-native\0.8.0\nd4j-native-0.8.0-linux-ppc64le.jar;C:\Users\1616016\.m2\repository\org\datavec\datavec-api\0.8.0\datavec-api-0.8.0.jar;C:\Users\1616016\.m2\repository\org\apache\commons\commons-compress\1.8.1\commons-compress-1.8.1.jar;C:\Users\1616016\.m2\repository\org\apache\commons\commons-lang3\3.3.1\commons-lang3-3.3.1.jar;C:\Users\1616016\.m2\repository\org\apache\commons\commons-math3\3.3\commons-math3-3.3.jar;C:\Users\1616016\.m2\repository\commons-io\commons-io\2.4\commons-io-2.4.jar;C:\Users\1616016\.m2\repository\joda-time\joda-time\2.9.2\joda-time-2.9.2.jar;C:\Users\1616016\.m2\repository\org\nd4j\jackson\0.8.0\jackson-0.8.0.jar;C:\Users\1616016\.m2\repository\org\yaml\snakeyaml\1.12\snakeyaml-1.12.jar;C:\Users\1616016\.m2\repository\org\codehaus\woodstox\stax2-api\3.1.4\stax2-api-3.1.4.jar;C:\Users\1616016\.m2\repository\org\projectlombok\lombok\1.16.10\lombok-1.16.10.jar;C:\Users\1616016\.m2\repository\org\freemarker\freemarker\2.3.23\freemarker-2.3.23.jar;C:\Users\1616016\.m2\repository\org\reflections\reflections\0.9.10\reflections-0.9.10.jar;C:\Users\1616016\.m2\repository\com\google\guava\guava\15.0\guava-15.0.jar;C:\Users\1616016\.m2\repository\org\javassist\javassist\3.19.0-GA\javassist-3.19.0-GA.jar;C:\Users\1616016\.m2\repository\com\google\code\findbugs\annotations\2.0.1\annotations-2.0.1.jar;C:\Users\1616016\.m2\repository\org\nd4j\nd4j-common\0.8.0\nd4j-common-0.8.0.jar;C:\Users\1616016\.m2\repository\com\clearspring\analytics\stream\2.7.0\stream-2.7.0.jar;C:\Users\1616016\.m2\repository\it\unimi\dsi\fastutil\6.5.7\fastutil-6.5.7.jar;C:\Users\1616016\.m2\repository\org\deeplearning4j\deeplearning4j-nn\0.8.0\deeplearning4j-nn-0.8.0.jar;C:\Users\1616016\.m2\repository\org\nd4j\nd4j-api\0.8.0\nd4j-api-0.8.0.jar;C:\Users\1616016\.m2\repository\org\nd4j\nd4j-buffer\0.8.0\nd4j-buffer-0.8.0.jar;C:\Users\1616016\.m2\repository\org\nd4j\nd4j-context\0.8.0\nd4j-context-0.8.0.jar;C:\Users\1616016\.m2\repository\net\ericaro\neoitertools\1.0.0\neoitertools-1.0.0.jar;C:\Users\1616016\.m2\repository\junit\junit\4.8.2\junit-4.8.2.jar;C:\Users\1616016\.m2\repository\org\deeplearning4j\deeplearning4j-modelimport\0.8.0-2\deeplearning4j-modelimport-0.8.0-2.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp\1.3.2\javacpp-1.3.2.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\hdf5-platform\1.10.0-patch1-1.3\hdf5-platform-1.10.0-patch1-1.3.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\hdf5\1.10.0-patch1-1.3\hdf5-1.10.0-patch1-1.3.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\hdf5\1.10.0-patch1-1.3\hdf5-1.10.0-patch1-1.3-linux-x86.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\hdf5\1.10.0-patch1-1.3\hdf5-1.10.0-patch1-1.3-linux-x86_64.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\hdf5\1.10.0-patch1-1.3\hdf5-1.10.0-patch1-1.3-linux-ppc64le.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\hdf5\1.10.0-patch1-1.3\hdf5-1.10.0-patch1-1.3-macosx-x86_64.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\hdf5\1.10.0-patch1-1.3\hdf5-1.10.0-patch1-1.3-windows-x86.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\hdf5\1.10.0-patch1-1.3\hdf5-1.10.0-patch1-1.3-windows-x86_64.jar;C:\Users\1616016\.m2\repository\org\deeplearning4j\deeplearning4j-core\0.8.0\deeplearning4j-core-0.8.0.jar;C:\Users\1616016\.m2\repository\org\json\json\20131018\json-20131018.jar;C:\Users\1616016\.m2\repository\org\datavec\datavec-nd4j-common\0.8.0\datavec-nd4j-common-0.8.0.jar;C:\Users\1616016\.m2\repository\org\datavec\datavec-data-image\0.8.0\datavec-data-image-0.8.0.jar;C:\Users\1616016\.m2\repository\com\github\jai-imageio\jai-imageio-core\1.3.0\jai-imageio-core-1.3.0.jar;C:\Users\1616016\.m2\repository\com\twelvemonkeys\imageio\imageio-jpeg\3.1.1\imageio-jpeg-3.1.1.jar;C:\Users\1616016\.m2\repository\com\twelvemonkeys\imageio\imageio-core\3.1.1\imageio-core-3.1.1.jar;C:\Users\1616016\.m2\repository\com\twelvemonkeys\imageio\imageio-metadata\3.1.1\imageio-metadata-3.1.1.jar;C:\Users\1616016\.m2\repository\com\twelvemonkeys\common\common-lang\3.1.1\common-lang-3.1.1.jar;C:\Users\1616016\.m2\repository\com\twelvemonkeys\common\common-io\3.1.1\common-io-3.1.1.jar;C:\Users\1616016\.m2\repository\com\twelvemonkeys\common\common-image\3.1.1\common-image-3.1.1.jar;C:\Users\1616016\.m2\repository\com\twelvemonkeys\imageio\imageio-tiff\3.1.1\imageio-tiff-3.1.1.jar;C:\Users\1616016\.m2\repository\com\twelvemonkeys\imageio\imageio-psd\3.1.1\imageio-psd-3.1.1.jar;C:\Users\1616016\.m2\repository\com\twelvemonkeys\imageio\imageio-bmp\3.1.1\imageio-bmp-3.1.1.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacv\1.3.1\javacv-1.3.1.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\opencv\3.1.0-1.3\opencv-3.1.0-1.3.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\ffmpeg\3.2.1-1.3\ffmpeg-3.2.1-1.3.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\flycapture\2.9.3.43-1.3\flycapture-2.9.3.43-1.3.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\libdc1394\2.2.4-1.3\libdc1394-2.2.4-1.3.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\libfreenect\0.5.3-1.3\libfreenect-0.5.3-1.3.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\libfreenect2\0.2.0-1.3\libfreenect2-0.2.0-1.3.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\librealsense\1.9.6-1.3\librealsense-1.9.6-1.3.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\videoinput\0.200-1.3\videoinput-0.200-1.3.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\artoolkitplus\2.3.1-1.3\artoolkitplus-2.3.1-1.3.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\flandmark\1.07-1.3\flandmark-1.07-1.3.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\opencv-platform\3.1.0-1.3\opencv-platform-3.1.0-1.3.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\opencv\3.1.0-1.3\opencv-3.1.0-1.3-android-arm.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\opencv\3.1.0-1.3\opencv-3.1.0-1.3-android-x86.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\opencv\3.1.0-1.3\opencv-3.1.0-1.3-linux-x86.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\opencv\3.1.0-1.3\opencv-3.1.0-1.3-linux-x86_64.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\opencv\3.1.0-1.3\opencv-3.1.0-1.3-linux-armhf.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\opencv\3.1.0-1.3\opencv-3.1.0-1.3-linux-ppc64le.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\opencv\3.1.0-1.3\opencv-3.1.0-1.3-macosx-x86_64.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\opencv\3.1.0-1.3\opencv-3.1.0-1.3-windows-x86.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\opencv\3.1.0-1.3\opencv-3.1.0-1.3-windows-x86_64.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\leptonica-platform\1.73-1.3\leptonica-platform-1.73-1.3.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\leptonica\1.73-1.3\leptonica-1.73-1.3.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\leptonica\1.73-1.3\leptonica-1.73-1.3-android-arm.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\leptonica\1.73-1.3\leptonica-1.73-1.3-android-x86.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\leptonica\1.73-1.3\leptonica-1.73-1.3-linux-x86.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\leptonica\1.73-1.3\leptonica-1.73-1.3-linux-x86_64.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\leptonica\1.73-1.3\leptonica-1.73-1.3-linux-armhf.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\leptonica\1.73-1.3\leptonica-1.73-1.3-linux-ppc64le.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\leptonica\1.73-1.3\leptonica-1.73-1.3-macosx-x86_64.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\leptonica\1.73-1.3\leptonica-1.73-1.3-windows-x86.jar;C:\Users\1616016\.m2\repository\org\bytedeco\javacpp-presets\leptonica\1.73-1.3\leptonica-1.73-1.3-windows-x86_64.jar;C:\Users\1616016\.m2\repository\org\deeplearning4j\deeplearning4j-ui-components\0.8.0\deeplearning4j-ui-components-0.8.0.jar;C:\Users\1616016\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\1616016\.m2\repository\org\deeplearning4j\deeplearning4j-ui_2.10\0.8.0\deeplearning4j-ui_2.10-0.8.0.jar;C:\Users\1616016\.m2\repository\org\deeplearning4j\deeplearning4j-play_2.10\0.8.0\deeplearning4j-play_2.10-0.8.0.jar;C:\Users\1616016\.m2\repository\com\typesafe\play\play-java_2.10\2.4.6\play-java_2.10-2.4.6.jar;C:\Users\1616016\.m2\repository\org\scala-lang\scala-library\2.10.5\scala-library-2.10.5.jar;C:\Users\1616016\.m2\repository\com\typesafe\play\play_2.10\2.4.6\play_2.10-2.4.6.jar;C:\Users\1616016\.m2\repository\com\typesafe\play\build-link\2.4.6\build-link-2.4.6.jar;C:\Users\1616016\.m2\repository\com\typesafe\play\play-exceptions\2.4.6\play-exceptions-2.4.6.jar;C:\Users\1616016\.m2\repository\com\typesafe\play\play-iteratees_2.10\2.4.6\play-iteratees_2.10-2.4.6.jar;C:\Users\1616016\.m2\repository\com\typesafe\config\1.3.0\config-1.3.0.jar;C:\Users\1616016\.m2\repository\com\typesafe\play\play-json_2.10\2.4.6\play-json_2.10-2.4.6.jar;C:\Users\1616016\.m2\repository\com\typesafe\play\play-functional_2.10\2.4.6\play-functional_2.10-2.4.6.jar;C:\Users\1616016\.m2\repository\com\typesafe\play\play-datacommons_2.10\2.4.6\play-datacommons_2.10-2.4.6.jar;C:\Users\1616016\.m2\repository\com\typesafe\play\play-netty-utils\2.4.6\play-netty-utils-2.4.6.jar;C:\Users\1616016\.m2\repository\com\typesafe\play\twirl-api_2.10\1.1.1\twirl-api_2.10-1.1.1.jar;C:\Users\1616016\.m2\repository\org\slf4j\jul-to-slf4j\1.7.12\jul-to-slf4j-1.7.12.jar;C:\Users\1616016\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.12\jcl-over-slf4j-1.7.12.jar;C:\Users\1616016\.m2\repository\ch\qos\logback\logback-core\1.1.3\logback-core-1.1.3.jar;C:\Users\1616016\.m2\repository\ch\qos\logback\logback-classic\1.1.3\logback-classic-1.1.3.jar;C:\Users\1616016\.m2\repository\com\typesafe\akka\akka-actor_2.10\2.3.13\akka-actor_2.10-2.3.13.jar;C:\Users\1616016\.m2\repository\com\typesafe\akka\akka-slf4j_2.10\2.3.13\akka-slf4j_2.10-2.3.13.jar;C:\Users\1616016\.m2\repository\org\scala-stm\scala-stm_2.10\0.7\scala-stm_2.10-0.7.jar;C:\Users\1616016\.m2\repository\org\joda\joda-convert\1.7\joda-convert-1.7.jar;C:\Users\1616016\.m2\repository\xerces\xercesImpl\2.11.0\xercesImpl-2.11.0.jar;C:\Users\1616016\.m2\repository\xml-apis\xml-apis\1.4.01\xml-apis-1.4.01.jar;C:\Users\1616016\.m2\repository\javax\transaction\jta\1.1\jta-1.1.jar;C:\Users\1616016\.m2\repository\com\google\inject\guice\4.0\guice-4.0.jar;C:\Users\1616016\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\1616016\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Users\1616016\.m2\repository\com\google\inject\extensions\guice-assistedinject\4.0\guice-assistedinject-4.0.jar;C:\Users\1616016\.m2\repository\org\scala-lang\modules\scala-java8-compat_2.10\0.3.0\scala-java8-compat_2.10-0.3.0.jar;C:\Users\1616016\.m2\repository\org\hibernate\hibernate-validator\5.0.3.Final\hibernate-validator-5.0.3.Final.jar;C:\Users\1616016\.m2\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;C:\Users\1616016\.m2\repository\com\fasterxml\classmate\1.0.0\classmate-1.0.0.jar;C:\Users\1616016\.m2\repository\org\jboss\logging\jboss-logging\3.2.1.Final\jboss-logging-3.2.1.Final.jar;C:\Users\1616016\.m2\repository\org\springframework\spring-context\4.1.6.RELEASE\spring-context-4.1.6.RELEASE.jar;C:\Users\1616016\.m2\repository\org\springframework\spring-core\4.1.6.RELEASE\spring-core-4.1.6.RELEASE.jar;C:\Users\1616016\.m2\repository\org\springframework\spring-beans\4.1.6.RELEASE\spring-beans-4.1.6.RELEASE.jar;C:\Users\1616016\.m2\repository\net\jodah\typetools\0.4.3\typetools-0.4.3.jar;C:\Users\1616016\.m2\repository\com\google\code\findbugs\jsr305\2.0.3\jsr305-2.0.3.jar;C:\Users\1616016\.m2\repository\org\apache\tomcat\tomcat-servlet-api\8.0.21\tomcat-servlet-api-8.0.21.jar;C:\Users\1616016\.m2\repository\com\typesafe\play\play-netty-server_2.10\2.4.6\play-netty-server_2.10-2.4.6.jar;C:\Users\1616016\.m2\repository\com\typesafe\play\play-server_2.10\2.4.6\play-server_2.10-2.4.6.jar;C:\Users\1616016\.m2\repository\io\netty\netty\3.10.4.Final\netty-3.10.4.Final.jar;C:\Users\1616016\.m2\repository\com\typesafe\netty\netty-http-pipelining\1.1.4\netty-http-pipelining-1.1.4.jar;C:\Users\1616016\.m2\repository\com\typesafe\akka\akka-contrib_2.10\2.3.13\akka-contrib_2.10-2.3.13.jar;C:\Users\1616016\.m2\repository\com\typesafe\akka\akka-remote_2.10\2.3.13\akka-remote_2.10-2.3.13.jar;C:\Users\1616016\.m2\repository\com\google\protobuf\protobuf-java\2.5.0\protobuf-java-2.5.0.jar;C:\Users\1616016\.m2\repository\org\uncommons\maths\uncommons-maths\1.2.2a\uncommons-maths-1.2.2a.jar;C:\Users\1616016\.m2\repository\com\typesafe\akka\akka-persistence-experimental_2.10\2.3.13\akka-persistence-experimental_2.10-2.3.13.jar;C:\Users\1616016\.m2\repository\org\iq80\leveldb\leveldb\0.5\leveldb-0.5.jar;C:\Users\1616016\.m2\repository\org\iq80\leveldb\leveldb-api\0.5\leveldb-api-0.5.jar;C:\Users\1616016\.m2\repository\org\fusesource\leveldbjni\leveldbjni-all\1.7\leveldbjni-all-1.7.jar;C:\Users\1616016\.m2\repository\org\fusesource\leveldbjni\leveldbjni\1.7\leveldbjni-1.7.jar;C:\Users\1616016\.m2\repository\org\fusesource\hawtjni\hawtjni-runtime\1.8\hawtjni-runtime-1.8.jar;C:\Users\1616016\.m2\repository\org\fusesource\leveldbjni\leveldbjni-osx\1.5\leveldbjni-osx-1.5.jar;C:\Users\1616016\.m2\repository\org\fusesource\leveldbjni\leveldbjni-linux32\1.5\leveldbjni-linux32-1.5.jar;C:\Users\1616016\.m2\repository\org\fusesource\leveldbjni\leveldbjni-linux64\1.5\leveldbjni-linux64-1.5.jar;C:\Users\1616016\.m2\repository\org\fusesource\leveldbjni\leveldbjni-win32\1.5\leveldbjni-win32-1.5.jar;C:\Users\1616016\.m2\repository\org\fusesource\leveldbjni\leveldbjni-win64\1.5\leveldbjni-win64-1.5.jar;C:\Users\1616016\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.4.4\jackson-core-2.4.4.jar;C:\Users\1616016\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.4.4\jackson-databind-2.4.4.jar;C:\Users\1616016\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.4.4\jackson-annotations-2.4.4.jar;C:\Users\1616016\.m2\repository\com\fasterxml\jackson\module\jackson-module-scala_2.10\2.4.4\jackson-module-scala_2.10-2.4.4.jar;C:\Users\1616016\.m2\repository\org\scala-lang\scala-reflect\2.10.4\scala-reflect-2.10.4.jar;C:\Users\1616016\.m2\repository\com\thoughtworks\paranamer\paranamer\2.6\paranamer-2.6.jar;C:\Users\1616016\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.4.4\jackson-datatype-jdk8-2.4.4.jar;C:\Users\1616016\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.4.4\jackson-datatype-jsr310-2.4.4.jar;C:\Users\1616016\.m2\repository\com\typesafe\akka\akka-cluster_2.10\2.3.13\akka-cluster_2.10-2.3.13.jar;C:\Users\1616016\.m2\repository\com\beust\jcommander\1.27\jcommander-1.27.jar;C:\Users\1616016\.m2\repository\javax\ws\rs\javax.ws.rs-api\2.0\javax.ws.rs-api-2.0.jar;C:\Users\1616016\.m2\repository\org\deeplearning4j\deeplearning4j-nlp\0.8.0\deeplearning4j-nlp-0.8.0.jar;C:\Users\1616016\.m2\repository\org\apache\directory\studio\org.apache.commons.codec\1.8\org.apache.commons.codec-1.8.jar;C:\Users\1616016\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\1616016\.m2\repository\org\nd4j\nd4j-jackson\0.8.0\nd4j-jackson-0.8.0.jar;C:\Users\1616016\.m2\repository\org\nd4j\nd4j-base64\0.8.0\nd4j-base64-0.8.0.jar;C:\Users\1616016\.m2\repository\commons-net\commons-net\3.1\commons-net-3.1.jar;C:\Users\1616016\.m2\repository\org\deeplearning4j\deeplearning4j-ui-model\0.8.0\deeplearning4j-ui-model-0.8.0.jar;C:\Users\1616016\.m2\repository\org\agrona\Agrona\0.5.4\Agrona-0.5.4.jar;C:\Users\1616016\.m2\repository\org\mapdb\mapdb\3.0.2\mapdb-3.0.2.jar;C:\Users\1616016\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\1.0.2\kotlin-stdlib-1.0.2.jar;C:\Users\1616016\.m2\repository\org\jetbrains\kotlin\kotlin-runtime\1.0.2\kotlin-runtime-1.0.2.jar;C:\Users\1616016\.m2\repository\org\eclipse\collections\eclipse-collections-api\7.1.1\eclipse-collections-api-7.1.1.jar;C:\Users\1616016\.m2\repository\net\jcip\jcip-annotations\1.0\jcip-annotations-1.0.jar;C:\Users\1616016\.m2\repository\org\eclipse\collections\eclipse-collections\7.1.1\eclipse-collections-7.1.1.jar;C:\Users\1616016\.m2\repository\org\eclipse\collections\eclipse-collections-forkjoin\7.1.1\eclipse-collections-forkjoin-7.1.1.jar;C:\Users\1616016\.m2\repository\net\jpountz\lz4\lz4\1.3.0\lz4-1.3.0.jar;C:\Users\1616016\.m2\repository\org\mapdb\elsa\3.0.0-M5\elsa-3.0.0-M5.jar;C:\Users\1616016\.m2\repository\org\xerial\sqlite-jdbc\3.15.1\sqlite-jdbc-3.15.1.jar;C:\Users\1616016\.m2\repository\org\deeplearning4j\deeplearning4j-ui-resources\0.8.0\deeplearning4j-ui-resources-0.8.0.jar;C:\Users\1616016\.m2\repository\org\slf4j\slf4j-api\1.7.9\slf4j-api-1.7.9.jar;C:\Users\1616016\.m2\repository\org\slf4j\slf4j-simple\1.7.9\slf4j-simple-1.7.9.jar;C:\Users\1616016\.m2\repository\net\sf\opencsv\opencsv\2.3\opencsv-2.3.jar" Main
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Users/1616016/.m2/repository/ch/qos/logback/logback-classic/1.1.3/logback-classic-1.1.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/Users/1616016/.m2/repository/org/slf4j/slf4j-simple/1.7.9/slf4j-simple-1.7.9.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+We're starting to create the CNN network
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+11:55:03.381 [main] INFO  org.nd4j.linalg.factory.Nd4jBackend - Loaded [CpuBackend] backend
+11:55:03.700 [main] INFO  org.nd4j.nativeblas.NativeOpsHolder - Number of threads used for NativeOps: 4
+11:55:03.738 [main] DEBUG org.reflections.Reflections - going to scan these urls:
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-native/0.8.0/nd4j-native-0.8.0-macosx-x86_64.jar!/
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-native-api/0.8.0/nd4j-native-api-0.8.0.jar!/
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-buffer/0.8.0/nd4j-buffer-0.8.0.jar!/
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-context/0.8.0/nd4j-context-0.8.0.jar!/
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-base64/0.8.0/nd4j-base64-0.8.0.jar!/
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-api/0.8.0/nd4j-api-0.8.0.jar!/
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-native/0.8.0/nd4j-native-0.8.0-linux-x86_64.jar!/
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-native/0.8.0/nd4j-native-0.8.0-linux-ppc64le.jar!/
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-common/0.8.0/nd4j-common-0.8.0.jar!/
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-native/0.8.0/nd4j-native-0.8.0-windows-x86_64.jar!/
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-jackson/0.8.0/nd4j-jackson-0.8.0.jar!/
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/jackson/0.8.0/jackson-0.8.0.jar!/
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-native/0.8.0/nd4j-native-0.8.0.jar!/
+11:55:03.870 [main] INFO  org.reflections.Reflections - Reflections took 130 ms to scan 13 urls, producing 29 keys and 189 values 
+11:55:05.572 [main] INFO  org.nd4j.nativeblas.Nd4jBlas - Number of threads used for BLAS: 4
+11:55:05.574 [main] INFO  o.n.l.a.o.e.DefaultOpExecutioner - Backend used: [CPU]; OS: [Windows 10]
+11:55:05.574 [main] INFO  o.n.l.a.o.e.DefaultOpExecutioner - Cores: [4]; Memory: [3.6GB];
+11:55:05.574 [main] INFO  o.n.l.a.o.e.DefaultOpExecutioner - Blas vendor: [OPENBLAS]
+11:55:05.757 [main] DEBUG org.reflections.Reflections - going to scan these urls:
+file:/C:/Users/1616016/.m2/repository/org/slf4j/slf4j-simple/1.7.9/slf4j-simple-1.7.9.jar
+file:/C:/Users/1616016/.m2/repository/com/google/inject/guice/4.0/guice-4.0.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/leptonica/1.73-1.3/leptonica-1.73-1.3-android-arm.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/leptonica/1.73-1.3/leptonica-1.73-1.3.jar
+file:/C:/Users/1616016/.m2/repository/org/xerial/sqlite-jdbc/3.15.1/sqlite-jdbc-3.15.1.jar
+file:/C:/Users/1616016/.m2/repository/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar
+file:/C:/Users/1616016/.m2/repository/org/eclipse/collections/eclipse-collections-api/7.1.1/eclipse-collections-api-7.1.1.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/openblas/0.2.19-1.3/openblas-0.2.19-1.3-linux-ppc64le.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/opencv/3.1.0-1.3/opencv-3.1.0-1.3-windows-x86_64.jar
+file:/C:/Users/1616016/.m2/repository/com/typesafe/play/play-exceptions/2.4.6/play-exceptions-2.4.6.jar
+file:/C:/Users/1616016/.m2/repository/com/typesafe/akka/akka-contrib_2.10/2.3.13/akka-contrib_2.10-2.3.13.jar
+file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-api/0.8.0/nd4j-api-0.8.0.jar
+file:/C:/Users/1616016/.m2/repository/org/datavec/datavec-nd4j-common/0.8.0/datavec-nd4j-common-0.8.0.jar
+file:/C:/Users/1616016/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.4.4/jackson-datatype-jdk8-2.4.4.jar
+file:/C:/Users/1616016/.m2/repository/com/typesafe/play/twirl-api_2.10/1.1.1/twirl-api_2.10-1.1.1.jar
+file:/C:/Users/1616016/.m2/repository/com/google/inject/extensions/guice-assistedinject/4.0/guice-assistedinject-4.0.jar
+file:/C:/Users/1616016/.m2/repository/org/iq80/leveldb/leveldb-api/0.5/leveldb-api-0.5.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/hdf5/1.10.0-patch1-1.3/hdf5-1.10.0-patch1-1.3-linux-x86_64.jar
+file:/C:/Users/1616016/.m2/repository/org/nd4j/jackson/0.8.0/jackson-0.8.0.jar
+file:/C:/Users/1616016/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.12/jcl-over-slf4j-1.7.12.jar
+file:/C:/Users/1616016/.m2/repository/javax/transaction/jta/1.1/jta-1.1.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/opencv/3.1.0-1.3/opencv-3.1.0-1.3-macosx-x86_64.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/opencv-platform/3.1.0-1.3/opencv-platform-3.1.0-1.3.jar
+file:/C:/Users/1616016/.m2/repository/org/datavec/datavec-data-image/0.8.0/datavec-data-image-0.8.0.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/opencv/3.1.0-1.3/opencv-3.1.0-1.3-android-x86.jar
+file:/C:/Users/1616016/.m2/repository/org/fusesource/leveldbjni/leveldbjni-win32/1.5/leveldbjni-win32-1.5.jar
+file:/C:/Users/1616016/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/leptonica/1.73-1.3/leptonica-1.73-1.3-linux-ppc64le.jar
+file:/C:/Users/1616016/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.4.4/jackson-core-2.4.4.jar
+file:/C:/Users/1616016/.m2/repository/org/mapdb/elsa/3.0.0-M5/elsa-3.0.0-M5.jar
+file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-native/0.8.0/nd4j-native-0.8.0-windows-x86_64.jar
+file:/C:/Users/1616016/.m2/repository/com/fasterxml/classmate/1.0.0/classmate-1.0.0.jar
+file:/C:/Users/1616016/.m2/repository/com/clearspring/analytics/stream/2.7.0/stream-2.7.0.jar
+file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-native/0.8.0/nd4j-native-0.8.0-macosx-x86_64.jar
+file:/C:/Users/1616016/.m2/repository/org/scala-lang/scala-library/2.10.5/scala-library-2.10.5.jar
+file:/C:/Users/1616016/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.4.4/jackson-annotations-2.4.4.jar
+file:/C:/Users/1616016/.m2/repository/org/uncommons/maths/uncommons-maths/1.2.2a/uncommons-maths-1.2.2a.jar
+file:/C:/Users/1616016/.m2/repository/org/deeplearning4j/deeplearning4j-nn/0.8.0/deeplearning4j-nn-0.8.0.jar
+file:/C:/Users/1616016/.m2/repository/org/fusesource/leveldbjni/leveldbjni-win64/1.5/leveldbjni-win64-1.5.jar
+file:/C:/Users/1616016/.m2/repository/com/twelvemonkeys/imageio/imageio-core/3.1.1/imageio-core-3.1.1.jar
+file:/C:/Users/1616016/.m2/repository/org/deeplearning4j/deeplearning4j-ui-resources/0.8.0/deeplearning4j-ui-resources-0.8.0.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/openblas/0.2.19-1.3/openblas-0.2.19-1.3.jar
+file:/C:/Users/1616016/.m2/repository/com/typesafe/play/play-netty-utils/2.4.6/play-netty-utils-2.4.6.jar
+file:/C:/Users/1616016/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.0.2/kotlin-stdlib-1.0.2.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/hdf5/1.10.0-patch1-1.3/hdf5-1.10.0-patch1-1.3.jar
+file:/C:/Program%20Files/JetBrains/IntelliJ%20IDEA%20Community%20Edition%202017.1.3/lib/idea_rt.jar
+file:/C:/Users/1616016/.m2/repository/org/springframework/spring-context/4.1.6.RELEASE/spring-context-4.1.6.RELEASE.jar
+file:/C:/Users/1616016/.m2/repository/com/typesafe/akka/akka-remote_2.10/2.3.13/akka-remote_2.10-2.3.13.jar
+file:/C:/Users/1616016/.m2/repository/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.jar
+file:/C:/Users/1616016/.m2/repository/com/google/code/findbugs/annotations/2.0.1/annotations-2.0.1.jar
+file:/C:/Users/1616016/.m2/repository/org/apache/directory/studio/org.apache.commons.codec/1.8/org.apache.commons.codec-1.8.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/hdf5/1.10.0-patch1-1.3/hdf5-1.10.0-patch1-1.3-linux-x86.jar
+file:/C:/Users/1616016/.m2/repository/org/yaml/snakeyaml/1.12/snakeyaml-1.12.jar
+file:/C:/Users/1616016/.m2/repository/com/typesafe/play/play-json_2.10/2.4.6/play-json_2.10-2.4.6.jar
+file:/C:/Users/1616016/.m2/repository/org/scala-lang/modules/scala-java8-compat_2.10/0.3.0/scala-java8-compat_2.10-0.3.0.jar
+file:/C:/Users/1616016/.m2/repository/com/typesafe/play/play-iteratees_2.10/2.4.6/play-iteratees_2.10-2.4.6.jar
+file:/C:/Users/1616016/.m2/repository/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.jar
+file:/C:/Users/1616016/.m2/repository/org/fusesource/leveldbjni/leveldbjni-linux64/1.5/leveldbjni-linux64-1.5.jar
+file:/C:/Users/1616016/.m2/repository/org/fusesource/leveldbjni/leveldbjni-osx/1.5/leveldbjni-osx-1.5.jar
+file:/C:/Users/1616016/.m2/repository/com/google/code/findbugs/jsr305/2.0.3/jsr305-2.0.3.jar
+file:/C:/Users/1616016/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar
+file:/C:/Users/1616016/.m2/repository/com/typesafe/netty/netty-http-pipelining/1.1.4/netty-http-pipelining-1.1.4.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/leptonica/1.73-1.3/leptonica-1.73-1.3-windows-x86.jar
+file:/C:/Users/1616016/.m2/repository/com/beust/jcommander/1.27/jcommander-1.27.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/opencv/3.1.0-1.3/opencv-3.1.0-1.3-windows-x86.jar
+file:/C:/Users/1616016/.m2/repository/org/fusesource/leveldbjni/leveldbjni-linux32/1.5/leveldbjni-linux32-1.5.jar
+file:/C:/Users/1616016/.m2/repository/net/jodah/typetools/0.4.3/typetools-0.4.3.jar
+file:/C:/Users/1616016/.m2/repository/com/twelvemonkeys/imageio/imageio-metadata/3.1.1/imageio-metadata-3.1.1.jar
+file:/C:/Users/1616016/.m2/repository/org/joda/joda-convert/1.7/joda-convert-1.7.jar
+file:/C:/Users/1616016/.m2/repository/com/google/guava/guava/15.0/guava-15.0.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacv/1.3.1/javacv-1.3.1.jar
+file:/C:/Users/1616016/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.4.4/jackson-databind-2.4.4.jar
+file:/C:/Users/1616016/.m2/repository/com/typesafe/play/play-java_2.10/2.4.6/play-java_2.10-2.4.6.jar
+file:/C:/Users/1616016/.m2/repository/com/typesafe/config/1.3.0/config-1.3.0.jar
+file:/C:/Users/1616016/.m2/repository/org/slf4j/slf4j-api/1.7.9/slf4j-api-1.7.9.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/openblas/0.2.19-1.3/openblas-0.2.19-1.3-android-x86.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/openblas/0.2.19-1.3/openblas-0.2.19-1.3-linux-armhf.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/openblas/0.2.19-1.3/openblas-0.2.19-1.3-linux-x86.jar
+file:/C:/Users/1616016/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar
+file:/C:/Users/1616016/.m2/repository/commons-net/commons-net/3.1/commons-net-3.1.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/leptonica/1.73-1.3/leptonica-1.73-1.3-windows-x86_64.jar
+file:/C:/Users/1616016/.m2/repository/com/twelvemonkeys/imageio/imageio-tiff/3.1.1/imageio-tiff-3.1.1.jar
+file:/C:/Users/1616016/.m2/repository/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.jar
+file:/C:/Users/1616016/.m2/repository/org/deeplearning4j/deeplearning4j-ui-components/0.8.0/deeplearning4j-ui-components-0.8.0.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/leptonica/1.73-1.3/leptonica-1.73-1.3-macosx-x86_64.jar
+file:/C:/Users/1616016/.m2/repository/net/ericaro/neoitertools/1.0.0/neoitertools-1.0.0.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/openblas-platform/0.2.19-1.3/openblas-platform-0.2.19-1.3.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/opencv/3.1.0-1.3/opencv-3.1.0-1.3-linux-x86_64.jar
+file:/C:/Users/1616016/.m2/repository/com/typesafe/play/play_2.10/2.4.6/play_2.10-2.4.6.jar
+file:/C:/Users/1616016/.m2/repository/com/twelvemonkeys/imageio/imageio-psd/3.1.1/imageio-psd-3.1.1.jar
+file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-jackson/0.8.0/nd4j-jackson-0.8.0.jar
+file:/C:/Users/1616016/.m2/repository/com/typesafe/play/play-server_2.10/2.4.6/play-server_2.10-2.4.6.jar
+file:/C:/Users/1616016/.m2/repository/com/twelvemonkeys/common/common-image/3.1.1/common-image-3.1.1.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/librealsense/1.9.6-1.3/librealsense-1.9.6-1.3.jar
+file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-native-api/0.8.0/nd4j-native-api-0.8.0.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/flycapture/2.9.3.43-1.3/flycapture-2.9.3.43-1.3.jar
+file:/C:/Users/1616016/.m2/repository/com/typesafe/akka/akka-actor_2.10/2.3.13/akka-actor_2.10-2.3.13.jar
+file:/C:/Users/1616016/.m2/repository/it/unimi/dsi/fastutil/6.5.7/fastutil-6.5.7.jar
+file:/C:/Users/1616016/.m2/repository/com/typesafe/play/play-functional_2.10/2.4.6/play-functional_2.10-2.4.6.jar
+file:/C:/Users/1616016/.m2/repository/org/deeplearning4j/deeplearning4j-core/0.8.0/deeplearning4j-core-0.8.0.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/videoinput/0.200-1.3/videoinput-0.200-1.3.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/leptonica/1.73-1.3/leptonica-1.73-1.3-linux-x86_64.jar
+file:/C:/Users/1616016/.m2/repository/com/typesafe/akka/akka-slf4j_2.10/2.3.13/akka-slf4j_2.10-2.3.13.jar
+file:/C:/Users/1616016/.m2/repository/org/datavec/datavec-api/0.8.0/datavec-api-0.8.0.jar
+file:/C:/Users/1616016/.m2/repository/org/projectlombok/lombok/1.16.10/lombok-1.16.10.jar
+file:/C:/Users/1616016/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/opencv/3.1.0-1.3/opencv-3.1.0-1.3-linux-x86.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/openblas/0.2.19-1.3/openblas-0.2.19-1.3-windows-x86_64.jar
+file:/C:/Users/1616016/.m2/repository/org/springframework/spring-core/4.1.6.RELEASE/spring-core-4.1.6.RELEASE.jar
+file:/C:/Users/1616016/.m2/repository/org/deeplearning4j/deeplearning4j-modelimport/0.8.0-2/deeplearning4j-modelimport-0.8.0-2.jar
+file:/C:/Users/1616016/.m2/repository/com/fasterxml/jackson/module/jackson-module-scala_2.10/2.4.4/jackson-module-scala_2.10-2.4.4.jar
+file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-base64/0.8.0/nd4j-base64-0.8.0.jar
+file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-native/0.8.0/nd4j-native-0.8.0.jar
+file:/C:/Users/1616016/.m2/repository/com/typesafe/play/play-netty-server_2.10/2.4.6/play-netty-server_2.10-2.4.6.jar
+file:/C:/Users/1616016/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar
+file:/C:/Users/1616016/.m2/repository/joda-time/joda-time/2.9.2/joda-time-2.9.2.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/hdf5-platform/1.10.0-patch1-1.3/hdf5-platform-1.10.0-patch1-1.3.jar
+file:/C:/Users/1616016/.m2/repository/com/thoughtworks/paranamer/paranamer/2.6/paranamer-2.6.jar
+file:/C:/Users/1616016/.m2/repository/org/deeplearning4j/deeplearning4j-nlp/0.8.0/deeplearning4j-nlp-0.8.0.jar
+file:/C:/Users/1616016/.m2/repository/org/fusesource/leveldbjni/leveldbjni-all/1.7/leveldbjni-all-1.7.jar
+file:/C:/Users/1616016/.m2/repository/com/typesafe/play/play-datacommons_2.10/2.4.6/play-datacommons_2.10-2.4.6.jar
+file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-native-platform/0.8.0/nd4j-native-platform-0.8.0.jar
+file:/C:/Users/1616016/.m2/repository/net/sf/opencsv/opencsv/2.3/opencsv-2.3.jar
+file:/C:/Users/1616016/.m2/repository/org/jetbrains/kotlin/kotlin-runtime/1.0.2/kotlin-runtime-1.0.2.jar
+file:/C:/Users/1616016/.m2/repository/com/twelvemonkeys/imageio/imageio-jpeg/3.1.1/imageio-jpeg-3.1.1.jar
+file:/C:/Users/1616016/.m2/repository/io/netty/netty/3.10.4.Final/netty-3.10.4.Final.jar
+file:/C:/Users/1616016/.m2/repository/org/apache/commons/commons-lang3/3.3.1/commons-lang3-3.3.1.jar
+file:/C:/Users/1616016/.m2/repository/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/artoolkitplus/2.3.1-1.3/artoolkitplus-2.3.1-1.3.jar
+file:/C:/Users/1616016/.m2/repository/org/jboss/logging/jboss-logging/3.2.1.Final/jboss-logging-3.2.1.Final.jar
+file:/C:/Users/1616016/.m2/repository/org/springframework/spring-beans/4.1.6.RELEASE/spring-beans-4.1.6.RELEASE.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/openblas/0.2.19-1.3/openblas-0.2.19-1.3-macosx-x86_64.jar
+file:/C:/Users/1616016/.m2/repository/org/fusesource/leveldbjni/leveldbjni/1.7/leveldbjni-1.7.jar
+file:/C:/Users/1616016/.m2/repository/org/deeplearning4j/deeplearning4j-ui-model/0.8.0/deeplearning4j-ui-model-0.8.0.jar
+file:/C:/Users/1616016/.m2/repository/junit/junit/4.8.2/junit-4.8.2.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp/1.3.2/javacpp-1.3.2.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/hdf5/1.10.0-patch1-1.3/hdf5-1.10.0-patch1-1.3-linux-ppc64le.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/opencv/3.1.0-1.3/opencv-3.1.0-1.3-linux-armhf.jar
+file:/C:/Users/1616016/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar
+file:/C:/Users/1616016/.m2/repository/com/github/jai-imageio/jai-imageio-core/1.3.0/jai-imageio-core-1.3.0.jar
+file:/C:/Users/1616016/.m2/repository/org/mapdb/mapdb/3.0.2/mapdb-3.0.2.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/leptonica-platform/1.73-1.3/leptonica-platform-1.73-1.3.jar
+file:/C:/Users/1616016/.m2/repository/org/deeplearning4j/deeplearning4j-ui_2.10/0.8.0/deeplearning4j-ui_2.10-0.8.0.jar
+file:/C:/Users/1616016/.m2/repository/org/reflections/reflections/0.9.10/reflections-0.9.10.jar
+file:/C:/Users/1616016/.m2/repository/org/eclipse/collections/eclipse-collections-forkjoin/7.1.1/eclipse-collections-forkjoin-7.1.1.jar
+file:/C:/Users/1616016/.m2/repository/com/twelvemonkeys/common/common-lang/3.1.1/common-lang-3.1.1.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/opencv/3.1.0-1.3/opencv-3.1.0-1.3.jar
+file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-common/0.8.0/nd4j-common-0.8.0.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/opencv/3.1.0-1.3/opencv-3.1.0-1.3-android-arm.jar
+file:/C:/Users/1616016/.m2/repository/org/apache/commons/commons-math3/3.3/commons-math3-3.3.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/flandmark/1.07-1.3/flandmark-1.07-1.3.jar
+file:/C:/Users/1616016/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.4.4/jackson-datatype-jsr310-2.4.4.jar
+file:/C:/Users/1616016/.m2/repository/com/typesafe/play/build-link/2.4.6/build-link-2.4.6.jar
+file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-native/0.8.0/nd4j-native-0.8.0-android-arm.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/openblas/0.2.19-1.3/openblas-0.2.19-1.3-linux-x86_64.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/hdf5/1.10.0-patch1-1.3/hdf5-1.10.0-patch1-1.3-windows-x86.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/leptonica/1.73-1.3/leptonica-1.73-1.3-linux-x86.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/ffmpeg/3.2.1-1.3/ffmpeg-3.2.1-1.3.jar
+file:/C:/Users/1616016/.m2/repository/org/agrona/Agrona/0.5.4/Agrona-0.5.4.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/libfreenect/0.5.3-1.3/libfreenect-0.5.3-1.3.jar
+file:/C:/Users/1616016/.m2/repository/org/freemarker/freemarker/2.3.23/freemarker-2.3.23.jar
+file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-native/0.8.0/nd4j-native-0.8.0-linux-ppc64le.jar
+file:/C:/Users/1616016/.m2/repository/org/scala-stm/scala-stm_2.10/0.7/scala-stm_2.10-0.7.jar
+file:/C:/Users/1616016/.m2/repository/org/iq80/leveldb/leveldb/0.5/leveldb-0.5.jar
+file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-native/0.8.0/nd4j-native-0.8.0-linux-x86_64.jar
+file:/C:/Users/1616016/.m2/repository/ch/qos/logback/logback-classic/1.1.3/logback-classic-1.1.3.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/libfreenect2/0.2.0-1.3/libfreenect2-0.2.0-1.3.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/leptonica/1.73-1.3/leptonica-1.73-1.3-android-x86.jar
+file:/C:/Users/1616016/.m2/repository/org/slf4j/jul-to-slf4j/1.7.12/jul-to-slf4j-1.7.12.jar
+file:/C:/Users/1616016/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.0/javax.ws.rs-api-2.0.jar
+file:/C:/Users/1616016/.m2/repository/com/typesafe/akka/akka-persistence-experimental_2.10/2.3.13/akka-persistence-experimental_2.10-2.3.13.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/leptonica/1.73-1.3/leptonica-1.73-1.3-linux-armhf.jar
+file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-native/0.8.0/nd4j-native-0.8.0-android-x86.jar
+file:/C:/Users/1616016/.m2/repository/org/scala-lang/scala-reflect/2.10.4/scala-reflect-2.10.4.jar
+file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-buffer/0.8.0/nd4j-buffer-0.8.0.jar
+file:/C:/Users/1616016/Downloads/D4JSelfback-master/target/classes/
+file:/C:/Users/1616016/.m2/repository/com/typesafe/akka/akka-cluster_2.10/2.3.13/akka-cluster_2.10-2.3.13.jar
+file:/C:/Users/1616016/.m2/repository/org/hibernate/hibernate-validator/5.0.3.Final/hibernate-validator-5.0.3.Final.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/hdf5/1.10.0-patch1-1.3/hdf5-1.10.0-patch1-1.3-macosx-x86_64.jar
+file:/C:/Users/1616016/.m2/repository/org/fusesource/hawtjni/hawtjni-runtime/1.8/hawtjni-runtime-1.8.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/opencv/3.1.0-1.3/opencv-3.1.0-1.3-linux-ppc64le.jar
+file:/C:/Users/1616016/.m2/repository/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0.jar
+file:/C:/Users/1616016/.m2/repository/org/deeplearning4j/deeplearning4j-play_2.10/0.8.0/deeplearning4j-play_2.10-0.8.0.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/openblas/0.2.19-1.3/openblas-0.2.19-1.3-windows-x86.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/hdf5/1.10.0-patch1-1.3/hdf5-1.10.0-patch1-1.3-windows-x86_64.jar
+file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-context/0.8.0/nd4j-context-0.8.0.jar
+file:/C:/Users/1616016/.m2/repository/org/json/json/20131018/json-20131018.jar
+file:/C:/Users/1616016/.m2/repository/com/twelvemonkeys/common/common-io/3.1.1/common-io-3.1.1.jar
+file:/C:/Users/1616016/.m2/repository/org/apache/tomcat/tomcat-servlet-api/8.0.21/tomcat-servlet-api-8.0.21.jar
+file:/C:/Users/1616016/.m2/repository/org/javassist/javassist/3.19.0-GA/javassist-3.19.0-GA.jar
+file:/C:/Users/1616016/.m2/repository/org/eclipse/collections/eclipse-collections/7.1.1/eclipse-collections-7.1.1.jar
+file:/C:/Users/1616016/.m2/repository/com/twelvemonkeys/imageio/imageio-bmp/3.1.1/imageio-bmp-3.1.1.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/openblas/0.2.19-1.3/openblas-0.2.19-1.3-android-arm.jar
+file:/C:/Users/1616016/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar
+file:/C:/Users/1616016/.m2/repository/org/bytedeco/javacpp-presets/libdc1394/2.2.4-1.3/libdc1394-2.2.4-1.3.jar
+file:/C:/Users/1616016/.m2/repository/ch/qos/logback/logback-core/1.1.3/logback-core-1.1.3.jar
+11:55:08.836 [main] INFO  org.reflections.Reflections - Reflections took 3076 ms to scan 196 urls, producing 3883 keys and 22306 values 
+11:55:08.877 [main] DEBUG o.d.nn.conf.NeuralNetConfiguration - Registering class for JSON serialization: org.deeplearning4j.nn.conf.layers.CenterLossOutputLayer as subtype of org.deeplearning4j.nn.conf.layers.Layer
+11:55:08.877 [main] DEBUG o.d.nn.conf.NeuralNetConfiguration - Registering class for JSON serialization: org.deeplearning4j.nn.modelimport.keras.preprocessors.TensorFlowCnnToFeedForwardPreProcessor as subtype of org.deeplearning4j.nn.conf.InputPreProcessor
+11:55:08.880 [main] DEBUG o.d.nn.conf.NeuralNetConfiguration - Registering class for JSON serialization: org.deeplearning4j.nn.conf.layers.CenterLossOutputLayer as subtype of org.deeplearning4j.nn.conf.layers.Layer
+11:55:08.881 [main] DEBUG o.d.nn.conf.NeuralNetConfiguration - Registering class for JSON serialization: org.deeplearning4j.nn.modelimport.keras.preprocessors.TensorFlowCnnToFeedForwardPreProcessor as subtype of org.deeplearning4j.nn.conf.InputPreProcessor
+11:55:08.882 [main] WARN  o.d.nn.conf.layers.LayerValidation - Layer "layer0" momentum has been set but will not be applied unless the updater is set to NESTEROVS.
+11:55:08.882 [main] WARN  o.d.nn.conf.layers.LayerValidation - Layer "layer0" rmsDecay is automatically set to 0.95. Add rmsDecay to configuration to change the value.
+11:55:08.883 [main] WARN  o.d.nn.conf.layers.LayerValidation - Layer "layer1" momentum has been set but will not be applied unless the updater is set to NESTEROVS.
+11:55:08.883 [main] WARN  o.d.nn.conf.layers.LayerValidation - Layer "layer1" rmsDecay is automatically set to 0.95. Add rmsDecay to configuration to change the value.
+11:55:08.883 [main] WARN  o.d.nn.conf.layers.LayerValidation - Layer "layer2" momentum has been set but will not be applied unless the updater is set to NESTEROVS.
+11:55:08.883 [main] WARN  o.d.nn.conf.layers.LayerValidation - Layer "layer2" rmsDecay is automatically set to 0.95. Add rmsDecay to configuration to change the value.
+11:55:08.883 [main] WARN  o.d.nn.conf.layers.LayerValidation - Layer "layer3" momentum has been set but will not be applied unless the updater is set to NESTEROVS.
+11:55:08.883 [main] WARN  o.d.nn.conf.layers.LayerValidation - Layer "layer3" rmsDecay is automatically set to 0.95. Add rmsDecay to configuration to change the value.
+11:55:08.883 [main] WARN  o.d.nn.conf.layers.LayerValidation - Layer "layer4" momentum has been set but will not be applied unless the updater is set to NESTEROVS.
+11:55:08.883 [main] WARN  o.d.nn.conf.layers.LayerValidation - Layer "layer4" rmsDecay is automatically set to 0.95. Add rmsDecay to configuration to change the value.
+11:55:08.883 [main] WARN  o.d.nn.conf.layers.LayerValidation - Layer "layer5" momentum has been set but will not be applied unless the updater is set to NESTEROVS.
+11:55:08.883 [main] WARN  o.d.nn.conf.layers.LayerValidation - Layer "layer5" rmsDecay is automatically set to 0.95. Add rmsDecay to configuration to change the value.
+11:55:08.883 [main] WARN  o.d.nn.conf.layers.LayerValidation - Layer "layer6" momentum has been set but will not be applied unless the updater is set to NESTEROVS.
+11:55:08.883 [main] WARN  o.d.nn.conf.layers.LayerValidation - Layer "layer6" rmsDecay is automatically set to 0.95. Add rmsDecay to configuration to change the value.
+11:55:08.883 [main] WARN  o.d.nn.conf.layers.LayerValidation - Layer "layer7" momentum has been set but will not be applied unless the updater is set to NESTEROVS.
+11:55:08.883 [main] WARN  o.d.nn.conf.layers.LayerValidation - Layer "layer7" rmsDecay is automatically set to 0.95. Add rmsDecay to configuration to change the value.
+11:55:08.933 [main] DEBUG org.reflections.Reflections - going to scan these urls:
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-native/0.8.0/nd4j-native-0.8.0-macosx-x86_64.jar!/
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-native-api/0.8.0/nd4j-native-api-0.8.0.jar!/
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-buffer/0.8.0/nd4j-buffer-0.8.0.jar!/
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-context/0.8.0/nd4j-context-0.8.0.jar!/
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-base64/0.8.0/nd4j-base64-0.8.0.jar!/
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-api/0.8.0/nd4j-api-0.8.0.jar!/
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-native/0.8.0/nd4j-native-0.8.0-linux-x86_64.jar!/
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-native/0.8.0/nd4j-native-0.8.0-linux-ppc64le.jar!/
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-common/0.8.0/nd4j-common-0.8.0.jar!/
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-native/0.8.0/nd4j-native-0.8.0-windows-x86_64.jar!/
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-jackson/0.8.0/nd4j-jackson-0.8.0.jar!/
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/jackson/0.8.0/jackson-0.8.0.jar!/
+jar:file:/C:/Users/1616016/.m2/repository/org/nd4j/nd4j-native/0.8.0/nd4j-native-0.8.0.jar!/
+11:55:09.058 [main] INFO  org.reflections.Reflections - Reflections took 125 ms to scan 13 urls, producing 373 keys and 1449 values 
+We're starting to create the CNN network
+Size dataset: 8110
+Normalizer
+End Normalizer
+Size dataset: 8110
+Normalizer
+End Normalizer
+We're starting to train my network
+11:55:20.135 [main] DEBUG play.api.libs.CryptoConfigParser - Generated dev mode secret 7e0e2333bbee3b170faa809ff9c311a2 for app at jar:file:/C:/Users/1616016/.m2/repository/org/deeplearning4j/deeplearning4j-play_2.10/0.8.0/deeplearning4j-play_2.10-0.8.0.jar!/application.conf
+11:55:20.142 [main] WARN  application - application.conf @ jar:file:/C:/Users/1616016/.m2/repository/org/deeplearning4j/deeplearning4j-play_2.10/0.8.0/deeplearning4j-play_2.10-0.8.0.jar!/application.conf: 355: parsers.text.maxLength is deprecated, use play.http.parser.maxMemoryBuffer instead
+11:55:20.581 [main] DEBUG p.a.l.concurrent.ActorSystemProvider - Starting application default Akka system: application
+11:55:20.722 [main] INFO  play.api.Play - Application started (Dev)
+11:55:20.944 [main] INFO  play.core.server.NettyServer - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+11:55:20.946 [main] INFO  o.d.ui.play.PlayUIServer - UI Server started at http://localhost:9000
+11:55:20.948 [Thread-2] DEBUG o.d.ui.play.PlayUIServer - PlayUIServer.StatsEventRouterRunnable started
+11:55:20.951 [main] INFO  o.d.ui.play.PlayUIServer - StatsStorage instance attached to UI: InMemoryStatsStorage(uid=aa0fd1ef)
+11:55:21.989 [application-akka.actor.default-dispatcher-4] DEBUG org.reflections.Reflections - going to scan these urls:
+jar:file:/C:/Users/1616016/.m2/repository/org/deeplearning4j/deeplearning4j-play_2.10/0.8.0/deeplearning4j-play_2.10-0.8.0.jar!/dl4j_i18n/
+11:55:21.991 [application-akka.actor.default-dispatcher-4] INFO  org.reflections.Reflections - Reflections took 2 ms to scan 1 urls, producing 359 keys and 388 values 
+1 epoch(s) completed
+Evaluation of model with Accuracy = 0.24325 and F1 = 0.19780443179508028
+2 epoch(s) completed
+Evaluation of model with Accuracy = 0.409 and F1 = 0.3627691924151208
+3 epoch(s) completed
+Evaluation of model with Accuracy = 0.58 and F1 = 0.5387135414144317
+4 epoch(s) completed
+Evaluation of model with Accuracy = 0.594375 and F1 = 0.5444679160009057
+5 epoch(s) completed
+Evaluation of model with Accuracy = 0.63275 and F1 = 0.584445449132017
+6 epoch(s) completed
+Evaluation of model with Accuracy = 0.646125 and F1 = 0.5918377668181033
+7 epoch(s) completed
+Evaluation of model with Accuracy = 0.663 and F1 = 0.6053714057038941
+8 epoch(s) completed
+Evaluation of model with Accuracy = 0.671125 and F1 = 0.6115437182215622
+9 epoch(s) completed
+Evaluation of model with Accuracy = 0.675125 and F1 = 0.6116475022959331
+10 epoch(s) completed
+Evaluation of model with Accuracy = 0.68075 and F1 = 0.6178028300722268
+11 epoch(s) completed
+Evaluation of model with Accuracy = 0.689875 and F1 = 0.6126620481001002
+12 epoch(s) completed
+Evaluation of model with Accuracy = 0.696375 and F1 = 0.6249412235514515
+13 epoch(s) completed
+Evaluation of model with Accuracy = 0.706625 and F1 = 0.6484698243470107
+14 epoch(s) completed
+Evaluation of model with Accuracy = 0.714375 and F1 = 0.6144177747928301
+15 epoch(s) completed
+Evaluation of model with Accuracy = 0.723375 and F1 = 0.59772415619787
+16 epoch(s) completed
+Evaluation of model with Accuracy = 0.7345 and F1 = 0.6009117480633911
+17 epoch(s) completed
+Evaluation of model with Accuracy = 0.739875 and F1 = 0.6146851970234741
+18 epoch(s) completed
+Evaluation of model with Accuracy = 0.741625 and F1 = 0.6151287038020427
+19 epoch(s) completed
+Evaluation of model with Accuracy = 0.747125 and F1 = 0.623384741282028
+20 epoch(s) completed
+Evaluation of model with Accuracy = 0.752375 and F1 = 0.6259208159186394
+21 epoch(s) completed
+Evaluation of model with Accuracy = 0.75625 and F1 = 0.6251299731447897
+22 epoch(s) completed
+Evaluation of model with Accuracy = 0.75875 and F1 = 0.6286606834950824
+23 epoch(s) completed
+Evaluation of model with Accuracy = 0.7595 and F1 = 0.6463261187838591
+24 epoch(s) completed
+Evaluation of model with Accuracy = 0.761 and F1 = 0.6783208202755436
+25 epoch(s) completed
+Evaluation of model with Accuracy = 0.76075 and F1 = 0.6786827076887694
+26 epoch(s) completed
+Evaluation of model with Accuracy = 0.76175 and F1 = 0.6787737358843451
+27 epoch(s) completed
+Evaluation of model with Accuracy = 0.76275 and F1 = 0.6815888164675233
+28 epoch(s) completed
+Evaluation of model with Accuracy = 0.763625 and F1 = 0.6822534685956012
+29 epoch(s) completed
+Evaluation of model with Accuracy = 0.764625 and F1 = 0.6859437698772435
+30 epoch(s) completed
+Evaluation of model with Accuracy = 0.76525 and F1 = 0.6863795344274288
+31 epoch(s) completed
+Evaluation of model with Accuracy = 0.766 and F1 = 0.6890945210742495
+32 epoch(s) completed
+Evaluation of model with Accuracy = 0.76825 and F1 = 0.6930556315372143
+33 epoch(s) completed
+Evaluation of model with Accuracy = 0.7725 and F1 = 0.7006119813799386
+34 epoch(s) completed
+Evaluation of model with Accuracy = 0.773375 and F1 = 0.7039633469816855
+35 epoch(s) completed
+Evaluation of model with Accuracy = 0.774 and F1 = 0.7040577463699162
+36 epoch(s) completed
+Evaluation of model with Accuracy = 0.776125 and F1 = 0.7081520582345113
+37 epoch(s) completed
+Evaluation of model with Accuracy = 0.776875 and F1 = 0.7093206659140496
+38 epoch(s) completed
+Evaluation of model with Accuracy = 0.778875 and F1 = 0.7135845274303307
+39 epoch(s) completed
+Evaluation of model with Accuracy = 0.781625 and F1 = 0.7182601422977136
+40 epoch(s) completed
+Evaluation of model with Accuracy = 0.781625 and F1 = 0.7181593915656634
+41 epoch(s) completed
+Evaluation of model with Accuracy = 0.782375 and F1 = 0.7192764620294845
+42 epoch(s) completed
+Evaluation of model with Accuracy = 0.7825 and F1 = 0.7207246414175931
+43 epoch(s) completed
+Evaluation of model with Accuracy = 0.78375 and F1 = 0.7223532726499826
+44 epoch(s) completed
+Evaluation of model with Accuracy = 0.787125 and F1 = 0.7285596888570534
+45 epoch(s) completed
+Evaluation of model with Accuracy = 0.785125 and F1 = 0.7246329252878324
+46 epoch(s) completed
+Evaluation of model with Accuracy = 0.790125 and F1 = 0.7336206343378217
+47 epoch(s) completed
+Evaluation of model with Accuracy = 0.7895 and F1 = 0.7315363558785726
+48 epoch(s) completed
+Evaluation of model with Accuracy = 0.791 and F1 = 0.734122761737361
+49 epoch(s) completed
+Evaluation of model with Accuracy = 0.791375 and F1 = 0.7358324952989691
+50 epoch(s) completed
+Evaluation of model with Accuracy = 0.79125 and F1 = 0.7357321239444049
+51 epoch(s) completed
+Evaluation of model with Accuracy = 0.793 and F1 = 0.6746306001198075
+52 epoch(s) completed
+Evaluation of model with Accuracy = 0.7935 and F1 = 0.6758856820482729
+53 epoch(s) completed
+Evaluation of model with Accuracy = 0.7935 and F1 = 0.6750027305950742
+54 epoch(s) completed
+Evaluation of model with Accuracy = 0.79325 and F1 = 0.675251885499209
+55 epoch(s) completed
+Evaluation of model with Accuracy = 0.796 and F1 = 0.7419909500480583
+56 epoch(s) completed
+Evaluation of model with Accuracy = 0.7965 and F1 = 0.7434291730708728
+57 epoch(s) completed
+Evaluation of model with Accuracy = 0.79875 and F1 = 0.7451575121729793
+58 epoch(s) completed
+Evaluation of model with Accuracy = 0.799 and F1 = 0.7466463007893104
+59 epoch(s) completed
+Evaluation of model with Accuracy = 0.79875 and F1 = 0.7451226892364987
+60 epoch(s) completed
+Evaluation of model with Accuracy = 0.800625 and F1 = 0.7488712350300962
+61 epoch(s) completed
+Evaluation of model with Accuracy = 0.801125 and F1 = 0.7495234983287757
+62 epoch(s) completed
+Evaluation of model with Accuracy = 0.801875 and F1 = 0.7498322958481167
+63 epoch(s) completed
+Evaluation of model with Accuracy = 0.802625 and F1 = 0.7514034660585891
+64 epoch(s) completed
+Evaluation of model with Accuracy = 0.803375 and F1 = 0.7524963389685169
+65 epoch(s) completed
+Evaluation of model with Accuracy = 0.806875 and F1 = 0.7539385937600783
+66 epoch(s) completed
+Evaluation of model with Accuracy = 0.80725 and F1 = 0.755910087278177
+67 epoch(s) completed
+Evaluation of model with Accuracy = 0.807875 and F1 = 0.756500825037219
+68 epoch(s) completed
+Evaluation of model with Accuracy = 0.808625 and F1 = 0.7570029250584598
+69 epoch(s) completed
+Evaluation of model with Accuracy = 0.8085 and F1 = 0.7577951896036964
+70 epoch(s) completed
+Evaluation of model with Accuracy = 0.809375 and F1 = 0.758701788386922
+71 epoch(s) completed
+Evaluation of model with Accuracy = 0.808625 and F1 = 0.7587731933871409
+72 epoch(s) completed
+Evaluation of model with Accuracy = 0.80875 and F1 = 0.692924132086521
+73 epoch(s) completed
+Evaluation of model with Accuracy = 0.80875 and F1 = 0.7586937133248653
+74 epoch(s) completed
+Evaluation of model with Accuracy = 0.810875 and F1 = 0.7599590885321501
+75 epoch(s) completed
+Evaluation of model with Accuracy = 0.8105 and F1 = 0.7595957452354941
+76 epoch(s) completed
+Evaluation of model with Accuracy = 0.81075 and F1 = 0.6950126053073681
+77 epoch(s) completed
+Evaluation of model with Accuracy = 0.811375 and F1 = 0.6950882508772116
+78 epoch(s) completed
+Evaluation of model with Accuracy = 0.810625 and F1 = 0.6949885129081514
+79 epoch(s) completed
+Evaluation of model with Accuracy = 0.811875 and F1 = 0.6958826886182979
+80 epoch(s) completed
+Evaluation of model with Accuracy = 0.812875 and F1 = 0.7170488243841665
+81 epoch(s) completed
+Evaluation of model with Accuracy = 0.812 and F1 = 0.7400000171957744
+82 epoch(s) completed
+Evaluation of model with Accuracy = 0.813125 and F1 = 0.7153315439467555
+83 epoch(s) completed
+Evaluation of model with Accuracy = 0.813375 and F1 = 0.7239694255941453
+84 epoch(s) completed
+Evaluation of model with Accuracy = 0.814125 and F1 = 0.7249710674474973
+85 epoch(s) completed
+Evaluation of model with Accuracy = 0.815125 and F1 = 0.7237622449814783
+86 epoch(s) completed
+Evaluation of model with Accuracy = 0.81525 and F1 = 0.7117790943015434
+87 epoch(s) completed
+Evaluation of model with Accuracy = 0.81625 and F1 = 0.724076512624521
+88 epoch(s) completed
+Evaluation of model with Accuracy = 0.816125 and F1 = 0.714822410013476
+89 epoch(s) completed
+Evaluation of model with Accuracy = 0.81675 and F1 = 0.7226776070216937
+90 epoch(s) completed
+Evaluation of model with Accuracy = 0.816375 and F1 = 0.7299634375339714
+91 epoch(s) completed
+Evaluation of model with Accuracy = 0.8175 and F1 = 0.7292130389270941
+92 epoch(s) completed
+Evaluation of model with Accuracy = 0.81725 and F1 = 0.7269905661140744
+93 epoch(s) completed
+Evaluation of model with Accuracy = 0.816375 and F1 = 0.7215363631099867
+94 epoch(s) completed
+Evaluation of model with Accuracy = 0.8165 and F1 = 0.7368205322549709
+95 epoch(s) completed
+Evaluation of model with Accuracy = 0.817 and F1 = 0.7374781294291753
+96 epoch(s) completed
+Evaluation of model with Accuracy = 0.81825 and F1 = 0.7335291073605181
+97 epoch(s) completed
+Evaluation of model with Accuracy = 0.817875 and F1 = 0.7248523906485022
+98 epoch(s) completed
+Evaluation of model with Accuracy = 0.818625 and F1 = 0.7276835583680065
+99 epoch(s) completed
+Evaluation of model with Accuracy = 0.81775 and F1 = 0.726797262346589
+100 epoch(s) completed
+Evaluation of model with Accuracy = 0.819375 and F1 = 0.7280012215312361
+101 epoch(s) completed
+Evaluation of model with Accuracy = 0.819375 and F1 = 0.729900720490139
+102 epoch(s) completed
+Evaluation of model with Accuracy = 0.819875 and F1 = 0.7297695881835636
+103 epoch(s) completed
+Evaluation of model with Accuracy = 0.82075 and F1 = 0.7357776887510373
+104 epoch(s) completed
+Evaluation of model with Accuracy = 0.820625 and F1 = 0.7396692441501912
+105 epoch(s) completed
+Evaluation of model with Accuracy = 0.820625 and F1 = 0.7390282413054652
+106 epoch(s) completed
+Evaluation of model with Accuracy = 0.818875 and F1 = 0.7502575085767536
+107 epoch(s) completed
+Evaluation of model with Accuracy = 0.820125 and F1 = 0.7452397827877529
+108 epoch(s) completed
+Evaluation of model with Accuracy = 0.821125 and F1 = 0.7362634264009793
+109 epoch(s) completed
+Evaluation of model with Accuracy = 0.821625 and F1 = 0.7453070319061625
+110 epoch(s) completed
+Evaluation of model with Accuracy = 0.820875 and F1 = 0.7412713793075706
+111 epoch(s) completed
+Evaluation of model with Accuracy = 0.82175 and F1 = 0.7411674358652006
+112 epoch(s) completed
+Evaluation of model with Accuracy = 0.821375 and F1 = 0.7484068712858991
+113 epoch(s) completed
+Evaluation of model with Accuracy = 0.821625 and F1 = 0.7405013761990896
+114 epoch(s) completed
+Evaluation of model with Accuracy = 0.8215 and F1 = 0.7435525535794146
+115 epoch(s) completed
+Evaluation of model with Accuracy = 0.82175 and F1 = 0.743841044503245
+116 epoch(s) completed
+Evaluation of model with Accuracy = 0.823375 and F1 = 0.7417734023835681
+117 epoch(s) completed
+Evaluation of model with Accuracy = 0.822625 and F1 = 0.7422681178207713
+118 epoch(s) completed
+Evaluation of model with Accuracy = 0.82375 and F1 = 0.7493107749605744
+119 epoch(s) completed
+Evaluation of model with Accuracy = 0.82325 and F1 = 0.7447121210673638
+120 epoch(s) completed
+Evaluation of model with Accuracy = 0.822875 and F1 = 0.7458494305671812
+121 epoch(s) completed
+Evaluation of model with Accuracy = 0.82475 and F1 = 0.751864588132599
+122 epoch(s) completed
+Evaluation of model with Accuracy = 0.82175 and F1 = 0.7542896354557892
+123 epoch(s) completed
+Evaluation of model with Accuracy = 0.824 and F1 = 0.7494208703702016
+124 epoch(s) completed
+Evaluation of model with Accuracy = 0.82575 and F1 = 0.7536276746107499
+125 epoch(s) completed
+Evaluation of model with Accuracy = 0.82475 and F1 = 0.7513949313460269
+126 epoch(s) completed
+Evaluation of model with Accuracy = 0.82525 and F1 = 0.7489509172749713
+127 epoch(s) completed
+Evaluation of model with Accuracy = 0.824875 and F1 = 0.7515476148607614
+128 epoch(s) completed
+Evaluation of model with Accuracy = 0.82525 and F1 = 0.751636894577716
+129 epoch(s) completed
+Evaluation of model with Accuracy = 0.8265 and F1 = 0.7567409773700108
+130 epoch(s) completed
+Evaluation of model with Accuracy = 0.827 and F1 = 0.7597878631887968
+131 epoch(s) completed
+Evaluation of model with Accuracy = 0.827375 and F1 = 0.7580376283357735
+132 epoch(s) completed
+Evaluation of model with Accuracy = 0.82675 and F1 = 0.7562064429517337
+133 epoch(s) completed
+Evaluation of model with Accuracy = 0.82625 and F1 = 0.7515360095539447
+134 epoch(s) completed
+Evaluation of model with Accuracy = 0.828625 and F1 = 0.7571366520924071
+135 epoch(s) completed
+Evaluation of model with Accuracy = 0.82825 and F1 = 0.7593701354559932
+136 epoch(s) completed
+Evaluation of model with Accuracy = 0.82725 and F1 = 0.7592438490974265
+137 epoch(s) completed
+Evaluation of model with Accuracy = 0.828375 and F1 = 0.7586185532810464
+138 epoch(s) completed
+Evaluation of model with Accuracy = 0.82975 and F1 = 0.7575783502980243
+139 epoch(s) completed
+Evaluation of model with Accuracy = 0.831375 and F1 = 0.7621904125331522
+140 epoch(s) completed
+Evaluation of model with Accuracy = 0.832 and F1 = 0.7649851274867134
+141 epoch(s) completed
+Evaluation of model with Accuracy = 0.83225 and F1 = 0.7691156534448448
+142 epoch(s) completed
+Evaluation of model with Accuracy = 0.833125 and F1 = 0.7671983195529524
+143 epoch(s) completed
+Evaluation of model with Accuracy = 0.83325 and F1 = 0.7652367995652607
+144 epoch(s) completed
+Evaluation of model with Accuracy = 0.832375 and F1 = 0.766051113735674
+145 epoch(s) completed
+Evaluation of model with Accuracy = 0.83325 and F1 = 0.7680063892491565
+146 epoch(s) completed
+Evaluation of model with Accuracy = 0.834875 and F1 = 0.766915257048732
+147 epoch(s) completed
+Evaluation of model with Accuracy = 0.835 and F1 = 0.7689286189133541
+148 epoch(s) completed
+Evaluation of model with Accuracy = 0.833625 and F1 = 0.7681326456477935
+149 epoch(s) completed
+Evaluation of model with Accuracy = 0.833875 and F1 = 0.763072597456867
+150 epoch(s) completed
+Evaluation of model with Accuracy = 0.835125 and F1 = 0.7677183290573494
+151 epoch(s) completed
+Evaluation of model with Accuracy = 0.8355 and F1 = 0.7664901978436262
+152 epoch(s) completed
+Evaluation of model with Accuracy = 0.83525 and F1 = 0.7678219117230468
+153 epoch(s) completed
+Evaluation of model with Accuracy = 0.83575 and F1 = 0.7715893855881836
+154 epoch(s) completed
+Evaluation of model with Accuracy = 0.834 and F1 = 0.763951166596319
+155 epoch(s) completed
+Evaluation of model with Accuracy = 0.834 and F1 = 0.7645477498804496
+156 epoch(s) completed
+Evaluation of model with Accuracy = 0.835125 and F1 = 0.7642818563415406
+157 epoch(s) completed
+Evaluation of model with Accuracy = 0.83675 and F1 = 0.769155754194256
+158 epoch(s) completed
+Evaluation of model with Accuracy = 0.839375 and F1 = 0.774341368916963
+159 epoch(s) completed
+Evaluation of model with Accuracy = 0.83875 and F1 = 0.7733733721912732
+160 epoch(s) completed
+Evaluation of model with Accuracy = 0.837125 and F1 = 0.7661832512071228
+161 epoch(s) completed
+Evaluation of model with Accuracy = 0.8385 and F1 = 0.7763444234845573
+162 epoch(s) completed
+Evaluation of model with Accuracy = 0.838625 and F1 = 0.774740090599454
+163 epoch(s) completed
+Evaluation of model with Accuracy = 0.835875 and F1 = 0.7648427424517693
+164 epoch(s) completed
+Evaluation of model with Accuracy = 0.83725 and F1 = 0.7681139621105657
+165 epoch(s) completed
+Evaluation of model with Accuracy = 0.84 and F1 = 0.7762728361122385
+166 epoch(s) completed
+Evaluation of model with Accuracy = 0.841125 and F1 = 0.7758284252718151
+167 epoch(s) completed
+Evaluation of model with Accuracy = 0.840125 and F1 = 0.7754720742017917
+168 epoch(s) completed
+Evaluation of model with Accuracy = 0.83975 and F1 = 0.7751756153393565
+169 epoch(s) completed
+Evaluation of model with Accuracy = 0.8375 and F1 = 0.767748653649406
+170 epoch(s) completed
+Evaluation of model with Accuracy = 0.839 and F1 = 0.7754276380861792
+171 epoch(s) completed
+Evaluation of model with Accuracy = 0.84025 and F1 = 0.7743258087747683
+172 epoch(s) completed
+Evaluation of model with Accuracy = 0.841625 and F1 = 0.776363976306887
+173 epoch(s) completed
+Evaluation of model with Accuracy = 0.838625 and F1 = 0.7696938938253337
+174 epoch(s) completed
+Evaluation of model with Accuracy = 0.84325 and F1 = 0.7802683642059819
+175 epoch(s) completed
+Evaluation of model with Accuracy = 0.840875 and F1 = 0.7738783015502696
+176 epoch(s) completed
+Evaluation of model with Accuracy = 0.835875 and F1 = 0.7622982207975475
+177 epoch(s) completed
+Evaluation of model with Accuracy = 0.836875 and F1 = 0.7650870908557061
+178 epoch(s) completed
+Evaluation of model with Accuracy = 0.83875 and F1 = 0.7725843007542645
+179 epoch(s) completed
+Evaluation of model with Accuracy = 0.83975 and F1 = 0.7753419704364186
+180 epoch(s) completed
+Evaluation of model with Accuracy = 0.8415 and F1 = 0.7792136895842663
+181 epoch(s) completed
+Evaluation of model with Accuracy = 0.839 and F1 = 0.7676732382851122
+182 epoch(s) completed
+Evaluation of model with Accuracy = 0.841625 and F1 = 0.7752629444233847
+183 epoch(s) completed
+Evaluation of model with Accuracy = 0.839875 and F1 = 0.7705595153887383
+184 epoch(s) completed
+Evaluation of model with Accuracy = 0.83875 and F1 = 0.7679679706995101
+185 epoch(s) completed
+Evaluation of model with Accuracy = 0.83975 and F1 = 0.7705126100699902
+186 epoch(s) completed
+Evaluation of model with Accuracy = 0.84075 and F1 = 0.7718107692556322
+187 epoch(s) completed
+Evaluation of model with Accuracy = 0.840625 and F1 = 0.7704898532956214
+188 epoch(s) completed
+Evaluation of model with Accuracy = 0.84325 and F1 = 0.7804412242014996
+189 epoch(s) completed
+Evaluation of model with Accuracy = 0.843875 and F1 = 0.7834370340678922
+190 epoch(s) completed
+Evaluation of model with Accuracy = 0.843125 and F1 = 0.7776036226306425
+191 epoch(s) completed
+Evaluation of model with Accuracy = 0.8425 and F1 = 0.7787061346358103
+192 epoch(s) completed
+Evaluation of model with Accuracy = 0.840625 and F1 = 0.7810589805618152
+193 epoch(s) completed
+Evaluation of model with Accuracy = 0.844875 and F1 = 0.7829201888544303
+194 epoch(s) completed
+Evaluation of model with Accuracy = 0.843 and F1 = 0.7778582449121019
+195 epoch(s) completed
+Evaluation of model with Accuracy = 0.844625 and F1 = 0.7831149911783369
+196 epoch(s) completed
+Evaluation of model with Accuracy = 0.843125 and F1 = 0.7780733635609439
+197 epoch(s) completed
+Evaluation of model with Accuracy = 0.845375 and F1 = 0.7830793324706133
+198 epoch(s) completed
+Evaluation of model with Accuracy = 0.84425 and F1 = 0.7795103145531231
+199 epoch(s) completed
+Evaluation of model with Accuracy = 0.845625 and F1 = 0.7845442534799525
+200 epoch(s) completed
+Evaluation of model with Accuracy = 0.84525 and F1 = 0.7835852839616438
+201 epoch(s) completed
+Evaluation of model with Accuracy = 0.845 and F1 = 0.782654127082799
+202 epoch(s) completed
+Evaluation of model with Accuracy = 0.845125 and F1 = 0.7828693766968797
+203 epoch(s) completed
+Evaluation of model with Accuracy = 0.844 and F1 = 0.7832410333159964
+204 epoch(s) completed
+Evaluation of model with Accuracy = 0.845375 and F1 = 0.7825495909755007
+205 epoch(s) completed
+Evaluation of model with Accuracy = 0.845625 and F1 = 0.781160385787354
+206 epoch(s) completed
+Evaluation of model with Accuracy = 0.84525 and F1 = 0.7843455649835249
+207 epoch(s) completed
+Evaluation of model with Accuracy = 0.844375 and F1 = 0.7787412519091563
+208 epoch(s) completed
+Evaluation of model with Accuracy = 0.84325 and F1 = 0.78232408846117
+209 epoch(s) completed
+Evaluation of model with Accuracy = 0.8445 and F1 = 0.7825932881355482
+210 epoch(s) completed
+Evaluation of model with Accuracy = 0.8455 and F1 = 0.7855334712962889
+211 epoch(s) completed
+Evaluation of model with Accuracy = 0.848625 and F1 = 0.7895371096599416
+212 epoch(s) completed
+Evaluation of model with Accuracy = 0.8475 and F1 = 0.7847047139615373
+213 epoch(s) completed
+Evaluation of model with Accuracy = 0.846 and F1 = 0.7827981308090399
+214 epoch(s) completed
+Evaluation of model with Accuracy = 0.845 and F1 = 0.7864234107813395
+215 epoch(s) completed
+Evaluation of model with Accuracy = 0.847 and F1 = 0.7881095397757715
+216 epoch(s) completed
+Evaluation of model with Accuracy = 0.8475 and F1 = 0.7874040955713331
+217 epoch(s) completed
+Evaluation of model with Accuracy = 0.84775 and F1 = 0.788701693432759
+218 epoch(s) completed
+Evaluation of model with Accuracy = 0.84725 and F1 = 0.7894588183617243
+219 epoch(s) completed
+Evaluation of model with Accuracy = 0.8485 and F1 = 0.7877978025835324
+220 epoch(s) completed
+Evaluation of model with Accuracy = 0.848875 and F1 = 0.7913558432684339
+221 epoch(s) completed
+Evaluation of model with Accuracy = 0.849625 and F1 = 0.791085715108947
+222 epoch(s) completed
+Evaluation of model with Accuracy = 0.848875 and F1 = 0.7921255532070757
+223 epoch(s) completed
+Evaluation of model with Accuracy = 0.8495 and F1 = 0.7867367274425598
+224 epoch(s) completed
+Evaluation of model with Accuracy = 0.851125 and F1 = 0.7924577035003493
+225 epoch(s) completed
+Evaluation of model with Accuracy = 0.8505 and F1 = 0.7903772155795326
+226 epoch(s) completed
+Evaluation of model with Accuracy = 0.849125 and F1 = 0.7906136139719229
+227 epoch(s) completed
+Evaluation of model with Accuracy = 0.850125 and F1 = 0.7917615016313324
+228 epoch(s) completed
+Evaluation of model with Accuracy = 0.84775 and F1 = 0.7889977965111947
+229 epoch(s) completed
+Evaluation of model with Accuracy = 0.8485 and F1 = 0.7881534966860543
+230 epoch(s) completed
+Evaluation of model with Accuracy = 0.849125 and F1 = 0.7906398737235576
+231 epoch(s) completed
+Evaluation of model with Accuracy = 0.8485 and F1 = 0.7909978510880783
+232 epoch(s) completed
+Evaluation of model with Accuracy = 0.85025 and F1 = 0.7928045942261284
+233 epoch(s) completed
+Evaluation of model with Accuracy = 0.851125 and F1 = 0.7929404127583138
+234 epoch(s) completed
+Evaluation of model with Accuracy = 0.85225 and F1 = 0.7984076066933764
+235 epoch(s) completed
+Evaluation of model with Accuracy = 0.85025 and F1 = 0.7961271712721016
+236 epoch(s) completed
+Evaluation of model with Accuracy = 0.850375 and F1 = 0.7972053306249134
+237 epoch(s) completed
+Evaluation of model with Accuracy = 0.8515 and F1 = 0.794129739761771
+238 epoch(s) completed
+Evaluation of model with Accuracy = 0.853 and F1 = 0.7998285698423946
+239 epoch(s) completed
+Evaluation of model with Accuracy = 0.852125 and F1 = 0.7966700079765011
+240 epoch(s) completed
+Evaluation of model with Accuracy = 0.85275 and F1 = 0.7959932274605419
+241 epoch(s) completed
+Evaluation of model with Accuracy = 0.85325 and F1 = 0.796028062704326
+242 epoch(s) completed
+Evaluation of model with Accuracy = 0.852375 and F1 = 0.7956839174326779
+243 epoch(s) completed
+Evaluation of model with Accuracy = 0.854875 and F1 = 0.7972580875170765
+244 epoch(s) completed
+Evaluation of model with Accuracy = 0.85225 and F1 = 0.798162180104044
+245 epoch(s) completed
+Evaluation of model with Accuracy = 0.8525 and F1 = 0.7937963918817891
+246 epoch(s) completed
+Evaluation of model with Accuracy = 0.854375 and F1 = 0.8014798121075764
+247 epoch(s) completed
+Evaluation of model with Accuracy = 0.85375 and F1 = 0.7962281830234448
+248 epoch(s) completed
+Evaluation of model with Accuracy = 0.853375 and F1 = 0.7975991950963055
+249 epoch(s) completed
+Evaluation of model with Accuracy = 0.855375 and F1 = 0.7975635233967359
+250 epoch(s) completed
+Evaluation of model with Accuracy = 0.8525 and F1 = 0.7886785665686693
+251 epoch(s) completed
+Evaluation of model with Accuracy = 0.85225 and F1 = 0.796515402480687
+252 epoch(s) completed
+Evaluation of model with Accuracy = 0.8535 and F1 = 0.7973052806145376
+253 epoch(s) completed
+Evaluation of model with Accuracy = 0.85325 and F1 = 0.7994824432437384
+254 epoch(s) completed
+Evaluation of model with Accuracy = 0.854375 and F1 = 0.800270270998303
+255 epoch(s) completed
+Evaluation of model with Accuracy = 0.85525 and F1 = 0.7982467369748385
+256 epoch(s) completed
+Evaluation of model with Accuracy = 0.8545 and F1 = 0.8020066589683745
+257 epoch(s) completed
+Evaluation of model with Accuracy = 0.856125 and F1 = 0.7986509009172459
+258 epoch(s) completed
+Evaluation of model with Accuracy = 0.853625 and F1 = 0.7984356379874135
+259 epoch(s) completed
+Evaluation of model with Accuracy = 0.854625 and F1 = 0.7975054767765507
+260 epoch(s) completed
+Evaluation of model with Accuracy = 0.85375 and F1 = 0.7978054376527266
+261 epoch(s) completed
+Evaluation of model with Accuracy = 0.853125 and F1 = 0.796691990621863
+262 epoch(s) completed
+Evaluation of model with Accuracy = 0.852875 and F1 = 0.795820677321045
+263 epoch(s) completed
+Evaluation of model with Accuracy = 0.85425 and F1 = 0.797200264165538
+264 epoch(s) completed
+Evaluation of model with Accuracy = 0.8555 and F1 = 0.7974333047135441
+265 epoch(s) completed
+Evaluation of model with Accuracy = 0.854125 and F1 = 0.7980090034935065
+266 epoch(s) completed
+Evaluation of model with Accuracy = 0.85475 and F1 = 0.7970311580794188
+267 epoch(s) completed
+Evaluation of model with Accuracy = 0.852625 and F1 = 0.7965528595709165
+268 epoch(s) completed
+Evaluation of model with Accuracy = 0.852625 and F1 = 0.7959853579445666
+269 epoch(s) completed
+Evaluation of model with Accuracy = 0.85475 and F1 = 0.7968124376050697
+270 epoch(s) completed
+Evaluation of model with Accuracy = 0.85575 and F1 = 0.7960024018431306
+271 epoch(s) completed
+Evaluation of model with Accuracy = 0.855375 and F1 = 0.7946440377318466
+272 epoch(s) completed
+Evaluation of model with Accuracy = 0.854375 and F1 = 0.7971970620632584
+273 epoch(s) completed
+Evaluation of model with Accuracy = 0.856 and F1 = 0.798777721779971
+274 epoch(s) completed
+Evaluation of model with Accuracy = 0.8525 and F1 = 0.798078829678193
+275 epoch(s) completed
+Evaluation of model with Accuracy = 0.854 and F1 = 0.7991533867452624
+276 epoch(s) completed
+Evaluation of model with Accuracy = 0.8545 and F1 = 0.7977569055002084
+277 epoch(s) completed
+Evaluation of model with Accuracy = 0.856875 and F1 = 0.7972822924272959
+278 epoch(s) completed
+Evaluation of model with Accuracy = 0.855 and F1 = 0.7993185780176228
+279 epoch(s) completed
+Evaluation of model with Accuracy = 0.853875 and F1 = 0.7955892004886116
+280 epoch(s) completed
+Evaluation of model with Accuracy = 0.85525 and F1 = 0.7973042845714349
+281 epoch(s) completed
+Evaluation of model with Accuracy = 0.855625 and F1 = 0.7995839594880401
+282 epoch(s) completed
+Evaluation of model with Accuracy = 0.853 and F1 = 0.7977968259679159
+283 epoch(s) completed
+Evaluation of model with Accuracy = 0.85575 and F1 = 0.7995451054266057
+284 epoch(s) completed
+Evaluation of model with Accuracy = 0.857125 and F1 = 0.8006460206280496
+285 epoch(s) completed
+Evaluation of model with Accuracy = 0.855125 and F1 = 0.7995725794591816
+286 epoch(s) completed
+Evaluation of model with Accuracy = 0.855875 and F1 = 0.8013366087447311
+287 epoch(s) completed
+Evaluation of model with Accuracy = 0.855125 and F1 = 0.7941985410933367
+288 epoch(s) completed
+Evaluation of model with Accuracy = 0.85725 and F1 = 0.7984507187182471
+289 epoch(s) completed
+Evaluation of model with Accuracy = 0.8555 and F1 = 0.7973063762532032
+290 epoch(s) completed
+Evaluation of model with Accuracy = 0.85675 and F1 = 0.7994379096756697
+291 epoch(s) completed
+Evaluation of model with Accuracy = 0.85675 and F1 = 0.8019635287210791
+292 epoch(s) completed
+Evaluation of model with Accuracy = 0.85675 and F1 = 0.7983519379037611
+293 epoch(s) completed
+Evaluation of model with Accuracy = 0.856125 and F1 = 0.7996960640026766
+294 epoch(s) completed
+Evaluation of model with Accuracy = 0.857875 and F1 = 0.8009128303512173
+295 epoch(s) completed
+Evaluation of model with Accuracy = 0.8555 and F1 = 0.8022701515598729
+296 epoch(s) completed
+Evaluation of model with Accuracy = 0.85825 and F1 = 0.8024513869841478
+297 epoch(s) completed
+Evaluation of model with Accuracy = 0.858375 and F1 = 0.8032187197404157
+298 epoch(s) completed
+Evaluation of model with Accuracy = 0.856 and F1 = 0.8044164228635909
+299 epoch(s) completed
+Evaluation of model with Accuracy = 0.858375 and F1 = 0.803953469845338
+300 epoch(s) completed
+Evaluation of model with Accuracy = 0.85925 and F1 = 0.8045925741647896
+301 epoch(s) completed
+Evaluation of model with Accuracy = 0.85925 and F1 = 0.8028866411853287
+302 epoch(s) completed
+Evaluation of model with Accuracy = 0.857875 and F1 = 0.8039726486545937
+303 epoch(s) completed
+Evaluation of model with Accuracy = 0.85925 and F1 = 0.8046810546626031
+304 epoch(s) completed
+Evaluation of model with Accuracy = 0.85825 and F1 = 0.8047616491020637
+305 epoch(s) completed
+Evaluation of model with Accuracy = 0.856625 and F1 = 0.8053207251484473
+306 epoch(s) completed
+Evaluation of model with Accuracy = 0.858375 and F1 = 0.8071877780532836
+307 epoch(s) completed
+Evaluation of model with Accuracy = 0.857875 and F1 = 0.808840864817737
+308 epoch(s) completed
+Evaluation of model with Accuracy = 0.859 and F1 = 0.8079851862518773
+309 epoch(s) completed
+Evaluation of model with Accuracy = 0.85725 and F1 = 0.8062160961696078
+310 epoch(s) completed
+Evaluation of model with Accuracy = 0.8585 and F1 = 0.8073986506165489
+311 epoch(s) completed
+Evaluation of model with Accuracy = 0.86075 and F1 = 0.8064781109410669
+312 epoch(s) completed
+Evaluation of model with Accuracy = 0.857625 and F1 = 0.8019533541177544
+313 epoch(s) completed
+Evaluation of model with Accuracy = 0.857375 and F1 = 0.8047615030480074
+314 epoch(s) completed
+Evaluation of model with Accuracy = 0.860125 and F1 = 0.808414552434943
+315 epoch(s) completed
+Evaluation of model with Accuracy = 0.859125 and F1 = 0.8091015061952972
+316 epoch(s) completed
+Evaluation of model with Accuracy = 0.85925 and F1 = 0.8092860381013596
+317 epoch(s) completed
+Evaluation of model with Accuracy = 0.860375 and F1 = 0.811608337047022
+318 epoch(s) completed
+Evaluation of model with Accuracy = 0.860875 and F1 = 0.8122648531108428
+319 epoch(s) completed
+Evaluation of model with Accuracy = 0.856875 and F1 = 0.8088199619850108
+320 epoch(s) completed
+Evaluation of model with Accuracy = 0.860875 and F1 = 0.8092613215893613
+321 epoch(s) completed
+Evaluation of model with Accuracy = 0.859875 and F1 = 0.8119037472299666
+322 epoch(s) completed
+Evaluation of model with Accuracy = 0.857625 and F1 = 0.809561943352448
+323 epoch(s) completed
+Evaluation of model with Accuracy = 0.859 and F1 = 0.808085684297196
+324 epoch(s) completed
+Evaluation of model with Accuracy = 0.859625 and F1 = 0.8082183935270061
+325 epoch(s) completed
+Evaluation of model with Accuracy = 0.86025 and F1 = 0.8096382311043454
+326 epoch(s) completed
+Evaluation of model with Accuracy = 0.861875 and F1 = 0.8110643729385548
+327 epoch(s) completed
+Evaluation of model with Accuracy = 0.861 and F1 = 0.8089378331205822
+328 epoch(s) completed
+Evaluation of model with Accuracy = 0.86125 and F1 = 0.808670326881512
+329 epoch(s) completed
+Evaluation of model with Accuracy = 0.859375 and F1 = 0.8081890027212534
+330 epoch(s) completed
+Evaluation of model with Accuracy = 0.857125 and F1 = 0.8062521389904079
+331 epoch(s) completed
+Evaluation of model with Accuracy = 0.86 and F1 = 0.8052497805744973
+332 epoch(s) completed
+Evaluation of model with Accuracy = 0.860375 and F1 = 0.8037188753424852
+333 epoch(s) completed
+Evaluation of model with Accuracy = 0.861375 and F1 = 0.8069693062782436
+334 epoch(s) completed
+Evaluation of model with Accuracy = 0.85975 and F1 = 0.8087559581443451
+335 epoch(s) completed
+Evaluation of model with Accuracy = 0.860875 and F1 = 0.8099619823293595
+336 epoch(s) completed
+Evaluation of model with Accuracy = 0.85825 and F1 = 0.8052304283520517
+337 epoch(s) completed
+Evaluation of model with Accuracy = 0.859375 and F1 = 0.8077816591260385
+338 epoch(s) completed
+Evaluation of model with Accuracy = 0.857 and F1 = 0.8063877947323062
+339 epoch(s) completed
+Evaluation of model with Accuracy = 0.86175 and F1 = 0.8093128435218084
+340 epoch(s) completed
+Evaluation of model with Accuracy = 0.8615 and F1 = 0.8080504358132888
+341 epoch(s) completed
+Evaluation of model with Accuracy = 0.86325 and F1 = 0.8121423380124263
+342 epoch(s) completed
+Evaluation of model with Accuracy = 0.86125 and F1 = 0.8130356383555347
+343 epoch(s) completed
+Evaluation of model with Accuracy = 0.86325 and F1 = 0.812045348259689
+344 epoch(s) completed
+Evaluation of model with Accuracy = 0.8615 and F1 = 0.8101369927616802
+345 epoch(s) completed
+Evaluation of model with Accuracy = 0.862125 and F1 = 0.810062824841765
+346 epoch(s) completed
+Evaluation of model with Accuracy = 0.863375 and F1 = 0.8118421833013931
+347 epoch(s) completed
+Evaluation of model with Accuracy = 0.86375 and F1 = 0.808168537648796
+348 epoch(s) completed
+Evaluation of model with Accuracy = 0.863625 and F1 = 0.8134573694929087
+349 epoch(s) completed
+Evaluation of model with Accuracy = 0.864 and F1 = 0.8118313590767322
+350 epoch(s) completed
+Evaluation of model with Accuracy = 0.86325 and F1 = 0.8113121836351659
+351 epoch(s) completed
+Evaluation of model with Accuracy = 0.863 and F1 = 0.8109853904854003
+352 epoch(s) completed
+Evaluation of model with Accuracy = 0.861 and F1 = 0.8120570685200775
+353 epoch(s) completed
+Evaluation of model with Accuracy = 0.86325 and F1 = 0.8146026622240933
+354 epoch(s) completed
+Evaluation of model with Accuracy = 0.86375 and F1 = 0.8145797473107919
+355 epoch(s) completed
+Evaluation of model with Accuracy = 0.864375 and F1 = 0.8175319430943909
+356 epoch(s) completed
+Evaluation of model with Accuracy = 0.863625 and F1 = 0.8187350637081446
+357 epoch(s) completed
+Evaluation of model with Accuracy = 0.8645 and F1 = 0.8189156548300172
+358 epoch(s) completed
+Evaluation of model with Accuracy = 0.863375 and F1 = 0.8182743903844857
+359 epoch(s) completed
+Evaluation of model with Accuracy = 0.863125 and F1 = 0.8181878981670259
+360 epoch(s) completed
+Evaluation of model with Accuracy = 0.863 and F1 = 0.815989810336365
+361 epoch(s) completed
+Evaluation of model with Accuracy = 0.862 and F1 = 0.8158313412258948
+362 epoch(s) completed
+Evaluation of model with Accuracy = 0.86175 and F1 = 0.8157364712154784
+363 epoch(s) completed
+Evaluation of model with Accuracy = 0.8635 and F1 = 0.8183941662356681
+364 epoch(s) completed
+Evaluation of model with Accuracy = 0.859625 and F1 = 0.8151450669969879
+365 epoch(s) completed
+Evaluation of model with Accuracy = 0.861 and F1 = 0.8188206468905244
+366 epoch(s) completed
+Evaluation of model with Accuracy = 0.866375 and F1 = 0.8200699226006593
+367 epoch(s) completed
+Evaluation of model with Accuracy = 0.860625 and F1 = 0.8175310286057621
+368 epoch(s) completed
+Evaluation of model with Accuracy = 0.862625 and F1 = 0.8210493996937467
+369 epoch(s) completed
+Evaluation of model with Accuracy = 0.862375 and F1 = 0.8189447106852216
+370 epoch(s) completed
+Evaluation of model with Accuracy = 0.862875 and F1 = 0.8203407108915424
+371 epoch(s) completed
+Evaluation of model with Accuracy = 0.86075 and F1 = 0.8153597238741659
+372 epoch(s) completed
+Evaluation of model with Accuracy = 0.863 and F1 = 0.8189769354452565
+373 epoch(s) completed
+Evaluation of model with Accuracy = 0.859375 and F1 = 0.8192303285245105
+374 epoch(s) completed
+Evaluation of model with Accuracy = 0.863375 and F1 = 0.8145258142345847
+375 epoch(s) completed
+Evaluation of model with Accuracy = 0.86225 and F1 = 0.8153842284443158
+376 epoch(s) completed
+Evaluation of model with Accuracy = 0.864375 and F1 = 0.8147908324096823
+377 epoch(s) completed
+Evaluation of model with Accuracy = 0.863625 and F1 = 0.8129399111660335
+378 epoch(s) completed
+Evaluation of model with Accuracy = 0.86275 and F1 = 0.8179202796663916
+379 epoch(s) completed
+Evaluation of model with Accuracy = 0.864875 and F1 = 0.8184941710250925
+380 epoch(s) completed
+Evaluation of model with Accuracy = 0.862625 and F1 = 0.8148484164761448
+381 epoch(s) completed
+Evaluation of model with Accuracy = 0.864125 and F1 = 0.8138527462062625
+382 epoch(s) completed
+Evaluation of model with Accuracy = 0.863625 and F1 = 0.8184774249562713
+383 epoch(s) completed
+Evaluation of model with Accuracy = 0.8625 and F1 = 0.8179722298319854
+384 epoch(s) completed
+Evaluation of model with Accuracy = 0.863125 and F1 = 0.8162931320378242
+385 epoch(s) completed
+Evaluation of model with Accuracy = 0.863875 and F1 = 0.8154341495669526
+386 epoch(s) completed
+Evaluation of model with Accuracy = 0.86525 and F1 = 0.8119721360175238
+387 epoch(s) completed
+Evaluation of model with Accuracy = 0.865 and F1 = 0.8179631224264995
+388 epoch(s) completed
+Evaluation of model with Accuracy = 0.864875 and F1 = 0.8182345920575667
+389 epoch(s) completed
+Evaluation of model with Accuracy = 0.865625 and F1 = 0.8221851860638968
+390 epoch(s) completed
+Evaluation of model with Accuracy = 0.863875 and F1 = 0.8184090011700333
+391 epoch(s) completed
+Evaluation of model with Accuracy = 0.862375 and F1 = 0.8206661185375153
+392 epoch(s) completed
+Evaluation of model with Accuracy = 0.866875 and F1 = 0.8214847528893343
+393 epoch(s) completed
+Evaluation of model with Accuracy = 0.864 and F1 = 0.8202976661820901
+394 epoch(s) completed
+Evaluation of model with Accuracy = 0.86525 and F1 = 0.8176722883643024
+395 epoch(s) completed
+Evaluation of model with Accuracy = 0.86525 and F1 = 0.8224314913214062
+396 epoch(s) completed
+Evaluation of model with Accuracy = 0.866 and F1 = 0.8228015069930669
+397 epoch(s) completed
+Evaluation of model with Accuracy = 0.865375 and F1 = 0.8224769242366943
+398 epoch(s) completed
+Evaluation of model with Accuracy = 0.866 and F1 = 0.8224435133059325
+399 epoch(s) completed
+Evaluation of model with Accuracy = 0.864625 and F1 = 0.8205078007609028
+400 epoch(s) completed
+Evaluation of model with Accuracy = 0.867125 and F1 = 0.8214097216017248
+401 epoch(s) completed
+Evaluation of model with Accuracy = 0.8665 and F1 = 0.8186937252310467
+402 epoch(s) completed
+Evaluation of model with Accuracy = 0.86525 and F1 = 0.8221644167304674
+403 epoch(s) completed
+Evaluation of model with Accuracy = 0.86525 and F1 = 0.8192378862122014
+404 epoch(s) completed
+Evaluation of model with Accuracy = 0.86575 and F1 = 0.8221970388382122
+405 epoch(s) completed
+Evaluation of model with Accuracy = 0.864875 and F1 = 0.8240513329751314
+406 epoch(s) completed
+Evaluation of model with Accuracy = 0.86675 and F1 = 0.8208546052702789
+407 epoch(s) completed
+Evaluation of model with Accuracy = 0.866 and F1 = 0.8239732733157186
+408 epoch(s) completed
+Evaluation of model with Accuracy = 0.86625 and F1 = 0.8233485648338366
+409 epoch(s) completed
+Evaluation of model with Accuracy = 0.8665 and F1 = 0.8256566205869244
+410 epoch(s) completed
+Evaluation of model with Accuracy = 0.865125 and F1 = 0.8263915289150455
+411 epoch(s) completed
+Evaluation of model with Accuracy = 0.8665 and F1 = 0.8236640625956816
+412 epoch(s) completed
+Evaluation of model with Accuracy = 0.867125 and F1 = 0.8234922401902682
+413 epoch(s) completed
+Evaluation of model with Accuracy = 0.867125 and F1 = 0.8227292299407184
+414 epoch(s) completed
+Evaluation of model with Accuracy = 0.86625 and F1 = 0.819352925082384
+415 epoch(s) completed
+Evaluation of model with Accuracy = 0.865875 and F1 = 0.8178325010819169
+416 epoch(s) completed
+Evaluation of model with Accuracy = 0.8665 and F1 = 0.8222499375104388
+417 epoch(s) completed
+Evaluation of model with Accuracy = 0.865125 and F1 = 0.8141240554395848
+418 epoch(s) completed
+Evaluation of model with Accuracy = 0.865375 and F1 = 0.8202719477259225
+419 epoch(s) completed
+Evaluation of model with Accuracy = 0.86725 and F1 = 0.822253670352117
+420 epoch(s) completed
+Evaluation of model with Accuracy = 0.867125 and F1 = 0.8254911122966297
+421 epoch(s) completed
+Evaluation of model with Accuracy = 0.86775 and F1 = 0.8249195325118677
+422 epoch(s) completed
+Evaluation of model with Accuracy = 0.866 and F1 = 0.8274583029666415
+423 epoch(s) completed
+Evaluation of model with Accuracy = 0.8665 and F1 = 0.8234180872140724
+424 epoch(s) completed
+Evaluation of model with Accuracy = 0.865 and F1 = 0.8230360995892957
+425 epoch(s) completed
+Evaluation of model with Accuracy = 0.8645 and F1 = 0.8235793101118667
+426 epoch(s) completed
+Evaluation of model with Accuracy = 0.864625 and F1 = 0.8288997028202972
+427 epoch(s) completed
+Evaluation of model with Accuracy = 0.865125 and F1 = 0.8263372269968953
+428 epoch(s) completed
+Evaluation of model with Accuracy = 0.86425 and F1 = 0.8244259767426371
+429 epoch(s) completed
+Evaluation of model with Accuracy = 0.863875 and F1 = 0.8243989829259768
+430 epoch(s) completed
+Evaluation of model with Accuracy = 0.866125 and F1 = 0.8246513384300111
+431 epoch(s) completed
+Evaluation of model with Accuracy = 0.86425 and F1 = 0.8244559737800092
+432 epoch(s) completed
+Evaluation of model with Accuracy = 0.865625 and F1 = 0.8215394057438421
+433 epoch(s) completed
+Evaluation of model with Accuracy = 0.866375 and F1 = 0.8249075812491509
+434 epoch(s) completed
+Evaluation of model with Accuracy = 0.868375 and F1 = 0.82401419032327
+435 epoch(s) completed
+Evaluation of model with Accuracy = 0.866375 and F1 = 0.821444275236626
+436 epoch(s) completed
+Evaluation of model with Accuracy = 0.865875 and F1 = 0.8206836192579998
+437 epoch(s) completed
+Evaluation of model with Accuracy = 0.865375 and F1 = 0.8230650722665326
+438 epoch(s) completed
+Evaluation of model with Accuracy = 0.867625 and F1 = 0.822014410914657
+439 epoch(s) completed
+Evaluation of model with Accuracy = 0.86575 and F1 = 0.8224950626121047
+440 epoch(s) completed
+Evaluation of model with Accuracy = 0.863125 and F1 = 0.8213804453389649
+441 epoch(s) completed
+Evaluation of model with Accuracy = 0.868125 and F1 = 0.8244702900672606
+442 epoch(s) completed
+Evaluation of model with Accuracy = 0.86875 and F1 = 0.8244728583088763
+443 epoch(s) completed
+Evaluation of model with Accuracy = 0.86275 and F1 = 0.8237145323061701
+444 epoch(s) completed
+Evaluation of model with Accuracy = 0.866 and F1 = 0.8189711909086567
+445 epoch(s) completed
+Evaluation of model with Accuracy = 0.867125 and F1 = 0.820995949394594
+446 epoch(s) completed
+Evaluation of model with Accuracy = 0.868 and F1 = 0.8219105745259736
+447 epoch(s) completed
+Evaluation of model with Accuracy = 0.865875 and F1 = 0.8244094440364151
+448 epoch(s) completed
+Evaluation of model with Accuracy = 0.865375 and F1 = 0.8261555844212958
+449 epoch(s) completed
+Evaluation of model with Accuracy = 0.868125 and F1 = 0.8287372113599564
+450 epoch(s) completed
+Evaluation of model with Accuracy = 0.86825 and F1 = 0.8285478175937271
+451 epoch(s) completed
+Evaluation of model with Accuracy = 0.859125 and F1 = 0.8273419290497752
+452 epoch(s) completed
+Evaluation of model with Accuracy = 0.868375 and F1 = 0.8301893682027685
+453 epoch(s) completed
+Evaluation of model with Accuracy = 0.867 and F1 = 0.8293568525438896
+454 epoch(s) completed
+Evaluation of model with Accuracy = 0.866125 and F1 = 0.8281351908882999
+455 epoch(s) completed
+Evaluation of model with Accuracy = 0.86625 and F1 = 0.828175520768378
+456 epoch(s) completed
+Evaluation of model with Accuracy = 0.866375 and F1 = 0.8282072206591317
+457 epoch(s) completed
+Evaluation of model with Accuracy = 0.867625 and F1 = 0.8271191949942234
+458 epoch(s) completed
+Evaluation of model with Accuracy = 0.864875 and F1 = 0.83122262052266
+459 epoch(s) completed
+Evaluation of model with Accuracy = 0.866375 and F1 = 0.8301209396940451
+460 epoch(s) completed
+Evaluation of model with Accuracy = 0.866875 and F1 = 0.8244649290888767
+04:39:38.907 [main] DEBUG o.d.optimize.solvers.BaseOptimizer - Hit termination condition on iteration 0: score=0.3599557800292969, oldScore=0.35995877075195315, condition=org.deeplearning4j.optimize.terminations.EpsTermination@123ab05d
+461 epoch(s) completed
+Evaluation of model with Accuracy = 0.86425 and F1 = 0.8296482602324496
+462 epoch(s) completed
+Evaluation of model with Accuracy = 0.8685 and F1 = 0.8304487787497434
+463 epoch(s) completed
+Evaluation of model with Accuracy = 0.867125 and F1 = 0.8323623288358567
+464 epoch(s) completed
+Evaluation of model with Accuracy = 0.866875 and F1 = 0.8292729219872098
+465 epoch(s) completed
+Evaluation of model with Accuracy = 0.86775 and F1 = 0.8291520247068924
+466 epoch(s) completed
+Evaluation of model with Accuracy = 0.869125 and F1 = 0.8297106380657223
+467 epoch(s) completed
+Evaluation of model with Accuracy = 0.869125 and F1 = 0.8311112820245257
+468 epoch(s) completed
+Evaluation of model with Accuracy = 0.86975 and F1 = 0.8300778939097032
+469 epoch(s) completed
+Evaluation of model with Accuracy = 0.86925 and F1 = 0.8321432447919029
+470 epoch(s) completed
+Evaluation of model with Accuracy = 0.862625 and F1 = 0.8324364448634324
+471 epoch(s) completed
+Evaluation of model with Accuracy = 0.86825 and F1 = 0.8390273287866034
+472 epoch(s) completed
+Evaluation of model with Accuracy = 0.86375 and F1 = 0.8345250107130696
+473 epoch(s) completed
+Evaluation of model with Accuracy = 0.870625 and F1 = 0.8345290656113178
+474 epoch(s) completed
+Evaluation of model with Accuracy = 0.871375 and F1 = 0.8346720738398162
+05:09:02.257 [main] DEBUG o.d.optimize.solvers.BaseOptimizer - Hit termination condition on iteration 0: score=0.36524932861328124, oldScore=0.36525042724609375, condition=org.deeplearning4j.optimize.terminations.EpsTermination@123ab05d
+475 epoch(s) completed
+Evaluation of model with Accuracy = 0.871875 and F1 = 0.8383434890896418
+476 epoch(s) completed
+Evaluation of model with Accuracy = 0.86475 and F1 = 0.8372755562755329
+477 epoch(s) completed
+Evaluation of model with Accuracy = 0.872625 and F1 = 0.8383047701417576
+478 epoch(s) completed
+Evaluation of model with Accuracy = 0.871875 and F1 = 0.834359235438441
+479 epoch(s) completed
+Evaluation of model with Accuracy = 0.870625 and F1 = 0.8330686571449002
+480 epoch(s) completed
+Evaluation of model with Accuracy = 0.871125 and F1 = 0.8325421861628743
+481 epoch(s) completed
+Evaluation of model with Accuracy = 0.8725 and F1 = 0.8351379720847517
+482 epoch(s) completed
+Evaluation of model with Accuracy = 0.8715 and F1 = 0.8303171859724272
+483 epoch(s) completed
+Evaluation of model with Accuracy = 0.873 and F1 = 0.8345670108171667
+484 epoch(s) completed
+Evaluation of model with Accuracy = 0.869875 and F1 = 0.8340799496178175
+485 epoch(s) completed
+Evaluation of model with Accuracy = 0.872125 and F1 = 0.8314354110851458
+486 epoch(s) completed
+Evaluation of model with Accuracy = 0.86475 and F1 = 0.830285816546027
+487 epoch(s) completed
+Evaluation of model with Accuracy = 0.86575 and F1 = 0.830712166879538
+488 epoch(s) completed
+Evaluation of model with Accuracy = 0.86875 and F1 = 0.8320268508817263
+489 epoch(s) completed
+Evaluation of model with Accuracy = 0.8675 and F1 = 0.8307546131850866
+490 epoch(s) completed
+Evaluation of model with Accuracy = 0.866 and F1 = 0.8360448943454862
+491 epoch(s) completed
+Evaluation of model with Accuracy = 0.866625 and F1 = 0.8305628223855438
+492 epoch(s) completed
+Evaluation of model with Accuracy = 0.86975 and F1 = 0.829682209992082
+493 epoch(s) completed
+Evaluation of model with Accuracy = 0.869375 and F1 = 0.8307698534230233
+494 epoch(s) completed
+Evaluation of model with Accuracy = 0.87025 and F1 = 0.8320315485429469
+495 epoch(s) completed
+Evaluation of model with Accuracy = 0.867375 and F1 = 0.8304573908074151
+496 epoch(s) completed
+Evaluation of model with Accuracy = 0.867625 and F1 = 0.8326650881777745
+497 epoch(s) completed
+Evaluation of model with Accuracy = 0.871 and F1 = 0.829339197569679
+498 epoch(s) completed
+Evaluation of model with Accuracy = 0.869 and F1 = 0.8349042394644636
+499 epoch(s) completed
+Evaluation of model with Accuracy = 0.8705 and F1 = 0.833953065316298
+500 epoch(s) completed
+Evaluation of model with Accuracy = 0.866125 and F1 = 0.8327013169598239
+501 epoch(s) completed
+Evaluation of model with Accuracy = 0.872625 and F1 = 0.8343227062563022
+502 epoch(s) completed
+Evaluation of model with Accuracy = 0.869375 and F1 = 0.833411670965506
+503 epoch(s) completed
+Evaluation of model with Accuracy = 0.867 and F1 = 0.8315443328254757
+504 epoch(s) completed
+Evaluation of model with Accuracy = 0.86675 and F1 = 0.832627349701236
+505 epoch(s) completed
+Evaluation of model with Accuracy = 0.86725 and F1 = 0.8308973233283985
+506 epoch(s) completed
+Evaluation of model with Accuracy = 0.87125 and F1 = 0.8289837362797469
+507 epoch(s) completed
+Evaluation of model with Accuracy = 0.868875 and F1 = 0.8297124270811441
+508 epoch(s) completed
+Evaluation of model with Accuracy = 0.871125 and F1 = 0.8279840911089064
+509 epoch(s) completed
+Evaluation of model with Accuracy = 0.869125 and F1 = 0.8322613067175662
+510 epoch(s) completed
+Evaluation of model with Accuracy = 0.869875 and F1 = 0.8304307878777529
+511 epoch(s) completed
+Evaluation of model with Accuracy = 0.872625 and F1 = 0.8329218734583271
+512 epoch(s) completed
+Evaluation of model with Accuracy = 0.870875 and F1 = 0.8356877613194362
+513 epoch(s) completed
+Evaluation of model with Accuracy = 0.869875 and F1 = 0.8352658956769334
+514 epoch(s) completed
+Evaluation of model with Accuracy = 0.867125 and F1 = 0.8334583320132627
+515 epoch(s) completed
+Evaluation of model with Accuracy = 0.8735 and F1 = 0.8343529416576951
+516 epoch(s) completed
+Evaluation of model with Accuracy = 0.865625 and F1 = 0.8367866579594547
+517 epoch(s) completed
+Evaluation of model with Accuracy = 0.868875 and F1 = 0.834040520492134
+518 epoch(s) completed
+Evaluation of model with Accuracy = 0.870375 and F1 = 0.8326331424390764
+519 epoch(s) completed
+Evaluation of model with Accuracy = 0.86875 and F1 = 0.8366340416471622
+520 epoch(s) completed
+Evaluation of model with Accuracy = 0.867125 and F1 = 0.8375261712509212
+521 epoch(s) completed
+Evaluation of model with Accuracy = 0.86975 and F1 = 0.8349773599945043
+522 epoch(s) completed
+Evaluation of model with Accuracy = 0.864625 and F1 = 0.8349244209010418
+523 epoch(s) completed
+Evaluation of model with Accuracy = 0.871375 and F1 = 0.8359301947814071
+524 epoch(s) completed
+Evaluation of model with Accuracy = 0.86425 and F1 = 0.8355614237103058
+525 epoch(s) completed
+Evaluation of model with Accuracy = 0.8705 and F1 = 0.8347370735182278
+526 epoch(s) completed
+Evaluation of model with Accuracy = 0.873125 and F1 = 0.8351184565587338
+527 epoch(s) completed
+Evaluation of model with Accuracy = 0.8705 and F1 = 0.8336549015215209
+528 epoch(s) completed
+Evaluation of model with Accuracy = 0.87125 and F1 = 0.8334785474528212
+529 epoch(s) completed
+Evaluation of model with Accuracy = 0.870125 and F1 = 0.8356796146093003
+530 epoch(s) completed
+Evaluation of model with Accuracy = 0.872 and F1 = 0.8364278763425579
+531 epoch(s) completed
+Evaluation of model with Accuracy = 0.872125 and F1 = 0.8308735810849479
+532 epoch(s) completed
+Evaluation of model with Accuracy = 0.865 and F1 = 0.8312763992755988
+533 epoch(s) completed
+Evaluation of model with Accuracy = 0.867 and F1 = 0.8322343249519301
+534 epoch(s) completed
+Evaluation of model with Accuracy = 0.873875 and F1 = 0.8321888731486953
+535 epoch(s) completed
+Evaluation of model with Accuracy = 0.8725 and F1 = 0.8338229677283208
+536 epoch(s) completed
+Evaluation of model with Accuracy = 0.868875 and F1 = 0.829345819026805
+537 epoch(s) completed
+Evaluation of model with Accuracy = 0.8715 and F1 = 0.8273514664483205
+538 epoch(s) completed
+Evaluation of model with Accuracy = 0.873125 and F1 = 0.8306071544326793
+539 epoch(s) completed
+Evaluation of model with Accuracy = 0.870625 and F1 = 0.831183096192109
+540 epoch(s) completed
+Evaluation of model with Accuracy = 0.873375 and F1 = 0.8328922239186948
+541 epoch(s) completed
+Evaluation of model with Accuracy = 0.873375 and F1 = 0.8340658178554651
+542 epoch(s) completed
+Evaluation of model with Accuracy = 0.87 and F1 = 0.8355702552620847
+543 epoch(s) completed
+Evaluation of model with Accuracy = 0.875125 and F1 = 0.8381755451899938
+544 epoch(s) completed
+Evaluation of model with Accuracy = 0.874125 and F1 = 0.8360538008951524
+545 epoch(s) completed
+Evaluation of model with Accuracy = 0.8735 and F1 = 0.8367366054274898
+546 epoch(s) completed
+Evaluation of model with Accuracy = 0.871625 and F1 = 0.838020220158149
+547 epoch(s) completed
+Evaluation of model with Accuracy = 0.87275 and F1 = 0.8401654040603551
+548 epoch(s) completed
+Evaluation of model with Accuracy = 0.873375 and F1 = 0.8351011841928492
+549 epoch(s) completed
+Evaluation of model with Accuracy = 0.87375 and F1 = 0.8383125491332161
+550 epoch(s) completed
+Evaluation of model with Accuracy = 0.876375 and F1 = 0.8373681634005536
+551 epoch(s) completed
+Evaluation of model with Accuracy = 0.8735 and F1 = 0.8392893480544247
+552 epoch(s) completed
+Evaluation of model with Accuracy = 0.87325 and F1 = 0.8360694310388259
+553 epoch(s) completed
+Evaluation of model with Accuracy = 0.872375 and F1 = 0.8362943096908514
+554 epoch(s) completed
+Evaluation of model with Accuracy = 0.870875 and F1 = 0.8354893278577777
+555 epoch(s) completed
+Evaluation of model with Accuracy = 0.87175 and F1 = 0.8320228711580026
+556 epoch(s) completed
+Evaluation of model with Accuracy = 0.87175 and F1 = 0.8348937240595075
+557 epoch(s) completed
+Evaluation of model with Accuracy = 0.872625 and F1 = 0.8351323966224214
+558 epoch(s) completed
+Evaluation of model with Accuracy = 0.87325 and F1 = 0.8328484016921539
+559 epoch(s) completed
+Evaluation of model with Accuracy = 0.8725 and F1 = 0.8351136681220082
+560 epoch(s) completed
+Evaluation of model with Accuracy = 0.873 and F1 = 0.8314113185167269
+561 epoch(s) completed
+Evaluation of model with Accuracy = 0.871875 and F1 = 0.8353651844257479
+562 epoch(s) completed
+Evaluation of model with Accuracy = 0.870375 and F1 = 0.8373240943129864
+563 epoch(s) completed
+Evaluation of model with Accuracy = 0.871875 and F1 = 0.8354285308745556
+564 epoch(s) completed
+Evaluation of model with Accuracy = 0.8695 and F1 = 0.8334018635892878
+565 epoch(s) completed
+Evaluation of model with Accuracy = 0.871375 and F1 = 0.8354521258298077
+566 epoch(s) completed
+Evaluation of model with Accuracy = 0.871375 and F1 = 0.8363012311404782
+567 epoch(s) completed
+Evaluation of model with Accuracy = 0.871875 and F1 = 0.8288762916599022
+568 epoch(s) completed
+Evaluation of model with Accuracy = 0.872625 and F1 = 0.8357843805929295
+569 epoch(s) completed
+Evaluation of model with Accuracy = 0.87425 and F1 = 0.8393524030432801
+570 epoch(s) completed
+Evaluation of model with Accuracy = 0.875 and F1 = 0.8385062877118871
+571 epoch(s) completed
+Evaluation of model with Accuracy = 0.876125 and F1 = 0.8387183734223836
+572 epoch(s) completed
+Evaluation of model with Accuracy = 0.870875 and F1 = 0.8391528945131987
+573 epoch(s) completed
+Evaluation of model with Accuracy = 0.87225 and F1 = 0.8362724984192119
+574 epoch(s) completed
+Evaluation of model with Accuracy = 0.873375 and F1 = 0.8392924494841012
+575 epoch(s) completed
+Evaluation of model with Accuracy = 0.875375 and F1 = 0.8376876898905252
+576 epoch(s) completed
+Evaluation of model with Accuracy = 0.873625 and F1 = 0.8375894942701638
+577 epoch(s) completed
+Evaluation of model with Accuracy = 0.87375 and F1 = 0.8358611731206702
+578 epoch(s) completed
+Evaluation of model with Accuracy = 0.8725 and F1 = 0.8377256529766045
+579 epoch(s) completed
+Evaluation of model with Accuracy = 0.8715 and F1 = 0.8331643223155576
+580 epoch(s) completed
+Evaluation of model with Accuracy = 0.873125 and F1 = 0.8340958118059691
+581 epoch(s) completed
+Evaluation of model with Accuracy = 0.871625 and F1 = 0.8336571387091897
+582 epoch(s) completed
+Evaluation of model with Accuracy = 0.87175 and F1 = 0.8322575884957818
+583 epoch(s) completed
+Evaluation of model with Accuracy = 0.873 and F1 = 0.8355816378389336
+584 epoch(s) completed
+Evaluation of model with Accuracy = 0.87525 and F1 = 0.8360223388066708
+585 epoch(s) completed
+Evaluation of model with Accuracy = 0.87525 and F1 = 0.8327374386168601
+586 epoch(s) completed
+Evaluation of model with Accuracy = 0.874 and F1 = 0.8348174011578523
+587 epoch(s) completed
+Evaluation of model with Accuracy = 0.875 and F1 = 0.8365239789903527
+588 epoch(s) completed
+Evaluation of model with Accuracy = 0.876375 and F1 = 0.8360968791893542
+589 epoch(s) completed
+Evaluation of model with Accuracy = 0.875375 and F1 = 0.8351099531466261
+590 epoch(s) completed
+Evaluation of model with Accuracy = 0.877125 and F1 = 0.8360788891029989
+591 epoch(s) completed
+Evaluation of model with Accuracy = 0.877 and F1 = 0.839027722428859
+592 epoch(s) completed
+Evaluation of model with Accuracy = 0.870125 and F1 = 0.8390702945288646
+593 epoch(s) completed
+Evaluation of model with Accuracy = 0.87375 and F1 = 0.8394309316300073
+594 epoch(s) completed
+Evaluation of model with Accuracy = 0.873875 and F1 = 0.8420142914647504
+595 epoch(s) completed
+Evaluation of model with Accuracy = 0.86475 and F1 = 0.8370263655917272
+596 epoch(s) completed
+Evaluation of model with Accuracy = 0.87325 and F1 = 0.8405509710174177
+597 epoch(s) completed
+Evaluation of model with Accuracy = 0.87025 and F1 = 0.8419998791324529
+598 epoch(s) completed
+Evaluation of model with Accuracy = 0.87575 and F1 = 0.8390223708635508
+599 epoch(s) completed
+Evaluation of model with Accuracy = 0.87425 and F1 = 0.838051379466468
+600 epoch(s) completed
+Evaluation of model with Accuracy = 0.8735 and F1 = 0.8382244787167445
+601 epoch(s) completed
+Evaluation of model with Accuracy = 0.87375 and F1 = 0.8380616467979871
+602 epoch(s) completed
+Evaluation of model with Accuracy = 0.8735 and F1 = 0.8410241732609124
+603 epoch(s) completed
+Evaluation of model with Accuracy = 0.872125 and F1 = 0.8385333361259373
+604 epoch(s) completed
+Evaluation of model with Accuracy = 0.873 and F1 = 0.8343706295930077
+605 epoch(s) completed
+Evaluation of model with Accuracy = 0.87325 and F1 = 0.8361559031133224
+606 epoch(s) completed
+Evaluation of model with Accuracy = 0.872625 and F1 = 0.8342471065069353
+607 epoch(s) completed
+Evaluation of model with Accuracy = 0.872125 and F1 = 0.8369965075269515
+608 epoch(s) completed
+Evaluation of model with Accuracy = 0.873875 and F1 = 0.8397367374686537
+609 epoch(s) completed
+Evaluation of model with Accuracy = 0.8765 and F1 = 0.8377389469706664
+610 epoch(s) completed
+Evaluation of model with Accuracy = 0.874625 and F1 = 0.8365930796644007
+611 epoch(s) completed
+Evaluation of model with Accuracy = 0.8735 and F1 = 0.8372731179901953
+612 epoch(s) completed
+Evaluation of model with Accuracy = 0.87525 and F1 = 0.8407742215479699
+613 epoch(s) completed
+Evaluation of model with Accuracy = 0.874375 and F1 = 0.8402860559550183
+614 epoch(s) completed
+Evaluation of model with Accuracy = 0.87375 and F1 = 0.8352768023029649
+615 epoch(s) completed
+Evaluation of model with Accuracy = 0.875125 and F1 = 0.8389461888577613
+616 epoch(s) completed
+Evaluation of model with Accuracy = 0.871875 and F1 = 0.8361564642557823
+617 epoch(s) completed
+Evaluation of model with Accuracy = 0.87075 and F1 = 0.8367880474954675
+618 epoch(s) completed
+Evaluation of model with Accuracy = 0.870375 and F1 = 0.8384275070938432
+619 epoch(s) completed
+Evaluation of model with Accuracy = 0.874875 and F1 = 0.8379722984198118
+620 epoch(s) completed
+Evaluation of model with Accuracy = 0.871875 and F1 = 0.839656136260816
+621 epoch(s) completed
+Evaluation of model with Accuracy = 0.87 and F1 = 0.837659676665468
+622 epoch(s) completed
+Evaluation of model with Accuracy = 0.87 and F1 = 0.8403041319822324
+623 epoch(s) completed
+Evaluation of model with Accuracy = 0.845875 and F1 = 0.8251522929001271
+624 epoch(s) completed
+Evaluation of model with Accuracy = 0.870625 and F1 = 0.837355415321759
+625 epoch(s) completed
+Evaluation of model with Accuracy = 0.874625 and F1 = 0.8380777404411898
+626 epoch(s) completed
+Evaluation of model with Accuracy = 0.872625 and F1 = 0.8379722680480816
+627 epoch(s) completed
+Evaluation of model with Accuracy = 0.87025 and F1 = 0.8386593790392831
+628 epoch(s) completed
+Evaluation of model with Accuracy = 0.86825 and F1 = 0.8386102865093225
+629 epoch(s) completed
+Evaluation of model with Accuracy = 0.873 and F1 = 0.8396055567719198
+630 epoch(s) completed
+Evaluation of model with Accuracy = 0.8705 and F1 = 0.8385493941058672
+631 epoch(s) completed
+Evaluation of model with Accuracy = 0.87075 and F1 = 0.8413021513481678
+632 epoch(s) completed
+Evaluation of model with Accuracy = 0.87475 and F1 = 0.8408946385793381
+633 epoch(s) completed
+Evaluation of model with Accuracy = 0.872375 and F1 = 0.8414620879245633
+634 epoch(s) completed
+Evaluation of model with Accuracy = 0.8735 and F1 = 0.8409203357568895
+635 epoch(s) completed
+Evaluation of model with Accuracy = 0.873125 and F1 = 0.840075292150789
+636 epoch(s) completed
+Evaluation of model with Accuracy = 0.874 and F1 = 0.841659528241038
+637 epoch(s) completed
+Evaluation of model with Accuracy = 0.87475 and F1 = 0.8400014140214153
+638 epoch(s) completed
+Evaluation of model with Accuracy = 0.8715 and F1 = 0.8426404758904429
+639 epoch(s) completed
+Evaluation of model with Accuracy = 0.87325 and F1 = 0.8430151231826555
+640 epoch(s) completed
+Evaluation of model with Accuracy = 0.875875 and F1 = 0.8412129200319218
+641 epoch(s) completed
+Evaluation of model with Accuracy = 0.87575 and F1 = 0.8374205732831045
+642 epoch(s) completed
+Evaluation of model with Accuracy = 0.87525 and F1 = 0.8431472269539181
+643 epoch(s) completed
+Evaluation of model with Accuracy = 0.86975 and F1 = 0.8394467060085798
+644 epoch(s) completed
+Evaluation of model with Accuracy = 0.873 and F1 = 0.8407960813806236
+645 epoch(s) completed
+Evaluation of model with Accuracy = 0.87375 and F1 = 0.8382934333441937
+646 epoch(s) completed
+Evaluation of model with Accuracy = 0.8735 and F1 = 0.8397017700885775
+647 epoch(s) completed
+Evaluation of model with Accuracy = 0.87275 and F1 = 0.8414913228001201
+648 epoch(s) completed
+Evaluation of model with Accuracy = 0.876 and F1 = 0.8413866893127812
+649 epoch(s) completed
+Evaluation of model with Accuracy = 0.875625 and F1 = 0.8414630761743792
+650 epoch(s) completed
+Evaluation of model with Accuracy = 0.873375 and F1 = 0.8417818015382551
+651 epoch(s) completed
+Evaluation of model with Accuracy = 0.873875 and F1 = 0.8403714503290719
+652 epoch(s) completed
+Evaluation of model with Accuracy = 0.874 and F1 = 0.8422653281005908
+653 epoch(s) completed
+Evaluation of model with Accuracy = 0.873375 and F1 = 0.8410866952093577
+654 epoch(s) completed
+Evaluation of model with Accuracy = 0.876875 and F1 = 0.841635229643524
+655 epoch(s) completed
+Evaluation of model with Accuracy = 0.87525 and F1 = 0.8404875761567632
+656 epoch(s) completed
+Evaluation of model with Accuracy = 0.874875 and F1 = 0.8457129796548415
+657 epoch(s) completed
+Evaluation of model with Accuracy = 0.875125 and F1 = 0.8451427764564688
+658 epoch(s) completed
+Evaluation of model with Accuracy = 0.878 and F1 = 0.8435987939962989
+659 epoch(s) completed
+Evaluation of model with Accuracy = 0.87925 and F1 = 0.8445027625888791
+660 epoch(s) completed
+Evaluation of model with Accuracy = 0.878125 and F1 = 0.8428241665814966
+661 epoch(s) completed
+Evaluation of model with Accuracy = 0.875 and F1 = 0.84100245577906
+662 epoch(s) completed
+Evaluation of model with Accuracy = 0.875625 and F1 = 0.8373087924713902
+663 epoch(s) completed
+Evaluation of model with Accuracy = 0.873875 and F1 = 0.8367623852153069
+664 epoch(s) completed
+Evaluation of model with Accuracy = 0.875 and F1 = 0.8386583575854922
+665 epoch(s) completed
+Evaluation of model with Accuracy = 0.873375 and F1 = 0.8389904055833496
+666 epoch(s) completed
+Evaluation of model with Accuracy = 0.878125 and F1 = 0.8362137817338211
+667 epoch(s) completed
+Evaluation of model with Accuracy = 0.876625 and F1 = 0.8392387369779029
+668 epoch(s) completed
+Evaluation of model with Accuracy = 0.873 and F1 = 0.8368615200553922
+669 epoch(s) completed
+Evaluation of model with Accuracy = 0.876875 and F1 = 0.8343667440290801
+670 epoch(s) completed
+Evaluation of model with Accuracy = 0.87675 and F1 = 0.8357887508136385
+671 epoch(s) completed
+Evaluation of model with Accuracy = 0.8755 and F1 = 0.8324264928531541
+672 epoch(s) completed
+Evaluation of model with Accuracy = 0.8735 and F1 = 0.8355098064935615
+673 epoch(s) completed
+Evaluation of model with Accuracy = 0.8755 and F1 = 0.8378512023857947
+674 epoch(s) completed
+Evaluation of model with Accuracy = 0.874375 and F1 = 0.8388260746413339
+675 epoch(s) completed
+Evaluation of model with Accuracy = 0.87875 and F1 = 0.842793709799023
+676 epoch(s) completed
+Evaluation of model with Accuracy = 0.877 and F1 = 0.8428210023396407
+677 epoch(s) completed
+Evaluation of model with Accuracy = 0.877 and F1 = 0.8393175975752132
+678 epoch(s) completed
+Evaluation of model with Accuracy = 0.878 and F1 = 0.845125452422798
+679 epoch(s) completed
+Evaluation of model with Accuracy = 0.875875 and F1 = 0.8377129564659427
+680 epoch(s) completed
+Evaluation of model with Accuracy = 0.87875 and F1 = 0.8443144337765364
+681 epoch(s) completed
+Evaluation of model with Accuracy = 0.87775 and F1 = 0.8361434090163614
+682 epoch(s) completed
+Evaluation of model with Accuracy = 0.880125 and F1 = 0.8394854132057554
+683 epoch(s) completed
+Evaluation of model with Accuracy = 0.878 and F1 = 0.8400282749935363
+684 epoch(s) completed
+Evaluation of model with Accuracy = 0.876 and F1 = 0.833242904389718
+685 epoch(s) completed
+Evaluation of model with Accuracy = 0.87725 and F1 = 0.8356334891341365
+686 epoch(s) completed
+Evaluation of model with Accuracy = 0.8775 and F1 = 0.8366243241287542
+687 epoch(s) completed
+Evaluation of model with Accuracy = 0.86925 and F1 = 0.8372878777736661
+688 epoch(s) completed
+Evaluation of model with Accuracy = 0.877375 and F1 = 0.8381520339768042
+689 epoch(s) completed
+Evaluation of model with Accuracy = 0.876 and F1 = 0.8362978554629753
+690 epoch(s) completed
+Evaluation of model with Accuracy = 0.87575 and F1 = 0.8384284252957215
+691 epoch(s) completed
+Evaluation of model with Accuracy = 0.8775 and F1 = 0.83738090327568
+692 epoch(s) completed
+Evaluation of model with Accuracy = 0.877625 and F1 = 0.8419297939179334
+693 epoch(s) completed
+Evaluation of model with Accuracy = 0.873875 and F1 = 0.8414894253477586
+694 epoch(s) completed
+Evaluation of model with Accuracy = 0.87675 and F1 = 0.8418926344198869
+695 epoch(s) completed
+Evaluation of model with Accuracy = 0.87675 and F1 = 0.8436374450857532
+696 epoch(s) completed
+Evaluation of model with Accuracy = 0.876125 and F1 = 0.8424544091023943
+697 epoch(s) completed
+Evaluation of model with Accuracy = 0.87725 and F1 = 0.8408140608130746
+698 epoch(s) completed
+Evaluation of model with Accuracy = 0.876125 and F1 = 0.8412690756644404
+699 epoch(s) completed
+Evaluation of model with Accuracy = 0.877 and F1 = 0.8425426536653278
+700 epoch(s) completed
+Evaluation of model with Accuracy = 0.874125 and F1 = 0.8439189000801974
+701 epoch(s) completed
+Evaluation of model with Accuracy = 0.873125 and F1 = 0.8410219184204879
+702 epoch(s) completed
+Evaluation of model with Accuracy = 0.874375 and F1 = 0.8380191055081906
+703 epoch(s) completed
+Evaluation of model with Accuracy = 0.875 and F1 = 0.8371217638774064
+704 epoch(s) completed
+Evaluation of model with Accuracy = 0.876125 and F1 = 0.8405403422073117
+705 epoch(s) completed
+Evaluation of model with Accuracy = 0.877 and F1 = 0.8345066401127348
+706 epoch(s) completed
+Evaluation of model with Accuracy = 0.8765 and F1 = 0.8330975538549846
+707 epoch(s) completed
+Evaluation of model with Accuracy = 0.872375 and F1 = 0.8349925787877794
+708 epoch(s) completed
+Evaluation of model with Accuracy = 0.871875 and F1 = 0.8372377453231834
+709 epoch(s) completed
+Evaluation of model with Accuracy = 0.87375 and F1 = 0.8375339302412412
+710 epoch(s) completed
+Evaluation of model with Accuracy = 0.87575 and F1 = 0.8395987222380458
+711 epoch(s) completed
+Evaluation of model with Accuracy = 0.87475 and F1 = 0.8381736419715062
+712 epoch(s) completed
+Evaluation of model with Accuracy = 0.876 and F1 = 0.838772102519612
+713 epoch(s) completed
+Evaluation of model with Accuracy = 0.8765 and F1 = 0.8418795996812821
+714 epoch(s) completed
+Evaluation of model with Accuracy = 0.87575 and F1 = 0.8374908308899759
+715 epoch(s) completed
+Evaluation of model with Accuracy = 0.8765 and F1 = 0.8344866836761005
+14:05:54.451 [main] DEBUG o.d.optimize.solvers.BaseOptimizer - Hit termination condition on iteration 0: score=0.34391217041015626, oldScore=0.34391357421875, condition=org.deeplearning4j.optimize.terminations.EpsTermination@123ab05d
+716 epoch(s) completed
+Evaluation of model with Accuracy = 0.87525 and F1 = 0.8370299674336638
+717 epoch(s) completed
+Evaluation of model with Accuracy = 0.874125 and F1 = 0.834534013993554
+718 epoch(s) completed
+Evaluation of model with Accuracy = 0.87525 and F1 = 0.8388607737323663
+719 epoch(s) completed
+Evaluation of model with Accuracy = 0.875625 and F1 = 0.8334840105119893
+720 epoch(s) completed
+Evaluation of model with Accuracy = 0.878 and F1 = 0.8346293899618836
+721 epoch(s) completed
+Evaluation of model with Accuracy = 0.874125 and F1 = 0.8333520648773585
+722 epoch(s) completed
+Evaluation of model with Accuracy = 0.877125 and F1 = 0.8345300472188206
+723 epoch(s) completed
+Evaluation of model with Accuracy = 0.876375 and F1 = 0.8341503781627417
+724 epoch(s) completed
+Evaluation of model with Accuracy = 0.873625 and F1 = 0.829961963936478
+725 epoch(s) completed
+Evaluation of model with Accuracy = 0.877125 and F1 = 0.8336216106592818
+726 epoch(s) completed
+Evaluation of model with Accuracy = 0.875375 and F1 = 0.8368464925298261
+727 epoch(s) completed
+Evaluation of model with Accuracy = 0.8775 and F1 = 0.8379082199854384
+728 epoch(s) completed
+Evaluation of model with Accuracy = 0.874875 and F1 = 0.8335393095651479
+729 epoch(s) completed
+Evaluation of model with Accuracy = 0.8765 and F1 = 0.8329968026723493
+730 epoch(s) completed
+Evaluation of model with Accuracy = 0.876 and F1 = 0.8355800877738273
+731 epoch(s) completed
+Evaluation of model with Accuracy = 0.876375 and F1 = 0.8374827115435897
+732 epoch(s) completed
+Evaluation of model with Accuracy = 0.874125 and F1 = 0.8356359795286269
+733 epoch(s) completed
+Evaluation of model with Accuracy = 0.876 and F1 = 0.8362363586282155
+734 epoch(s) completed
+Evaluation of model with Accuracy = 0.873 and F1 = 0.8326911612083242
+735 epoch(s) completed
+Evaluation of model with Accuracy = 0.875 and F1 = 0.8333021460743858
+736 epoch(s) completed
+Evaluation of model with Accuracy = 0.875375 and F1 = 0.8372926102611626
+737 epoch(s) completed
+Evaluation of model with Accuracy = 0.8775 and F1 = 0.8395817632908343
+738 epoch(s) completed
+Evaluation of model with Accuracy = 0.872875 and F1 = 0.8387506776837422
+739 epoch(s) completed
+Evaluation of model with Accuracy = 0.87625 and F1 = 0.8379597652556925
+740 epoch(s) completed
+Evaluation of model with Accuracy = 0.878 and F1 = 0.8369216638482272
+741 epoch(s) completed
+Evaluation of model with Accuracy = 0.877 and F1 = 0.8326833844303902
+742 epoch(s) completed
+Evaluation of model with Accuracy = 0.876625 and F1 = 0.8389326467342125
+743 epoch(s) completed
+Evaluation of model with Accuracy = 0.873875 and F1 = 0.836059486890113
+744 epoch(s) completed
+Evaluation of model with Accuracy = 0.875625 and F1 = 0.8391432370096177
+745 epoch(s) completed
+Evaluation of model with Accuracy = 0.863 and F1 = 0.8357362088500317
+746 epoch(s) completed
+Evaluation of model with Accuracy = 0.87175 and F1 = 0.8415062073160451
+747 epoch(s) completed
+Evaluation of model with Accuracy = 0.873375 and F1 = 0.841074927618628
+748 epoch(s) completed
+Evaluation of model with Accuracy = 0.869625 and F1 = 0.8432582649176336
+749 epoch(s) completed
+Evaluation of model with Accuracy = 0.877125 and F1 = 0.8410395620818107
+750 epoch(s) completed
+Evaluation of model with Accuracy = 0.875 and F1 = 0.8388812150238527
+751 epoch(s) completed
+Evaluation of model with Accuracy = 0.87775 and F1 = 0.8391672872690022
+752 epoch(s) completed
+Evaluation of model with Accuracy = 0.870375 and F1 = 0.8359046939614282
+753 epoch(s) completed
+Evaluation of model with Accuracy = 0.87525 and F1 = 0.8372382749846905
+754 epoch(s) completed
+Evaluation of model with Accuracy = 0.874875 and F1 = 0.8380309333713234
+755 epoch(s) completed
+Evaluation of model with Accuracy = 0.877125 and F1 = 0.8374470689714201
+756 epoch(s) completed
+Evaluation of model with Accuracy = 0.877125 and F1 = 0.8385453290852269
+757 epoch(s) completed
+Evaluation of model with Accuracy = 0.8775 and F1 = 0.8363730028551221
+758 epoch(s) completed
+Evaluation of model with Accuracy = 0.87425 and F1 = 0.8372123830524016
+759 epoch(s) completed
+Evaluation of model with Accuracy = 0.878125 and F1 = 0.83752219228155
+760 epoch(s) completed
+Evaluation of model with Accuracy = 0.875875 and F1 = 0.8324539905842092
+761 epoch(s) completed
+Evaluation of model with Accuracy = 0.8755 and F1 = 0.8332781563358161
+762 epoch(s) completed
+Evaluation of model with Accuracy = 0.87225 and F1 = 0.8357412325978716
+763 epoch(s) completed
+Evaluation of model with Accuracy = 0.876125 and F1 = 0.8317462657409952
+764 epoch(s) completed
+Evaluation of model with Accuracy = 0.874625 and F1 = 0.8325178389702795
+765 epoch(s) completed
+Evaluation of model with Accuracy = 0.868375 and F1 = 0.8259675167337251
+766 epoch(s) completed
+Evaluation of model with Accuracy = 0.873125 and F1 = 0.8289855719396475
+767 epoch(s) completed
+Evaluation of model with Accuracy = 0.874125 and F1 = 0.8288500305209828
+768 epoch(s) completed
+Evaluation of model with Accuracy = 0.87075 and F1 = 0.8332583958094314
+769 epoch(s) completed
+Evaluation of model with Accuracy = 0.871 and F1 = 0.8320572903407385
+770 epoch(s) completed
+Evaluation of model with Accuracy = 0.87725 and F1 = 0.8343504311525027
+771 epoch(s) completed
+Evaluation of model with Accuracy = 0.877 and F1 = 0.8344780275236742
+772 epoch(s) completed
+Evaluation of model with Accuracy = 0.874625 and F1 = 0.833869034622711
+773 epoch(s) completed
+Evaluation of model with Accuracy = 0.87475 and F1 = 0.8274007859175226
+774 epoch(s) completed
+Evaluation of model with Accuracy = 0.876375 and F1 = 0.8336830427289321
+775 epoch(s) completed
+Evaluation of model with Accuracy = 0.87575 and F1 = 0.8343061586542139
+776 epoch(s) completed
+Evaluation of model with Accuracy = 0.875375 and F1 = 0.8333061744018142
+777 epoch(s) completed
+Evaluation of model with Accuracy = 0.877125 and F1 = 0.8365953406075175
+778 epoch(s) completed
+Evaluation of model with Accuracy = 0.875625 and F1 = 0.8347597716722757
+779 epoch(s) completed
+Evaluation of model with Accuracy = 0.878625 and F1 = 0.8372546313982866
+780 epoch(s) completed
+Evaluation of model with Accuracy = 0.879625 and F1 = 0.8375276428184468
+781 epoch(s) completed
+Evaluation of model with Accuracy = 0.878125 and F1 = 0.8365732782814747
+782 epoch(s) completed
+Evaluation of model with Accuracy = 0.878375 and F1 = 0.8375260822668198
+783 epoch(s) completed
+Evaluation of model with Accuracy = 0.878625 and F1 = 0.8353360784929987
+784 epoch(s) completed
+Evaluation of model with Accuracy = 0.87525 and F1 = 0.8368328365577886
+785 epoch(s) completed
+Evaluation of model with Accuracy = 0.8775 and F1 = 0.8325929442395106
+786 epoch(s) completed
+Evaluation of model with Accuracy = 0.877625 and F1 = 0.832588309253874
+787 epoch(s) completed
+Evaluation of model with Accuracy = 0.877125 and F1 = 0.837080601667219
+788 epoch(s) completed
+Evaluation of model with Accuracy = 0.877625 and F1 = 0.8360002528184798
+789 epoch(s) completed
+Evaluation of model with Accuracy = 0.8765 and F1 = 0.8343132842332425
+790 epoch(s) completed
+Evaluation of model with Accuracy = 0.878625 and F1 = 0.8351380707876556
+791 epoch(s) completed
+Evaluation of model with Accuracy = 0.876125 and F1 = 0.8349708414502337
+792 epoch(s) completed
+Evaluation of model with Accuracy = 0.87725 and F1 = 0.8397494506720263
+793 epoch(s) completed
+Evaluation of model with Accuracy = 0.87975 and F1 = 0.8434848703398116
+794 epoch(s) completed
+Evaluation of model with Accuracy = 0.874625 and F1 = 0.839846341394866
+795 epoch(s) completed
+Evaluation of model with Accuracy = 0.878625 and F1 = 0.8389765648282561
+796 epoch(s) completed
+Evaluation of model with Accuracy = 0.8775 and F1 = 0.8412347046991961
+797 epoch(s) completed
+Evaluation of model with Accuracy = 0.880875 and F1 = 0.8423189794849396
+798 epoch(s) completed
+Evaluation of model with Accuracy = 0.876375 and F1 = 0.8402528458381374
+799 epoch(s) completed
+Evaluation of model with Accuracy = 0.880125 and F1 = 0.8413196491647296
+800 epoch(s) completed
+Evaluation of model with Accuracy = 0.881375 and F1 = 0.8418468756725301
+801 epoch(s) completed
+Evaluation of model with Accuracy = 0.88075 and F1 = 0.8425765557277667
+802 epoch(s) completed
+Evaluation of model with Accuracy = 0.88075 and F1 = 0.8435280168524909
+803 epoch(s) completed
+Evaluation of model with Accuracy = 0.88 and F1 = 0.8429533178792795
+804 epoch(s) completed
+Evaluation of model with Accuracy = 0.879625 and F1 = 0.8446200081964358
+805 epoch(s) completed
+Evaluation of model with Accuracy = 0.879 and F1 = 0.8433200136172464
+806 epoch(s) completed
+Evaluation of model with Accuracy = 0.87875 and F1 = 0.8431726575689694
+807 epoch(s) completed
+Evaluation of model with Accuracy = 0.875375 and F1 = 0.8339967428830408
+808 epoch(s) completed
+Evaluation of model with Accuracy = 0.876375 and F1 = 0.8328144310172643
+809 epoch(s) completed
+Evaluation of model with Accuracy = 0.877375 and F1 = 0.8380851813598555
+810 epoch(s) completed
+Evaluation of model with Accuracy = 0.8785 and F1 = 0.8369535197721159
+811 epoch(s) completed
+Evaluation of model with Accuracy = 0.876375 and F1 = 0.8370813363649621
+812 epoch(s) completed
+Evaluation of model with Accuracy = 0.878375 and F1 = 0.8381577146989406
+813 epoch(s) completed
+Evaluation of model with Accuracy = 0.8795 and F1 = 0.8357935065945695
+814 epoch(s) completed
+Evaluation of model with Accuracy = 0.8795 and F1 = 0.8407546287214007
+815 epoch(s) completed
+Evaluation of model with Accuracy = 0.87975 and F1 = 0.8390262948748818
+816 epoch(s) completed
+Evaluation of model with Accuracy = 0.877625 and F1 = 0.8445825872279569
+817 epoch(s) completed
+Evaluation of model with Accuracy = 0.87875 and F1 = 0.8414115292135143
+818 epoch(s) completed
+Evaluation of model with Accuracy = 0.879125 and F1 = 0.8425489864424048
+819 epoch(s) completed
+Evaluation of model with Accuracy = 0.883125 and F1 = 0.844479769717118
+820 epoch(s) completed
+Evaluation of model with Accuracy = 0.879375 and F1 = 0.8375886934178931
+821 epoch(s) completed
+Evaluation of model with Accuracy = 0.879625 and F1 = 0.8396281555562484
+822 epoch(s) completed
+Evaluation of model with Accuracy = 0.878125 and F1 = 0.8368556513784375
+823 epoch(s) completed
+Evaluation of model with Accuracy = 0.87725 and F1 = 0.8379476561158751
+824 epoch(s) completed
+Evaluation of model with Accuracy = 0.875875 and F1 = 0.8399318715454118
+825 epoch(s) completed
+Evaluation of model with Accuracy = 0.87975 and F1 = 0.8412941528145466
+826 epoch(s) completed
+Evaluation of model with Accuracy = 0.876125 and F1 = 0.8394777021055128
+827 epoch(s) completed
+Evaluation of model with Accuracy = 0.8785 and F1 = 0.8396152124591331
+828 epoch(s) completed
+Evaluation of model with Accuracy = 0.87925 and F1 = 0.8424007953879288
+829 epoch(s) completed
+Evaluation of model with Accuracy = 0.879 and F1 = 0.8443694230781513
+830 epoch(s) completed
+Evaluation of model with Accuracy = 0.879 and F1 = 0.8397393735694552
+831 epoch(s) completed
+Evaluation of model with Accuracy = 0.879125 and F1 = 0.8426295938715338
+832 epoch(s) completed
+Evaluation of model with Accuracy = 0.87975 and F1 = 0.841762025997915
+833 epoch(s) completed
+Evaluation of model with Accuracy = 0.877 and F1 = 0.8454432850488772
+834 epoch(s) completed
+Evaluation of model with Accuracy = 0.87875 and F1 = 0.8433208958042944
+835 epoch(s) completed
+Evaluation of model with Accuracy = 0.875875 and F1 = 0.842770041638998
+836 epoch(s) completed
+Evaluation of model with Accuracy = 0.87625 and F1 = 0.8409917041716795
+837 epoch(s) completed
+Evaluation of model with Accuracy = 0.876625 and F1 = 0.8435739385844812
+838 epoch(s) completed
+Evaluation of model with Accuracy = 0.880375 and F1 = 0.8510657684166255
+839 epoch(s) completed
+Evaluation of model with Accuracy = 0.8795 and F1 = 0.8456464177373257
+840 epoch(s) completed
+Evaluation of model with Accuracy = 0.8765 and F1 = 0.8449767966001948
+841 epoch(s) completed
+Evaluation of model with Accuracy = 0.87225 and F1 = 0.843079419540766
+842 epoch(s) completed
+Evaluation of model with Accuracy = 0.8795 and F1 = 0.8440385512677228
+843 epoch(s) completed
+Evaluation of model with Accuracy = 0.876125 and F1 = 0.843711828868523
+844 epoch(s) completed
+Evaluation of model with Accuracy = 0.874 and F1 = 0.8456470653994097
+845 epoch(s) completed
+Evaluation of model with Accuracy = 0.876875 and F1 = 0.8452828956816674
+846 epoch(s) completed
+Evaluation of model with Accuracy = 0.876125 and F1 = 0.8445260660284319
+847 epoch(s) completed
+Evaluation of model with Accuracy = 0.8755 and F1 = 0.8440824565557878
+848 epoch(s) completed
+Evaluation of model with Accuracy = 0.88025 and F1 = 0.845631082907132
+849 epoch(s) completed
+Evaluation of model with Accuracy = 0.881625 and F1 = 0.8477068533190579
+850 epoch(s) completed
+Evaluation of model with Accuracy = 0.879625 and F1 = 0.8468384485502085
+851 epoch(s) completed
+Evaluation of model with Accuracy = 0.876375 and F1 = 0.844541765180069
+852 epoch(s) completed
+Evaluation of model with Accuracy = 0.882 and F1 = 0.8480593971843106
+853 epoch(s) completed
+Evaluation of model with Accuracy = 0.8805 and F1 = 0.8456871872976957
+854 epoch(s) completed
+Evaluation of model with Accuracy = 0.87475 and F1 = 0.8403450401091438
+855 epoch(s) completed
+Evaluation of model with Accuracy = 0.87975 and F1 = 0.8409345214219203
+856 epoch(s) completed
+Evaluation of model with Accuracy = 0.879125 and F1 = 0.8412940129151889
+857 epoch(s) completed
+Evaluation of model with Accuracy = 0.87225 and F1 = 0.8361881480223393
+858 epoch(s) completed
+Evaluation of model with Accuracy = 0.8805 and F1 = 0.8453841652629622
+859 epoch(s) completed
+Evaluation of model with Accuracy = 0.876 and F1 = 0.8449137072871095
+860 epoch(s) completed
+Evaluation of model with Accuracy = 0.881 and F1 = 0.8455715860783246
+861 epoch(s) completed
+Evaluation of model with Accuracy = 0.877125 and F1 = 0.8447282352646914
+862 epoch(s) completed
+Evaluation of model with Accuracy = 0.880125 and F1 = 0.8464263680784755
+863 epoch(s) completed
+Evaluation of model with Accuracy = 0.87025 and F1 = 0.8422321416238111
+864 epoch(s) completed
+Evaluation of model with Accuracy = 0.881 and F1 = 0.8469234569843287
+865 epoch(s) completed
+Evaluation of model with Accuracy = 0.879625 and F1 = 0.845296076268386
+866 epoch(s) completed
+Evaluation of model with Accuracy = 0.874125 and F1 = 0.8442193077254565
+867 epoch(s) completed
+Evaluation of model with Accuracy = 0.879875 and F1 = 0.8422453438057014
+868 epoch(s) completed
+Evaluation of model with Accuracy = 0.8785 and F1 = 0.8416486566576339
+869 epoch(s) completed
+Evaluation of model with Accuracy = 0.882875 and F1 = 0.8459219704551463
+870 epoch(s) completed
+Evaluation of model with Accuracy = 0.879375 and F1 = 0.8410113059033117
+871 epoch(s) completed
+Evaluation of model with Accuracy = 0.878875 and F1 = 0.8430128501583168
+872 epoch(s) completed
+Evaluation of model with Accuracy = 0.87675 and F1 = 0.8397803217895563
+873 epoch(s) completed
+Evaluation of model with Accuracy = 0.87925 and F1 = 0.8437940779075892
+874 epoch(s) completed
+Evaluation of model with Accuracy = 0.876 and F1 = 0.8379730388553369
+875 epoch(s) completed
+Evaluation of model with Accuracy = 0.877375 and F1 = 0.8392316504920283
+876 epoch(s) completed
+Evaluation of model with Accuracy = 0.88 and F1 = 0.8455896605030646
+877 epoch(s) completed
+Evaluation of model with Accuracy = 0.87925 and F1 = 0.8452623024466358
+878 epoch(s) completed
+Evaluation of model with Accuracy = 0.87475 and F1 = 0.8437986301048808
+879 epoch(s) completed
+Evaluation of model with Accuracy = 0.880625 and F1 = 0.8431886395593895
+880 epoch(s) completed
+Evaluation of model with Accuracy = 0.87525 and F1 = 0.8432038606975052
+881 epoch(s) completed
+Evaluation of model with Accuracy = 0.878625 and F1 = 0.8418449446579271
+882 epoch(s) completed
+Evaluation of model with Accuracy = 0.87625 and F1 = 0.8434369044363296
+883 epoch(s) completed
+Evaluation of model with Accuracy = 0.875375 and F1 = 0.8405229047513433
+884 epoch(s) completed
+Evaluation of model with Accuracy = 0.878125 and F1 = 0.8419620649728472
+885 epoch(s) completed
+Evaluation of model with Accuracy = 0.8785 and F1 = 0.8471342571772936
+886 epoch(s) completed
+Evaluation of model with Accuracy = 0.8775 and F1 = 0.8460010799371633
+887 epoch(s) completed
+Evaluation of model with Accuracy = 0.876125 and F1 = 0.8468702958000279
+888 epoch(s) completed
+Evaluation of model with Accuracy = 0.872 and F1 = 0.8444734778766669
+889 epoch(s) completed
+Evaluation of model with Accuracy = 0.878875 and F1 = 0.8449303802435625
+890 epoch(s) completed
+Evaluation of model with Accuracy = 0.88125 and F1 = 0.8470710283150332
+891 epoch(s) completed
+Evaluation of model with Accuracy = 0.884375 and F1 = 0.847384521422268
+892 epoch(s) completed
+Evaluation of model with Accuracy = 0.881 and F1 = 0.8425153612282398
+893 epoch(s) completed
+Evaluation of model with Accuracy = 0.877625 and F1 = 0.8428532673270045
+894 epoch(s) completed
+Evaluation of model with Accuracy = 0.88125 and F1 = 0.8441704732318718
+895 epoch(s) completed
+Evaluation of model with Accuracy = 0.880375 and F1 = 0.8439974725938765
+896 epoch(s) completed
+Evaluation of model with Accuracy = 0.880875 and F1 = 0.8450339600591188
+897 epoch(s) completed
+Evaluation of model with Accuracy = 0.877375 and F1 = 0.8449309134589238
+898 epoch(s) completed
+Evaluation of model with Accuracy = 0.88 and F1 = 0.8438582361143357
+899 epoch(s) completed
+Evaluation of model with Accuracy = 0.87725 and F1 = 0.8419427871999517
+900 epoch(s) completed
+Evaluation of model with Accuracy = 0.872875 and F1 = 0.84092585213076
+901 epoch(s) completed
+Evaluation of model with Accuracy = 0.879625 and F1 = 0.8470188239347348
+902 epoch(s) completed
+Evaluation of model with Accuracy = 0.875 and F1 = 0.8439963436470436
+903 epoch(s) completed
+Evaluation of model with Accuracy = 0.874875 and F1 = 0.8437107173759488
+904 epoch(s) completed
+Evaluation of model with Accuracy = 0.880375 and F1 = 0.8464052065951491
+905 epoch(s) completed
+Evaluation of model with Accuracy = 0.879625 and F1 = 0.8466968550925759
+906 epoch(s) completed
+Evaluation of model with Accuracy = 0.876625 and F1 = 0.8407045955698244
+907 epoch(s) completed
+Evaluation of model with Accuracy = 0.877375 and F1 = 0.8424152388884099
+908 epoch(s) completed
+Evaluation of model with Accuracy = 0.8775 and F1 = 0.844806775575675
+909 epoch(s) completed
+Evaluation of model with Accuracy = 0.8815 and F1 = 0.842877455677441
+910 epoch(s) completed
+Evaluation of model with Accuracy = 0.877125 and F1 = 0.8429751680368301
+911 epoch(s) completed
+Evaluation of model with Accuracy = 0.87675 and F1 = 0.8469615383709939
+912 epoch(s) completed
+Evaluation of model with Accuracy = 0.88125 and F1 = 0.8438316458497942
+913 epoch(s) completed
+Evaluation of model with Accuracy = 0.87925 and F1 = 0.8431850831510296
+914 epoch(s) completed
+Evaluation of model with Accuracy = 0.878875 and F1 = 0.8416859457096983
+915 epoch(s) completed
+Evaluation of model with Accuracy = 0.87925 and F1 = 0.837766097447726
+916 epoch(s) completed
+Evaluation of model with Accuracy = 0.881 and F1 = 0.8412182716445183
+917 epoch(s) completed
+Evaluation of model with Accuracy = 0.88175 and F1 = 0.8454801646057911
+918 epoch(s) completed
+Evaluation of model with Accuracy = 0.88225 and F1 = 0.8457166171373519
+919 epoch(s) completed
+Evaluation of model with Accuracy = 0.87975 and F1 = 0.8425557265859073
+920 epoch(s) completed
+Evaluation of model with Accuracy = 0.87575 and F1 = 0.8432379656600101
+921 epoch(s) completed
+Evaluation of model with Accuracy = 0.881625 and F1 = 0.845568116299514
+922 epoch(s) completed
+Evaluation of model with Accuracy = 0.873 and F1 = 0.8453784485945348
+923 epoch(s) completed
+Evaluation of model with Accuracy = 0.8785 and F1 = 0.8419141136558049
+924 epoch(s) completed
+Evaluation of model with Accuracy = 0.876125 and F1 = 0.8422270356648754
+925 epoch(s) completed
+Evaluation of model with Accuracy = 0.874125 and F1 = 0.8414815452418578
+926 epoch(s) completed
+Evaluation of model with Accuracy = 0.878 and F1 = 0.8451505852694664
+927 epoch(s) completed
+Evaluation of model with Accuracy = 0.87825 and F1 = 0.8448869615318251
+928 epoch(s) completed
+Evaluation of model with Accuracy = 0.877875 and F1 = 0.8438208024887518
+929 epoch(s) completed
+Evaluation of model with Accuracy = 0.87775 and F1 = 0.8457820858968732
+930 epoch(s) completed
+Evaluation of model with Accuracy = 0.879 and F1 = 0.8461123192891015
+931 epoch(s) completed
+Evaluation of model with Accuracy = 0.879375 and F1 = 0.8419267656578754
+932 epoch(s) completed
+Evaluation of model with Accuracy = 0.88275 and F1 = 0.846104290376136
+933 epoch(s) completed
+Evaluation of model with Accuracy = 0.880375 and F1 = 0.8461136295861539
+934 epoch(s) completed
+Evaluation of model with Accuracy = 0.87975 and F1 = 0.8428478062588253
+935 epoch(s) completed
+Evaluation of model with Accuracy = 0.880125 and F1 = 0.8500530296440055
+936 epoch(s) completed
+Evaluation of model with Accuracy = 0.881875 and F1 = 0.848475281987663
+937 epoch(s) completed
+Evaluation of model with Accuracy = 0.87825 and F1 = 0.8473533433578258
+938 epoch(s) completed
+Evaluation of model with Accuracy = 0.8795 and F1 = 0.8436068207571807
+939 epoch(s) completed
+Evaluation of model with Accuracy = 0.877875 and F1 = 0.8442388369911304
+940 epoch(s) completed
+Evaluation of model with Accuracy = 0.880875 and F1 = 0.8437951105307347
+941 epoch(s) completed
+Evaluation of model with Accuracy = 0.8805 and F1 = 0.8489081104101821
+942 epoch(s) completed
+Evaluation of model with Accuracy = 0.874625 and F1 = 0.8427385899032241
+943 epoch(s) completed
+Evaluation of model with Accuracy = 0.88325 and F1 = 0.8461853516484894
+944 epoch(s) completed
+Evaluation of model with Accuracy = 0.88175 and F1 = 0.8462873898838444
+945 epoch(s) completed
+Evaluation of model with Accuracy = 0.88 and F1 = 0.8450189234240744
+946 epoch(s) completed
+Evaluation of model with Accuracy = 0.880625 and F1 = 0.8479656011090217
+947 epoch(s) completed
+Evaluation of model with Accuracy = 0.88125 and F1 = 0.8447333545299517
+948 epoch(s) completed
+Evaluation of model with Accuracy = 0.880625 and F1 = 0.8457554811569032
+949 epoch(s) completed
+Evaluation of model with Accuracy = 0.878875 and F1 = 0.8437127301174397
+950 epoch(s) completed
+Evaluation of model with Accuracy = 0.8805 and F1 = 0.8467121035644122
+951 epoch(s) completed
+Evaluation of model with Accuracy = 0.875875 and F1 = 0.8411949081920445
+952 epoch(s) completed
+Evaluation of model with Accuracy = 0.876375 and F1 = 0.8389577386663367
+953 epoch(s) completed
+Evaluation of model with Accuracy = 0.880125 and F1 = 0.8390334636719358
+954 epoch(s) completed
+Evaluation of model with Accuracy = 0.87875 and F1 = 0.8424748018996779
+955 epoch(s) completed
+Evaluation of model with Accuracy = 0.88275 and F1 = 0.8432920455593491
+956 epoch(s) completed
+Evaluation of model with Accuracy = 0.8825 and F1 = 0.8438428879911353
+957 epoch(s) completed
+Evaluation of model with Accuracy = 0.88025 and F1 = 0.8404474162188622
+958 epoch(s) completed
+Evaluation of model with Accuracy = 0.882625 and F1 = 0.8437769315064785
+959 epoch(s) completed
+Evaluation of model with Accuracy = 0.879375 and F1 = 0.8418318933732425
+960 epoch(s) completed
+Evaluation of model with Accuracy = 0.8815 and F1 = 0.8414311682159685
+961 epoch(s) completed
+Evaluation of model with Accuracy = 0.879625 and F1 = 0.8382633865209485
+962 epoch(s) completed
+Evaluation of model with Accuracy = 0.878625 and F1 = 0.8431254517812004
+963 epoch(s) completed
+Evaluation of model with Accuracy = 0.881 and F1 = 0.8427460641519506
+964 epoch(s) completed
+Evaluation of model with Accuracy = 0.87875 and F1 = 0.8425814925393997
+965 epoch(s) completed
+Evaluation of model with Accuracy = 0.880375 and F1 = 0.8437190259120585
+966 epoch(s) completed
+Evaluation of model with Accuracy = 0.87975 and F1 = 0.841075196709983
+967 epoch(s) completed
+Evaluation of model with Accuracy = 0.878625 and F1 = 0.8403699389977023
+968 epoch(s) completed
+Evaluation of model with Accuracy = 0.880375 and F1 = 0.8381565222859655
+969 epoch(s) completed
+Evaluation of model with Accuracy = 0.87875 and F1 = 0.8362065742839934
+970 epoch(s) completed
+Evaluation of model with Accuracy = 0.879875 and F1 = 0.8440442028105742
+971 epoch(s) completed
+Evaluation of model with Accuracy = 0.876625 and F1 = 0.8423889841574507
+972 epoch(s) completed
+Evaluation of model with Accuracy = 0.8805 and F1 = 0.8461973021493868
+973 epoch(s) completed
+Evaluation of model with Accuracy = 0.878375 and F1 = 0.8460353394223897
+974 epoch(s) completed
+Evaluation of model with Accuracy = 0.876625 and F1 = 0.8419540719804869
+975 epoch(s) completed
+Evaluation of model with Accuracy = 0.881125 and F1 = 0.8437224643912008
+976 epoch(s) completed
+Evaluation of model with Accuracy = 0.881 and F1 = 0.8436043323641133
+977 epoch(s) completed
+Evaluation of model with Accuracy = 0.879375 and F1 = 0.8435516618232312
+978 epoch(s) completed
+Evaluation of model with Accuracy = 0.87825 and F1 = 0.8418509600110824
+979 epoch(s) completed
+Evaluation of model with Accuracy = 0.880875 and F1 = 0.8432173781856915
+980 epoch(s) completed
+Evaluation of model with Accuracy = 0.879375 and F1 = 0.8399834450241069
+981 epoch(s) completed
+Evaluation of model with Accuracy = 0.87825 and F1 = 0.8378052848720492
+982 epoch(s) completed
+Evaluation of model with Accuracy = 0.876 and F1 = 0.8385699333380608
+983 epoch(s) completed
+Evaluation of model with Accuracy = 0.8785 and F1 = 0.837465824420389
+984 epoch(s) completed
+Evaluation of model with Accuracy = 0.882 and F1 = 0.8439796249740541
+985 epoch(s) completed
+Evaluation of model with Accuracy = 0.879625 and F1 = 0.8436236232567199
+986 epoch(s) completed
+Evaluation of model with Accuracy = 0.8785 and F1 = 0.839043720601129
+987 epoch(s) completed
+Evaluation of model with Accuracy = 0.87875 and F1 = 0.8393394593965917
+988 epoch(s) completed
+Evaluation of model with Accuracy = 0.87875 and F1 = 0.8386087804125358
+989 epoch(s) completed
+Evaluation of model with Accuracy = 0.8795 and F1 = 0.8360986888943589
+990 epoch(s) completed
+Evaluation of model with Accuracy = 0.877125 and F1 = 0.8410720343494088
+991 epoch(s) completed
+Evaluation of model with Accuracy = 0.874875 and F1 = 0.8395751115133773
+992 epoch(s) completed
+Evaluation of model with Accuracy = 0.879125 and F1 = 0.8430302656155214
+993 epoch(s) completed
+Evaluation of model with Accuracy = 0.881 and F1 = 0.8443689809858602
+994 epoch(s) completed
+Evaluation of model with Accuracy = 0.882 and F1 = 0.8410785803292937
+995 epoch(s) completed
+Evaluation of model with Accuracy = 0.883625 and F1 = 0.8437011189396396
+996 epoch(s) completed
+Evaluation of model with Accuracy = 0.8815 and F1 = 0.8423028296543321
+997 epoch(s) completed
+Evaluation of model with Accuracy = 0.878125 and F1 = 0.8402107682158246
+998 epoch(s) completed
+Evaluation of model with Accuracy = 0.879375 and F1 = 0.8394853123266497
+999 epoch(s) completed
+Evaluation of model with Accuracy = 0.87975 and F1 = 0.8399662042199744
+1000 epoch(s) completed
+Evaluation of model with Accuracy = 0.88325 and F1 = 0.84600867543752
+1001 epoch(s) completed
+Evaluation of model with Accuracy = 0.879875 and F1 = 0.8438038067852872
+1002 epoch(s) completed
+Evaluation of model with Accuracy = 0.88025 and F1 = 0.843055295358879
+1003 epoch(s) completed
+Evaluation of model with Accuracy = 0.881125 and F1 = 0.8418244987367076
+1004 epoch(s) completed
+Evaluation of model with Accuracy = 0.88 and F1 = 0.8422220794712849
+1005 epoch(s) completed
+Evaluation of model with Accuracy = 0.87975 and F1 = 0.8396864613836311
+1006 epoch(s) completed
+Evaluation of model with Accuracy = 0.88 and F1 = 0.8393469496923927
+1007 epoch(s) completed
+Evaluation of model with Accuracy = 0.8805 and F1 = 0.842797602414732
+1008 epoch(s) completed
+Evaluation of model with Accuracy = 0.879 and F1 = 0.8396255920238221
+1009 epoch(s) completed
+Evaluation of model with Accuracy = 0.879375 and F1 = 0.839606981037067
+1010 epoch(s) completed
+Evaluation of model with Accuracy = 0.8805 and F1 = 0.843615204721353
+1011 epoch(s) completed
+Evaluation of model with Accuracy = 0.87925 and F1 = 0.8415816739450901
+1012 epoch(s) completed
+Evaluation of model with Accuracy = 0.881125 and F1 = 0.8408053610179396
+1013 epoch(s) completed
+Evaluation of model with Accuracy = 0.88 and F1 = 0.8411914679086344
+1014 epoch(s) completed
+Evaluation of model with Accuracy = 0.8805 and F1 = 0.8429529325604032
+1015 epoch(s) completed
+Evaluation of model with Accuracy = 0.88025 and F1 = 0.8404519233917223
+1016 epoch(s) completed
+Evaluation of model with Accuracy = 0.87975 and F1 = 0.8426679829387851
+1017 epoch(s) completed
+Evaluation of model with Accuracy = 0.8745 and F1 = 0.8412140619920133
+1018 epoch(s) completed
+Evaluation of model with Accuracy = 0.8815 and F1 = 0.8408615072625548
+1019 epoch(s) completed
+Evaluation of model with Accuracy = 0.877625 and F1 = 0.8392449521869375
+1020 epoch(s) completed
+Evaluation of model with Accuracy = 0.87975 and F1 = 0.8390357564151157
+1021 epoch(s) completed
+Evaluation of model with Accuracy = 0.88075 and F1 = 0.8404230006684972
+1022 epoch(s) completed
+Evaluation of model with Accuracy = 0.8825 and F1 = 0.8440279198482042
+1023 epoch(s) completed
+Evaluation of model with Accuracy = 0.880875 and F1 = 0.8404897662149856
+1024 epoch(s) completed
+Evaluation of model with Accuracy = 0.882 and F1 = 0.8412557523062263
+1025 epoch(s) completed
+Evaluation of model with Accuracy = 0.881375 and F1 = 0.8424912927416695
+1026 epoch(s) completed
+Evaluation of model with Accuracy = 0.880625 and F1 = 0.8385864011706462
+1027 epoch(s) completed
+Evaluation of model with Accuracy = 0.883625 and F1 = 0.846069665936174
+1028 epoch(s) completed
+Evaluation of model with Accuracy = 0.87925 and F1 = 0.8426144861060348
+1029 epoch(s) completed
+Evaluation of model with Accuracy = 0.88 and F1 = 0.8445755413605976
+1030 epoch(s) completed
+Evaluation of model with Accuracy = 0.881625 and F1 = 0.8429210016910157
+1031 epoch(s) completed
+Evaluation of model with Accuracy = 0.882125 and F1 = 0.8453740377058592
+1032 epoch(s) completed
+Evaluation of model with Accuracy = 0.879875 and F1 = 0.8415543440328056
+1033 epoch(s) completed
+Evaluation of model with Accuracy = 0.882125 and F1 = 0.8452085082028921
+1034 epoch(s) completed
+Evaluation of model with Accuracy = 0.87975 and F1 = 0.8408611927774278
+1035 epoch(s) completed
+Evaluation of model with Accuracy = 0.878125 and F1 = 0.8373549694076402
+1036 epoch(s) completed
+Evaluation of model with Accuracy = 0.876625 and F1 = 0.8352359577968422
+1037 epoch(s) completed
+Evaluation of model with Accuracy = 0.8785 and F1 = 0.8379624736589625
+1038 epoch(s) completed
+Evaluation of model with Accuracy = 0.87675 and F1 = 0.836699432892834
+1039 epoch(s) completed
+Evaluation of model with Accuracy = 0.8785 and F1 = 0.8355637634184009
+1040 epoch(s) completed
+Evaluation of model with Accuracy = 0.88125 and F1 = 0.8448242188423349
+1041 epoch(s) completed
+Evaluation of model with Accuracy = 0.881375 and F1 = 0.8426034439001064
+1042 epoch(s) completed
+Evaluation of model with Accuracy = 0.879125 and F1 = 0.8422285231775964
+1043 epoch(s) completed
+Evaluation of model with Accuracy = 0.88025 and F1 = 0.8427266792179745
+1044 epoch(s) completed
+Evaluation of model with Accuracy = 0.88025 and F1 = 0.8407463202040334
+1045 epoch(s) completed
+Evaluation of model with Accuracy = 0.871875 and F1 = 0.8401630585878778
+1046 epoch(s) completed
+Evaluation of model with Accuracy = 0.880875 and F1 = 0.8410995833155641
+1047 epoch(s) completed
+Evaluation of model with Accuracy = 0.881 and F1 = 0.8442521591451231
+1048 epoch(s) completed
+Evaluation of model with Accuracy = 0.880375 and F1 = 0.8434280990530136
+1049 epoch(s) completed
+Evaluation of model with Accuracy = 0.880875 and F1 = 0.8437812443569278
+1050 epoch(s) completed
+Evaluation of model with Accuracy = 0.875375 and F1 = 0.8417181477021445
+1051 epoch(s) completed
+Evaluation of model with Accuracy = 0.882375 and F1 = 0.8443510097350526
+1052 epoch(s) completed
+Evaluation of model with Accuracy = 0.87725 and F1 = 0.8416000599129616
+1053 epoch(s) completed
+Evaluation of model with Accuracy = 0.88375 and F1 = 0.8467360686620236
+1054 epoch(s) completed
+Evaluation of model with Accuracy = 0.881375 and F1 = 0.8435301661856118
+1055 epoch(s) completed
+Evaluation of model with Accuracy = 0.88175 and F1 = 0.84536630852399
+1056 epoch(s) completed
+Evaluation of model with Accuracy = 0.880375 and F1 = 0.8431269660287533
+1057 epoch(s) completed
+Evaluation of model with Accuracy = 0.8805 and F1 = 0.840409474444611
+1058 epoch(s) completed
+Evaluation of model with Accuracy = 0.879625 and F1 = 0.8434203991874761
+1059 epoch(s) completed
+Evaluation of model with Accuracy = 0.88 and F1 = 0.8417339985517396
+1060 epoch(s) completed
+Evaluation of model with Accuracy = 0.87925 and F1 = 0.8368351032317018
+1061 epoch(s) completed
+Evaluation of model with Accuracy = 0.881 and F1 = 0.8406990429042492
+1062 epoch(s) completed
+Evaluation of model with Accuracy = 0.88175 and F1 = 0.8425354449262775
+1063 epoch(s) completed
+Evaluation of model with Accuracy = 0.882 and F1 = 0.842092362146294
+1064 epoch(s) completed
+Evaluation of model with Accuracy = 0.881625 and F1 = 0.8420757617225906
+1065 epoch(s) completed
+Evaluation of model with Accuracy = 0.883625 and F1 = 0.8454065457740997
+1066 epoch(s) completed
+Evaluation of model with Accuracy = 0.879625 and F1 = 0.8394559022497813
+1067 epoch(s) completed
+Evaluation of model with Accuracy = 0.8735 and F1 = 0.8384078203325744
+1068 epoch(s) completed
+Evaluation of model with Accuracy = 0.882125 and F1 = 0.8421371408322185
+1069 epoch(s) completed
+Evaluation of model with Accuracy = 0.88225 and F1 = 0.8443659973444341
+1070 epoch(s) completed
+Evaluation of model with Accuracy = 0.88125 and F1 = 0.8429861632195648
+1071 epoch(s) completed
+Evaluation of model with Accuracy = 0.883375 and F1 = 0.844939777973414
+1072 epoch(s) completed
+Evaluation of model with Accuracy = 0.883375 and F1 = 0.844118940674574
+1073 epoch(s) completed
+Evaluation of model with Accuracy = 0.883375 and F1 = 0.8430276761690029
+1074 epoch(s) completed
+Evaluation of model with Accuracy = 0.88225 and F1 = 0.8472376509798131
+1075 epoch(s) completed
+Evaluation of model with Accuracy = 0.88475 and F1 = 0.8438964212695345
+1076 epoch(s) completed
+Evaluation of model with Accuracy = 0.883375 and F1 = 0.8422478706309503
+1077 epoch(s) completed
+Evaluation of model with Accuracy = 0.88125 and F1 = 0.8452967133419378
+1078 epoch(s) completed
+Evaluation of model with Accuracy = 0.8835 and F1 = 0.8468022044458685
+1079 epoch(s) completed
+Evaluation of model with Accuracy = 0.882375 and F1 = 0.8458453633259995
+1080 epoch(s) completed
+Evaluation of model with Accuracy = 0.883 and F1 = 0.8479354301170541
+1081 epoch(s) completed
+Evaluation of model with Accuracy = 0.88175 and F1 = 0.8461921282001725
+1082 epoch(s) completed
+Evaluation of model with Accuracy = 0.88425 and F1 = 0.846743364860271
+1083 epoch(s) completed
+Evaluation of model with Accuracy = 0.88025 and F1 = 0.8436364850186445
+1084 epoch(s) completed
+Evaluation of model with Accuracy = 0.8825 and F1 = 0.8463225552128291
+1085 epoch(s) completed
+Evaluation of model with Accuracy = 0.88225 and F1 = 0.8437666612761157
+1086 epoch(s) completed
+Evaluation of model with Accuracy = 0.879875 and F1 = 0.8427588187919899
+1087 epoch(s) completed
+Evaluation of model with Accuracy = 0.880125 and F1 = 0.8426158889333789
+1088 epoch(s) completed
+Evaluation of model with Accuracy = 0.88075 and F1 = 0.8447770748662681
+1089 epoch(s) completed
+Evaluation of model with Accuracy = 0.879125 and F1 = 0.8429458709329904
+1090 epoch(s) completed
+Evaluation of model with Accuracy = 0.880375 and F1 = 0.8431278149954295
+1091 epoch(s) completed
+Evaluation of model with Accuracy = 0.873875 and F1 = 0.841668893101759
+1092 epoch(s) completed
+Evaluation of model with Accuracy = 0.879375 and F1 = 0.8427670521093281
+1093 epoch(s) completed
+Evaluation of model with Accuracy = 0.879875 and F1 = 0.8424910642508386
+1094 epoch(s) completed
+Evaluation of model with Accuracy = 0.87475 and F1 = 0.8426477799709859
+1095 epoch(s) completed
+Evaluation of model with Accuracy = 0.881625 and F1 = 0.8460799216205276
+1096 epoch(s) completed
+Evaluation of model with Accuracy = 0.88225 and F1 = 0.8437853988246892
+1097 epoch(s) completed
+Evaluation of model with Accuracy = 0.881 and F1 = 0.8452720181448541
+1098 epoch(s) completed
+Evaluation of model with Accuracy = 0.87975 and F1 = 0.8454507748293644
+1099 epoch(s) completed
+Evaluation of model with Accuracy = 0.88175 and F1 = 0.8426603972934975
+1100 epoch(s) completed
+Evaluation of model with Accuracy = 0.881625 and F1 = 0.8435249766815721
+1101 epoch(s) completed
+Evaluation of model with Accuracy = 0.8825 and F1 = 0.8484859144996671
+1102 epoch(s) completed
+Evaluation of model with Accuracy = 0.883 and F1 = 0.8488299507645434
+1103 epoch(s) completed
+Evaluation of model with Accuracy = 0.8805 and F1 = 0.8428120925569454
+1104 epoch(s) completed
+Evaluation of model with Accuracy = 0.882875 and F1 = 0.8444097317706041
+1105 epoch(s) completed
+Evaluation of model with Accuracy = 0.88075 and F1 = 0.8472260201338951
+1106 epoch(s) completed
+Evaluation of model with Accuracy = 0.883 and F1 = 0.8498457581528875
+1107 epoch(s) completed
+Evaluation of model with Accuracy = 0.882 and F1 = 0.8482711652963629
+1108 epoch(s) completed
+Evaluation of model with Accuracy = 0.880375 and F1 = 0.8491853879537462
+1109 epoch(s) completed
+Evaluation of model with Accuracy = 0.883 and F1 = 0.8479915240999739
+1110 epoch(s) completed
+Evaluation of model with Accuracy = 0.88275 and F1 = 0.8471330730622081
+1111 epoch(s) completed
+Evaluation of model with Accuracy = 0.8855 and F1 = 0.8501924273985495
+1112 epoch(s) completed
+Evaluation of model with Accuracy = 0.88425 and F1 = 0.849415540176901
+1113 epoch(s) completed
+Evaluation of model with Accuracy = 0.882375 and F1 = 0.8484772297487428
+1114 epoch(s) completed
+Evaluation of model with Accuracy = 0.881875 and F1 = 0.8500736851645142
+1115 epoch(s) completed
+Evaluation of model with Accuracy = 0.8815 and F1 = 0.8475977121065514
+1116 epoch(s) completed
+Evaluation of model with Accuracy = 0.88325 and F1 = 0.846560951597585
+1117 epoch(s) completed
+Evaluation of model with Accuracy = 0.883875 and F1 = 0.8475174711866041
+1118 epoch(s) completed
+Evaluation of model with Accuracy = 0.88225 and F1 = 0.8440600919424854
+1119 epoch(s) completed
+Evaluation of model with Accuracy = 0.881625 and F1 = 0.848467361877543
+1120 epoch(s) completed
+Evaluation of model with Accuracy = 0.885 and F1 = 0.8508681490341976
+1121 epoch(s) completed
+Evaluation of model with Accuracy = 0.881875 and F1 = 0.8497641006937775
+1122 epoch(s) completed
+Evaluation of model with Accuracy = 0.885 and F1 = 0.8469328991972818
+1123 epoch(s) completed
+Evaluation of model with Accuracy = 0.8865 and F1 = 0.8500458409369014
+1124 epoch(s) completed
+Evaluation of model with Accuracy = 0.88225 and F1 = 0.8470606148715197
+1125 epoch(s) completed
+Evaluation of model with Accuracy = 0.885 and F1 = 0.846734191068309
+1126 epoch(s) completed
+Evaluation of model with Accuracy = 0.881125 and F1 = 0.8480050141572133
+1127 epoch(s) completed
+Evaluation of model with Accuracy = 0.883125 and F1 = 0.8485828459171042
+1128 epoch(s) completed
+Evaluation of model with Accuracy = 0.882625 and F1 = 0.8451825468609309
+1129 epoch(s) completed
+Evaluation of model with Accuracy = 0.882875 and F1 = 0.8447461068516343
+1130 epoch(s) completed
+Evaluation of model with Accuracy = 0.878875 and F1 = 0.8449021446938929
+1131 epoch(s) completed
+Evaluation of model with Accuracy = 0.88275 and F1 = 0.8466990566015391
+1132 epoch(s) completed
+Evaluation of model with Accuracy = 0.877875 and F1 = 0.8404801589243427
+1133 epoch(s) completed
+Evaluation of model with Accuracy = 0.880625 and F1 = 0.8423039002690785
+1134 epoch(s) completed
+Evaluation of model with Accuracy = 0.881 and F1 = 0.8410431220677907
+1135 epoch(s) completed
+Evaluation of model with Accuracy = 0.878625 and F1 = 0.8448728034120802
+1136 epoch(s) completed
+Evaluation of model with Accuracy = 0.87725 and F1 = 0.8403450922101464
+1137 epoch(s) completed
+Evaluation of model with Accuracy = 0.878 and F1 = 0.8401986554201537
+1138 epoch(s) completed
+Evaluation of model with Accuracy = 0.882 and F1 = 0.8415039794090676
+1139 epoch(s) completed
+Evaluation of model with Accuracy = 0.88275 and F1 = 0.8426668739395878
+1140 epoch(s) completed
+Evaluation of model with Accuracy = 0.8825 and F1 = 0.8432010803179255
+1141 epoch(s) completed
+Evaluation of model with Accuracy = 0.883 and F1 = 0.8452578111704563
+1142 epoch(s) completed
+Evaluation of model with Accuracy = 0.8825 and F1 = 0.8428526984292903
+1143 epoch(s) completed
+Evaluation of model with Accuracy = 0.87975 and F1 = 0.8428547912714056
+1144 epoch(s) completed
+Evaluation of model with Accuracy = 0.877125 and F1 = 0.8388565993043124
+1145 epoch(s) completed
+Evaluation of model with Accuracy = 0.87825 and F1 = 0.837074959852508
+1146 epoch(s) completed
+Evaluation of model with Accuracy = 0.882875 and F1 = 0.8460093420142477
+1147 epoch(s) completed
+Evaluation of model with Accuracy = 0.880625 and F1 = 0.8424359365012839
+1148 epoch(s) completed
+Evaluation of model with Accuracy = 0.8835 and F1 = 0.8427904358725824
+1149 epoch(s) completed
+Evaluation of model with Accuracy = 0.88075 and F1 = 0.841058220914945
+1150 epoch(s) completed
+Evaluation of model with Accuracy = 0.879625 and F1 = 0.8438296661394906
+1151 epoch(s) completed
+Evaluation of model with Accuracy = 0.88325 and F1 = 0.8475816680723761
+1152 epoch(s) completed
+Evaluation of model with Accuracy = 0.879625 and F1 = 0.8444566091799063
+1153 epoch(s) completed
+Evaluation of model with Accuracy = 0.877 and F1 = 0.8427935467803793
+1154 epoch(s) completed
+Evaluation of model with Accuracy = 0.878125 and F1 = 0.8413910510686112
+1155 epoch(s) completed
+Evaluation of model with Accuracy = 0.880125 and F1 = 0.8447394727766847
+1156 epoch(s) completed
+Evaluation of model with Accuracy = 0.88125 and F1 = 0.8381633472849529
+1157 epoch(s) completed
+Evaluation of model with Accuracy = 0.881375 and F1 = 0.8452122580822773
+1158 epoch(s) completed
+Evaluation of model with Accuracy = 0.883625 and F1 = 0.8432128585819851
+1159 epoch(s) completed
+Evaluation of model with Accuracy = 0.88 and F1 = 0.8402790159548484
+1160 epoch(s) completed
+Evaluation of model with Accuracy = 0.881375 and F1 = 0.8426869239335977
+1161 epoch(s) completed
+Evaluation of model with Accuracy = 0.879625 and F1 = 0.8379278331999652
+1162 epoch(s) completed
+Evaluation of model with Accuracy = 0.881 and F1 = 0.8381251883946451
+1163 epoch(s) completed
+Evaluation of model with Accuracy = 0.881 and F1 = 0.8393520502021051
+1164 epoch(s) completed
+Evaluation of model with Accuracy = 0.881125 and F1 = 0.8422649194105276
+1165 epoch(s) completed
+Evaluation of model with Accuracy = 0.879375 and F1 = 0.8419209275651911
+1166 epoch(s) completed
+Evaluation of model with Accuracy = 0.885125 and F1 = 0.8473469192885674
+1167 epoch(s) completed
+Evaluation of model with Accuracy = 0.88725 and F1 = 0.8490146746062006
+1168 epoch(s) completed
+Evaluation of model with Accuracy = 0.8815 and F1 = 0.8427045393665582
+1169 epoch(s) completed
+Evaluation of model with Accuracy = 0.8845 and F1 = 0.8446880912711525
+1170 epoch(s) completed
+Evaluation of model with Accuracy = 0.88225 and F1 = 0.8424671307588449
+1171 epoch(s) completed
+Evaluation of model with Accuracy = 0.88325 and F1 = 0.8452710419244199
+1172 epoch(s) completed
+Evaluation of model with Accuracy = 0.883 and F1 = 0.8450927474337592
+1173 epoch(s) completed
+Evaluation of model with Accuracy = 0.8825 and F1 = 0.8427871592078325
+1174 epoch(s) completed
+Evaluation of model with Accuracy = 0.87875 and F1 = 0.8408201184686834
+1175 epoch(s) completed
+Evaluation of model with Accuracy = 0.87575 and F1 = 0.8389819531713981
+1176 epoch(s) completed
+Evaluation of model with Accuracy = 0.881125 and F1 = 0.8419324891214162
+1177 epoch(s) completed
+Evaluation of model with Accuracy = 0.882125 and F1 = 0.8449030112409542
+1178 epoch(s) completed
+Evaluation of model with Accuracy = 0.88325 and F1 = 0.844491192771316
+1179 epoch(s) completed
+Evaluation of model with Accuracy = 0.8805 and F1 = 0.8388844019948756
+1180 epoch(s) completed
+Evaluation of model with Accuracy = 0.8775 and F1 = 0.839257144473772
+1181 epoch(s) completed
+Evaluation of model with Accuracy = 0.881125 and F1 = 0.8421829505934771
+1182 epoch(s) completed
+Evaluation of model with Accuracy = 0.879625 and F1 = 0.8414508341478603
+1183 epoch(s) completed
+Evaluation of model with Accuracy = 0.881125 and F1 = 0.8403043308663037
+1184 epoch(s) completed
+Evaluation of model with Accuracy = 0.88225 and F1 = 0.8418819294082898
+1185 epoch(s) completed
+Evaluation of model with Accuracy = 0.877 and F1 = 0.8318992209256094
+1186 epoch(s) completed
+Evaluation of model with Accuracy = 0.882125 and F1 = 0.8440211506331143
+1187 epoch(s) completed
+Evaluation of model with Accuracy = 0.882375 and F1 = 0.8412769900800773
+1188 epoch(s) completed
+Evaluation of model with Accuracy = 0.88275 and F1 = 0.8435400982892308
+1189 epoch(s) completed
+Evaluation of model with Accuracy = 0.88175 and F1 = 0.8432667589076044
+1190 epoch(s) completed
+Evaluation of model with Accuracy = 0.87625 and F1 = 0.8362840215792332
+1191 epoch(s) completed
+Evaluation of model with Accuracy = 0.880625 and F1 = 0.83780173078333
+1192 epoch(s) completed
+Evaluation of model with Accuracy = 0.881875 and F1 = 0.8433746920552639
+1193 epoch(s) completed
+Evaluation of model with Accuracy = 0.88125 and F1 = 0.8413419449629662
+1194 epoch(s) completed
+Evaluation of model with Accuracy = 0.8805 and F1 = 0.845057490193668
+1195 epoch(s) completed
+Evaluation of model with Accuracy = 0.881125 and F1 = 0.8399468341081304
+1196 epoch(s) completed
+Evaluation of model with Accuracy = 0.87975 and F1 = 0.8373848151417452
+1197 epoch(s) completed
+Evaluation of model with Accuracy = 0.87975 and F1 = 0.8389879865717317
+1198 epoch(s) completed
+Evaluation of model with Accuracy = 0.878875 and F1 = 0.8418723748438804
+1199 epoch(s) completed
+Evaluation of model with Accuracy = 0.881875 and F1 = 0.8451045114368401
+1200 epoch(s) completed
+Evaluation of model with Accuracy = 0.88075 and F1 = 0.8449390971257996
+1201 epoch(s) completed
+Evaluation of model with Accuracy = 0.88025 and F1 = 0.8463626382795204
+1202 epoch(s) completed
+Evaluation of model with Accuracy = 0.881375 and F1 = 0.8444363959330687
+1203 epoch(s) completed
+Evaluation of model with Accuracy = 0.87875 and F1 = 0.8456256861128608
+1204 epoch(s) completed
+Evaluation of model with Accuracy = 0.8815 and F1 = 0.8439087273354109
+1205 epoch(s) completed
+Evaluation of model with Accuracy = 0.881625 and F1 = 0.8483896777213126
+1206 epoch(s) completed
+Evaluation of model with Accuracy = 0.881 and F1 = 0.8400762429540236
+1207 epoch(s) completed
+Evaluation of model with Accuracy = 0.884 and F1 = 0.8451357384373827
+1208 epoch(s) completed
+Evaluation of model with Accuracy = 0.88125 and F1 = 0.8453282098552433
+1209 epoch(s) completed
+Evaluation of model with Accuracy = 0.884125 and F1 = 0.8442953863191645
+1210 epoch(s) completed
+Evaluation of model with Accuracy = 0.882875 and F1 = 0.8423535688412852
+1211 epoch(s) completed
+Evaluation of model with Accuracy = 0.8855 and F1 = 0.8511038000561629
+1212 epoch(s) completed
+Evaluation of model with Accuracy = 0.884625 and F1 = 0.8478936987253868
+1213 epoch(s) completed
+Evaluation of model with Accuracy = 0.884125 and F1 = 0.8428307691567175
+1214 epoch(s) completed
+Evaluation of model with Accuracy = 0.8825 and F1 = 0.8416734559107906
+1215 epoch(s) completed
+Evaluation of model with Accuracy = 0.8805 and F1 = 0.8393827146716224
+1216 epoch(s) completed
+Evaluation of model with Accuracy = 0.880375 and F1 = 0.8388895522362858
+1217 epoch(s) completed
+Evaluation of model with Accuracy = 0.880125 and F1 = 0.8411042363498656
+1218 epoch(s) completed
+Evaluation of model with Accuracy = 0.87925 and F1 = 0.8368043767285662
+1219 epoch(s) completed
+Evaluation of model with Accuracy = 0.881375 and F1 = 0.8414593195340624
+1220 epoch(s) completed
+Evaluation of model with Accuracy = 0.881375 and F1 = 0.83867275205972
+1221 epoch(s) completed
+Evaluation of model with Accuracy = 0.8825 and F1 = 0.8407276126099287
+1222 epoch(s) completed
+Evaluation of model with Accuracy = 0.882125 and F1 = 0.8394884400072384
+1223 epoch(s) completed
+Evaluation of model with Accuracy = 0.881125 and F1 = 0.839133602983323
+1224 epoch(s) completed
+Evaluation of model with Accuracy = 0.883625 and F1 = 0.843715912800548
+1225 epoch(s) completed
+Evaluation of model with Accuracy = 0.883875 and F1 = 0.8452993582698197
+09:28:53.427 [main] DEBUG o.d.optimize.solvers.BaseOptimizer - Hit termination condition on iteration 0: score=0.3112224731445313, oldScore=0.31122335815429686, condition=org.deeplearning4j.optimize.terminations.EpsTermination@123ab05d
+1226 epoch(s) completed
+Evaluation of model with Accuracy = 0.88475 and F1 = 0.8491664178638708
+1227 epoch(s) completed
+Evaluation of model with Accuracy = 0.884375 and F1 = 0.845030095963839
+1228 epoch(s) completed
+Evaluation of model with Accuracy = 0.8815 and F1 = 0.8422144274552548
+1229 epoch(s) completed
+Evaluation of model with Accuracy = 0.877125 and F1 = 0.8401988317434242
+1230 epoch(s) completed
+Evaluation of model with Accuracy = 0.879625 and F1 = 0.8406020140293268
+1231 epoch(s) completed
+Evaluation of model with Accuracy = 0.881125 and F1 = 0.8417181618690449
+1232 epoch(s) completed
+Evaluation of model with Accuracy = 0.881 and F1 = 0.8404708126216024
+1233 epoch(s) completed
+Evaluation of model with Accuracy = 0.87825 and F1 = 0.8317803249458662
+1234 epoch(s) completed
+Evaluation of model with Accuracy = 0.88025 and F1 = 0.8398693786479093
+1235 epoch(s) completed
+Evaluation of model with Accuracy = 0.878875 and F1 = 0.8400819398169342
+1236 epoch(s) completed
+Evaluation of model with Accuracy = 0.881375 and F1 = 0.838697254906024
+1237 epoch(s) completed
+Evaluation of model with Accuracy = 0.879375 and F1 = 0.8340753584790491
+1238 epoch(s) completed
+Evaluation of model with Accuracy = 0.876875 and F1 = 0.8319214640752229
+1239 epoch(s) completed
+Evaluation of model with Accuracy = 0.8795 and F1 = 0.8373796419844686
+1240 epoch(s) completed
+Evaluation of model with Accuracy = 0.88275 and F1 = 0.8417164604386986
+1241 epoch(s) completed
+Evaluation of model with Accuracy = 0.878375 and F1 = 0.8373234345639957
+1242 epoch(s) completed
+Evaluation of model with Accuracy = 0.881625 and F1 = 0.8389774623765156
+1243 epoch(s) completed
+Evaluation of model with Accuracy = 0.881875 and F1 = 0.8434758462057959
+1244 epoch(s) completed
+Evaluation of model with Accuracy = 0.882375 and F1 = 0.8428894003051357
+1245 epoch(s) completed
+Evaluation of model with Accuracy = 0.884875 and F1 = 0.8480803315697603
+1246 epoch(s) completed
+Evaluation of model with Accuracy = 0.8845 and F1 = 0.8436152910352424
+1247 epoch(s) completed
+Evaluation of model with Accuracy = 0.88725 and F1 = 0.8489297327785137
+1248 epoch(s) completed
+Evaluation of model with Accuracy = 0.8835 and F1 = 0.8438690801431569
+1249 epoch(s) completed
+Evaluation of model with Accuracy = 0.88425 and F1 = 0.849541654722947
+1250 epoch(s) completed
+Evaluation of model with Accuracy = 0.885375 and F1 = 0.8482056795865112
+1251 epoch(s) completed
+Evaluation of model with Accuracy = 0.884875 and F1 = 0.8486383776173559
+1252 epoch(s) completed
+Evaluation of model with Accuracy = 0.88475 and F1 = 0.8475944358833281
+1253 epoch(s) completed
+Evaluation of model with Accuracy = 0.883 and F1 = 0.8477951513542701
+1254 epoch(s) completed
+Evaluation of model with Accuracy = 0.884 and F1 = 0.8463182273681991
+1255 epoch(s) completed
+Evaluation of model with Accuracy = 0.883 and F1 = 0.8459896492021903
+1256 epoch(s) completed
+Evaluation of model with Accuracy = 0.884125 and F1 = 0.8473334501687044
+1257 epoch(s) completed
+Evaluation of model with Accuracy = 0.882 and F1 = 0.8454532028648861
+1258 epoch(s) completed
+Evaluation of model with Accuracy = 0.884375 and F1 = 0.8468130359749545
+1259 epoch(s) completed
+Evaluation of model with Accuracy = 0.883125 and F1 = 0.8423916343386001
+1260 epoch(s) completed
+Evaluation of model with Accuracy = 0.881625 and F1 = 0.8454649284683375
+1261 epoch(s) completed
+Evaluation of model with Accuracy = 0.88325 and F1 = 0.8448932450777045
+1262 epoch(s) completed
+Evaluation of model with Accuracy = 0.884625 and F1 = 0.8454070593423139
+1263 epoch(s) completed
+Evaluation of model with Accuracy = 0.880875 and F1 = 0.8442896641730869
+1264 epoch(s) completed
+Evaluation of model with Accuracy = 0.88075 and F1 = 0.8404651916509288
+1265 epoch(s) completed
+Evaluation of model with Accuracy = 0.883375 and F1 = 0.8426988595083491
+1266 epoch(s) completed
+Evaluation of model with Accuracy = 0.883625 and F1 = 0.842066937300415
+1267 epoch(s) completed
+Evaluation of model with Accuracy = 0.88225 and F1 = 0.8432727292589117
+1268 epoch(s) completed
+Evaluation of model with Accuracy = 0.880875 and F1 = 0.841455406766822
+1269 epoch(s) completed
+Evaluation of model with Accuracy = 0.8835 and F1 = 0.8459018541809727
+1270 epoch(s) completed
+Evaluation of model with Accuracy = 0.883125 and F1 = 0.8436134636518478
+1271 epoch(s) completed
+Evaluation of model with Accuracy = 0.882375 and F1 = 0.842459885432112
+1272 epoch(s) completed
+Evaluation of model with Accuracy = 0.881625 and F1 = 0.8447780542374042
+1273 epoch(s) completed
+Evaluation of model with Accuracy = 0.882625 and F1 = 0.8427829101903122
+1274 epoch(s) completed
+Evaluation of model with Accuracy = 0.88175 and F1 = 0.8437441635799874
+1275 epoch(s) completed
+Evaluation of model with Accuracy = 0.882 and F1 = 0.8432571759186768
+1276 epoch(s) completed
+Evaluation of model with Accuracy = 0.881125 and F1 = 0.8446075266940671
+1277 epoch(s) completed
+Evaluation of model with Accuracy = 0.879875 and F1 = 0.8418179766436477
+1278 epoch(s) completed
+Evaluation of model with Accuracy = 0.881 and F1 = 0.8422840791584143
+1279 epoch(s) completed
+Evaluation of model with Accuracy = 0.88425 and F1 = 0.8464510606227786
+1280 epoch(s) completed
+Evaluation of model with Accuracy = 0.883 and F1 = 0.8459067782492363
+1281 epoch(s) completed
+Evaluation of model with Accuracy = 0.88375 and F1 = 0.8468389905566667
+1282 epoch(s) completed
+Evaluation of model with Accuracy = 0.8825 and F1 = 0.8438629784061322
+1283 epoch(s) completed
+Evaluation of model with Accuracy = 0.87975 and F1 = 0.846777594452559
+1284 epoch(s) completed
+Evaluation of model with Accuracy = 0.88275 and F1 = 0.8484379370176061
+1285 epoch(s) completed
+Evaluation of model with Accuracy = 0.876375 and F1 = 0.8439545579781433
+1286 epoch(s) completed
+Evaluation of model with Accuracy = 0.881125 and F1 = 0.842456000268065
+1287 epoch(s) completed
+Evaluation of model with Accuracy = 0.886375 and F1 = 0.8503167900870198
+1288 epoch(s) completed
+Evaluation of model with Accuracy = 0.88125 and F1 = 0.8473817132116442
+1289 epoch(s) completed
+Evaluation of model with Accuracy = 0.8815 and F1 = 0.8433108257695998
+1290 epoch(s) completed
+Evaluation of model with Accuracy = 0.879625 and F1 = 0.8355175779854156
+1291 epoch(s) completed
+Evaluation of model with Accuracy = 0.88425 and F1 = 0.8453958477959314
+1292 epoch(s) completed
+Evaluation of model with Accuracy = 0.883875 and F1 = 0.8461859798722836
+1293 epoch(s) completed
+Evaluation of model with Accuracy = 0.88675 and F1 = 0.8490841926857172
+1294 epoch(s) completed
+Evaluation of model with Accuracy = 0.881 and F1 = 0.8437456068426138
+1295 epoch(s) completed
+Evaluation of model with Accuracy = 0.880875 and F1 = 0.845305770834142
+1296 epoch(s) completed
+Evaluation of model with Accuracy = 0.883375 and F1 = 0.844997181008767
+1297 epoch(s) completed
+Evaluation of model with Accuracy = 0.885125 and F1 = 0.8467036650040465
+1298 epoch(s) completed
+Evaluation of model with Accuracy = 0.884375 and F1 = 0.8461830643195624
+1299 epoch(s) completed
+Evaluation of model with Accuracy = 0.88325 and F1 = 0.8429097296892488
+1300 epoch(s) completed
+Evaluation of model with Accuracy = 0.884 and F1 = 0.8458555767009296
+1301 epoch(s) completed
+Evaluation of model with Accuracy = 0.879625 and F1 = 0.8421703668151229
+1302 epoch(s) completed
+Evaluation of model with Accuracy = 0.882125 and F1 = 0.8446006502642133
+1303 epoch(s) completed
+Evaluation of model with Accuracy = 0.880875 and F1 = 0.8410951089517101
+1304 epoch(s) completed
+Evaluation of model with Accuracy = 0.8845 and F1 = 0.8454942537103394
+1305 epoch(s) completed
+Evaluation of model with Accuracy = 0.88575 and F1 = 0.8479049554438413
+1306 epoch(s) completed
+Evaluation of model with Accuracy = 0.885 and F1 = 0.8449428838594274
+1307 epoch(s) completed
+Evaluation of model with Accuracy = 0.886625 and F1 = 0.8503396804977579
+1308 epoch(s) completed
+Evaluation of model with Accuracy = 0.886 and F1 = 0.8483449079644542
+1309 epoch(s) completed
+Evaluation of model with Accuracy = 0.8805 and F1 = 0.8428881485839774
+1310 epoch(s) completed
+Evaluation of model with Accuracy = 0.885375 and F1 = 0.8488587266722858
+1311 epoch(s) completed
+Evaluation of model with Accuracy = 0.881875 and F1 = 0.8439801298929236
+1312 epoch(s) completed
+Evaluation of model with Accuracy = 0.882875 and F1 = 0.8450775424637158
+1313 epoch(s) completed
+Evaluation of model with Accuracy = 0.878375 and F1 = 0.8382563878793918
+1314 epoch(s) completed
+Evaluation of model with Accuracy = 0.88175 and F1 = 0.8418224520253564
+1315 epoch(s) completed
+Evaluation of model with Accuracy = 0.88325 and F1 = 0.8416740956481569
+1316 epoch(s) completed
+Evaluation of model with Accuracy = 0.88025 and F1 = 0.8428332437204411
+1317 epoch(s) completed
+Evaluation of model with Accuracy = 0.8785 and F1 = 0.8395242135347296
+1318 epoch(s) completed
+Evaluation of model with Accuracy = 0.877 and F1 = 0.8398731899419621
+1319 epoch(s) completed
+Evaluation of model with Accuracy = 0.87875 and F1 = 0.8404440444600514
+1320 epoch(s) completed
+Evaluation of model with Accuracy = 0.8815 and F1 = 0.8390541494842234
+1321 epoch(s) completed
+Evaluation of model with Accuracy = 0.883 and F1 = 0.8414315789499642
+1322 epoch(s) completed
+Evaluation of model with Accuracy = 0.879875 and F1 = 0.8379718811431673
+1323 epoch(s) completed
+Evaluation of model with Accuracy = 0.879625 and F1 = 0.835336020130467
+1324 epoch(s) completed
+Evaluation of model with Accuracy = 0.88075 and F1 = 0.8374196359085749
+1325 epoch(s) completed
+Evaluation of model with Accuracy = 0.8815 and F1 = 0.8383888527404021
+1326 epoch(s) completed
+Evaluation of model with Accuracy = 0.8825 and F1 = 0.8393934032735897
+1327 epoch(s) completed
+Evaluation of model with Accuracy = 0.882375 and F1 = 0.8404995482521372
+1328 epoch(s) completed
+Evaluation of model with Accuracy = 0.884125 and F1 = 0.8421159462078693
+1329 epoch(s) completed
+Evaluation of model with Accuracy = 0.88125 and F1 = 0.8408828231345715
+1330 epoch(s) completed
+Evaluation of model with Accuracy = 0.8825 and F1 = 0.8415475601335881
+1331 epoch(s) completed
+Evaluation of model with Accuracy = 0.883125 and F1 = 0.8437628631892446
+1332 epoch(s) completed
+Evaluation of model with Accuracy = 0.883 and F1 = 0.8424273114652201
+1333 epoch(s) completed
+Evaluation of model with Accuracy = 0.880375 and F1 = 0.8406226176401853
+1334 epoch(s) completed
+Evaluation of model with Accuracy = 0.881625 and F1 = 0.8418246926484069
+1335 epoch(s) completed
+Evaluation of model with Accuracy = 0.881625 and F1 = 0.8426347376872905
+1336 epoch(s) completed
+Evaluation of model with Accuracy = 0.884875 and F1 = 0.842551875076415
+1337 epoch(s) completed
+Evaluation of model with Accuracy = 0.884625 and F1 = 0.8437628081425617
+1338 epoch(s) completed
+Evaluation of model with Accuracy = 0.883625 and F1 = 0.8421483359829043
+1339 epoch(s) completed
+Evaluation of model with Accuracy = 0.885 and F1 = 0.8459273984843967
+1340 epoch(s) completed
+Evaluation of model with Accuracy = 0.882875 and F1 = 0.8425256448556605
+1341 epoch(s) completed
+Evaluation of model with Accuracy = 0.88575 and F1 = 0.8453952856759113
+1342 epoch(s) completed
+Evaluation of model with Accuracy = 0.8815 and F1 = 0.8422240395086037
+1343 epoch(s) completed
+Evaluation of model with Accuracy = 0.878375 and F1 = 0.8394517992976448
+1344 epoch(s) completed
+Evaluation of model with Accuracy = 0.884 and F1 = 0.8454417787241296
+1345 epoch(s) completed
+Evaluation of model with Accuracy = 0.8825 and F1 = 0.8438882543532353
+1346 epoch(s) completed
+Evaluation of model with Accuracy = 0.885125 and F1 = 0.8464617837729398
+1347 epoch(s) completed
+Evaluation of model with Accuracy = 0.88325 and F1 = 0.8456882146013014
+1348 epoch(s) completed
+Evaluation of model with Accuracy = 0.8845 and F1 = 0.8446956557852429
+1349 epoch(s) completed
+Evaluation of model with Accuracy = 0.88275 and F1 = 0.8411046843400387
+1350 epoch(s) completed
+Evaluation of model with Accuracy = 0.882125 and F1 = 0.8432520960542863
+1351 epoch(s) completed
+Evaluation of model with Accuracy = 0.883 and F1 = 0.8421992962287406
+1352 epoch(s) completed
+Evaluation of model with Accuracy = 0.882375 and F1 = 0.8400014793018412
+1353 epoch(s) completed
+Evaluation of model with Accuracy = 0.883125 and F1 = 0.8415524161322617
+1354 epoch(s) completed
+Evaluation of model with Accuracy = 0.881375 and F1 = 0.8406747095962946
+1355 epoch(s) completed
+Evaluation of model with Accuracy = 0.8825 and F1 = 0.8421266235642751
+1356 epoch(s) completed
+Evaluation of model with Accuracy = 0.876625 and F1 = 0.8390629403481952
+1357 epoch(s) completed
+Evaluation of model with Accuracy = 0.885375 and F1 = 0.8459032579990229
+1358 epoch(s) completed
+Evaluation of model with Accuracy = 0.882375 and F1 = 0.8415016222524959
+1359 epoch(s) completed
+Evaluation of model with Accuracy = 0.881375 and F1 = 0.8402287834140977
+1360 epoch(s) completed
+Evaluation of model with Accuracy = 0.882625 and F1 = 0.8419873599841071
+1361 epoch(s) completed
+Evaluation of model with Accuracy = 0.883125 and F1 = 0.84273777736047
+1362 epoch(s) completed
+Evaluation of model with Accuracy = 0.882 and F1 = 0.8428272900126952
+1363 epoch(s) completed
+Evaluation of model with Accuracy = 0.87925 and F1 = 0.8419577149677402
+1364 epoch(s) completed
+Evaluation of model with Accuracy = 0.881375 and F1 = 0.8387191766438747
+1365 epoch(s) completed
+Evaluation of model with Accuracy = 0.88125 and F1 = 0.8463918681747433
+1366 epoch(s) completed
+Evaluation of model with Accuracy = 0.883375 and F1 = 0.8426591011185022
+1367 epoch(s) completed
+Evaluation of model with Accuracy = 0.881625 and F1 = 0.8397160802286939
+1368 epoch(s) completed
+Evaluation of model with Accuracy = 0.884875 and F1 = 0.8463023595426242
+1369 epoch(s) completed
+Evaluation of model with Accuracy = 0.8835 and F1 = 0.8479577019506592
+1370 epoch(s) completed
+Evaluation of model with Accuracy = 0.881625 and F1 = 0.8418715961585239
+1371 epoch(s) completed
+Evaluation of model with Accuracy = 0.87925 and F1 = 0.8450973360828914
+1372 epoch(s) completed
+Evaluation of model with Accuracy = 0.879875 and F1 = 0.8469670587188275
+1373 epoch(s) completed
+Evaluation of model with Accuracy = 0.883375 and F1 = 0.8455776032500959
+1374 epoch(s) completed
+Evaluation of model with Accuracy = 0.883 and F1 = 0.8490157638587925
+1375 epoch(s) completed
+Evaluation of model with Accuracy = 0.883 and F1 = 0.8443622423254414
+1376 epoch(s) completed
+Evaluation of model with Accuracy = 0.882875 and F1 = 0.8483074222720222
+1377 epoch(s) completed
+Evaluation of model with Accuracy = 0.8815 and F1 = 0.8446142518391472
+1378 epoch(s) completed
+Evaluation of model with Accuracy = 0.883625 and F1 = 0.8493121221421575
+1379 epoch(s) completed
+Evaluation of model with Accuracy = 0.88025 and F1 = 0.8456707573584091
+1380 epoch(s) completed
+Evaluation of model with Accuracy = 0.88175 and F1 = 0.8476209266085164
+1381 epoch(s) completed
+Evaluation of model with Accuracy = 0.88325 and F1 = 0.8479638596001337
+1382 epoch(s) completed
+Evaluation of model with Accuracy = 0.881375 and F1 = 0.8484582849529262
+1383 epoch(s) completed
+Evaluation of model with Accuracy = 0.880625 and F1 = 0.8471738216994276
+1384 epoch(s) completed
+Evaluation of model with Accuracy = 0.877 and F1 = 0.8454845403058582
+1385 epoch(s) completed
+Evaluation of model with Accuracy = 0.883875 and F1 = 0.8479076295817011
+1386 epoch(s) completed
+Evaluation of model with Accuracy = 0.883625 and F1 = 0.847011324230217
+1387 epoch(s) completed
+Evaluation of model with Accuracy = 0.883 and F1 = 0.8436536515259754
+1388 epoch(s) completed
+Evaluation of model with Accuracy = 0.882375 and F1 = 0.8492293845554395
+1389 epoch(s) completed
+Evaluation of model with Accuracy = 0.8835 and F1 = 0.8477196474045138
+1390 epoch(s) completed
+Evaluation of model with Accuracy = 0.88675 and F1 = 0.8484727534226695
+1391 epoch(s) completed
+Evaluation of model with Accuracy = 0.88275 and F1 = 0.8460481690606367
+1392 epoch(s) completed
+Evaluation of model with Accuracy = 0.881375 and F1 = 0.8401828579319999
+1393 epoch(s) completed
+Evaluation of model with Accuracy = 0.881875 and F1 = 0.8410070555738887
+1394 epoch(s) completed
+Evaluation of model with Accuracy = 0.8805 and F1 = 0.8443948245498287
+1395 epoch(s) completed
+Evaluation of model with Accuracy = 0.8825 and F1 = 0.8447686914684893
+1396 epoch(s) completed
+Evaluation of model with Accuracy = 0.8805 and F1 = 0.8361134387937945
+1397 epoch(s) completed
+Evaluation of model with Accuracy = 0.880625 and F1 = 0.8391830694896211
+1398 epoch(s) completed
+Evaluation of model with Accuracy = 0.88025 and F1 = 0.842242771940846
+1399 epoch(s) completed
+Evaluation of model with Accuracy = 0.88525 and F1 = 0.8492423184441711
+1400 epoch(s) completed
+Evaluation of model with Accuracy = 0.88375 and F1 = 0.8431165628467112
+1401 epoch(s) completed
+Evaluation of model with Accuracy = 0.882625 and F1 = 0.8397198178110126
+1402 epoch(s) completed
+Evaluation of model with Accuracy = 0.88075 and F1 = 0.8395316755599963
+1403 epoch(s) completed
+Evaluation of model with Accuracy = 0.8765 and F1 = 0.8369418290440428
+1404 epoch(s) completed
+Evaluation of model with Accuracy = 0.883125 and F1 = 0.8402989639383834
+1405 epoch(s) completed
+Evaluation of model with Accuracy = 0.87925 and F1 = 0.8330432145375163
+1406 epoch(s) completed
+Evaluation of model with Accuracy = 0.8825 and F1 = 0.8395165305202108
+1407 epoch(s) completed
+Evaluation of model with Accuracy = 0.879875 and F1 = 0.8339663163327573
+1408 epoch(s) completed
+Evaluation of model with Accuracy = 0.879125 and F1 = 0.8346365324765795
+1409 epoch(s) completed
+Evaluation of model with Accuracy = 0.87975 and F1 = 0.83462978104609
+1410 epoch(s) completed
+Evaluation of model with Accuracy = 0.881125 and F1 = 0.8377070709266446
+1411 epoch(s) completed
+Evaluation of model with Accuracy = 0.879125 and F1 = 0.8350785884144445
+1412 epoch(s) completed
+Evaluation of model with Accuracy = 0.877625 and F1 = 0.8287190151671696
+1413 epoch(s) completed
+Evaluation of model with Accuracy = 0.878 and F1 = 0.8299235678595537
+1414 epoch(s) completed
+Evaluation of model with Accuracy = 0.8785 and F1 = 0.8296296605195704
+1415 epoch(s) completed
+Evaluation of model with Accuracy = 0.879625 and F1 = 0.8340983886381781
+1416 epoch(s) completed
+Evaluation of model with Accuracy = 0.87925 and F1 = 0.8331602174906008
+1417 epoch(s) completed
+Evaluation of model with Accuracy = 0.88175 and F1 = 0.8379598284232045
+1418 epoch(s) completed
+Evaluation of model with Accuracy = 0.882875 and F1 = 0.8372734829662258
+1419 epoch(s) completed
+Evaluation of model with Accuracy = 0.884625 and F1 = 0.8424977536945454
+1420 epoch(s) completed
+Evaluation of model with Accuracy = 0.885 and F1 = 0.8429243768632498
+1421 epoch(s) completed
+Evaluation of model with Accuracy = 0.883125 and F1 = 0.8445264891744007
+1422 epoch(s) completed
+Evaluation of model with Accuracy = 0.881625 and F1 = 0.8407379852747761
+1423 epoch(s) completed
+Evaluation of model with Accuracy = 0.88325 and F1 = 0.8426050676631638
+1424 epoch(s) completed
+Evaluation of model with Accuracy = 0.882625 and F1 = 0.8425019295586579
+1425 epoch(s) completed
+Evaluation of model with Accuracy = 0.88425 and F1 = 0.8439445852841639
+1426 epoch(s) completed
+Evaluation of model with Accuracy = 0.882 and F1 = 0.8445156754072474
+1427 epoch(s) completed
+Evaluation of model with Accuracy = 0.8845 and F1 = 0.8450170994090743
+1428 epoch(s) completed
+Evaluation of model with Accuracy = 0.882 and F1 = 0.8394565169713853
+1429 epoch(s) completed
+Evaluation of model with Accuracy = 0.883625 and F1 = 0.8440613262702112
+1430 epoch(s) completed
+Evaluation of model with Accuracy = 0.881375 and F1 = 0.8391524418343944
+1431 epoch(s) completed
+Evaluation of model with Accuracy = 0.88375 and F1 = 0.8428070887916238
+1432 epoch(s) completed
+Evaluation of model with Accuracy = 0.88525 and F1 = 0.8458529953370659
+1433 epoch(s) completed
+Evaluation of model with Accuracy = 0.882375 and F1 = 0.8406405822649948
+1434 epoch(s) completed
+Evaluation of model with Accuracy = 0.88175 and F1 = 0.8394833771559964
+1435 epoch(s) completed
+Evaluation of model with Accuracy = 0.87925 and F1 = 0.8395183358492646
+1436 epoch(s) completed
+Evaluation of model with Accuracy = 0.88175 and F1 = 0.8406346500949153
+1437 epoch(s) completed
+Evaluation of model with Accuracy = 0.87725 and F1 = 0.8381133423867706
+1438 epoch(s) completed
+Evaluation of model with Accuracy = 0.8845 and F1 = 0.8436519231468121
+1439 epoch(s) completed
+Evaluation of model with Accuracy = 0.883375 and F1 = 0.8427686630923248
+1440 epoch(s) completed
+Evaluation of model with Accuracy = 0.882 and F1 = 0.8396558291241232
+1441 epoch(s) completed
+Evaluation of model with Accuracy = 0.88025 and F1 = 0.8389842546477436
+1442 epoch(s) completed
+Evaluation of model with Accuracy = 0.882125 and F1 = 0.8422999385325095
+1443 epoch(s) completed
+Evaluation of model with Accuracy = 0.8815 and F1 = 0.8389892220167484
+1444 epoch(s) completed
+Evaluation of model with Accuracy = 0.882 and F1 = 0.8393766679434741
+1445 epoch(s) completed
+Evaluation of model with Accuracy = 0.87925 and F1 = 0.8391759117632318
+1446 epoch(s) completed
+Evaluation of model with Accuracy = 0.883 and F1 = 0.8443977295178781
+1447 epoch(s) completed
+Evaluation of model with Accuracy = 0.885125 and F1 = 0.846130122114322
+1448 epoch(s) completed
+Evaluation of model with Accuracy = 0.883 and F1 = 0.8394578149821587
+1449 epoch(s) completed
+Evaluation of model with Accuracy = 0.88075 and F1 = 0.837026726614803
+1450 epoch(s) completed
+Evaluation of model with Accuracy = 0.881 and F1 = 0.8414684510274624
+1451 epoch(s) completed
+Evaluation of model with Accuracy = 0.883 and F1 = 0.840868113416686
+1452 epoch(s) completed
+Evaluation of model with Accuracy = 0.88175 and F1 = 0.8365455611111847
+1453 epoch(s) completed
+Evaluation of model with Accuracy = 0.8845 and F1 = 0.8434642488837533
+1454 epoch(s) completed
+Evaluation of model with Accuracy = 0.881 and F1 = 0.8401041119566631
+1455 epoch(s) completed
+Evaluation of model with Accuracy = 0.882125 and F1 = 0.8418117934204723
+1456 epoch(s) completed
+Evaluation of model with Accuracy = 0.879875 and F1 = 0.843341925028666
+1457 epoch(s) completed
+Evaluation of model with Accuracy = 0.882625 and F1 = 0.8447533530944872
+1458 epoch(s) completed
+Evaluation of model with Accuracy = 0.88675 and F1 = 0.8491844729565983
+1459 epoch(s) completed
+Evaluation of model with Accuracy = 0.8825 and F1 = 0.8386544023374856
+1460 epoch(s) completed
+Evaluation of model with Accuracy = 0.8825 and F1 = 0.8404004536704686
+1461 epoch(s) completed
+Evaluation of model with Accuracy = 0.8825 and F1 = 0.8379023342629823
+1462 epoch(s) completed
+Evaluation of model with Accuracy = 0.879125 and F1 = 0.8343532357499935
+1463 epoch(s) completed
+Evaluation of model with Accuracy = 0.8795 and F1 = 0.837220738413311
+1464 epoch(s) completed
+Evaluation of model with Accuracy = 0.88275 and F1 = 0.8418352813015617
+1465 epoch(s) completed
+Evaluation of model with Accuracy = 0.883625 and F1 = 0.8415964756895283
+1466 epoch(s) completed
+Evaluation of model with Accuracy = 0.883 and F1 = 0.8399363291243335
+1467 epoch(s) completed
+Evaluation of model with Accuracy = 0.883 and F1 = 0.8398978458456412
+1468 epoch(s) completed
+Evaluation of model with Accuracy = 0.88325 and F1 = 0.841007156605422
+1469 epoch(s) completed
+Evaluation of model with Accuracy = 0.886 and F1 = 0.8448606632218755
+1470 epoch(s) completed
+Evaluation of model with Accuracy = 0.880875 and F1 = 0.8348108051297424
+1471 epoch(s) completed
+Evaluation of model with Accuracy = 0.881 and F1 = 0.8365151091711146
+1472 epoch(s) completed
+Evaluation of model with Accuracy = 0.881875 and F1 = 0.8390892214042346
+1473 epoch(s) completed
+Evaluation of model with Accuracy = 0.881375 and F1 = 0.8350613100113254
+1474 epoch(s) completed
+Evaluation of model with Accuracy = 0.882375 and F1 = 0.8363542607207973
+1475 epoch(s) completed
+Evaluation of model with Accuracy = 0.882625 and F1 = 0.8375338289569113
+1476 epoch(s) completed
+Evaluation of model with Accuracy = 0.881875 and F1 = 0.8363427858162166
+1477 epoch(s) completed
+Evaluation of model with Accuracy = 0.882875 and F1 = 0.8386862303045166
+1478 epoch(s) completed
+Evaluation of model with Accuracy = 0.88175 and F1 = 0.8357397329653052
+1479 epoch(s) completed
+Evaluation of model with Accuracy = 0.880125 and F1 = 0.8359669788090393
+1480 epoch(s) completed
+Evaluation of model with Accuracy = 0.87975 and F1 = 0.8367473452934742
+1481 epoch(s) completed
+Evaluation of model with Accuracy = 0.87975 and F1 = 0.8332597430593536
+1482 epoch(s) completed
+Evaluation of model with Accuracy = 0.88 and F1 = 0.8382800703078302
+1483 epoch(s) completed
+Evaluation of model with Accuracy = 0.879625 and F1 = 0.8334769785286464
+1484 epoch(s) completed
+Evaluation of model with Accuracy = 0.879125 and F1 = 0.8328313284628437
+1485 epoch(s) completed
+Evaluation of model with Accuracy = 0.8805 and F1 = 0.836392514768634
+1486 epoch(s) completed
+Evaluation of model with Accuracy = 0.88225 and F1 = 0.8417124210058728
+1487 epoch(s) completed
+Evaluation of model with Accuracy = 0.884625 and F1 = 0.8447750582860551
+1488 epoch(s) completed
+Evaluation of model with Accuracy = 0.88025 and F1 = 0.8390377610697445
+1489 epoch(s) completed
+Evaluation of model with Accuracy = 0.880125 and F1 = 0.8357978500818048
+1490 epoch(s) completed
+Evaluation of model with Accuracy = 0.88025 and F1 = 0.8366680179090955
+1491 epoch(s) completed
+Evaluation of model with Accuracy = 0.876875 and F1 = 0.8285286518405327
+1492 epoch(s) completed
+Evaluation of model with Accuracy = 0.881875 and F1 = 0.8387907581053781
+1493 epoch(s) completed
+Evaluation of model with Accuracy = 0.88075 and F1 = 0.8354730406313744
+1494 epoch(s) completed
+Evaluation of model with Accuracy = 0.880625 and F1 = 0.8374332027201268
+1495 epoch(s) completed
+Evaluation of model with Accuracy = 0.879125 and F1 = 0.8348188821474611
+1496 epoch(s) completed
+Evaluation of model with Accuracy = 0.880875 and F1 = 0.8367751059625885
+1497 epoch(s) completed
+Evaluation of model with Accuracy = 0.881375 and F1 = 0.8382502238131143
+1498 epoch(s) completed
+Evaluation of model with Accuracy = 0.877125 and F1 = 0.8281385284305984
+1499 epoch(s) completed
+Evaluation of model with Accuracy = 0.880375 and F1 = 0.8330089684139795
+1500 epoch(s) completed
+Evaluation of model with Accuracy = 0.879375 and F1 = 0.8313834086492286
+We finished to train my network
+Model save in a zip

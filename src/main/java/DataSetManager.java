@@ -43,20 +43,24 @@ public class DataSetManager {
     private int batchSize;//500
     /** Classes : downstairs,jogging,etc.*/
     private int numClasses;//6
-    /**3 if the label index is on the 4th column*/
-    private int labelIndex;//3
+    /**3-4-5 Parameters for my own dataset iterator*/
+    private int height;//1
+    private int width;//500
+    private int depth;//3
 
     /** Constructor private */
-    private DataSetManager(int batchSize, int numClasses, int labelIndex) {
+    private DataSetManager(int batchSize, int numClasses, int height, int width, int depth) {
         this.batchSize = batchSize;
         this.numClasses = numClasses;
-        this.labelIndex = labelIndex;
+        this.height = height;
+        this.width  = width;
+        this.depth = depth;
     }
 
     /** Singleton */
-    public static synchronized DataSetManager getInstance(int batchSize, int numClasses, int labelIndex) {
-        if (INSTANCE == null)
-        { 	INSTANCE = new DataSetManager(batchSize,numClasses,labelIndex);
+    public static synchronized DataSetManager getInstance(int batchSize, int numClasses, int height, int width, int depth) {
+        if (INSTANCE == null) {
+            INSTANCE = new DataSetManager(batchSize,numClasses,height,width,depth);
         }
         return INSTANCE;
     }
@@ -87,9 +91,6 @@ public class DataSetManager {
     }
 
     public DataSetIterator createMyOwnDataSetIterator (File fileData) throws IOException, InterruptedException {
-        int height = 1;
-        int width = 500;
-        int depth = 3;
 
         DataInput di = new DataInput(height,width,depth);
 
@@ -107,10 +108,7 @@ public class DataSetManager {
 
     }
 
-    public DataSetIterator createDataSetTestCNN (File fileData) throws IOException, InterruptedException {
-        int height = 1;
-        int width = 500;
-        int depth = 3;
+    public DataSetIterator createDataSetIteratorTest (File fileData) throws IOException, InterruptedException {
 
         DataInput dataInput = new DataInput(height,width,depth);
 
@@ -119,6 +117,5 @@ public class DataSetManager {
         return  iterator;
 
     }
-
 
 }

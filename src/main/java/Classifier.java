@@ -222,7 +222,7 @@ public class Classifier {
                 .list()
                 .layer(0, new ConvolutionLayer.Builder(1,10) //depends height
                         .nIn(3)//depth
-                        .nOut(40)
+                        .nOut(130)
                         .stride(1,1)
                         .build())
                 .layer(1, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX) //max pooling
@@ -230,23 +230,32 @@ public class Classifier {
                         .stride(1,2)
                         .build())
                 .layer(2, new ConvolutionLayer.Builder(1,10)
-                        .nIn(40)//depth
-                        .nOut(10)
+                        .nIn(130)//depth
+                        .nOut(70)
                         .stride(1,1)
                         .build())
-                .layer(3, new DenseLayer.Builder()
-                        .nOut(50)
+                .layer(3, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX) //max pooling
+                        .kernelSize(1,2)
+                        .stride(1,2)
+                        .build())
+                .layer(4, new ConvolutionLayer.Builder(1,10) //depends height
+                        .nIn(70)//depth
+                        .nOut(40)
+                        .stride(1,1)
+                        .build())
+                .layer(5, new DenseLayer.Builder()
+                        .nOut(150)
                         .activation(Activation.TANH)
                         .dropOut(0.5)
                         .build())
-                .layer(4, new GravesLSTM.Builder()
-                        .nIn(50)
+                .layer(6, new GravesLSTM.Builder()
+                        .nIn(150)
                         .nOut(50)
                         .build())
-                .layer(5, new RnnOutputLayer.Builder(LossFunctions.LossFunction.MCXENT)
+                .layer(7, new RnnOutputLayer.Builder(LossFunctions.LossFunction.MCXENT)
                         .activation(Activation.SOFTMAX)
                         .nIn(50)
-                        .nOut(6)
+                        .nOut(numOutputs)
                         .build())
                 .setInputType(InputType.convolutional(1, 500, 3))
                 .backprop(true)
@@ -276,6 +285,7 @@ public class Classifier {
             System.out.println(i+" epoch(s) completed");
             Evaluation evaluation = net.evaluate(testData);
             System.out.println("Evaluation of model with Accuracy = "+evaluation.accuracy()+" and F1 = "+evaluation.f1());
+            System.out.println(evaluation.stats());
             testData.reset();
         }
 
@@ -317,24 +327,34 @@ public class Classifier {
             System.out.println(i+" epoch(s) completed");
             Evaluation evaluation = model.evaluate(testData);
             System.out.println("Evaluation of model with Accuracy = "+evaluation.accuracy()+" and F1 = "+evaluation.f1());
+            System.out.println(evaluation.stats());
             testData.reset();
         }
         System.out.println("We finished to train my network");
     }
 
     public void makePrediction(DataSetIterator it) {
-        //evaluate the model on the test set
+        int i = 0;
         System.out.println("Prediction is starting");
         List<Integer> list = new LinkedList<Integer>();
+
         while (it.hasNext()) {
             DataSet ds = it.next();
             int[] ls = model.predict(ds.getFeatureMatrix());
             for(int s : ls) {
                 list.add(s);
             }
-            System.out.println("Iterator has next...");
+            i++;
         }
+
         dispOccurence(list);
+        System.out.println("Size of the DataSetIterator : "+i);
+    }
+
+    public void dispTabProbabilities (DataSetIterator it) {
+        INDArray evaluation = model.output(it);
+        System.out.println(evaluation);
+
     }
 
     private void dispOccurence (List<Integer> myList) {
