@@ -30,10 +30,6 @@ public class DataInput {
     private static final int UPSTAIRS = 4;
     private static final int WALKING = 5;
 
-    /** In the constructor of INDArrayDataSetIterator : batchsize seems to be the number of INDarray for one datasets
-     *  if the number is 500, it means that 500 INDarray with width of Y will be contained in one dataset
-     */
-
     public DataInput(int x , int y, int z){
         nHeight = x;
         nWidth = y;
@@ -75,7 +71,7 @@ public class DataInput {
         Collections.shuffle(featureAndLabel);
 
         Iterable featLab = featureAndLabel;
-        INDArrayDataSetIterator ds = new INDArrayDataSetIterator(featLab, 1);
+        INDArrayDataSetIterator ds = new INDArrayDataSetIterator(featLab, 500);
         return ds;
     }
 

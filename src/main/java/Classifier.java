@@ -35,7 +35,7 @@ public class Classifier {
     private MultiLayerNetwork model;
     private ComputationGraph net;
 
-    public Classifier (int seed, double learningRate, int iteration, int nEpochs) {
+    public Classifier (int seed, double learningRate, int iteration, int nEpochs, int numOutputs) {
         this.seed = seed;
         this.learningRate = learningRate;
         this.iteration = iteration;
