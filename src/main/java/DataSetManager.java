@@ -1,36 +1,14 @@
-import org.datavec.api.io.WritableConverter;
-import org.datavec.api.io.labels.PathLabelGenerator;
-import org.datavec.api.io.labels.PatternPathLabelGenerator;
-import org.datavec.api.records.reader.RecordReader;
 import org.datavec.api.records.reader.SequenceRecordReader;
-import org.datavec.api.records.reader.impl.csv.CSVRecordReader;
 import org.datavec.api.records.reader.impl.csv.CSVSequenceRecordReader;
-import org.datavec.api.split.FileSplit;
 import org.datavec.api.split.NumberedFileInputSplit;
-import org.datavec.api.writable.Writable;
-import org.datavec.image.recordreader.ImageRecordReader;
-import org.deeplearning4j.datasets.datavec.RecordReaderDataSetIterator;
 import org.deeplearning4j.datasets.datavec.SequenceRecordReaderDataSetIterator;
-import org.deeplearning4j.datasets.iterator.BaseDatasetIterator;
 import org.deeplearning4j.datasets.iterator.INDArrayDataSetIterator;
-import org.deeplearning4j.datasets.iterator.MultipleEpochsIterator;
-import org.deeplearning4j.datasets.iterator.impl.CifarDataSetIterator;
-import org.deeplearning4j.datasets.iterator.impl.ListDataSetIterator;
-import org.nd4j.linalg.api.ndarray.INDArray;
-import org.nd4j.linalg.dataset.DataSet;
-import org.nd4j.linalg.dataset.SplitTestAndTrain;
-import org.nd4j.linalg.dataset.api.iterator.CachingDataSetIterator;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
 import org.nd4j.linalg.dataset.api.preprocessor.DataNormalization;
-import org.nd4j.linalg.dataset.api.preprocessor.ImagePreProcessingScaler;
-import org.nd4j.linalg.dataset.api.preprocessor.NormalizerMinMaxScaler;
 import org.nd4j.linalg.dataset.api.preprocessor.NormalizerStandardize;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * Created by maxime on 02-Jun-17.
@@ -49,18 +27,30 @@ public class DataSetManager {
     private int depth;//3
 
     /** Constructor private */
-    private DataSetManager(int batchSize, int numClasses, int height, int width, int depth) {
-        this.batchSize = batchSize;
-        this.numClasses = numClasses;
+    private DataSetManager(int height, int width, int depth) {
         this.height = height;
         this.width  = width;
         this.depth = depth;
     }
 
+    /** Constructor private */
+    private DataSetManager(int batchSize, int numClasses) {
+        this.batchSize = batchSize;
+        this.numClasses = numClasses;
+    }
+
     /** Singleton */
-    public static synchronized DataSetManager getInstance(int batchSize, int numClasses, int height, int width, int depth) {
+    public static synchronized DataSetManager getInstance(int batchSize, int numClasses) {
         if (INSTANCE == null) {
-            INSTANCE = new DataSetManager(batchSize,numClasses,height,width,depth);
+            INSTANCE = new DataSetManager(batchSize,numClasses);
+        }
+        return INSTANCE;
+    }
+
+    /** Singleton */
+    public static synchronized DataSetManager getInstance(int height, int width, int depth) {
+        if (INSTANCE == null) {
+            INSTANCE = new DataSetManager(height,width,depth);
         }
         return INSTANCE;
     }
