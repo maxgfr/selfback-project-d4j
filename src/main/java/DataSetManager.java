@@ -68,7 +68,6 @@ public class DataSetManager {
 
         System.out.println("Normalizer");
 
-        //Normalize the training data
         DataNormalization normalizer = new NormalizerStandardize();
         normalizer.fit(trainData);
         trainData.reset();

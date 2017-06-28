@@ -12,88 +12,54 @@ The **batchsize** is 500
 
 ## FOR CNN : 
 
-NetworkD4J_1 is the model which corresponds to CNN in the model folder
+NetworkD4J_CNN500 is the model which corresponds to CNN in the model folder. It uses data and label folder 
 
-CNN uses data and label folder 
+### Configuration : 
 
-DataInput.java : **height of 1, width of 500 and depth of 3**
+* 500 epochs,
+* 0.01 of learning rate,
+* no normalization of the data input
+* DataInput.java : **height of 1, width of 500 and depth of 3**
 
-Configuration : **350 epochs, 0.01 of learning rate**
+### Scores at 500 epochs
+```
+Accuracy:        0.9456
+Precision:       0.9326
+Recall:          0.9216
+F1 Score:        0.9271
+```
+About labelisation of the examples :
 
-**Scores**
-
-Accuracy:        0.8982
-
-Precision:       0.8775
-
-Recall:          0.8477
-
-F1 Score:        0.8623
-
-**Examples labeled as 0 classified by model as 0: 590 times**
-
-Examples labeled as 0 classified by model as 1: 4 times
-
-Examples labeled as 0 classified by model as 2: 1 times
-
-Examples labeled as 0 classified by model as 3: 3 times
-
-Examples labeled as 0 classified by model as 4: 42 times
-
-Examples labeled as 0 classified by model as 5: 56 times
-
-Examples labeled as 1 classified by model as 0: 4 times
-
-**Examples labeled as 1 classified by model as 1: 1923 times**
-
-Examples labeled as 1 classified by model as 2: 5 times
-
-Examples labeled as 1 classified by model as 3: 6 times
-
-Examples labeled as 1 classified by model as 4: 3 times
-
-Examples labeled as 1 classified by model as 5: 12 times
-
-Examples labeled as 2 classified by model as 0: 1 times
-
-Examples labeled as 2 classified by model as 1: 1 times
-
-**Examples labeled as 2 classified by model as 2: 1497 times**
-
-Examples labeled as 2 classified by model as 3: 24 times
-
-Examples labeled as 2 classified by model as 5: 5 times
-
+```
+Examples labeled as 0 classified by model as 0: 618 times
+Examples labeled as 0 classified by model as 1: 2 times
+Examples labeled as 0 classified by model as 3: 1 times
+Examples labeled as 0 classified by model as 4: 50 times
+Examples labeled as 0 classified by model as 5: 21 times
+Examples labeled as 1 classified by model as 0: 2 times
+Examples labeled as 1 classified by model as 1: 1929 times
+Examples labeled as 1 classified by model as 2: 2 times
+Examples labeled as 1 classified by model as 3: 7 times
+Examples labeled as 1 classified by model as 4: 5 times
+Examples labeled as 1 classified by model as 5: 8 times
+Examples labeled as 2 classified by model as 2: 1509 times
+Examples labeled as 2 classified by model as 3: 16 times
+Examples labeled as 2 classified by model as 4: 1 times
 Examples labeled as 3 classified by model as 0: 2 times
+Examples labeled as 3 classified by model as 2: 28 times
+Examples labeled as 3 classified by model as 3: 1504 times
+Examples labeled as 3 classified by model as 4: 1 times
+Examples labeled as 3 classified by model as 5: 4 times
+Examples labeled as 4 classified by model as 0: 17 times
+Examples labeled as 4 classified by model as 2: 2 times
+Examples labeled as 4 classified by model as 3: 4 times
+Examples labeled as 4 classified by model as 4: 563 times
+Examples labeled as 4 classified by model as 5: 175 times
+Examples labeled as 5 classified by model as 0: 10 times
+Examples labeled as 5 classified by model as 2: 1 times
+Examples labeled as 5 classified by model as 3: 2 times
+Examples labeled as 5 classified by model as 4: 74 times
+Examples labeled as 5 classified by model as 5: 1442 times
+```
 
-Examples labeled as 3 classified by model as 1: 1 times
-
-Examples labeled as 3 classified by model as 2: 49 times
-
-**Examples labeled as 3 classified by model as 3: 1455 times**
-
-Examples labeled as 3 classified by model as 4: 3 times
-
-Examples labeled as 3 classified by model as 5: 23 times
-
-Examples labeled as 4 classified by model as 0: 52 times
-
-Examples labeled as 4 classified by model as 2: 1 times
-
-Examples labeled as 4 classified by model as 3: 11 times
-
-**Examples labeled as 4 classified by model as 4: 303 times**
-
-Examples labeled as 4 classified by model as 5: 389 times
-
-Examples labeled as 5 classified by model as 0: 38 times
-
-Examples labeled as 5 classified by model as 2: 7 times
-
-Examples labeled as 5 classified by model as 3: 14 times
-
-Examples labeled as 5 classified by model as 4: 57 times
-
-**Examples labeled as 5 classified by model as 5: 1418 times**
-
-![alt text](https://github.com/maxgfr/D4JSelfback/blob/master/screen/Capture.PNG)
+![alt text](https://github.com/maxgfr/D4JSelfback/blob/master/screen/CNN_500/Capture.PNG)

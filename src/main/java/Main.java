@@ -19,8 +19,8 @@ public class Main {
         //DataSetManager dataSetManager = DataSetManager.getInstance(500,6);
         DataSetManager myOwnDataSetManager = DataSetManager.getInstance(1,500,3);
         Classifier LSTM = new Classifier(123,0.01,1,200,3,6,300,30);
-        Classifier CNN = new Classifier(123, 0.01,1,1500, 3,6,20);
-        Classifier myOwnNetwork = new Classifier(123,0.01,1,1500,6);
+        Classifier CNN = new Classifier(123, 0.01,1,500, 3,6,20);
+        Classifier myOwnNetwork = new Classifier(123,0.01,1,500,6);
 
         /**To train LSTM model */
         /*final File data = new ClassPathResource("data").getFile();
