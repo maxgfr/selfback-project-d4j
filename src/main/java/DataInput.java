@@ -99,7 +99,7 @@ public class DataInput {
 
             Iterable featLab = trainData;
 
-            Iterable testLab = trainData;
+            Iterable testLab = testData;
 
             dsTrain = new INDArrayDataSetIterator(featLab, 500);
 
