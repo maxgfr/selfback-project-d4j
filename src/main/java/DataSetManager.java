@@ -15,44 +15,22 @@ import java.io.IOException;
  */
 public class DataSetManager {
 
-    /** Instance of our class */
-    private static DataSetManager INSTANCE = null;
-    /** Defines number of samples that going to be propagated through the network.*/
     private int batchSize;//500
-    /** Classes : downstairs,jogging,etc.*/
     private int numClasses;//6
-    /**3-4-5 Parameters for my own dataset iterator*/
+    /**Parameters for my own dataset iterator*/
     private int height;//1
     private int width;//500
     private int depth;//3
 
-    /** Constructor private */
-    private DataSetManager(int height, int width, int depth) {
+    public DataSetManager(int height, int width, int depth) {
         this.height = height;
         this.width  = width;
         this.depth = depth;
     }
 
-    /** Constructor private */
-    private DataSetManager(int batchSize, int numClasses) {
+    public DataSetManager(int batchSize, int numClasses) {
         this.batchSize = batchSize;
         this.numClasses = numClasses;
-    }
-
-    /** Singleton */
-    public static synchronized DataSetManager getInstance(int batchSize, int numClasses) {
-        if (INSTANCE == null) {
-            INSTANCE = new DataSetManager(batchSize,numClasses);
-        }
-        return INSTANCE;
-    }
-
-    /** Singleton */
-    public static synchronized DataSetManager getInstance(int height, int width, int depth) {
-        if (INSTANCE == null) {
-            INSTANCE = new DataSetManager(height,width,depth);
-        }
-        return INSTANCE;
     }
 
     public DataSetIterator createDataSetIteratorForLSTM (File fileData, File fileLabel) throws IOException, InterruptedException {
@@ -81,17 +59,25 @@ public class DataSetManager {
 
     public DataSetIterator createMyOwnDataSetIterator (File fileData, boolean toTrain) throws IOException, InterruptedException {
 
-        DataInput di = new DataInput(height,width,depth);
+        DataInput di = DataInput.getInstance(height,width,depth,fileData);
 
         INDArrayDataSetIterator iterator = null;
 
         if (toTrain) {
-            iterator = di.getDataSetIterator(fileData);
+            iterator = di.getDataSetIteratorToTrain();
         } else {
-            iterator = di.getDataSetIteratorTest(fileData);
+            iterator = di.getDataSetIteratorToTest();
         }
 
         return iterator;
+
+    }
+
+    public DataSetIterator createDataSetIteratorTest (File fileData) throws IOException, InterruptedException {
+
+        DataInput di = DataInput.getInstance(height,width,depth,null);
+
+        return di.getDataSetIteratorTest(fileData);
 
     }
 

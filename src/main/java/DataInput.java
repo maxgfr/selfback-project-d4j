@@ -16,6 +16,8 @@ import java.util.ArrayList;
  */
 public class DataInput {
 
+    private static DataInput INSTANCE = null;
+
     private static final int DOWNSTAIRS = 0;
     private static final int JOGGING = 1;
     private static final int SITTING = 2;
@@ -26,30 +28,32 @@ public class DataInput {
     private int nHeight;//1
     private int nWidth;//500
     private int nDepth;//3
+    private File folder;
 
     private List<INDArray> allListData;
     private List<INDArray> allListLabel;
 
-    public DataInput(int x , int y, int z){
+    private ArrayList<Pair> trainData;
+    private ArrayList<Pair> testData;
+
+    private INDArrayDataSetIterator dsTrain;
+    private INDArrayDataSetIterator dsTest;
+
+    private DataInput(int x , int y, int z, File fder){
         nHeight = x;
         nWidth = y;
         nDepth = z;
         allListData = new ArrayList<INDArray>();
         allListLabel = new ArrayList<INDArray>();
+        folder = fder;
+        process();
     }
 
-    public INDArrayDataSetIterator getDataSetIterator(File folder){
-
-        fusionList(folder);
-
-        ArrayList<Pair> featureAndLabel = mergeFeaturesWithLabels(allListData,allListLabel);
-
-        Collections.shuffle(featureAndLabel);
-
-        Iterable featLab = featureAndLabel;
-
-        INDArrayDataSetIterator ds = new INDArrayDataSetIterator(featLab, 500);
-        return ds;
+    public static synchronized DataInput getInstance(int x , int y, int z, File fder) {
+        if (INSTANCE == null) {
+            INSTANCE = new DataInput(x,y,z,fder);
+        }
+        return INSTANCE;
     }
 
     public INDArrayDataSetIterator getDataSetIteratorTest(File nameFile){
@@ -73,6 +77,34 @@ public class DataInput {
         INDArrayDataSetIterator ds = new INDArrayDataSetIterator(featLab, 1);
 
         return ds;
+    }
+
+    public INDArrayDataSetIterator getDataSetIteratorToTrain(){
+        return dsTrain;
+    }
+
+    public INDArrayDataSetIterator getDataSetIteratorToTest (){
+        return dsTest;
+    }
+
+    private void process () {
+        if (folder !=null) {
+            fusionList(folder);
+
+            ArrayList<Pair> featureAndLabel = mergeFeaturesWithLabels(allListData,allListLabel);
+
+            Collections.shuffle(featureAndLabel);
+
+            splitShuffleArray(featureAndLabel,85);
+
+            Iterable featLab = trainData;
+
+            Iterable testLab = trainData;
+
+            dsTrain = new INDArrayDataSetIterator(featLab, 500);
+
+            dsTest = new INDArrayDataSetIterator(testLab, 500);
+        }
     }
 
     private List<INDArray> createFalseRandLabels(int numOutcomes,int numSamples){
@@ -258,5 +290,20 @@ public class DataInput {
         } finally {
             is.close();
         }
+    }
+
+    private void splitShuffleArray (ArrayList<Pair> array, int percentToTrain) {
+
+        int end = array.size();
+        int toCut = (end*percentToTrain)/100;
+
+        List<Pair> listTrain = array.subList(0, toCut);
+        List<Pair> listTest = array.subList(toCut, end);
+
+        trainData = new ArrayList<Pair>(listTrain);
+        testData = new ArrayList<Pair>(listTest);
+
+        System.out.println("Size of the train data :"+trainData.size());
+        System.out.println("Size of the test data :"+testData.size());
     }
 }

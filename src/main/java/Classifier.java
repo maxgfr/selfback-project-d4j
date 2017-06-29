@@ -40,6 +40,7 @@ public class Classifier {
         this.learningRate = learningRate;
         this.iteration = iteration;
         this.nbEpochs = nEpochs;
+        this.numOutputs = numOutputs;
     }
 
     public Classifier (int seed, double learningRate, int iteration, int nEpochs, int numInputs, int numOutputs, int numHiddenNodes) {
