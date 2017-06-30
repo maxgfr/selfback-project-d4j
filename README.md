@@ -16,7 +16,8 @@ The **batchsize** is 500
 
 - Each model in directory ``model`` was trained with 100% of the data available.
 
-I need to remake an other training with 80% of training data and 20% of testing data in order to have a better evealuation of the models
+- I remake an other training with 85% of training data and 15% of testing data in order to have a better evaluation of the model.
+You can find it in folder ``screen``.
 
 
 ## FOR CNN : 

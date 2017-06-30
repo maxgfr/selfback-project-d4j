@@ -17,13 +17,15 @@ public class Main {
 
 
         final File data = new ClassPathResource("data").getFile();
-        final File data_test = new ClassPathResource("data_test/jogging.csv").getFile();
+        final File data_test = new ClassPathResource("data_test/standing.csv").getFile();
 
         KerasManager kerasManager = KerasManager.getInstance();
         DataSetManager dataSetManager = new DataSetManager(500,6);
         DataSetManager myOwnDataSetManager = new DataSetManager(1,500,3);
         DataSetIterator trainData = myOwnDataSetManager.createMyOwnDataSetIterator(data,true);
         DataSetIterator testData = myOwnDataSetManager.createMyOwnDataSetIterator(data,false);
+        //DataSetIterator trainData = myOwnDataSetManager.createMyOwnDataSetIteratorSameData(data);
+        //DataSetIterator testData = myOwnDataSetManager.createMyOwnDataSetIteratorSameData(data);
 
         Classifier LSTM = new Classifier(123,0.01,1,200,3,6,300,30);
         Classifier CNN = new Classifier(123, 0.01,1,500, 3,6,20);

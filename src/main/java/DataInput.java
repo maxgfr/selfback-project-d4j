@@ -38,6 +38,7 @@ public class DataInput {
 
     private INDArrayDataSetIterator dsTrain;
     private INDArrayDataSetIterator dsTest;
+    private INDArrayDataSetIterator sameData;
 
     private DataInput(int x , int y, int z, File fder){
         nHeight = x;
@@ -87,6 +88,10 @@ public class DataInput {
         return dsTest;
     }
 
+    public INDArrayDataSetIterator getDataSetIteratorSameData (){
+        return sameData;
+    }
+
     private void process () {
         if (folder !=null) {
             fusionList(folder);
@@ -94,6 +99,10 @@ public class DataInput {
             ArrayList<Pair> featureAndLabel = mergeFeaturesWithLabels(allListData,allListLabel);
 
             Collections.shuffle(featureAndLabel);
+
+            Iterable iterable = featureAndLabel;
+
+            sameData = new INDArrayDataSetIterator(iterable, 500);
 
             splitShuffleArray(featureAndLabel,85);
 
