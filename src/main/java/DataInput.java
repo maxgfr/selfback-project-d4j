@@ -88,7 +88,7 @@ public class DataInput {
         return dsTest;
     }
 
-    public INDArrayDataSetIterator getDataSetIteratorSameData (){
+    public INDArrayDataSetIterator  getDataSetIteratorSameData(){
         return sameData;
     }
 
@@ -100,15 +100,17 @@ public class DataInput {
 
             Collections.shuffle(featureAndLabel);
 
+            ArrayList<Pair> toSplit = new ArrayList<Pair>(featureAndLabel);
+
+            splitShuffleArray(toSplit,85);
+
             Iterable iterable = featureAndLabel;
-
-            sameData = new INDArrayDataSetIterator(iterable, 500);
-
-            splitShuffleArray(featureAndLabel,85);
 
             Iterable featLab = trainData;
 
             Iterable testLab = testData;
+
+            sameData = new INDArrayDataSetIterator(iterable, 500);
 
             dsTrain = new INDArrayDataSetIterator(featLab, 500);
 
@@ -312,7 +314,7 @@ public class DataInput {
         trainData = new ArrayList<Pair>(listTrain);
         testData = new ArrayList<Pair>(listTest);
 
-        System.out.println("Size of the train data :"+trainData.size());
-        System.out.println("Size of the test data :"+testData.size());
+        //System.out.println("Size of the train data :"+trainData.size());
+        //System.out.println("Size of the test data :"+testData.size());
     }
 }

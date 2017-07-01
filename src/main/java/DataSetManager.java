@@ -44,14 +44,12 @@ public class DataSetManager {
         DataSetIterator trainData = new SequenceRecordReaderDataSetIterator(trainFeatures, trainLabels, batchSize, numClasses,
                 false, SequenceRecordReaderDataSetIterator.AlignmentMode.ALIGN_END);
 
-        System.out.println("Normalizer");
-
+        /*System.out.println("Normalizer");
         DataNormalization normalizer = new NormalizerStandardize();
         normalizer.fit(trainData);
         trainData.reset();
         trainData.setPreProcessor(normalizer);
-
-        System.out.println("End fit normalizer");
+        System.out.println("End fit normalizer");*/
 
         return trainData;
 
@@ -77,7 +75,9 @@ public class DataSetManager {
 
         DataInput di = DataInput.getInstance(height,width,depth,fileData);
 
-        return di.getDataSetIteratorSameData();
+        INDArrayDataSetIterator iterator =  di.getDataSetIteratorSameData();
+
+        return iterator;
 
     }
 

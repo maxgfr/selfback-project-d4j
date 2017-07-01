@@ -31,7 +31,6 @@ public class Classifier {
     private int numInputs;//3
     private int numOutputs;//6
     private int numHiddenNodes;
-    private int tBPTT;
     private MultiLayerNetwork model;
     private ComputationGraph net;
 
@@ -53,17 +52,6 @@ public class Classifier {
         this.numHiddenNodes= numHiddenNodes;
     }
 
-    public Classifier (int seed, double learningRate, int iteration, int nEpochs, int numInputs, int numOutputs, int numHiddenNodes, int tBPTT) {
-        this.seed = seed;
-        this.learningRate = learningRate;
-        this.iteration = iteration;
-        this.nbEpochs = nEpochs;
-        this.numInputs= numInputs;
-        this.numOutputs= numOutputs;
-        this.numHiddenNodes= numHiddenNodes;
-        this.tBPTT = tBPTT;
-    }
-
     public MultiLayerNetwork getModel () {return model;}
 
     public void setModel (MultiLayerNetwork mln) {model = mln;}
@@ -81,31 +69,28 @@ public class Classifier {
                 .seed(seed)
                 .iterations(iteration)
                 .learningRate(learningRate)
-                .updater(Updater.RMSPROP)
+                .updater(Updater.ADAM)
                 .weightInit(WeightInit.XAVIER)
-                .activation(Activation.TANH)
+                .activation(Activation.RELU)
                 .regularization(true)
-                .l2(0.001)
+                .l2(0.0015)
                 .graphBuilder()
                 .addInputs("input")
-                .addLayer("first", new GravesLSTM.Builder()
+                .addLayer("lstm1", new GravesLSTM.Builder()
                         .nIn(numInputs)
                         .nOut(numHiddenNodes)
                         .build(),"input")
-                .addLayer("second", new GravesLSTM.Builder()
+                .addLayer("lstm2", new GravesLSTM.Builder()
                         .nIn(numHiddenNodes)
                         .nOut(numHiddenNodes)
-                        .build(),"first")
+                        .build(),"lstm1")
                 .addLayer("outputLayer", new RnnOutputLayer.Builder(LossFunctions.LossFunction.MCXENT)
                         .activation(Activation.SOFTMAX)
-                        .nIn(2*numHiddenNodes)
+                        .nIn(numHiddenNodes)
                         .nOut(numOutputs)
-                        .build(),"first","second")
+                        .build(),"lstm2")
                 .setOutputs("outputLayer")
                 .backprop(true)
-                .backpropType(BackpropType.TruncatedBPTT)
-                .tBPTTForwardLength(tBPTT)
-                .tBPTTBackwardLength(tBPTT)
                 .pretrain(false)
                 .build();
 
