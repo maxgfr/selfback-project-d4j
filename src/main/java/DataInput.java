@@ -38,7 +38,8 @@ public class DataInput {
 
     private INDArrayDataSetIterator dsTrain;
     private INDArrayDataSetIterator dsTest;
-    private INDArrayDataSetIterator sameData;
+    private INDArrayDataSetIterator sameDataTrain;
+    private INDArrayDataSetIterator sameDataTest;
 
     private DataInput(int x , int y, int z, File fder){
         nHeight = x;
@@ -88,8 +89,12 @@ public class DataInput {
         return dsTest;
     }
 
-    public INDArrayDataSetIterator  getDataSetIteratorSameData(){
-        return sameData;
+    public INDArrayDataSetIterator getDataSetIteratorSameDataTrain (){
+        return sameDataTrain;
+    }
+
+    public INDArrayDataSetIterator getDataSetIteratorSameDataTest (){
+        return sameDataTest;
     }
 
     private void process () {
@@ -102,15 +107,21 @@ public class DataInput {
 
             ArrayList<Pair> toSplit = new ArrayList<Pair>(featureAndLabel);
 
+            ArrayList<Pair> copyArray = new ArrayList<Pair>(featureAndLabel);
+
             splitShuffleArray(toSplit,85);
 
             Iterable iterable = featureAndLabel;
+
+            Iterable iterableTest = copyArray;
 
             Iterable featLab = trainData;
 
             Iterable testLab = testData;
 
-            sameData = new INDArrayDataSetIterator(iterable, 500);
+            sameDataTest = new INDArrayDataSetIterator(iterableTest, 500);
+
+            sameDataTrain = new INDArrayDataSetIterator(iterable, 500);
 
             dsTrain = new INDArrayDataSetIterator(featLab, 500);
 

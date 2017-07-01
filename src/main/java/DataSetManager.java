@@ -71,14 +71,19 @@ public class DataSetManager {
 
     }
 
-    public DataSetIterator createMyOwnDataSetIteratorSameData (File fileData) throws IOException, InterruptedException {
+    public DataSetIterator createMyOwnDataSetIteratorSameData (File fileData, boolean toTrain) throws IOException, InterruptedException {
 
         DataInput di = DataInput.getInstance(height,width,depth,fileData);
 
-        INDArrayDataSetIterator iterator =  di.getDataSetIteratorSameData();
+        INDArrayDataSetIterator iterator = null;
+
+        if (toTrain) {
+            iterator = di.getDataSetIteratorSameDataTrain();
+        } else {
+            iterator = di.getDataSetIteratorSameDataTest();
+        }
 
         return iterator;
-
     }
 
     public DataSetIterator createDataSetIteratorTest (File fileData) throws IOException, InterruptedException {
