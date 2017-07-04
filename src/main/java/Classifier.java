@@ -195,7 +195,7 @@ public class Classifier {
 
     public void createMyOwnNetwork () {
 
-        System.out.println("We're starting to create the CNN network");
+        System.out.println("We're starting to create my network");
 
         MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
                 .seed(seed)
@@ -257,7 +257,73 @@ public class Classifier {
 
         model.setListeners(new ScoreIterationListener(100));
 
-        System.out.println("We're starting to create the CNN network");
+        System.out.println("We're starting to create my network");
+    }
+
+    public void createMyOwnNetwork2 () {
+
+        System.out.println("We're starting to create my own second network");
+
+        MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
+                .seed(seed)
+                .iterations(iteration)
+                .activation(Activation.RELU)
+                .learningRate(learningRate)
+                .weightInit(WeightInit.XAVIER)
+                .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
+                .updater(Updater.RMSPROP).momentum(0.9)
+                .list()
+                .layer(0, new ConvolutionLayer.Builder(1,10) //depends height
+                        .nIn(3)//depth
+                        .nOut(130)
+                        .stride(1,1)
+                        .build())
+                .layer(1, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX) //max pooling
+                        .kernelSize(1,2)
+                        .stride(1,2)
+                        .build())
+                .layer(2, new ConvolutionLayer.Builder(1,10)
+                        .nIn(130)//depth
+                        .nOut(70)
+                        .stride(1,1)
+                        .build())
+                .layer(3, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX) //max pooling
+                        .kernelSize(1,2)
+                        .stride(1,2)
+                        .build())
+                .layer(4, new ConvolutionLayer.Builder(1,10) //depends height
+                        .nIn(70)//depth
+                        .nOut(50)
+                        .stride(1,1)
+                        .build())
+                .layer(5, new GravesLSTM.Builder()
+                        .nIn(5450)
+                        .nOut(60)
+                        .build())
+                .layer(6, new GravesLSTM.Builder()
+                        .nIn(60)
+                        .nOut(30)
+                        .build())
+                .layer(7, new RnnOutputLayer.Builder(LossFunctions.LossFunction.MCXENT)
+                        .activation(Activation.SOFTMAX)
+                        .nIn(30)
+                        .nOut(numOutputs)
+                        .build())
+                .setInputType(InputType.convolutional(1, 500, 3))
+                .backprop(true)
+                .pretrain(false)
+                .build();
+
+        MultiLayerNetwork net = new MultiLayerNetwork(conf);
+        net.init();
+
+        model = new MultiLayerNetwork(conf);
+
+        model.init();
+
+        model.setListeners(new ScoreIterationListener(100));
+
+        System.out.println("We're starting to create my own second network");
     }
 
     public void trainLSTM (DataSetIterator iteratorTrain, DataSetIterator testData) {

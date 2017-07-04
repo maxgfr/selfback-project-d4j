@@ -42,7 +42,7 @@ public class DataSetManager {
         trainLabels.initialize(new NumberedFileInputSplit(fileLabel.getAbsolutePath() + "/%d.csv", 1, 6));
 
         DataSetIterator trainData = new SequenceRecordReaderDataSetIterator(trainFeatures, trainLabels, batchSize, numClasses,
-                false, SequenceRecordReaderDataSetIterator.AlignmentMode.ALIGN_END);
+                false, SequenceRecordReaderDataSetIterator.AlignmentMode.ALIGN_START);
 
         /*System.out.println("Normalizer");
         DataNormalization normalizer = new NormalizerStandardize();

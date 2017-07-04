@@ -260,3 +260,110 @@ Examples labeled as 5 classified by model as 5: 1248 times
 ```
 
 ![alt text](https://github.com/maxgfr/D4JSelfback/blob/master/screen/CNN+RNN_500/Capture.PNG)
+
+## FOR CNN + RNN 2.0 : 
+
+NetworkD4J_CNN+RNN500_2 is the model which corresponds to CNN in the model folder. It uses data and label folder 
+
+### Configuration : 
+
+* 500 epochs,
+* 0.01 of learning rate,
+* no normalization of the data input
+* DataInput.java : **height of 1, width of 500 and depth of 3**
+
+```java
+ MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
+                .seed(seed)
+                .iterations(iteration)
+                .activation(Activation.RELU)
+                .learningRate(learningRate)
+                .weightInit(WeightInit.XAVIER)
+                .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
+                .updater(Updater.RMSPROP).momentum(0.9)
+                .list()
+                .layer(0, new ConvolutionLayer.Builder(1,10) //depends height
+                        .nIn(3)//depth
+                        .nOut(130)
+                        .stride(1,1)
+                        .build())
+                .layer(1, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX) //max pooling
+                        .kernelSize(1,2)
+                        .stride(1,2)
+                        .build())
+                .layer(2, new ConvolutionLayer.Builder(1,10)
+                        .nIn(130)//depth
+                        .nOut(70)
+                        .stride(1,1)
+                        .build())
+                .layer(3, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX) //max pooling
+                        .kernelSize(1,2)
+                        .stride(1,2)
+                        .build())
+                .layer(4, new ConvolutionLayer.Builder(1,10) //depends height
+                        .nIn(70)//depth
+                        .nOut(50)
+                        .stride(1,1)
+                        .build())
+                .layer(5, new GravesLSTM.Builder()
+                        .nIn(5450)
+                        .nOut(60)
+                        .build())
+                .layer(6, new GravesLSTM.Builder()
+                        .nIn(60)
+                        .nOut(30)
+                        .build())
+                .layer(7, new RnnOutputLayer.Builder(LossFunctions.LossFunction.MCXENT)
+                        .activation(Activation.SOFTMAX)
+                        .nIn(30)
+                        .nOut(numOutputs)
+                        .build())
+                .setInputType(InputType.convolutional(1, 500, 3))
+                .backprop(true)
+                .pretrain(false)
+                .build();
+```
+
+### Scores at the second last epoch :
+
+```
+Accuracy:        0.9271
+Precision:       0.9009
+Recall:          0.9043
+F1 Score:        0.9026
+```
+About labelisation of the examples :
+
+```
+Examples labeled as 0 classified by model as 0: 666 times
+Examples labeled as 0 classified by model as 4: 17 times
+Examples labeled as 0 classified by model as 5: 13 times
+Examples labeled as 1 classified by model as 0: 1 times
+Examples labeled as 1 classified by model as 1: 1930 times
+Examples labeled as 1 classified by model as 2: 1 times
+Examples labeled as 1 classified by model as 3: 4 times
+Examples labeled as 1 classified by model as 4: 2 times
+Examples labeled as 1 classified by model as 5: 7 times
+Examples labeled as 2 classified by model as 1: 1 times
+Examples labeled as 2 classified by model as 2: 1513 times
+Examples labeled as 2 classified by model as 3: 14 times
+Examples labeled as 2 classified by model as 4: 1 times
+Examples labeled as 2 classified by model as 5: 1 times
+Examples labeled as 3 classified by model as 0: 7 times
+Examples labeled as 3 classified by model as 2: 51 times
+Examples labeled as 3 classified by model as 3: 1485 times
+Examples labeled as 3 classified by model as 4: 3 times
+Examples labeled as 3 classified by model as 5: 3 times
+Examples labeled as 4 classified by model as 0: 61 times
+Examples labeled as 4 classified by model as 1: 1 times
+Examples labeled as 4 classified by model as 3: 7 times
+Examples labeled as 4 classified by model as 4: 501 times
+Examples labeled as 4 classified by model as 5: 189 times
+Examples labeled as 5 classified by model as 0: 65 times
+Examples labeled as 5 classified by model as 1: 1 times
+Examples labeled as 5 classified by model as 3: 1 times
+Examples labeled as 5 classified by model as 4: 132 times
+Examples labeled as 5 classified by model as 5: 1322 times
+```
+
+![alt text](https://github.com/maxgfr/D4JSelfback/blob/master/screen/CNN+RNN_500_2.0/Capture.PNG)
