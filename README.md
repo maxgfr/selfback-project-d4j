@@ -267,7 +267,7 @@ NetworkD4J_CNN+RNN500_2 is the model which corresponds to CNN in the model folde
 
 ### Configuration : 
 
-* 500 epochs,
+* 500 and 1000 epochs,
 * 0.01 of learning rate,
 * no normalization of the data input
 * DataInput.java : **height of 1, width of 500 and depth of 3**
@@ -324,46 +324,77 @@ NetworkD4J_CNN+RNN500_2 is the model which corresponds to CNN in the model folde
                 .build();
 ```
 
-### Scores at the second last epoch :
+### Scores at the last epoch for 500 epochs:
 
 ```
-Accuracy:        0.9271
-Precision:       0.9009
-Recall:          0.9043
-F1 Score:        0.9026
+Accuracy:        0.8746
+Precision:       0.8371
+Recall:          0.8598
+F1 Score:        0.8483
 ```
 About labelisation of the examples :
 
 ```
-Examples labeled as 0 classified by model as 0: 666 times
-Examples labeled as 0 classified by model as 4: 17 times
-Examples labeled as 0 classified by model as 5: 13 times
-Examples labeled as 1 classified by model as 0: 1 times
-Examples labeled as 1 classified by model as 1: 1930 times
-Examples labeled as 1 classified by model as 2: 1 times
-Examples labeled as 1 classified by model as 3: 4 times
-Examples labeled as 1 classified by model as 4: 2 times
-Examples labeled as 1 classified by model as 5: 7 times
-Examples labeled as 2 classified by model as 1: 1 times
-Examples labeled as 2 classified by model as 2: 1513 times
-Examples labeled as 2 classified by model as 3: 14 times
-Examples labeled as 2 classified by model as 4: 1 times
-Examples labeled as 2 classified by model as 5: 1 times
-Examples labeled as 3 classified by model as 0: 7 times
-Examples labeled as 3 classified by model as 2: 51 times
-Examples labeled as 3 classified by model as 3: 1485 times
-Examples labeled as 3 classified by model as 4: 3 times
-Examples labeled as 3 classified by model as 5: 3 times
-Examples labeled as 4 classified by model as 0: 61 times
+Examples labeled as 0 classified by model as 0: 686 times
+Examples labeled as 0 classified by model as 4: 8 times
+Examples labeled as 0 classified by model as 5: 2 times
+Examples labeled as 1 classified by model as 0: 2 times
+Examples labeled as 1 classified by model as 1: 1933 times
+Examples labeled as 1 classified by model as 3: 3 times
+Examples labeled as 1 classified by model as 4: 4 times
+Examples labeled as 1 classified by model as 5: 3 times
+Examples labeled as 2 classified by model as 0: 1 times
+Examples labeled as 2 classified by model as 1: 6 times
+Examples labeled as 2 classified by model as 2: 1497 times
+Examples labeled as 2 classified by model as 3: 21 times
+Examples labeled as 2 classified by model as 4: 3 times
+Examples labeled as 2 classified by model as 5: 2 times
+Examples labeled as 3 classified by model as 0: 10 times
+Examples labeled as 3 classified by model as 1: 3 times
+Examples labeled as 3 classified by model as 2: 37 times
+Examples labeled as 3 classified by model as 3: 1477 times
+Examples labeled as 3 classified by model as 4: 12 times
+Examples labeled as 3 classified by model as 5: 10 times
+Examples labeled as 4 classified by model as 0: 192 times
 Examples labeled as 4 classified by model as 1: 1 times
-Examples labeled as 4 classified by model as 3: 7 times
-Examples labeled as 4 classified by model as 4: 501 times
-Examples labeled as 4 classified by model as 5: 189 times
-Examples labeled as 5 classified by model as 0: 65 times
+Examples labeled as 4 classified by model as 3: 2 times
+Examples labeled as 4 classified by model as 4: 491 times
+Examples labeled as 4 classified by model as 5: 73 times
+Examples labeled as 5 classified by model as 0: 201 times
 Examples labeled as 5 classified by model as 1: 1 times
-Examples labeled as 5 classified by model as 3: 1 times
-Examples labeled as 5 classified by model as 4: 132 times
-Examples labeled as 5 classified by model as 5: 1322 times
+Examples labeled as 5 classified by model as 4: 406 times
+Examples labeled as 5 classified by model as 5: 913 times
+```
+
+### Scores at the last epoch for 1000 epochs:
+
+```
+ Accuracy:        0.9673
+ Precision:       0.9658
+ Recall:          0.9521
+ F1 Score:        0.9589
+```
+About labelisation of the examples :
+
+```
+Examples labeled as 0 classified by model as 0: 684 times
+Examples labeled as 0 classified by model as 4: 1 times
+Examples labeled as 0 classified by model as 5: 5 times
+Examples labeled as 1 classified by model as 1: 1940 times
+Examples labeled as 1 classified by model as 3: 3 times
+Examples labeled as 1 classified by model as 5: 4 times
+Examples labeled as 2 classified by model as 2: 1510 times
+Examples labeled as 2 classified by model as 3: 17 times
+Examples labeled as 3 classified by model as 2: 19 times
+Examples labeled as 3 classified by model as 3: 1517 times
+Examples labeled as 4 classified by model as 0: 4 times
+Examples labeled as 4 classified by model as 3: 7 times
+Examples labeled as 4 classified by model as 4: 588 times
+Examples labeled as 4 classified by model as 5: 158 times
+Examples labeled as 5 classified by model as 0: 5 times
+Examples labeled as 5 classified by model as 3: 2 times
+Examples labeled as 5 classified by model as 4: 37 times
+Examples labeled as 5 classified by model as 5: 1499 times
 ```
 
 ![alt text](https://github.com/maxgfr/D4JSelfback/blob/master/screen/CNN+RNN_500_2.0/Capture.PNG)

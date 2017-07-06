@@ -52,7 +52,7 @@ public class Main {
         kerasManager.saveModelD4J(myOwnNetwork.getModel());*/
 
         /**To test D4J model from zip */
-        File data_test = new ClassPathResource("data_test/standing.csv").getFile();
+        File data_test = new ClassPathResource("data_test/jogging.csv").getFile();
         DataSetIterator testModelData = myOwnDataSetManager.createDataSetIteratorTest(data_test);
         DataSetIterator sameData = myOwnDataSetManager.createDataSetIteratorTest(data_test);
 
@@ -62,7 +62,7 @@ public class Main {
         CNN.makePrediction(testModelData);
         //CNN.dispTabProbabilities(testModelData);
 
-        File modelMINE = new File ("model/NetworkD4J_CNN+RNN500.zip");
+        File modelMINE = new File ("model/NetworkD4J_CNN+RNN1000_2.zip");
         MultiLayerNetwork networkRestored2 = kerasManager.restoreModelFromD4J(modelMINE);
         myOwnNetwork.setModel(networkRestored2);
         myOwnNetwork.makePrediction(sameData);
