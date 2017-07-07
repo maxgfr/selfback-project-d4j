@@ -12,13 +12,9 @@ The **batchsize** is 500
 
 ## Evaluation :
 
-- I use the same data to make my evaluation and my training.
+- I make one evaluation with the same data to train and test my model and an other evaluation with 85% of my all data to train and to test my model
 
 - Each model in directory ``model`` was trained with 100% of the data available.
-
-- I remake an other training with 85% of training data and 15% of testing data in order to have a better evaluation of the model.
-You can find it in folder ``screen``.
-
 
 ## FOR CNN : 
 
@@ -106,7 +102,7 @@ NetworkD4J_CNN500 is the model which corresponds to CNN in the model folder. It 
                 .build();
 ```
 
-### Scores at the latest epoch :
+### Scores at the latest epoch with same data with 500 epochs:
 ```
 Accuracy:        0.9456
 Precision:       0.9326
@@ -147,254 +143,43 @@ Examples labeled as 5 classified by model as 4: 74 times
 Examples labeled as 5 classified by model as 5: 1442 times
 ```
 
-![alt text](https://github.com/maxgfr/D4JSelfback/blob/master/screen/CNN_500/Capture.PNG)
-
-
-## FOR CNN + RNN : 
-
-NetworkD4J_CNN+RNN500 is the model which corresponds to CNN in the model folder. It uses data and label folder 
-
-### Configuration : 
-
-* 500 epochs,
-* 0.01 of learning rate,
-* no normalization of the data input
-* DataInput.java : **height of 1, width of 500 and depth of 3**
-
-```java
-MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
-                .seed(seed)
-                .iterations(iteration)
-                .activation(Activation.RELU)
-                .learningRate(learningRate)
-                .weightInit(WeightInit.XAVIER)
-                .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-                .updater(Updater.RMSPROP).momentum(0.9)
-                .list()
-                .layer(0, new ConvolutionLayer.Builder(1,10) //depends height
-                        .nIn(3)//depth
-                        .nOut(130)
-                        .stride(1,1)
-                        .build())
-                .layer(1, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX) //max pooling
-                        .kernelSize(1,2)
-                        .stride(1,2)
-                        .build())
-                .layer(2, new ConvolutionLayer.Builder(1,10)
-                        .nIn(130)//depth
-                        .nOut(70)
-                        .stride(1,1)
-                        .build())
-                .layer(3, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX) //max pooling
-                        .kernelSize(1,2)
-                        .stride(1,2)
-                        .build())
-                .layer(4, new ConvolutionLayer.Builder(1,10) //depends height
-                        .nIn(70)//depth
-                        .nOut(40)
-                        .stride(1,1)
-                        .build())
-                .layer(5, new DenseLayer.Builder()
-                        .nOut(150)
-                        .activation(Activation.TANH)
-                        .dropOut(0.5)
-                        .build())
-                .layer(6, new GravesLSTM.Builder()
-                        .nIn(150)
-                        .nOut(50)
-                        .build())
-                .layer(7, new RnnOutputLayer.Builder(LossFunctions.LossFunction.MCXENT)
-                        .activation(Activation.SOFTMAX)
-                        .nIn(50)
-                        .nOut(numOutputs)
-                        .build())
-                .setInputType(InputType.convolutional(1, 500, 3))
-                .backprop(true)
-                .pretrain(false)
-                .build();
-```
-
-### Scores at the latest epoch :
+### Scores at the latest epoch with 85% to train and 15% to test the model with 500 epochs :
 
 ```
-Accuracy:        0.8781
-Precision:       0.8375
-Recall:          0.8331
-F1 Score:        0.8353
+Accuracy:        0.874
+Precision:       0.8237
+Recall:          0.8136
+F1 Score:        0.8187
 ```
 About labelisation of the examples :
 
 ```
-Examples labeled as 0 classified by model as 0: 565 times
-Examples labeled as 0 classified by model as 1: 7 times
-Examples labeled as 0 classified by model as 4: 91 times
-Examples labeled as 0 classified by model as 5: 34 times
-Examples labeled as 1 classified by model as 0: 7 times
-Examples labeled as 1 classified by model as 1: 1920 times
-Examples labeled as 1 classified by model as 2: 2 times
-Examples labeled as 1 classified by model as 3: 6 times
-Examples labeled as 1 classified by model as 4: 9 times
-Examples labeled as 1 classified by model as 5: 7 times
-Examples labeled as 2 classified by model as 0: 1 times
-Examples labeled as 2 classified by model as 1: 1 times
-Examples labeled as 2 classified by model as 2: 1498 times
-Examples labeled as 2 classified by model as 3: 13 times
-Examples labeled as 2 classified by model as 5: 9 times
-Examples labeled as 3 classified by model as 0: 8 times
-Examples labeled as 3 classified by model as 1: 2 times
-Examples labeled as 3 classified by model as 2: 58 times
-Examples labeled as 3 classified by model as 3: 1435 times
-Examples labeled as 3 classified by model as 4: 3 times
-Examples labeled as 3 classified by model as 5: 36 times
-Examples labeled as 4 classified by model as 0: 59 times
-Examples labeled as 4 classified by model as 2: 1 times
-Examples labeled as 4 classified by model as 3: 5 times
-Examples labeled as 4 classified by model as 4: 359 times
-Examples labeled as 4 classified by model as 5: 335 times
-Examples labeled as 5 classified by model as 0: 49 times
-Examples labeled as 5 classified by model as 1: 1 times
-Examples labeled as 5 classified by model as 2: 1 times
-Examples labeled as 5 classified by model as 3: 5 times
-Examples labeled as 5 classified by model as 4: 225 times
-Examples labeled as 5 classified by model as 5: 1248 times
-```
-
-![alt text](https://github.com/maxgfr/D4JSelfback/blob/master/screen/CNN+RNN_500/Capture.PNG)
-
-## FOR CNN + RNN 2.0 : 
-
-NetworkD4J_CNN+RNN500_2 is the model which corresponds to CNN in the model folder. It uses data and label folder 
-
-### Configuration : 
-
-* 500 and 1000 epochs,
-* 0.01 of learning rate,
-* no normalization of the data input
-* DataInput.java : **height of 1, width of 500 and depth of 3**
-
-```java
- MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
-                .seed(seed)
-                .iterations(iteration)
-                .activation(Activation.RELU)
-                .learningRate(learningRate)
-                .weightInit(WeightInit.XAVIER)
-                .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-                .updater(Updater.RMSPROP).momentum(0.9)
-                .list()
-                .layer(0, new ConvolutionLayer.Builder(1,10) //depends height
-                        .nIn(3)//depth
-                        .nOut(130)
-                        .stride(1,1)
-                        .build())
-                .layer(1, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX) //max pooling
-                        .kernelSize(1,2)
-                        .stride(1,2)
-                        .build())
-                .layer(2, new ConvolutionLayer.Builder(1,10)
-                        .nIn(130)//depth
-                        .nOut(70)
-                        .stride(1,1)
-                        .build())
-                .layer(3, new SubsamplingLayer.Builder(SubsamplingLayer.PoolingType.MAX) //max pooling
-                        .kernelSize(1,2)
-                        .stride(1,2)
-                        .build())
-                .layer(4, new ConvolutionLayer.Builder(1,10) //depends height
-                        .nIn(70)//depth
-                        .nOut(50)
-                        .stride(1,1)
-                        .build())
-                .layer(5, new GravesLSTM.Builder()
-                        .nIn(5450)
-                        .nOut(60)
-                        .build())
-                .layer(6, new GravesLSTM.Builder()
-                        .nIn(60)
-                        .nOut(30)
-                        .build())
-                .layer(7, new RnnOutputLayer.Builder(LossFunctions.LossFunction.MCXENT)
-                        .activation(Activation.SOFTMAX)
-                        .nIn(30)
-                        .nOut(numOutputs)
-                        .build())
-                .setInputType(InputType.convolutional(1, 500, 3))
-                .backprop(true)
-                .pretrain(false)
-                .build();
-```
-
-### Scores at the last epoch for 500 epochs:
-
-```
-Accuracy:        0.8746
-Precision:       0.8371
-Recall:          0.8598
-F1 Score:        0.8483
-```
-About labelisation of the examples :
-
-```
-Examples labeled as 0 classified by model as 0: 686 times
-Examples labeled as 0 classified by model as 4: 8 times
-Examples labeled as 0 classified by model as 5: 2 times
-Examples labeled as 1 classified by model as 0: 2 times
-Examples labeled as 1 classified by model as 1: 1933 times
-Examples labeled as 1 classified by model as 3: 3 times
-Examples labeled as 1 classified by model as 4: 4 times
-Examples labeled as 1 classified by model as 5: 3 times
-Examples labeled as 2 classified by model as 0: 1 times
-Examples labeled as 2 classified by model as 1: 6 times
-Examples labeled as 2 classified by model as 2: 1497 times
-Examples labeled as 2 classified by model as 3: 21 times
-Examples labeled as 2 classified by model as 4: 3 times
-Examples labeled as 2 classified by model as 5: 2 times
-Examples labeled as 3 classified by model as 0: 10 times
-Examples labeled as 3 classified by model as 1: 3 times
-Examples labeled as 3 classified by model as 2: 37 times
-Examples labeled as 3 classified by model as 3: 1477 times
-Examples labeled as 3 classified by model as 4: 12 times
-Examples labeled as 3 classified by model as 5: 10 times
-Examples labeled as 4 classified by model as 0: 192 times
-Examples labeled as 4 classified by model as 1: 1 times
-Examples labeled as 4 classified by model as 3: 2 times
-Examples labeled as 4 classified by model as 4: 491 times
-Examples labeled as 4 classified by model as 5: 73 times
-Examples labeled as 5 classified by model as 0: 201 times
-Examples labeled as 5 classified by model as 1: 1 times
-Examples labeled as 5 classified by model as 4: 406 times
-Examples labeled as 5 classified by model as 5: 913 times
-```
-
-### Scores at the last epoch for 1000 epochs:
-
-```
- Accuracy:        0.9673
- Precision:       0.9658
- Recall:          0.9521
- F1 Score:        0.9589
-```
-About labelisation of the examples :
-
-```
-Examples labeled as 0 classified by model as 0: 684 times
-Examples labeled as 0 classified by model as 4: 1 times
+Examples labeled as 0 classified by model as 0: 70 times
+Examples labeled as 0 classified by model as 1: 1 times
+Examples labeled as 0 classified by model as 3: 1 times
+Examples labeled as 0 classified by model as 4: 15 times
 Examples labeled as 0 classified by model as 5: 5 times
-Examples labeled as 1 classified by model as 1: 1940 times
-Examples labeled as 1 classified by model as 3: 3 times
-Examples labeled as 1 classified by model as 5: 4 times
-Examples labeled as 2 classified by model as 2: 1510 times
-Examples labeled as 2 classified by model as 3: 17 times
-Examples labeled as 3 classified by model as 2: 19 times
-Examples labeled as 3 classified by model as 3: 1517 times
+Examples labeled as 1 classified by model as 0: 3 times
+Examples labeled as 1 classified by model as 1: 258 times
+Examples labeled as 1 classified by model as 5: 1 times
+Examples labeled as 2 classified by model as 0: 1 times
+Examples labeled as 2 classified by model as 1: 2 times
+Examples labeled as 2 classified by model as 2: 172 times
+Examples labeled as 2 classified by model as 3: 1 times
+Examples labeled as 2 classified by model as 5: 1 times
+Examples labeled as 3 classified by model as 1: 1 times
+Examples labeled as 3 classified by model as 2: 7 times
+Examples labeled as 3 classified by model as 3: 180 times
+Examples labeled as 3 classified by model as 5: 6 times
 Examples labeled as 4 classified by model as 0: 4 times
-Examples labeled as 4 classified by model as 3: 7 times
-Examples labeled as 4 classified by model as 4: 588 times
-Examples labeled as 4 classified by model as 5: 158 times
-Examples labeled as 5 classified by model as 0: 5 times
-Examples labeled as 5 classified by model as 3: 2 times
-Examples labeled as 5 classified by model as 4: 37 times
-Examples labeled as 5 classified by model as 5: 1499 times
+Examples labeled as 4 classified by model as 3: 1 times
+Examples labeled as 4 classified by model as 4: 33 times
+Examples labeled as 4 classified by model as 5: 44 times
+Examples labeled as 5 classified by model as 0: 8 times
+Examples labeled as 5 classified by model as 2: 1 times
+Examples labeled as 5 classified by model as 3: 1 times
+Examples labeled as 5 classified by model as 4: 22 times
+Examples labeled as 5 classified by model as 5: 161 times
 ```
 
-![alt text](https://github.com/maxgfr/D4JSelfback/blob/master/screen/CNN+RNN_500_2.0/Capture.PNG)
+![alt text](https://github.com/maxgfr/D4JSelfback/blob/master/screen/CNN_500/Capture.PNG)
