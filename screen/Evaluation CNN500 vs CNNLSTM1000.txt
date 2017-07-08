@@ -1,0 +1,137 @@
+Size dataset: 8110
+number of line in this CSV : 17806
+Size dataset: 35
+number of line in this CSV : 17806
+Size dataset: 35
+[main] INFO org.reflections.Reflections - Reflections took 18272 ms to scan 196 urls, producing 3883 keys and 22306 values 
+
+
+
+
+
+Model restore from D4J zip
+Prediction is starting
+[main] INFO org.reflections.Reflections - Reflections took 254 ms to scan 13 urls, producing 373 keys and 1449 values 
+Number of occurrence :
+for downstairs is 0
+for jogging is 35
+for sitting is 0
+for standing is 0
+for upstairs is 0
+for walking is 0
+Size of the DataSetIterator : 35
+<table>
+<tr><th class="empty-space" colspan="2" rowspan="2"><th class="predicted-class-header" colspan="7">Predicted Class</th></tr>
+<tr><th class="predicted-class-header">0</th><th class="predicted-class-header">1</th><th class="predicted-class-header">2</th><th class="predicted-class-header">3</th><th class="predicted-class-header">4</th><th class="predicted-class-header">5</th><th class="predicted-class-header">Total</th></tr>
+<tr><th class="actual-class-header" rowspan="7">Actual Class</th><th class="actual-class-header" >0</th><td class="count-element">624</td><td class="count-element">2</td><td class="count-element">0</td><td class="count-element">1</td><td class="count-element">50</td><td class="count-element">22</td><td class="count-element">699</td></tr>
+<tr><th class="actual-class-header" >1</th><td class="count-element">2</td><td class="count-element">1927</td><td class="count-element">2</td><td class="count-element">6</td><td class="count-element">5</td><td class="count-element">8</td><td class="count-element">1950</td></tr>
+<tr><th class="actual-class-header" >2</th><td class="count-element">0</td><td class="count-element">0</td><td class="count-element">1513</td><td class="count-element">15</td><td class="count-element">1</td><td class="count-element">0</td><td class="count-element">1529</td></tr>
+<tr><th class="actual-class-header" >3</th><td class="count-element">2</td><td class="count-element">0</td><td class="count-element">28</td><td class="count-element">1505</td><td class="count-element">1</td><td class="count-element">4</td><td class="count-element">1540</td></tr>
+<tr><th class="actual-class-header" >4</th><td class="count-element">16</td><td class="count-element">0</td><td class="count-element">2</td><td class="count-element">4</td><td class="count-element">557</td><td class="count-element">174</td><td class="count-element">753</td></tr>
+<tr><th class="actual-class-header" >5</th><td class="count-element">10</td><td class="count-element">0</td><td class="count-element">1</td><td class="count-element">2</td><td class="count-element">72</td><td class="count-element">1444</td><td class="count-element">1529</td></tr>
+<tr><th class="actual-class-header">Total</th><td class="count-element">654</td><td class="count-element">1929</td><td class="count-element">1546</td><td class="count-element">1533</td><td class="count-element">686</td><td class="count-element">1652</td><td class="empty-space"></td>
+</tr>
+</table>
+
+
+Examples labeled as 0 classified by model as 0: 624 times
+Examples labeled as 0 classified by model as 1: 2 times
+Examples labeled as 0 classified by model as 3: 1 times
+Examples labeled as 0 classified by model as 4: 50 times
+Examples labeled as 0 classified by model as 5: 22 times
+Examples labeled as 1 classified by model as 0: 2 times
+Examples labeled as 1 classified by model as 1: 1927 times
+Examples labeled as 1 classified by model as 2: 2 times
+Examples labeled as 1 classified by model as 3: 6 times
+Examples labeled as 1 classified by model as 4: 5 times
+Examples labeled as 1 classified by model as 5: 8 times
+Examples labeled as 2 classified by model as 2: 1513 times
+Examples labeled as 2 classified by model as 3: 15 times
+Examples labeled as 2 classified by model as 4: 1 times
+Examples labeled as 3 classified by model as 0: 2 times
+Examples labeled as 3 classified by model as 2: 28 times
+Examples labeled as 3 classified by model as 3: 1505 times
+Examples labeled as 3 classified by model as 4: 1 times
+Examples labeled as 3 classified by model as 5: 4 times
+Examples labeled as 4 classified by model as 0: 16 times
+Examples labeled as 4 classified by model as 2: 2 times
+Examples labeled as 4 classified by model as 3: 4 times
+Examples labeled as 4 classified by model as 4: 557 times
+Examples labeled as 4 classified by model as 5: 174 times
+Examples labeled as 5 classified by model as 0: 10 times
+Examples labeled as 5 classified by model as 2: 1 times
+Examples labeled as 5 classified by model as 3: 2 times
+Examples labeled as 5 classified by model as 4: 72 times
+Examples labeled as 5 classified by model as 5: 1444 times
+
+
+==========================Scores========================================
+ Accuracy:        0.9463
+ Precision:       0.9333
+ Recall:          0.922
+ F1 Score:        0.9276
+========================================================================
+
+
+
+
+
+
+
+
+
+
+Model restore from D4J zip
+Prediction is starting
+Number of occurrence :
+for downstairs is 0
+for jogging is 35
+for sitting is 0
+for standing is 0
+for upstairs is 0
+for walking is 0
+Size of the DataSetIterator : 35
+<table>
+<tr><th class="empty-space" colspan="2" rowspan="2"><th class="predicted-class-header" colspan="7">Predicted Class</th></tr>
+<tr><th class="predicted-class-header">0</th><th class="predicted-class-header">1</th><th class="predicted-class-header">2</th><th class="predicted-class-header">3</th><th class="predicted-class-header">4</th><th class="predicted-class-header">5</th><th class="predicted-class-header">Total</th></tr>
+<tr><th class="actual-class-header" rowspan="7">Actual Class</th><th class="actual-class-header" >0</th><td class="count-element">691</td><td class="count-element">1</td><td class="count-element">0</td><td class="count-element">0</td><td class="count-element">2</td><td class="count-element">5</td><td class="count-element">699</td></tr>
+<tr><th class="actual-class-header" >1</th><td class="count-element">0</td><td class="count-element">1942</td><td class="count-element">0</td><td class="count-element">2</td><td class="count-element">0</td><td class="count-element">6</td><td class="count-element">1950</td></tr>
+<tr><th class="actual-class-header" >2</th><td class="count-element">0</td><td class="count-element">0</td><td class="count-element">1513</td><td class="count-element">16</td><td class="count-element">0</td><td class="count-element">0</td><td class="count-element">1529</td></tr>
+<tr><th class="actual-class-header" >3</th><td class="count-element">0</td><td class="count-element">0</td><td class="count-element">19</td><td class="count-element">1520</td><td class="count-element">0</td><td class="count-element">1</td><td class="count-element">1540</td></tr>
+<tr><th class="actual-class-header" >4</th><td class="count-element">4</td><td class="count-element">0</td><td class="count-element">0</td><td class="count-element">7</td><td class="count-element">579</td><td class="count-element">163</td><td class="count-element">753</td></tr>
+<tr><th class="actual-class-header" >5</th><td class="count-element">5</td><td class="count-element">0</td><td class="count-element">0</td><td class="count-element">2</td><td class="count-element">37</td><td class="count-element">1485</td><td class="count-element">1529</td></tr>
+<tr><th class="actual-class-header">Total</th><td class="count-element">700</td><td class="count-element">1943</td><td class="count-element">1532</td><td class="count-element">1547</td><td class="count-element">618</td><td class="count-element">1660</td><td class="empty-space"></td>
+</tr>
+</table>
+
+
+Examples labeled as 0 classified by model as 0: 691 times
+Examples labeled as 0 classified by model as 1: 1 times
+Examples labeled as 0 classified by model as 4: 2 times
+Examples labeled as 0 classified by model as 5: 5 times
+Examples labeled as 1 classified by model as 1: 1942 times
+Examples labeled as 1 classified by model as 3: 2 times
+Examples labeled as 1 classified by model as 5: 6 times
+Examples labeled as 2 classified by model as 2: 1513 times
+Examples labeled as 2 classified by model as 3: 16 times
+Examples labeled as 3 classified by model as 2: 19 times
+Examples labeled as 3 classified by model as 3: 1520 times
+Examples labeled as 3 classified by model as 5: 1 times
+Examples labeled as 4 classified by model as 0: 4 times
+Examples labeled as 4 classified by model as 3: 7 times
+Examples labeled as 4 classified by model as 4: 579 times
+Examples labeled as 4 classified by model as 5: 163 times
+Examples labeled as 5 classified by model as 0: 5 times
+Examples labeled as 5 classified by model as 3: 2 times
+Examples labeled as 5 classified by model as 4: 37 times
+Examples labeled as 5 classified by model as 5: 1485 times
+
+
+==========================Scores========================================
+ Accuracy:        0.9663
+ Precision:       0.9647
+ Recall:          0.9502
+ F1 Score:        0.9574
+========================================================================
+
+Process finished with exit code 0

@@ -403,6 +403,13 @@ public class Classifier {
         System.out.println("Size of the DataSetIterator : "+i);
     }
 
+    public void makeEvaluation (DataSetIterator testData) {
+        Evaluation evaluation = model.evaluate(testData);
+        System.out.println(evaluation.getConfusionMatrix().toHTML());
+        System.out.println(evaluation.stats());
+        testData.reset();
+    }
+
     public void dispTabProbabilities (DataSetIterator it) {
         INDArray evaluation = model.output(it);
         System.out.println(evaluation);

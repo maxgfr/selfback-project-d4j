@@ -55,17 +55,21 @@ public class Main {
         File data_test = new ClassPathResource("data_test/jogging.csv").getFile();
         DataSetIterator testModelData = myOwnDataSetManager.createDataSetIteratorTest(data_test);
         DataSetIterator sameData = myOwnDataSetManager.createDataSetIteratorTest(data_test);
+        DataSetIterator testModelDataEval = myOwnDataSetManager.createMyOwnDataSetIteratorSameData(data,false);
+        DataSetIterator sameDataEval = myOwnDataSetManager.createMyOwnDataSetIteratorSameData(data,false);
 
         File modelCNN = new File ("model/NetworkD4J_CNN500.zip");
         MultiLayerNetwork networkRestored1 = kerasManager.restoreModelFromD4J(modelCNN);
         CNN.setModel(networkRestored1);
         CNN.makePrediction(testModelData);
+        CNN.makeEvaluation(testModelDataEval);
         //CNN.dispTabProbabilities(testModelData);
 
         File modelMINE = new File ("model/NetworkD4J_CNN+RNN1000_2.zip");
         MultiLayerNetwork networkRestored2 = kerasManager.restoreModelFromD4J(modelMINE);
         myOwnNetwork.setModel(networkRestored2);
         myOwnNetwork.makePrediction(sameData);
+        myOwnNetwork.makeEvaluation(sameDataEval);
         //myOwnNetwork.dispTabProbabilities(sameData);
 
         /**To test from Keras model the model */
