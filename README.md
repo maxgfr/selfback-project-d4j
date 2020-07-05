@@ -1,4 +1,5 @@
-# D4JSelfback
+# selfback-project-d4j
+
 Activity recognition through Neural Network
 
 ==The data provides from 50 person from wrist.==
